@@ -21,7 +21,7 @@ status: live — update each session
 | **Orchestrator** | ORION (aiox-master) |
 | **Framework** | Synkra AIOX |
 | **Primary vault** | SÍRIOS (`C:/runa-systems-global/SÍRIOS/`) |
-| **Knowledge vault** | AKASHA (`C:/runa-systems-global/bases/`) |
+| **Knowledge vault** | AKASHA (`C:/runa-systems-global/AKASHA/`) |
 
 ---
 
@@ -44,11 +44,13 @@ Each product leads naturally to the next. ALPHA is the entry door.
 ## 3. Agent Ecosystem
 
 ### Custom Agents (Runa-specific)
-| Agent | Icon | File | Purpose |
+| Agent | Icon | Note | Purpose |
 |-------|------|------|---------|
-| ARES | ⚔️ | `agents/ares.md` | Offer design (Hormozi frameworks) |
-| HERMES | 🪽 | `agents/hermes.md` | Client success (Digital + DFY) |
-| FREYJA | 🌙 | `agents/freyja.md` | Instagram narrative + voice |
+| ORION | 🌌 | [[orion]] | Master orchestrator + Obsidian exclusive authority |
+| ARES | ⚔️ | [[ares]] | Offer design + product teia (Hormozi frameworks) |
+| FREYJA | 🌙 | [[freyja]] | ALL copy + narrative + Instagram + LP + sales letters in disguise |
+| HERMES | 🪽 | [[hermes]] | Client success + onboarding + upsell sequences |
+| HELIOS | ☀️ | [[helios]] | SEO strategy + technical + GEO + AI search (8 skills) |
 
 ### AIOX Core Agents
 | Agent | Persona | Role |
@@ -70,14 +72,21 @@ Each product leads naturally to the next. ALPHA is the entry door.
 ### Arthur's Instagram (@arthsystems_)
 - **Status:** 21 followers, 5 posts — recovery narrative (WRONG positioning)
 - **Mission:** Shift to architect narrative ("I build post-human businesses")
-- **Agent:** FREYJA handles this
+- **Agent:** [[freyja]] handles this
+- **References:** [[instagram-market-references]] — hub com Doug, Sarah, Carol
+- **Diagnosis:** [[analysis-instagram-arthur-diagnosis]]
 - **Next action:** `@freyja *content-plan` — design first 10 posts
 
 ### Knowledge Bases (AKASHA)
-- ✅ Alex Hormozi frameworks (offer-building, growth-levers, mental-models)
-- ✅ Vendas Alto Ticket (RECA/RALOCA/RADOVECA)
-- ✅ FREYJA content strategy map
-- ❌ Carol Dutra analysis → to be saved here
+- ✅ Alex Hormozi: [[growth-levers]], [[offer-building-framework]], [[hormozi-mental-models]]
+- ✅ Vendas Alto Ticket: [[sales-frameworks-reca-raloca]]
+- ✅ FREYJA strategy: [[freyja-content-strategy]]
+
+### Business Context & Architecture
+- [[runa-systems-business-context]] — full business briefing + Arthur's voice + tone
+- [[product-catalog]] — all products, status, upsell paths, priority order
+- [[squad-architecture]] — squad roles, communication flows, Obsidian authority
+- [[product-course-raw-material]] — raw material accumulated for course product
 
 ### Git State
 - All files untracked — commit pending (@devops)
@@ -134,6 +143,24 @@ bases/ (AKASHA)                 ← agent knowledge vault
 
 ## 7. Tools and Infrastructure
 
+> Full inventory: [[tooling-inventory]] — source of truth for all tools.
+
+### MCPs Active (claude.ai native)
+Figma, Gmail, Google Calendar, Netlify, Supabase — all active every session.
+
+### MCPs via ~/.claude.json (need session restart)
+| MCP | Agent | Status |
+|-----|-------|--------|
+| Neon | @data-engineer | ✅ Active |
+| notebooklm-mcp | FREYJA / ARES | ✅ Configured |
+| n8n-mcp | HERMES / ORION | ✅ Configured (Railway: primary-production-bae40.up.railway.app) |
+
+### Key Skills Installed
+- **ARES:** 18 ads-* skills (ads-meta, ads-google, ads-tiktok...)
+- **HELIOS:** 13 seo-* skills (seo-technical, seo-content, seo-geo...)
+- **@ux-design-expert / @dev:** ui-ux-pro-max (67 styles, 96 palettes), frontend-design
+
+### CLIs
 | Tool | Status | Purpose |
 |------|--------|---------|
 | Antigravity CLI | ✅ Installed | Obsidian interaction |
@@ -141,6 +168,7 @@ bases/ (AKASHA)                 ← agent knowledge vault
 | Google Workspace CLI (gws) | ✅ Configured | automatikruna@gmail.com |
 | AIOX Framework | ✅ Active | Agent orchestration |
 | Husky | ✅ Configured | Git hooks |
+| GitHub CLI (gh) | ✅ Available | PRs, releases (@devops exclusive) |
 
 ---
 

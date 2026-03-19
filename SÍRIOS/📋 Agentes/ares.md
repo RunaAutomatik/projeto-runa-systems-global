@@ -36,9 +36,16 @@ Content creation → [[freyja]] | Client success → [[hermes]] | Technical → 
 | `*audit-offer` | Audit against Grand Slam framework |
 | `*runa-product-web` | Design/review the product teia |
 
-## Knowledge Base
-- `bases/📚 Alex Hormozi/` — Grand Slam Offer, Value Equation, growth levers
-- `bases/📚 Vendas Alto Ticket/` — RECA/RALOCA/RADOVECA
+## Knowledge Base (AKASHA)
+- [[growth-levers]] — Hormozi growth levers framework
+- [[offer-building-framework]] — Grand Slam Offer construction
+- [[hormozi-mental-models]] — Mental models for pricing and positioning
+- [[sales-frameworks-reca-raloca]] — RECA/RALOCA/RADOVECA alto ticket
+
+## Connected Agents
+- [[freyja]] — narrative arm (positioning feeds offer design)
+- [[hermes]] — execution arm (offer delivery and client success)
+- [[orion]] — orchestrator
 
 ## Core Principles
 1. Value Equation First: Dream Outcome × Likelihood ÷ (Time Delay × Effort)

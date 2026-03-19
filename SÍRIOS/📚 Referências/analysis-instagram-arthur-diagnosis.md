@@ -8,6 +8,7 @@ related: [analysis-instagram-dougdemarco, analysis-instagram-sarahseller, analys
 # Instagram Diagnosis — @arthsystems_ (Arthur)
 
 > Analysis date: 2026-03-18 | Agent: manual review + FREYJA knowledge base
+> Hub: [[instagram-market-references]] | Agent responsible: [[freyja]] | Business context: [[runa-systems-business-context]]
 
 ---
 

@@ -386,3 +386,14 @@ A identidade visual em preto/bege, as ilustrações minimalistas em line art, o 
 
 *Análise extraída manualmente via leitura do perfil público @acaroldutraa no Instagram.*
 *Data de coleta: 18/03/2026*
+
+
+
+---
+
+## Connected Notes
+- [[instagram-market-references]] — Hub de todas as análises
+- [[analysis-instagram-arthur-diagnosis]] — Diagnóstico do perfil interno (Arthur/@arthsystems_)
+- [[analysis-instagram-dougdemarco]] — Referência de mercado: Doug D'Marco
+- [[analysis-instagram-sarahseller]] — Referência de mercado: Sarah Seller
+- [[freyja]] — Agente responsável por estratégia narrativa

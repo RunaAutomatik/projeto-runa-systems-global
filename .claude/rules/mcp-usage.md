@@ -22,21 +22,30 @@ Other agents (Dev, Architect, etc.) are MCP **consumers**, not administrators. I
 
 ## MCP Configuration Architecture
 
-AIOX uses Docker MCP Toolkit as the primary MCP infrastructure:
+> Full inventory: `SÍRIOS/📐 Projetos/tooling-inventory.md`
 
-### Direct in Claude Code (global ~/.claude.json)
-| MCP | Purpose |
-|-----|---------|
-| **playwright** | Browser automation, screenshots, web testing |
-| **desktop-commander** | Docker container operations via docker-gateway |
+### Active every session (claude.ai native integrations)
+| MCP | Purpose | Agent |
+|-----|---------|-------|
+| **claude_ai_Figma** | Design tool access | @ux-design-expert / @dev |
+| **claude_ai_Gmail** | Email read/send | HERMES / ORION |
+| **claude_ai_Google_Calendar** | Calendar management | ORION / HERMES |
+| **claude_ai_Netlify** | Deploy and hosting | @devops |
+| **claude_ai_Supabase** | Database and auth | @data-engineer |
 
-### Inside Docker Desktop (via docker-gateway)
+### Configured in ~/.claude.json (require session restart)
+| MCP | Purpose | Agent | Command |
+|-----|---------|-------|---------|
+| **Neon** | PostgreSQL database | @data-engineer | HTTP |
+| **n8n-mcp** | n8n workflow automation — 1,084 nodes, HERMES automations | HERMES / ORION | `npx -y n8n-mcp` |
+| **notebooklm-mcp** | Google NotebookLM — podcast/content generation | FREYJA / ARES | `npx -y notebooklm-mcp` |
 
-| MCP | Purpose |
-|-----|---------|
-| **EXA** | Web search, research, company/competitor analysis |
-| **Context7** | Library documentation lookup |
-| **Apify** | Web scraping, Actors, social media data extraction |
+> ⚠️ **notebooklm-mcp fix (2026-03-19):** Command must be `npx -y notebooklm-mcp`, NOT bare `notebooklm-mcp`. Bare command fails silently — always use npx pattern for stdio MCPs.
+
+### NOT available (Docker not installed)
+> ⚠️ Docker is NOT installed in this environment.
+> EXA, Context7, and Apify referenced in legacy docs are NOT available.
+> Do NOT attempt to use `mcp__docker-gateway__*` tools — they will fail.
 
 ## CRITICAL: Tool Selection Priority
 
@@ -44,29 +53,12 @@ ALWAYS prefer native Claude Code tools over MCP servers:
 
 | Task | USE THIS | NOT THIS |
 |------|----------|----------|
-| Read files | `Read` tool | docker-gateway |
-| Write files | `Write` / `Edit` tools | docker-gateway |
-| Run commands | `Bash` tool | docker-gateway |
-| Search files | `Glob` tool | docker-gateway |
-| Search content | `Grep` tool | docker-gateway |
-| List directories | `Bash(ls)` or `Glob` | docker-gateway |
-
-## desktop-commander (docker-gateway) Usage
-
-### ONLY use docker-gateway when:
-1. User explicitly says "use docker" or "use container"
-2. User explicitly mentions "Desktop Commander"
-3. Task specifically requires Docker container operations
-4. Accessing MCPs running inside Docker (EXA, Context7)
-5. User asks to run something inside a Docker container
-
-### NEVER use docker-gateway for:
-- Reading local files (use `Read` tool)
-- Writing local files (use `Write` or `Edit` tools)
-- Running shell commands on host (use `Bash` tool)
-- Searching files (use `Glob` or `Grep` tools)
-- Listing directories (use `Bash(ls)` or `Glob`)
-- Running Node.js or Python scripts on host (use `Bash` tool)
+| Read files | `Read` tool | any MCP |
+| Write files | `Write` / `Edit` tools | any MCP |
+| Run commands | `Bash` tool | any MCP |
+| Search files | `Glob` tool | any MCP |
+| Search content | `Grep` tool | any MCP |
+| List directories | `Bash(ls)` or `Glob` | any MCP |
 
 ## playwright MCP Usage
 
@@ -174,3 +166,58 @@ mcp__docker-gateway__fetch-apify-docs              # Fetch documentation page
 **Working MCPs:** EXA works because its key is in `~/.docker/mcp/config.yaml` under `apiKeys`
 
 For detailed instructions, see `*add-mcp` task or ask @devops for assistance.
+
+---
+
+## n8n-mcp Usage (direct stdio — ~/.claude.json)
+
+**Instance:** `https://primary-production-bae40.up.railway.app` (Railway)
+**Agent owner:** HERMES (automations) + ORION (orchestration)
+
+### Use n8n-mcp for:
+1. Designing and executing n8n workflows from Claude
+2. Instagram DM automation ("comment X → receive Y in DM")
+3. Client onboarding sequences
+4. Upsell and retention automations (HERMES)
+5. Accessing 1,084 node docs + 2,709 workflow templates
+
+### Access pattern:
+```
+mcp__n8n-mcp__*  (tools available after session restart)
+```
+
+### Agents with access:
+- **HERMES** — primary consumer (DMs, onboarding, upsell)
+- **ORION** — orchestration and workflow design
+- **ARES** — campaign automation triggers
+
+---
+
+## Meta Graph API Access
+
+**App:** Humus IA | ID: `2144558136010050` | Type: Business | Mode: Live
+**Credentials:** Stored in `.env` — never hardcode in code
+
+| Variable | Description |
+|----------|-------------|
+| `META_APP_ID` | Humus IA App ID |
+| `META_APP_SECRET` | App secret (for token exchange) |
+| `META_USER_TOKEN` | Long-Lived User Token (~60 days) |
+| `META_PAGE_ID` | Runa Eco IA Facebook Page (679507035249065) |
+| `META_PAGE_ACCESS_TOKEN` | Permanent Page Token (derived from Long-Lived User Token) |
+| `META_INSTAGRAM_ACCOUNT_ID` | @arthsystems_ Instagram Business Account (17841472834166826) |
+| `META_INSTAGRAM_USERNAME` | arthsystems_ |
+
+**Token renewal:** When META_USER_TOKEN expires (~60 days), user provides new short-lived token.
+Exchange via: `GET https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id={APP_ID}&client_secret={APP_SECRET}&fb_exchange_token={NEW_TOKEN}`
+
+**Agent access:**
+- **HERMES** — comment automation, DMs, follower check
+- **ARES** — post insights, campaign metrics
+- **FREYJA** — content publishing (`instagram_content_publish`)
+- **ORION** — orchestration of all Meta operations
+
+**Instagram automation strategy:**
+- Comment triggers + DM delivery → **ManyChat** (not Graph API directly — avoids App Review)
+- Post-conversion automation → **N8N via HERMES**
+- Biznomad ManyChat MCP → pending install (see project_pending_tasks.md)

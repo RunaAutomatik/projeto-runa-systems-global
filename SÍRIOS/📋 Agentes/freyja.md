@@ -43,7 +43,11 @@ Offer design → [[ares]] | Client success → [[hermes]] | Data analysis → @a
 
 ## Knowledge Base
 - `bases/🧠 Agent Knowledge Maps/freyja-content-strategy.md` — full strategy synthesis
-- Reference analyses: Doug DeMarco, Sarah Seller, Carol Dutra (in SÍRIOS/📚 Referências/)
+- [[instagram-market-references]] — Hub de referências de mercado do Instagram
+- [[analysis-instagram-arthur-diagnosis]] — Diagnóstico do perfil do Arthur
+- [[analysis-instagram-dougdemarco]] — Referência: Doug D'Marco
+- [[analysis-instagram-sarahseller]] — Referência: Sarah Seller
+- [[analysis-instagram-caroldutra]] — Referência: Carol Dutra
 
 ## The Architect Narrative
 | Wrong | Right |
