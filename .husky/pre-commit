@@ -1,0 +1,2 @@
+# pre-commit hook — no automated tests required yet
+exit 0
