@@ -27,3 +27,16 @@ Thumbs.db
 .aiox-core/local/
 .claude/settings.local.json
 .aiox/install-log.txt
+
+# AI Tool Configs (local only)
+.antigravity/
+.codex/
+.cursor/
+.gemini/
+
+# Env backups
+.env.backup.*
+
+# Third-party plugins (installed separately)
+claude-seo/
+obsidian-skills/
