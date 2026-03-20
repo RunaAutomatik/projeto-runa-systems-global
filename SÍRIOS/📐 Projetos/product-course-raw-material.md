@@ -265,3 +265,89 @@ Assignment is not permanent — context overrides. ORION can use any tool when o
 - [ ] Module: Agent-tool assignment table — who uses what and why
 - [ ] Module: What's already installed vs what to build — the audit before the install
 
+
+---
+
+## Session 2026-03-19 (evening) — Meta Graph API + Instagram Automation Architecture
+
+### Debugging a broken MCP (the notebooklm-mcp case)
+
+**Symptom:** `claude mcp list` shows `✗ Failed to connect`
+
+**Diagnosis sequence:**
+```bash
+claude mcp list               # see status of all MCPs
+claude mcp get notebooklm-mcp # see exact command configured
+npx --yes notebooklm-mcp      # test if it runs via npx
+```
+
+**Root cause found:** Configured as bare name `notebooklm-mcp` — binary not in PATH.
+**Fix:**
+```bash
+claude mcp remove "notebooklm-mcp" -s user
+claude mcp add notebooklm-mcp -s user -- npx -y notebooklm-mcp
+```
+
+**Pattern rule for all npm stdio MCPs:** Always `npx -y {package}`, never bare name.
+
+---
+
+### Meta Graph API — Token types and which one to use
+
+| Token Type | Expires | Use Case |
+|-----------|---------|---------|
+| Short-Lived User Token | ~1–2 hours | Testing only |
+| Long-Lived User Token | 60 days | Development, renewals |
+| Page Token (from Long-Lived) | Never* | Automation — agents use this |
+| System User Token | Never | Production without re-auth |
+
+*Page Token derived from Long-Lived User Token is permanent.
+
+**Token exchange flow:**
+```bash
+# Short-Lived → Long-Lived
+curl "https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=APP_ID&client_secret=APP_SECRET&fb_exchange_token=SHORT_TOKEN"
+
+# Get permanent Page Token
+curl "https://graph.facebook.com/me/accounts?fields=id,name,access_token&access_token=LONG_LIVED_TOKEN"
+
+# Debug any token
+curl "https://graph.facebook.com/debug_token?input_token=TOKEN&access_token=TOKEN"
+```
+
+**Non-obvious:** Instagram must be linked to a Facebook Page — verify with:
+```bash
+curl "https://graph.facebook.com/{PAGE_ID}?fields=instagram_business_account&access_token=TOKEN"
+```
+
+---
+
+### Instagram automation — API vs ManyChat decision tree
+
+```
+Need comment trigger + DM?
+  → ManyChat (already approved by Meta, handles follower check, fuzzy keywords)
+
+Need post-conversion automation (onboarding, upsell)?
+  → N8N via HERMES
+
+Need programmatic subscriber/tag/field management?
+  → ManyChat MCP (Biznomad — self-hosted, 14 tools)
+```
+
+**Why not API directly for DMs:** `instagram_manage_messages` requires Meta App Review.
+Takes weeks, may be denied. ManyChat sidesteps this entirely.
+
+**The fuzzy matching insight:** "RUNA" / "RUNNA" / "RUNA!" — ManyChat handles natively.
+Via API this requires Levenshtein distance implementation server-side.
+
+---
+
+### Module additions for $QUAD course (Meta/Instagram block)
+
+- [ ] Module: Meta Graph API token types — which one to use and why
+- [ ] Module: Debugging a broken MCP — the diagnosis → fix loop
+- [ ] Module: Instagram API vs ManyChat — authorization limits and the right architecture
+- [ ] Module: Comment automation with fuzzy keyword matching (the RUNA → RUNNA problem)
+- [ ] Module: Token lifecycle management — renewal flow for 60-day tokens
+- [ ] Module: Environment variables as credential source of truth
