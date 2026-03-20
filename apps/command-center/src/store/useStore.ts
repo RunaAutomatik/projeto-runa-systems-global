@@ -9,6 +9,7 @@ interface AppState {
   activeTab:     TabId
   messages:      Record<string, Message[]>
   sessionCount:  number
+  clearedAt:     Record<string, number>  // agentId → timestamp of last visual clear
 
   setActiveAgent:    (id: string) => void
   setThinking:       (v: boolean) => void
@@ -18,6 +19,7 @@ interface AppState {
   addMessage:        (agentId: string, msg: Message) => void
   updateLastMessage: (agentId: string, content: string) => void
   clearMessages:     (agentId: string) => void
+  clearVisual:       (agentId: string) => void  // visual clear — keeps context
 }
 
 export const useStore = create<AppState>((set, get) => ({
@@ -26,6 +28,7 @@ export const useStore = create<AppState>((set, get) => ({
   activeTab:     'chat',
   messages:      {},
   sessionCount:  1,
+  clearedAt:     {},
 
   setActiveAgent: (id) => {
     saveActiveAgent(id)
@@ -67,5 +70,11 @@ export const useStore = create<AppState>((set, get) => ({
     delete next[agentId]
     saveMessages(next)
     set({ messages: next })
+  },
+
+  clearVisual: (agentId) => {
+    set(state => ({
+      clearedAt: { ...state.clearedAt, [agentId]: Date.now() },
+    }))
   },
 }))

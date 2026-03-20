@@ -2,6 +2,7 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getAgent } from '@/lib/agents'
+import { FeedbackButton } from './FeedbackButton'
 import type { Message } from '@/types'
 
 interface Props { message: Message }
@@ -29,7 +30,7 @@ export function ChatMessage({ message }: Props) {
   }
 
   return (
-    <div className="flex items-start gap-3 animate-[fade-slide_0.2s_ease-out_forwards]">
+    <div className="flex items-start gap-3 animate-[fade-slide_0.2s_ease-out_forwards] group">
       <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5"
         style={{ background: 'rgba(245,158,11,0.12)', border: '1px solid rgba(245,158,11,0.25)' }}>
         <span style={{ fontSize: 13 }}>{agent?.icon ?? '🤖'}</span>
@@ -51,6 +52,12 @@ export function ChatMessage({ message }: Props) {
             <span style={{ color: '#7AA8B8', fontStyle: 'italic', fontSize: 12 }}>▌</span>
           )}
         </div>
+        {/* Feedback — only shown when message has content */}
+        {message.content && (
+          <div className="mt-1 pl-1">
+            <FeedbackButton agentId={message.agentId} messageContent={message.content} />
+          </div>
+        )}
       </div>
     </div>
   )

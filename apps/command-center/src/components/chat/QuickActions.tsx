@@ -1,13 +1,15 @@
 'use client'
-interface Props { actions: string[]; onAction: (a: string) => void; disabled?: boolean }
+import type { QuickAction } from '@/types'
+
+interface Props { actions: QuickAction[]; onAction: (prompt: string) => void; disabled?: boolean }
 
 export function QuickActions({ actions, onAction, disabled }: Props) {
   return (
     <div className="flex flex-wrap gap-1.5 px-1">
       {actions.map(action => (
         <button
-          key={action}
-          onClick={() => onAction(action)}
+          key={action.label}
+          onClick={() => onAction(action.prompt)}
           disabled={disabled}
           className="font-mono text-xs px-2.5 py-1 rounded transition-all hover:border-amber-DEFAULT"
           style={{
@@ -15,7 +17,7 @@ export function QuickActions({ actions, onAction, disabled }: Props) {
             border: '1px solid rgba(245,158,11,0.2)', color: '#7AA8B8',
           }}
         >
-          {action}
+          {action.label}
         </button>
       ))}
     </div>

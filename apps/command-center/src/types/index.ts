@@ -5,6 +5,11 @@ export interface AgentKnowledge {
   count: number
 }
 
+export interface QuickAction {
+  label: string
+  prompt: string
+}
+
 export interface Agent {
   id: string
   name: string
@@ -13,7 +18,7 @@ export interface Agent {
   role: string
   status: AgentStatus
   isPrimary?: boolean
-  quickActions: string[]
+  quickActions: QuickAction[]
   knowledge: AgentKnowledge | null
   systemPrompt: string
   color?: string
@@ -38,3 +43,11 @@ export interface WorkerStatus {
 }
 
 export type TabId = 'chat' | 'projects' | 'workers' | 'knowledge'
+
+export interface AgentCommand {
+  cmd: string          // e.g. "/briefing"
+  args?: string        // e.g. "[tema]"
+  description: string
+  prompt: string
+  category: string
+}

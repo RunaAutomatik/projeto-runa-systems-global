@@ -5,9 +5,10 @@ import { Send } from 'lucide-react'
 interface Props {
   onSend: (content: string) => void
   disabled?: boolean
+  agentName?: string
 }
 
-export function ChatInput({ onSend, disabled }: Props) {
+export function ChatInput({ onSend, disabled, agentName }: Props) {
   const [value, setValue] = useState('')
   const ref = useRef<HTMLTextAreaElement>(null)
 
@@ -38,7 +39,7 @@ export function ChatInput({ onSend, disabled }: Props) {
         onChange={e => setValue(e.target.value)}
         onKeyDown={onKey}
         onInput={onInput}
-        placeholder="Comando para ORION... (Enter para enviar)"
+        placeholder={`Comando para ${agentName ?? 'agente'}... (Enter para enviar)`}
         disabled={disabled}
         rows={1}
         className="flex-1 bg-transparent resize-none font-body text-sm outline-none"

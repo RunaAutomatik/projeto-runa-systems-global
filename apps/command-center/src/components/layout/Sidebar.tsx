@@ -1,6 +1,27 @@
 'use client'
 import { AgentCard } from '@/components/agents/AgentCard'
 import { AGENTS, TECHNICAL_AGENTS, SKILLS } from '@/lib/agents'
+import { useStore } from '@/store/useStore'
+
+// Skill → agent routing + prompt
+const SKILL_CONFIG: Record<string, { agentId: string; prompt: string }> = {
+  Ads: {
+    agentId: 'ares',
+    prompt: 'Quero trabalhar com as skills de Ads (18 skills disponíveis: Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, criativo, budget etc.). Qual campanha ou plataforma vamos analisar/otimizar?',
+  },
+  SEO: {
+    agentId: 'helios',
+    prompt: 'Quero usar as skills de SEO (13 skills: técnico, conteúdo, GEO, schema, sitemap, performance, hreflang, programático, imagens, competidor, page-level, content quality). Por onde começamos?',
+  },
+  'UI/UX': {
+    agentId: 'orion',
+    prompt: 'Preciso de suporte em UI/UX design (skill ui-ux-pro-max disponível: 67 estilos, 96 paletas, 57 font pairings, 25 charts, 13 stacks). Qual é o projeto ou tela que vamos trabalhar?',
+  },
+  Frontend: {
+    agentId: 'orion',
+    prompt: 'Preciso de suporte em Frontend (skill frontend-design disponível: interfaces de produção, alta qualidade visual). Qual é o componente ou página que vamos construir?',
+  },
+}
 
 const Divider = ({ label }: { label: string }) => (
   <div className="flex items-center gap-2 px-2 py-2 mt-1">
@@ -11,8 +32,20 @@ const Divider = ({ label }: { label: string }) => (
 )
 
 export function Sidebar() {
+  const { setActiveAgent } = useStore()
   const orion = AGENTS.find(a => a.isPrimary)!
   const squad = AGENTS.filter(a => !a.isPrimary)
+
+  // Skills dispatch: route to agent + trigger command via custom event
+  const handleSkillClick = (skillName: string) => {
+    const config = SKILL_CONFIG[skillName]
+    if (!config) return
+    setActiveAgent(config.agentId)
+    // Small delay so agent switches before dispatching the message
+    setTimeout(() => {
+      window.dispatchEvent(new CustomEvent('skill:execute', { detail: { prompt: config.prompt } }))
+    }, 100)
+  }
 
   return (
     <aside className="w-56 shrink-0 flex flex-col overflow-hidden relative z-10"
@@ -41,8 +74,20 @@ export function Sidebar() {
         <Divider label="Skills" />
         <div className="px-2 space-y-1">
           {SKILLS.map(s => (
-            <div key={s.name} className="flex items-center justify-between px-2 py-1 rounded hover:bg-surface transition-all cursor-pointer"
-              style={{ border: '1px solid transparent' }}>
+            <button
+              key={s.name}
+              onClick={() => handleSkillClick(s.name)}
+              className="w-full flex items-center justify-between px-2 py-1.5 rounded transition-all text-left group"
+              style={{ border: '1px solid rgba(26,58,74,0.3)', background: 'transparent' }}
+              onMouseEnter={e => {
+                e.currentTarget.style.background = 'rgba(245,158,11,0.04)'
+                e.currentTarget.style.borderColor = 'rgba(245,158,11,0.2)'
+              }}
+              onMouseLeave={e => {
+                e.currentTarget.style.background = 'transparent'
+                e.currentTarget.style.borderColor = 'rgba(26,58,74,0.3)'
+              }}
+            >
               <div className="flex items-center gap-2">
                 <span style={{ fontSize: 11 }}>{s.icon}</span>
                 <span className="font-body text-xs" style={{ color: '#7AA8B8' }}>{s.name}</span>
@@ -51,7 +96,7 @@ export function Sidebar() {
                 style={{ background: 'rgba(245,158,11,0.08)', color: '#F59E0B', fontSize: 9 }}>
                 {s.count}
               </span>
-            </div>
+            </button>
           ))}
         </div>
       </div>

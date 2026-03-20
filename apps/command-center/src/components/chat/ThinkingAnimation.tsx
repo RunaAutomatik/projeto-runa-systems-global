@@ -1,10 +1,12 @@
 'use client'
-export function ThinkingAnimation() {
+interface Props { agentIcon?: string }
+
+export function ThinkingAnimation({ agentIcon = '🤖' }: Props) {
   return (
     <div className="flex items-start gap-3 animate-[fade-slide_0.2s_ease-out_forwards]">
       <div className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5"
         style={{ background: 'rgba(245,158,11,0.15)', border: '1px solid rgba(245,158,11,0.3)' }}>
-        <span style={{ fontSize: 13 }}>🌌</span>
+        <span style={{ fontSize: 13 }}>{agentIcon}</span>
       </div>
       <div className="rounded-lg px-4 py-3" style={{
         background: 'rgba(10,31,46,0.9)',
