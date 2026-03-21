@@ -141,10 +141,18 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes typing-dot {
+  0%, 60%, 100% { transform: translateY(0);    opacity: 0.4; }
+  30%           { transform: translateY(-4px); opacity: 1; }
+}
+
 @keyframes mycelium-pulse {
   0%,100% { opacity: 0.06; }
   50%     { opacity: 0.16; }
 }
+
+/* ── Chat input placeholder ─────────────────── */
+.chat-input::placeholder { color: #1A3A4A; }
 
 /* ── Chat markdown ───────────────────────────── */
 .prose-hud h1,

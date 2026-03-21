@@ -30,7 +30,29 @@ export interface Message {
   content: string
   timestamp: number
   agentId: string
+  toolCalls?: ToolCall[]  // inline tool call blocks attached to this message
 }
+
+// ── Tool use types ────────────────────────────────────────────────────────────
+
+export type ToolStatus = 'running' | 'done' | 'error'
+
+export interface ToolCall {
+  id: string        // tool_use_id from Claude API
+  name: string      // e.g. "gws_drive_list"
+  label: string     // human-readable e.g. "Listando Google Drive..."
+  input: Record<string, unknown>
+  status: ToolStatus
+  result?: string   // stdout on done, error message on error
+}
+
+// SSE events streamed from /api/chat
+export type ChatEvent =
+  | { type: 'text';        content: string }
+  | { type: 'tool_start';  id: string; name: string; label: string; input: Record<string, unknown> }
+  | { type: 'tool_result'; id: string; name: string; success: boolean; content: string }
+  | { type: 'done' }
+  | { type: 'error';       message: string }
 
 export interface WorkerStatus {
   id: string

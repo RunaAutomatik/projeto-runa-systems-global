@@ -3,7 +3,31 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getAgent } from '@/lib/agents'
 import { FeedbackButton } from './FeedbackButton'
-import type { Message } from '@/types'
+import type { Message, ToolCall } from '@/types'
+
+// Tool call block rendered inline within an assistant message
+function ToolCallBlock({ tc }: { tc: ToolCall }) {
+  const statusIcon  = tc.status === 'running' ? '◌' : tc.status === 'done' ? '✓' : '✕'
+  const statusColor = tc.status === 'running' ? '#FFD166' : tc.status === 'done' ? '#22C55E' : '#FF6B00'
+
+  return (
+    <div className="my-2 rounded font-mono text-xs"
+      style={{ background: 'rgba(245,158,11,0.04)', border: '1px solid rgba(245,158,11,0.12)', padding: '6px 10px' }}>
+      <div className="flex items-center gap-2">
+        <span style={{ color: statusColor, fontSize: 11 }}>{statusIcon}</span>
+        <span style={{ color: '#7AA8B8' }}>⚙</span>
+        <span style={{ color: '#F59E0B' }}>{tc.name}</span>
+        <span style={{ color: '#7AA8B8', fontSize: 10 }}>{tc.label}</span>
+      </div>
+      {tc.result && tc.status !== 'running' && (
+        <div className="mt-1.5 pl-5 text-xs leading-relaxed"
+          style={{ color: tc.status === 'done' ? '#7AA8B8' : '#FF6B00', whiteSpace: 'pre-wrap', maxHeight: 120, overflowY: 'auto' }}>
+          {tc.result.slice(0, 600)}{tc.result.length > 600 ? '\n...' : ''}
+        </div>
+      )}
+    </div>
+  )
+}
 
 interface Props { message: Message }
 
@@ -44,13 +68,31 @@ export function ChatMessage({ message }: Props) {
         </div>
         <div className="rounded-lg px-4 py-3 prose-hud text-sm"
           style={{ background: 'rgba(10,31,46,0.9)', border: '1px solid rgba(26,58,74,0.8)', color: '#E8F4F8' }}>
+          {/* Tool call blocks rendered above the text response */}
+          {message.toolCalls?.map(tc => (
+            <ToolCallBlock key={tc.id} tc={tc} />
+          ))}
           {message.content ? (
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {message.content}
             </ReactMarkdown>
-          ) : (
-            <span style={{ color: '#7AA8B8', fontStyle: 'italic', fontSize: 12 }}>▌</span>
-          )}
+          ) : !message.toolCalls?.length ? (
+            /* WhatsApp-style typing dots — shown while waiting for first token or tool */
+            <div className="flex items-center gap-1.5 py-0.5">
+              {[0, 1, 2].map(i => (
+                <span
+                  key={i}
+                  className="block w-2 h-2 rounded-full"
+                  style={{
+                    background: '#F59E0B',
+                    opacity: 0.5,
+                    animation: 'typing-dot 1.2s ease-in-out infinite',
+                    animationDelay: `${i * 0.2}s`,
+                  }}
+                />
+              ))}
+            </div>
+          ) : null}
         </div>
         {/* Feedback — only shown when message has content */}
         {message.content && (

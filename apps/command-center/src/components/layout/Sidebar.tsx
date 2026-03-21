@@ -34,7 +34,8 @@ const Divider = ({ label }: { label: string }) => (
 export function Sidebar() {
   const { setActiveAgent } = useStore()
   const orion = AGENTS.find(a => a.isPrimary)!
-  const squad = AGENTS.filter(a => !a.isPrimary)
+  const technicalIds = new Set(TECHNICAL_AGENTS.map(a => a.id))
+  const squad = AGENTS.filter(a => !a.isPrimary && !technicalIds.has(a.id))
 
   // Skills dispatch: route to agent + trigger command via custom event
   const handleSkillClick = (skillName: string) => {
@@ -55,18 +56,23 @@ export function Sidebar() {
         {/* ORION — primary */}
         <AgentCard agent={orion} />
 
-        {/* Internal squad */}
-        <Divider label="Squad" />
+        {/* Operational squad */}
+        <Divider label="Squad Operacional" />
         {squad.map(a => <AgentCard key={a.id} agent={a} />)}
 
-        {/* Technical layer */}
-        <Divider label="Technical" />
+        {/* Technical squad */}
+        <Divider label="Squad Técnico" />
         <div className="flex flex-wrap gap-1 px-2 py-1">
           {TECHNICAL_AGENTS.map(a => (
-            <span key={a.id} className="font-mono text-xs px-2 py-0.5 rounded transition-all hover:border-amber-DEFAULT cursor-pointer"
-              style={{ fontSize: 10, background: 'rgba(26,58,74,0.3)', border: '1px solid rgba(26,58,74,0.6)', color: '#7AA8B8' }}>
-              {a.label}
-            </span>
+            <button key={a.id}
+              onClick={() => setActiveAgent(a.id)}
+              className="font-mono text-xs px-2 py-0.5 rounded transition-all cursor-pointer"
+              style={{ fontSize: 10, background: 'rgba(26,58,74,0.3)', border: '1px solid rgba(26,58,74,0.6)', color: '#7AA8B8' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(0,212,200,0.4)'; e.currentTarget.style.color = '#00D4C8' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(26,58,74,0.6)'; e.currentTarget.style.color = '#7AA8B8' }}
+            >
+              {a.name}
+            </button>
           ))}
         </div>
 

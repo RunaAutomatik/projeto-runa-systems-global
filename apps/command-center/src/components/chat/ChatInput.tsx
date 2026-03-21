@@ -42,9 +42,8 @@ export function ChatInput({ onSend, disabled, agentName }: Props) {
         placeholder={`Comando para ${agentName ?? 'agente'}... (Enter para enviar)`}
         disabled={disabled}
         rows={1}
-        className="flex-1 bg-transparent resize-none font-body text-sm outline-none"
-        style={{ color: '#E8F4F8', lineHeight: 1.5, maxHeight: 120,
-          '::placeholder': { color: '#7AA8B8' } as never }}
+        className="flex-1 bg-transparent resize-none font-body text-sm outline-none chat-input"
+        style={{ color: '#E8F4F8', lineHeight: 1.5, maxHeight: 120 }}
       />
       <button
         onClick={send}

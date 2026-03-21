@@ -1,6 +1,6 @@
 'use client'
 import { create } from 'zustand'
-import type { Message, TabId } from '@/types'
+import type { Message, TabId, ToolCall } from '@/types'
 import { saveMessages, saveActiveAgent } from '@/lib/storage'
 
 interface AppState {
@@ -17,7 +17,7 @@ interface AppState {
   setSessionCount:   (n: number) => void
   initMessages:      (stored: Record<string, Message[]>) => void
   addMessage:        (agentId: string, msg: Message) => void
-  updateLastMessage: (agentId: string, content: string) => void
+  updateLastMessage: (agentId: string, content: string, toolCalls?: ToolCall[]) => void
   clearMessages:     (agentId: string) => void
   clearVisual:       (agentId: string) => void  // visual clear — keeps context
 }
@@ -53,12 +53,12 @@ export const useStore = create<AppState>((set, get) => ({
     set({ messages: next })
   },
 
-  updateLastMessage: (agentId, content) => {
+  updateLastMessage: (agentId, content, toolCalls) => {
     const { messages } = get()
     const agentMsgs = messages[agentId] ?? []
     if (agentMsgs.length === 0) return
     const updated = [...agentMsgs]
-    updated[updated.length - 1] = { ...updated[updated.length - 1], content }
+    updated[updated.length - 1] = { ...updated[updated.length - 1], content, ...(toolCalls !== undefined ? { toolCalls } : {}) }
     const next = { ...messages, [agentId]: updated }
     saveMessages(next)
     set({ messages: next })

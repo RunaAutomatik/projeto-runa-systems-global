@@ -3,11 +3,10 @@ import { useEffect, useRef, useState, MutableRefObject } from 'react'
 import { ChatMessage }       from './ChatMessage'
 import { ChatInput }         from './ChatInput'
 import { QuickActions }      from './QuickActions'
-import { ThinkingAnimation } from './ThinkingAnimation'
 import { useStore }          from '@/store/useStore'
 import { getAgent }          from '@/lib/agents'
 import { isCorrectionMessage, saveMemory, formatMemoriesForPrompt } from '@/lib/agentMemory'
-import type { Message }      from '@/types'
+import type { Message, ToolCall, ChatEvent } from '@/types'
 
 interface Props {
   sendMessageRef?: MutableRefObject<((prompt: string) => void) | null>
@@ -83,14 +82,49 @@ export function ChatWorkspace({ sendMessageRef }: Props) {
       }
 
       setThinking(false)
+
       const reader  = res.body.getReader()
       const decoder = new TextDecoder()
-      let full = ''
+      let buffer = ''
+      let textContent = ''
+      const pendingToolCalls: ToolCall[] = []
+
       while (true) {
         const { done, value } = await reader.read()
         if (done) break
-        full += decoder.decode(value, { stream: true })
-        updateLastMessage(activeAgentId, full)
+
+        buffer += decoder.decode(value, { stream: true })
+        const lines = buffer.split('\n')
+        buffer = lines.pop() ?? ''   // keep incomplete line for next chunk
+
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue
+          const raw = line.slice(6).trim()
+          if (!raw) continue
+
+          let event: ChatEvent
+          try { event = JSON.parse(raw) } catch { continue }
+
+          if (event.type === 'text') {
+            textContent += event.content
+            updateLastMessage(activeAgentId, textContent, [...pendingToolCalls])
+          } else if (event.type === 'tool_start') {
+            const tc: ToolCall = { id: event.id, name: event.name, label: event.label, input: event.input, status: 'running' }
+            pendingToolCalls.push(tc)
+            updateLastMessage(activeAgentId, textContent, [...pendingToolCalls])
+          } else if (event.type === 'tool_result') {
+            const tc = pendingToolCalls.find(t => t.id === event.id)
+            if (tc) {
+              tc.status  = event.success ? 'done' : 'error'
+              tc.result  = event.content
+            }
+            updateLastMessage(activeAgentId, textContent, [...pendingToolCalls])
+          } else if (event.type === 'error') {
+            textContent += `\n\nErro: ${event.message}`
+            updateLastMessage(activeAgentId, textContent, [...pendingToolCalls])
+          }
+          // 'done' event — loop will end naturally
+        }
       }
     } catch {
       updateLastMessage(activeAgentId, 'Erro de conexão. Verifique a ANTHROPIC_API_KEY no .env.local')
@@ -201,7 +235,6 @@ export function ChatWorkspace({ sendMessageRef }: Props) {
         {visibleMsgs.map(msg => (
           <ChatMessage key={msg.id} message={msg} />
         ))}
-        {isThinking && <ThinkingAnimation agentIcon={agent?.icon} />}
         <div ref={bottomRef} />
       </div>
 
