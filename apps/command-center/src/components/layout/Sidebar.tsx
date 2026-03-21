@@ -62,16 +62,17 @@ export function Sidebar() {
 
         {/* Technical squad */}
         <Divider label="Squad Técnico" />
-        <div className="flex flex-wrap gap-1 px-2 py-1">
+        <div className="grid grid-cols-2 gap-1 px-2 py-1">
           {TECHNICAL_AGENTS.map(a => (
             <button key={a.id}
               onClick={() => setActiveAgent(a.id)}
-              className="font-mono text-xs px-2 py-0.5 rounded transition-all cursor-pointer"
-              style={{ fontSize: 10, background: 'rgba(26,58,74,0.3)', border: '1px solid rgba(26,58,74,0.6)', color: '#7AA8B8' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(0,212,200,0.4)'; e.currentTarget.style.color = '#00D4C8' }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(26,58,74,0.6)'; e.currentTarget.style.color = '#7AA8B8' }}
+              className="flex flex-col items-start px-2 py-1.5 rounded transition-all cursor-pointer text-left"
+              style={{ background: 'rgba(26,58,74,0.3)', border: '1px solid rgba(26,58,74,0.6)' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(0,212,200,0.4)'; e.currentTarget.style.background = 'rgba(0,212,200,0.05)' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(26,58,74,0.6)'; e.currentTarget.style.background = 'rgba(26,58,74,0.3)' }}
             >
-              {a.name}
+              <span className="font-mono" style={{ fontSize: 10, color: '#00D4C8', lineHeight: 1.3 }}>{a.name}</span>
+              <span className="font-body" style={{ fontSize: 9, color: '#4A7A8A', lineHeight: 1.2 }}>{a.persona}</span>
             </button>
           ))}
         </div>
