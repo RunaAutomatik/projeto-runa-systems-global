@@ -55,15 +55,17 @@ Lives R$97
 
 ---
 
-### $QUAD *(planned)*
-**Status:** Concept
-**What it is:** How to increase productivity and delivery quality with autonomous hyperpersonalized agent squads — scale without infrastructure, charge more without spending more.
+### $QUAD *(in development)*
+**Status:** PRD complete → production phase
+**PRD:** [[squad-dollar-prd]]
+**What it is:** How to build a hyperpersonalized AI agent squad for a solo entrepreneur/mentor/consultant — and run a real business on it. Squad handles operations; expert orchestrates and charges premium.
 **Core promise:** Your squad works. You orchestrate. You charge premium.
-**Format:** Mini-course + squad template + setup guide
-**Price:** R$197–297
-**Upsell to:** RUNA SYSTEMS, RUNA INTERVENÇÃO
+**Format:** Skool classroom — build-in-public screen recordings + framework PDF + full squad config
+**Demo case:** Alpha®'s complete squad built live (offer agent, content agent, automation agent, intelligence agent)
+**Price:** R$297 (full bundle CREATOR$ + MIND$ + $QUAD: R$597)
+**Upsell to:** RUNA SYSTEMS (R$15k) / RUNA MENTORIA (R$30k)
 **Agent responsible:** ORION documents + ARES structures offer + FREYJA sells
-**Note:** THIS project (Runa Systems Global setup) is the raw material for this product.
+**Note:** THIS project (Runa Systems Global) IS the raw material. Production = building Alpha®'s squad live.
 
 ---
 
@@ -80,16 +82,28 @@ Lives R$97
 
 ---
 
-### CREATOR$ *(planned)*
-**Status:** Concept
-**What it is:** How to transfer your intellectual property into a post-human mentor — clone your brain, scale your knowledge infinitely.
-**Core promise:** You appear without appearing. Your AI works 24/7. Your knowledge generates revenue while you sleep.
-**Format:** Mini-course + avatar creation protocol + monetization structure
-**Use case:** Arthur's own Alpha avatar (first AI agent) as live demo
-**Price:** R$247–297
-**Reference:** MAYA® methodology (visual side) + ICARUS® (knowledge side)
-**Upsell to:** MAYA® + ICARUS®
-**Agent responsible:** FREYJA (narrative) + @dev (technical implementation)
+### CREATOR$ *(in development)*
+**Status:** PRD complete → production phase
+**PRD:** [[creator-dollar-prd]]
+**What it is:** How to create a consistent AI-generated visual avatar (fictional character or the expert themselves) + storybook that serves as the creative foundation for all future content and products.
+**Core promise:** Create your avatar. Own your narrative. Appear without appearing.
+**Format:** Skool classroom — short build-in-public videos (screen recording) + text support
+**Demo case:** Alpha® — mentor avatar built live throughout the entire product
+**Price:** R$247 (launch: R$197 first 72h)
+**Upsell to:** MIND$ ("now give it a brain") → $QUAD
+**Agent responsible:** FREYJA (copy) + @dev (technical) + ARES (offer structure)
+
+### MIND$ *(in development)*
+**Status:** PRD complete → production phase
+**PRD:** [[mind-dollar-prd]]
+**What it is:** How to extract intellectual property — cognitive patterns, mental frameworks, decision processes — from any expert (external reference or self) and build an AI knowledge base.
+**Core promise:** Extract the expert. Build the brain. Scale the knowledge.
+**Two routes:** (1) Extract from references like Hormozi → power your agents / (2) Extract your own methodology → your knowledge becomes a transferable asset
+**Format:** Skool classroom — build-in-public videos + text support + extraction protocol PDF
+**Demo case:** ARES agent (Hormozi extraction, already built) + Alpha®'s self-extraction
+**Price:** R$247 (bundle with CREATOR$: R$397)
+**Upsell to:** $QUAD
+**Agent responsible:** ORION documents + ARES structures offer + FREYJA sells
 
 ---
 

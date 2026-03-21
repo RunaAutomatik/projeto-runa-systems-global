@@ -2,11 +2,11 @@
 date: 2026-03-20
 tags: [prd, product, command-center, interface, aiox, squads]
 project: runa-systems-global
-status: v2-revised
+status: v3-planning
 type: prd
 ---
 
-# PRD — Runa Command Center (v2)
+# PRD — Runa Command Center (v3)
 
 > Command & control interface for Runa Systems Global squad operations.
 > Local-first. Bioluminescent HUD aesthetic. Built on Claude API + AIOS architecture.
@@ -451,47 +451,172 @@ health_metrics  — id, checked_at, score, mcp_status jsonb, workers_live int, p
 
 ## 9. Versioned Build Plan
 
-### V1 — Foundation Shell (1 session, deploy & use)
+### V1 — Foundation Shell ✅ COMPLETE (commit: 20e4fee)
 **Goal:** Working HUD with ORION chat. Can talk to agents. Looks right.
 - Layout shell (top bar, sidebar, main workspace)
 - Full HUD design system (colors, tokens, panels, typography)
-- Sidebar: all agents listed with breathing indicators (static data)
+- Sidebar: all agents listed with breathing indicators
 - Chat: ORION active with Claude API integration
-- localStorage state (no Supabase yet)
-- Health Score: static placeholder (always 87% in V1)
+- localStorage state
+- Health Score: static placeholder (87%)
 
-### V2 — All Agents + Artifacts (1 session)
-**Goal:** Full squad accessible. Outputs have a home.
-- All 5 Runa agents activatable with full personas
-- Quick actions per agent
-- Artifact panel (slides in for long outputs)
-- Command palette (`/` trigger)
-- AIOX Technical agents (@dev, @qa, @architect, etc.)
+### V2 — All Agents + Command Panel ✅ COMPLETE (commit: 85cbefc)
+**Goal:** Full squad accessible. Commands discoverable. Self-learning active.
+- All 5 Runa agents with full personas and quick actions
+- CommandPanel (right): 31 commands per agent, grouped by category, collapsible
+- Self-learning Opção C: auto-detection of corrections + manual feedback button per message
+- Memory injected into system prompt (localStorage, max 30 per agent)
+- Visual clear (⌫): clears UI, preserves API context
+- Skills clickable in sidebar (Ads→ARES, SEO→HELIOS with contextual prompts)
+- ThinkingAnimation uses active agent icon
+- Dynamic input placeholder per agent
 
-### V3 — Memory + Projects (1 session)
-**Goal:** Context persists. Projects tracked.
-- Supabase integration (chat history, sessions)
-- Context flow between agents (project_context)
-- Projects view (cards + pipeline)
-- AIOX Stories sub-view (reads docs/stories/)
+### V2.1 — UX Polish ✅ COMPLETE (2026-03-20, same session)
+**Goal:** Fix visual and formatting issues found during real usage.
+- WhatsApp-style typing dots inside message bubble (removed duplicate ThinkingAnimation bar)
+- Agent response format: conversational, no unnecessary headers/bullets, no emojis in text
+- Response length matched to context complexity — no arbitrary paragraph limits
+- FREYJA/HERMES exception: deliverable outputs (copy, flows) formatted as needed
 
-### V4 — Workers + Knowledge (1 session)
+### V3 — Tool Execution Layer + Supabase (next session)
+**Goal:** Interface can actually DO things, not just talk. Data persists.
+
+**Priority 1 — Tool Execution Layer:**
+The interface currently has no bridge between chat and local tools. Claude can suggest commands but cannot execute them. This version adds the full tool loop.
+- Tool definitions added to Claude API call (`tools` array in route.ts)
+- Tool executor layer: spawns local processes (child_process)
+- Multi-turn tool use loop: tool_use → execute → tool_result → resume stream
+- Bridged tools (all CLIs already installed, needs wiring):
+  - `gws` — Google Workspace (Drive, Gmail, Calendar, Sheets, Docs)
+  - `obsidian` — REST API at localhost:27124 (read/write vault)
+  - `git` / `gh` — repository and GitHub operations
+  - `n8n` — workflow triggers via HTTP
+  - Supabase — database queries via MCP
+- Tool execution state in Zustand (pending / running / complete / error)
+- Timeout protection (30s per tool call)
+- Tool results rendered inline in chat (distinct visual treatment)
+
+**Priority 2 — Supabase Integration:**
+- Chat history persisted (sessions, messages, artifacts)
+- project_context table: shared context across agents on the same project
+- Hooks Database (first production use case — see section 10.1)
+
+**Priority 3 — Projects View:**
+- Project cards with pipeline status per agent
+- Context flow: ARES output → auto-available to FREYJA on same project
+
+### V4 — Workers + Knowledge (future)
 **Goal:** Workers visible. Knowledge browseable.
 - Workers view with status + animations
 - Knowledge base / Dossiês browser
 - Health Score real metrics (MCP pings)
 - Ingest UI (drag + drop)
 
-### V5 — Conclave + Polish (1 session)
+### V5 — Conclave + Polish (future)
 **Goal:** War room mode. Full animation system.
 - Conclave mode (split panel + verdict)
 - Full Framer Motion animation system
 - Network visualization (agent graph view)
-- V2 prep: auth, mobile, deploy
+- Deploy prep: auth, mobile responsiveness
 
 ---
 
-## 10. Problem 8 — Design Spec Input Methods
+## 10. Data Architecture — Obsidian vs Supabase
+
+A clear separation of concerns between the two persistence systems. This was decided on 2026-03-20 after identifying that Obsidian was being used for data that belongs in a structured database.
+
+| System | Role | What lives here |
+|--------|------|----------------|
+| **Obsidian** (SÍRIOS vault) | Second brain — knowledge, memory, notes | Agent definitions, session notes, PRDs, research, daily diary, raw material, docs generated by agents as `.md` |
+| **Supabase** | Structured database — operational data | Chat history, sessions, projects, artifacts, workers status, hooks, metrics, scraped content |
+
+**Rule:** If the data needs to be queried, filtered, sorted, or related to other data — it belongs in Supabase. If it's a document, note, or knowledge artifact — it belongs in Obsidian. The two systems are complementary, not redundant.
+
+### 10.1 Hooks Database — First Production Use Case
+
+The first real Supabase use case beyond chat history: a structured database of high-engagement hooks scraped from Instagram.
+
+**Business objective:** Build a proprietary hook library drawn from top-performing content in the same niche, to be used by FREYJA when generating copy.
+
+**Data collection flow:**
+1. Squad agent (or HELIOS) scrapes Instagram profiles of top influencers in the same niche
+2. For each post/reel: extracts the hook (first line/frame), engagement metrics
+3. Engagement priority ranking: **comments > shares > saves > likes**
+4. Stores structured record in Supabase
+
+**Schema:**
+
+```sql
+hooks (
+  id              uuid primary key,
+  creator_handle  text,           -- @influencer
+  platform        text,           -- 'instagram'
+  content_type    text,           -- 'reel' | 'carousel' | 'post'
+  hook_text       text,           -- extracted first line / hook
+  media_url       text,           -- original post URL
+  likes           int,
+  comments        int,
+  shares          int,
+  saves           int,
+  engagement_score float,         -- computed: comments*4 + shares*3 + saves*2 + likes*1
+  niche           text,           -- 'ai-automation' | 'marketing' | etc.
+  posted_at       timestamptz,
+  scraped_at      timestamptz default now()
+)
+```
+
+**FREYJA integration:** When generating hooks or copy, FREYJA can query the top-performing hooks by `engagement_score DESC` and use them as reference, filtered by `content_type` and `niche`.
+
+## 11. Tool Execution Layer — Architecture
+
+This section documents the planned architecture for connecting the chat interface to local CLI tools. Added 2026-03-20 after diagnosis session.
+
+### The Gap
+
+The interface is currently a **pure text relay** — Claude API receives text and returns text. There is no mechanism to execute local commands or use installed tools from within the chat.
+
+**What's installed and ready to be bridged:**
+
+| Tool | Binary | Capabilities |
+|------|--------|-------------|
+| `gws` | `C:/Users/user/AppData/Roaming/npm/gws` | Drive, Gmail, Calendar, Sheets, Docs, Tasks |
+| `obsidian` (REST API) | `https://localhost:27124` | Read/write vault, search notes |
+| `git` | system PATH | Commits, branches, diff, log |
+| `gh` | system PATH | PRs, issues, GitHub API |
+| `n8n` | Railway HTTP API | Workflow triggers and monitoring |
+| Supabase | MCP (`claude_ai_Supabase`) | Database queries and management |
+
+### Implementation Plan
+
+**Layer 1 — Tool Definitions** (route.ts)
+Add `tools` array to the Anthropic SDK call with JSON Schema definitions for each tool.
+
+**Layer 2 — Tool Executor** (new: `src/server/tools/`)
+Server-side module that maps tool names to actual process spawning:
+```
+executor.ts         — spawns child_process, captures stdout/stderr
+gws-tools.ts        — wraps gws CLI commands
+obsidian-tools.ts   — HTTP calls to localhost:27124
+git-tools.ts        — git and gh commands
+n8n-tools.ts        — Railway HTTP API calls
+```
+
+**Layer 3 — Multi-turn Loop** (route.ts + ChatWorkspace.tsx)
+When Claude returns a `tool_use` content block:
+1. Intercept the block in the stream handler
+2. Execute the tool via the executor layer
+3. Submit `tool_result` back to Claude in a new messages call
+4. Stream the final response to the UI
+
+**Visual treatment in chat:**
+Tool calls rendered as a distinct inline block (not a regular message bubble):
+```
+[ ⚙ gws drive list ]  ← tool being called
+  └ Listando arquivos...
+  └ ✓ 23 arquivos encontrados
+```
+
+## 12. Problem 8 — Design Spec Input Methods
 
 For future iterations, user can provide visual direction via:
 
@@ -508,7 +633,7 @@ For V1: **creative freedom** is granted. Arthur iterates based on actual usage.
 
 ---
 
-## 11. Success Criteria
+## 13. Success Criteria
 
 - Opens `localhost:3000` → ORION active → briefing renders in < 2s
 - Can activate any squad agent in 1 click
@@ -520,7 +645,7 @@ For V1: **creative freedom** is granted. Arthur iterates based on actual usage.
 
 ---
 
-## References
+## 14. References
 
 - AIOS video analysis: NotebookLM session `ae105219`
 - [AIOS Blog — Squad Architecture](https://agenciacafeonline.com.br/blog/aios-sistema-operacional-ia-squads-agentes-2026/)
