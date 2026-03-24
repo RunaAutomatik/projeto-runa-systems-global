@@ -44,3 +44,7 @@ Thumbs.db
 # Third-party plugins (installed separately)
 claude-seo/
 obsidian-skills/
+
+# Obsidian plugins (installed locally, not committed)
+AKASHA/.obsidian/plugins/
+SÍRIOS/.obsidian/plugins/
