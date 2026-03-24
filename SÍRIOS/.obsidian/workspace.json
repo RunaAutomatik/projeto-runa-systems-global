@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📋 Agentes/reel-gpt-instructions.md",
+                "file": "📚 Referências/analysis-instagram-caroldutra.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "reel-gpt-instructions"
+              "title": "analysis-instagram-caroldutra"
             }
           }
         ]
@@ -182,14 +182,17 @@
   },
   "active": "f14a3fcbd5beea3f",
   "lastOpenFiles": [
-    "📋 Agentes/orion.md",
+    "📚 Referências/analysis-instagram-dougdemarco.md",
+    "📚 Referências/analysis-instagram-sarahseller.md",
+    "📚 Referências/arthur-storyboard.md",
+    "📐 Projetos/mind-dollar-prd.md",
+    "📐 Projetos/creator-dollar-prd.md",
+    "📚 Referências/alpha-storyboard.md",
     "📋 Agentes/reel-gpt-instructions.md",
+    "📋 Agentes/orion.md",
     "📋 Agentes/lens-gpt-instructions.md",
     "📐 Projetos/product-catalog.md",
-    "📐 Projetos/creator-dollar-prd.md",
     "📐 Projetos/lens-gpt-instructions.md",
-    "📚 Referências/arthur-storyboard.md",
-    "📚 Referências/alpha-storyboard.md",
     "🔗 Templates/storyboard-template.md",
     "📋 Agentes/agents-deploy-links.md",
     "📋 Agentes/reel-gpt-kb.md",
@@ -204,10 +207,7 @@
     "📐 Projetos/runa-brand-identity-system.md",
     "📐 Projetos/reel-gpt-instructions.md",
     "📐 Projetos/squad-dollar-prd.md",
-    "📐 Projetos/mind-dollar-prd.md",
     "📐 Projetos/runa-command-center-prd.md",
-    "🛠️ Skills.md",
-    "📐 Projetos/runa-systems-business-context.md",
     "📅 Diário"
   ]
 }
