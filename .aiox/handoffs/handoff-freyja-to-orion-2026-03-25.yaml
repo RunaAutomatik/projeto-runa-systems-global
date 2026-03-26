@@ -1,0 +1,76 @@
+handoff:
+  from_agent: freyja
+  to_agent: orion
+  timestamp: 2026-03-25
+  priority: high
+
+story_context:
+  active_work: "@arthsystems_ Instagram build"
+  current_phase: "Content creation pipeline — automation design needed"
+  branch: main
+
+context_summary: |
+  FREYJA has completed the narrative and content architecture for @arthsystems_:
+  - Bio finalized
+  - 3 pinned posts drafted (manifesto, proof, mirror)
+  - Comment-to-checkout conversion framework established
+  - CTA keyword map: ARQUITETO / RUNA / SISTEMA → ManyChat → Offer Doc → Checkout
+  - Content folder created: SÍRIOS/📱 Instagram/@arthsystems_/
+
+  Arthur now needs an automated pipeline for content production — images, carousels,
+  and videos (Stories/Reels/Ads). Remotion was mentioned as a candidate for video.
+  Antigravity native tools are available in the environment.
+
+request_to_orion: |
+  FREYJA needs ORION to design the architecture for the content automation pipeline.
+
+  QUESTION: What is the best technical architecture to automate the following?
+
+  1. CAROUSEL CREATION
+     - Input: FREYJA's brief (theme + copy + slide structure)
+     - Output: Ready-to-post carousel (images with text, brand aesthetic)
+     - Options to evaluate: Claude API + image gen API + canvas/puppeteer rendering?
+
+  2. POST IMAGE CREATION
+     - Input: FREYJA's brief (visual idea + mood + copy overlay if any)
+     - Output: Single image, dark aesthetic, Arthur's brand
+     - Options: Imagen (Google), DALL-E, Midjourney API, Stable Diffusion?
+
+  3. VIDEO / STORIES / REELS / ADS
+     - Input: FREYJA's script + visual direction
+     - Output: Animated video, formatted for 9:16
+     - Remotion confirmed as strong candidate — React-based programmatic video
+     - Evaluate: Remotion workers vs n8n automation (HERMES) vs standalone worker
+
+  4. DISTRIBUTION
+     - Meta Graph API available (Instagram Business Account: 17841472834166826)
+     - Should publishing be part of the same worker or separate step?
+
+  CONSTRAINTS:
+  - Docker NOT available in this environment
+  - Antigravity IDE native tools available
+  - n8n instance on Railway (HERMES manages)
+  - We are inside the monorepo: runa-systems-global
+
+  FREYJA's ideal output from this discussion:
+  - Recommended stack per content type
+  - Worker architecture (where does each piece live in the monorepo?)
+  - What FREYJA's input format should be (the brief she hands off to the worker)
+  - Effort estimate per content type (is Remotion worth the setup for Stage 1?)
+
+decisions_so_far:
+  - Remotion mentioned by Arthur as candidate for video/Stories/ads
+  - Workers as the likely execution layer
+  - Google Antigravity has native tools that may accelerate some of this
+  - All content follows FREYJA's narrative + Atlas's offer layer
+
+files_relevant:
+  - SÍRIOS/📱 Instagram/@arthsystems_/_hub.md
+  - SÍRIOS/📐 Projetos/conversion-framework-cta.md
+  - SÍRIOS/📐 Projetos/product-catalog.md
+  - .aiox-core/infrastructure/ (for worker patterns)
+
+next_action: |
+  ORION responds with recommended architecture.
+  FREYJA adapts content brief format to match the pipeline input.
+  @dev implements the workers once architecture is approved.
