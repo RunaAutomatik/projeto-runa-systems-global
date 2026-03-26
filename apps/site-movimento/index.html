@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOVA — Sites que vendem em 48 horas</title>
+  <meta name="description" content="Sites com animação de vídeo scroll-driven. Entrega em 48h, hosting e domínio incluídos. R$ 1.000 para os primeiros 10 clientes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-brand">MOVA</div>
+    <div class="loader-bar-wrap">
+      <div id="loader-bar"></div>
+    </div>
+    <span id="loader-percent">0%</span>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/5549999527013?text=Olá%2C%20quero%20saber%20mais%20sobre%20o%20Site%20de%20Movimento"
+     target="_blank" rel="noopener" class="whatsapp-float" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- FIXED HEADER -->
+  <header class="site-header">
+    <nav>
+      <span class="nav-logo">MOVA</span>
+      <div class="nav-links">
+        <a href="#oferta">oferta</a>
+        <a href="#cta" class="nav-cta">garantir vaga →</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO — standalone 100vh -->
+  <section class="hero-standalone">
+    <div class="hero-inner">
+      <span class="hero-label">Site de Movimento</span>
+      <h1 class="hero-heading">
+        <span class="word">O site que</span>
+        <span class="word">agências cobram</span>
+        <span class="word accent">R$ 4.000 por.</span>
+      </h1>
+      <p class="hero-tagline">Entregue em 48 horas. Por R$ 1.000.</p>
+      <p class="hero-sub">Hosting + domínio incluídos. Garantia de resultado.</p>
+      <div class="hero-actions">
+        <a href="#cta" class="btn-primary">Garantir minha vaga →</a>
+        <a href="https://wa.me/5549999527013?text=Olá%2C%20quero%20saber%20mais%20sobre%20o%20Site%20de%20Movimento"
+           target="_blank" rel="noopener" class="btn-ghost">Falar no WhatsApp</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>role</span>
+    </div>
+  </section>
+
+  <!-- CANVAS WRAP -->
+  <div class="canvas-wrap" id="canvas-wrap">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- DARK OVERLAY -->
+  <div id="dark-overlay"></div>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap" id="marquee-1" data-scroll-speed="-28">
+    <div class="marquee-text">
+      48 HORAS &nbsp;·&nbsp; HOSTING INCLUSO &nbsp;·&nbsp; ANIMAÇÃO DE VÍDEO &nbsp;·&nbsp;
+      SITES QUE CONVERTEM &nbsp;·&nbsp; 48 HORAS &nbsp;·&nbsp; HOSTING INCLUSO &nbsp;·&nbsp;
+      ANIMAÇÃO DE VÍDEO &nbsp;·&nbsp; SITES QUE CONVERTEM &nbsp;·&nbsp;
+    </div>
+  </div>
+
+  <!-- SCROLL CONTAINER -->
+  <div id="scroll-container">
+
+    <!-- SECTION 1 — DOR -->
+    <section class="scroll-section section-content align-left"
+             data-enter="8" data-leave="22" data-animation="slide-left">
+      <div class="section-inner">
+        <span class="section-label">001</span>
+        <h2 class="section-heading">Você já pagou por um site que não entregou nada.</h2>
+        <p class="section-body">
+          Freelancer que sumiu. Agência que cobrou R$ 3.000 e demorou dois meses.
+          Site que parece de 2015 e não gerou um contato sequer.
+        </p>
+        <p class="section-note">Enquanto isso, seus concorrentes aparecem antes de você no Google.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — SOLUÇÃO -->
+    <section class="scroll-section section-content align-right"
+             data-enter="26" data-leave="40" data-animation="slide-right">
+      <div class="section-inner">
+        <span class="section-label">002</span>
+        <h2 class="section-heading">Um site diferente de tudo que você já viu.</h2>
+        <p class="section-body">
+          Quando o visitante rola a página, o vídeo do seu negócio ganha vida.
+          A tecnologia que grandes marcas usam — agora disponível para o seu negócio.
+        </p>
+        <p class="section-note">Não é um site. É uma experiência.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — COMO FUNCIONA -->
+    <section class="scroll-section section-content align-left"
+             data-enter="43" data-leave="56" data-animation="scale-up">
+      <div class="section-inner">
+        <span class="section-label">003</span>
+        <h2 class="section-heading">Você envia o material.<br/>Em 48h está no ar.</h2>
+        <ul class="section-list">
+          <li>Animação de vídeo scroll-driven</li>
+          <li>4–5 seções otimizadas para conversão</li>
+          <li>Hosting por 12 meses incluso</li>
+          <li>Domínio por 1 ano incluso</li>
+          <li>Otimizado para celular</li>
+          <li>Entrega em até 48h</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — STATS (dark overlay) -->
+    <section class="scroll-section section-stats"
+             data-enter="57" data-leave="72" data-animation="stagger-up">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-row">
+            <span class="stat-number" data-value="48" data-decimals="0">0</span>
+            <span class="stat-suffix">h</span>
+          </div>
+          <span class="stat-label">prazo de entrega</span>
+        </div>
+        <div class="stat">
+          <div class="stat-row">
+            <span class="stat-number" data-value="4" data-decimals="0">0</span>
+            <span class="stat-suffix">x</span>
+          </div>
+          <span class="stat-label">mais barato que agências</span>
+        </div>
+        <div class="stat">
+          <div class="stat-row">
+            <span class="stat-number" data-value="30" data-decimals="0">0</span>
+            <span class="stat-suffix">d</span>
+          </div>
+          <span class="stat-label">garantia de resultado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — OFERTA -->
+    <section id="oferta" class="scroll-section section-content align-right"
+             data-enter="74" data-leave="87" data-animation="clip-reveal">
+      <div class="section-inner">
+        <span class="section-label">004</span>
+        <h2 class="section-heading">Tudo incluso.<br/>Por R$ 1.000.</h2>
+        <ul class="section-list offer-list">
+          <li><span class="offer-main">Site de Movimento completo</span><span class="offer-detail">animação + 4-5 seções + hosting + domínio</span></li>
+          <li><span class="offer-main">Script de Apresentação Digital</span><span class="offer-detail">copy pronto para WhatsApp e DM</span></li>
+          <li><span class="offer-main">Setup Google Meu Negócio</span><span class="offer-detail">apareça no Maps da sua cidade</span></li>
+          <li><span class="offer-main">1 LP Promocional</span><span class="offer-detail">válido nos 90 dias seguintes</span></li>
+        </ul>
+        <p class="guarantee-note">
+          Se em 30 dias você não receber nenhum contato via site — refazemos tudo. Sem custo.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — CTA FINAL -->
+    <section id="cta" class="scroll-section section-cta"
+             data-enter="88" data-leave="100" data-animation="fade-up" data-persist="true">
+      <div class="cta-inner">
+        <span class="section-label">lançamento</span>
+        <h2 class="cta-heading">Restam <em class="vagas-num">10</em> vagas<br/>este mês.</h2>
+        <p class="cta-sub">Preço de R$ 1.000 apenas para os primeiros 10 clientes.<br/>Depois disso, R$ 1.500.</p>
+        <div class="cta-buttons">
+          <a href="https://buy.stripe.com/test_3cI7sKgMN88t3uV70m8ww00" target="_blank" rel="noopener" class="btn-primary btn-lg">
+            Garantir por R$ 1.000 →
+          </a>
+          <a href="https://wa.me/5549999527013?text=Olá%2C%20quero%20garantir%20minha%20vaga%20no%20Site%20de%20Movimento"
+             target="_blank" rel="noopener" class="btn-whatsapp btn-lg">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Prefiro falar antes
+          </a>
+        </div>
+        <p class="cta-fine">Capacidade: 15 projetos/mês. Quando acabar, acabou.</p>
+      </div>
+    </section>
+
+  </div><!-- end scroll-container -->
+
+  <footer class="site-footer">
+    <span>MOVA · Runa Systems Global · 2026</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
