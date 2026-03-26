@@ -61,16 +61,16 @@ Lives R$97
 **What it is:** How to build a hyperpersonalized AI agent squad for a solo entrepreneur/mentor/consultant — and run a real business on it. Squad handles operations; expert orchestrates and charges premium.
 **Core promise:** Your squad works. You orchestrate. You charge premium.
 **Format:** Skool classroom — build-in-public screen recordings + framework PDF + full squad config
-**Demo case:** Alpha®'s complete squad built live (offer agent, content agent, automation agent, intelligence agent)
+**Demo case:** Runa Systems squad built live — ORION, FREYJA, ATLAS, HERMES + AIOX operating as a real business
 **Price:** R$297 (full bundle CREATOR$ + MIND$ + $QUAD: R$597)
 **Upsell to:** RUNA SYSTEMS (R$15k) / RUNA MENTORIA (R$30k)
 **Agent responsible:** ORION documents + ARES structures offer + FREYJA sells
-**Note:** THIS project (Runa Systems Global) IS the raw material. Production = building Alpha®'s squad live.
+**Note:** THIS project (Runa Systems Global) IS the raw material. The squad running Runa Systems IS the product demo.
 
 ---
 
-### POSICIONAMENTO$ *(planned)*
-**Status:** Concept
+### POSICIONAMENTO$ *(in development)*
+**Status:** Being built live — raw material in production
 **What it is:** How to increase your lead base and conversion without paid ads — through narrative construction and strategic positioning on Instagram.
 **Core promise:** Organic authority. Sales letters disguised as posts. Clients in permanent buying state.
 **Format:** Mini-course + content strategy template + FREYJA methodology
@@ -78,7 +78,8 @@ Lives R$97
 **Reference models:** @dougdemarco_ (disguised sales), @sarahseller.br (persona positioning)
 **Upsell to:** ALPHA®, RUNA MENTORIA
 **Agent responsible:** FREYJA (this IS her methodology documented)
-**Raw material:** [[instagram-market-references]] + Arthur's Instagram results
+**Demo case:** FREYJA building @arthsystems_ from 0 — the journey from recovery narrative to architect positioning
+**Raw material:** [[instagram-market-references]] + @arthsystems_ live build
 
 ---
 
@@ -88,7 +89,7 @@ Lives R$97
 **What it is:** How to create a consistent AI-generated visual avatar (fictional character or the expert themselves) + storybook that serves as the creative foundation for all future content and products.
 **Core promise:** Create your avatar. Own your narrative. Appear without appearing.
 **Format:** Skool classroom — short build-in-public videos (screen recording) + text support
-**Demo case:** Alpha® — mentor avatar built live throughout the entire product
+**Demo case:** Alpha® built live throughout the entire product — avatar creation for the Alpha® program
 **Price:** R$247 (launch: R$197 first 72h)
 **Upsell to:** MIND$ ("now give it a brain") → $QUAD
 **Agent responsible:** FREYJA (copy) + @dev (technical) + ARES (offer structure)
@@ -104,6 +105,19 @@ Lives R$97
 **Price:** R$247 (bundle with CREATOR$: R$397)
 **Upsell to:** $QUAD
 **Agent responsible:** ORION documents + ARES structures offer + FREYJA sells
+
+---
+
+### SITE$ *(planned)*
+**Status:** Concept — raw material being built
+**What it is:** How to create a client budget/proposal in interactive LP (website) format optimized for video — increases conversion and closing rates vs traditional PDF.
+**Core promise:** Your proposal becomes an experience. Clients close faster.
+**Format:** Mini-course + template + the LP itself as product demo
+**Price:** R$197–297
+**Note:** Naming pattern confirmed — $ replaces S (Runa Systems product standard)
+**Upsell to:** $QUAD, POSICIONAMENTO$
+**Agent responsible:** FREYJA (copy) + @dev (technical build) + ARES (offer structure)
+**Raw material:** Arthur's first client budget built as LP/site — documented live
 
 ---
 

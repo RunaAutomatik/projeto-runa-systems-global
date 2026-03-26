@@ -5,14 +5,14 @@
 
 ## 1. VISÃO GERAL DO PERFIL
 
-| Campo | Dado |
-|-------|------|
-| **Username** | @acaroldutraa |
-| **Nome** | Carol Dutra |
-| **Verificado** | ✅ Sim |
-| **Seguidores** | 3.226 |
-| **Seguindo** | 87 |
-| **Posts** | 10 |
+| Campo             | Dado                              |
+| ----------------- | --------------------------------- |
+| **Username**      | @acaroldutraa                     |
+| **Nome**          | Carol Dutra                       |
+| **Verificado**    | ✅ Sim                             |
+| **Seguidores**    | 3.226                             |
+| **Seguindo**      | 87                                |
+| **Posts**         | 10                                |
 | **Tag do perfil** | @acarolweb (mencionada nos posts) |
 
 ### Bio Completa
