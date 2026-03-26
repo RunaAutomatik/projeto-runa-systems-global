@@ -1,4 +1,8 @@
-import 'dotenv/config'
+import { config } from 'dotenv'
+import { resolve, dirname } from 'path'
+import { fileURLToPath } from 'url'
+// Load root .env (monorepo pattern — workers share env file at repo root)
+config({ path: resolve(dirname(fileURLToPath(import.meta.url)), '../../../.env') })
 import express from 'express'
 import { matchTrigger } from './triggers.js'
 import { sendDM, sendQuickReply } from './instagram.js'
@@ -108,7 +112,7 @@ async function handleMessage(value) {
     pendingFollowCheck.delete(userId)
   } else if (notFollower) {
     console.log(`[dm] User ${userId} does not follow — prompting`)
-    await sendDM(userId, "Sem problema! Segue o perfil e depois é só responder aqui com "sim" que te mando o link 😊")
+    await sendDM(userId, 'Sem problema! Segue o perfil e depois é só responder aqui com "sim" que te mando o link 😊')
   }
 }
 

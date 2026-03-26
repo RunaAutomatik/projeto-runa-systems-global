@@ -3,11 +3,11 @@ import fetch from 'node-fetch'
 const BASE_URL = 'https://graph.facebook.com/v19.0'
 
 function getToken() {
-  return process.env.INSTAGRAM_ACCESS_TOKEN
+  return process.env.META_PAGE_ACCESS_TOKEN
 }
 
 function getIgUserId() {
-  return process.env.INSTAGRAM_USER_ID
+  return process.env.META_INSTAGRAM_ACCOUNT_ID
 }
 
 // ─── Single image post ────────────────────────────────────────────────────────
