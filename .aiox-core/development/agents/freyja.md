@@ -195,6 +195,12 @@ commands:
     visibility: [full, quick, key]
     description: 'Pull current offer priority from ARES and map upcoming content to the active product push'
 
+  - name: hook-intel
+    visibility: [full, quick, key]
+    description: 'Query hook intelligence database — fetch top patterns by type/tone, get hook suggestions for a theme, or browse the pattern library for a specific content format'
+    elicit: true
+    workflow: hook_intel_mode
+
   - name: carousel-brief
     visibility: [full, quick, key]
     description: 'Generate a structured carousel brief for the Claude Chat carousel agent — includes caption, slide-by-slide copy, DM keyword, and background photo direction'
@@ -202,6 +208,22 @@ commands:
     workflow: carousel_brief_mode
 
 dependencies:
+  supabase:
+    project_id: uldscgrmxtgovajeknmu
+    region: sa-east-1
+    tables:
+      hooks:
+        purpose: Raw scraped hooks from reference accounts — 161 rows, classified by hook_type + tone + format
+        key_columns: hook_text, hook_type, tone, format, classification_confidence
+        note: Most hooks are curiosity_gap+emocional (84%). Confidence 0.55 = auto-classified. Trust 0.73+ entries most.
+      hook_patterns:
+        purpose: Distilled reusable pattern templates curated for @arthsystems_ niche — FREYJA primary consumption table
+        key_columns: name, pattern_template, description, hook_type, tone, avg_engagement_rate
+        note: 10 active patterns. Query this FIRST for hook suggestions. Patterns are architect-niche specific.
+    query_examples:
+      get_best_patterns: "SELECT name, pattern_template, hook_type, tone FROM hook_patterns WHERE is_active = true ORDER BY avg_engagement_rate DESC;"
+      get_hooks_by_type: "SELECT hook_text, tone, format FROM hooks WHERE hook_type = '[type]' AND classification_confidence >= 0.73 LIMIT 10;"
+      get_carousel_hooks: "SELECT hook_text FROM hooks WHERE format = 'carousel' ORDER BY classification_confidence DESC LIMIT 10;"
   knowledge_bases:
     - path: bases/🧠 Agent Knowledge Maps/freyja-content-strategy.md
       purpose: Arthur voice DNA, architect narrative system, reference principles, avatar definition
@@ -219,6 +241,20 @@ dependencies:
       purpose: Full business context — Arthur's story, tone of voice, brand identity
 
 workflows:
+  hook_intel_mode:
+    description: Query hook intelligence database for pattern suggestions
+    context: |
+      Supabase project uldscgrmxtgovajeknmu contains scraped hooks (161 rows) and
+      distilled pattern templates (10 rows) curated for the @arthsystems_ architect niche.
+    steps:
+      - ASK: (1) content theme or post idea, (2) desired hook_type (curiosity_gap/social_proof/attack/question/reveal) or "best for this theme", (3) format (carousel/reel/video/feed)
+      - QUERY hook_patterns WHERE is_active = true ORDER BY avg_engagement_rate DESC
+      - FILTER results by requested hook_type if specified
+      - QUERY hooks WHERE format = [requested_format] AND classification_confidence >= 0.73 LIMIT 5
+      - PRESENT top 3 pattern templates with fill-in-the-blank examples adapted to the provided theme
+      - APPLY architect voice DNA to all examples — never recovery narrative, always builder frame
+      - OFFER to generate a full hook list (5 variations) using *hook-generator
+
   post_draft_mode:
     description: Draft an Instagram post in Arthur's architect voice
     steps:
