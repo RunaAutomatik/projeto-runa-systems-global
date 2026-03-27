@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  
+  <!-- Vertical stem -->
+  <line x1="100.0" y1="30.0" x2="100.0" y2="170.0"
+        stroke="#0E9E8E" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Ansuz branch 1 -->
+  <line x1="100.0" y1="60.0" x2="185.0" y2="115.99999999999999"
+        stroke="#0E9E8E" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Ansuz branch 2 -->
+  <line x1="100.0" y1="104.0" x2="185.0" y2="160.0"
+        stroke="#0E9E8E" stroke-width="2.4" stroke-linecap="round"/>
+  <!-- Horizontal bar — circuit terminal (gold) -->
+  <line x1="24.0" y1="40.0" x2="176.0" y2="40.0"
+        stroke="#C9A84C" stroke-width="1.7999999999999998" stroke-linecap="round" opacity="0.9"/>
+</svg>

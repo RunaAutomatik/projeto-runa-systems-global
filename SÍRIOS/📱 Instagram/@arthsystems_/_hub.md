@@ -82,15 +82,15 @@ POST
 ## Content Index
 
 ### 📌 Pins (permanent)
-- [[pin-01-manifesto]] — Manifesto: "Construo negócios que não precisam de mim"
-- [[pin-02-prova]] — Prova: "Enquanto você lê isso, o Runa Systems está funcionando"
-- [[pin-03-espelho]] — Espelho: "Você não tem um problema de produtividade"
+- [[pin-01-manifesto]] — Manifesto: "Construo negócios que não precisam de mim" ✅ **ready-to-publish** — assets em `pin-01-assets/`
+- [[pin-02-prova]] — Prova: "Enquanto você lê isso, o Runa Systems está funcionando" _(draft)_
+- [[pin-03-espelho]] — Espelho: "Você não tem um problema de produtividade" _(draft)_
 
 ### 🖼️ Posts (imagem)
 *(none yet)*
 
 ### 🎠 Carrosseis
-*(none yet)*
+- Pin 01 — 7 slides gerados ✅ — aguardando publish via instagram-worker
 
 ### 🎬 Reels
 *(none yet)*

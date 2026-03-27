@@ -195,6 +195,12 @@ commands:
     visibility: [full, quick, key]
     description: 'Pull current offer priority from ARES and map upcoming content to the active product push'
 
+  - name: carousel-brief
+    visibility: [full, quick, key]
+    description: 'Generate a structured carousel brief for the Claude Chat carousel agent — includes caption, slide-by-slide copy, DM keyword, and background photo direction'
+    elicit: true
+    workflow: carousel_brief_mode
+
 dependencies:
   knowledge_bases:
     - path: bases/🧠 Agent Knowledge Maps/freyja-content-strategy.md
@@ -246,4 +252,93 @@ workflows:
       - DRAFT titles/themes for each post (not full captions yet)
       - MAP the CTA strategy (which posts activate which keyword automations)
       - OUTPUT as content calendar with themes, formats, and CTA map
+
+  carousel_brief_mode:
+    description: Generate a structured carousel brief ready for the Claude Chat carousel agent
+    context: |
+      The carousel agent (Claude Chat) already owns the full design system — colors, typography,
+      glyph, slide structure. FREYJA only provides content mapped to the slide architecture.
+      This is a content contract, not a visual description.
+    steps:
+      - LOAD freyja-content-strategy.md knowledge base
+      - LOAD product-catalog.md (to identify implicit offer)
+      - ASK for: (1) post theme or raw idea, (2) DM keyword if not defined, (3) whether a setup photo is available for slides 1 and 7, (4) style if not in brief (ARCHITECT/MANIFESTO/TERMINAL) — auto-select from post type if not informed
+      - IDENTIFY which arc post this carousel belongs to (pins or posts 04–13)
+      - WRITE the Instagram caption (full invisible sales letter — same standard as *post-draft)
+      - WRITE slide-by-slide copy using the 7-slide architecture below:
+          Slide 1 (HERO): bold declaration or paradox — no body copy
+          Slide 2 (PROBLEMA): tag + headline + 2-3 lines developing the pain
+          Slide 3 (VIRADA): headline + 1-2 lines — Arthur's reframe
+          Slide 4 (SISTEMA): tag + headline + 3 numbered steps (title / short description)
+          Slide 5 (PROVA): tag + headline + 3 terminal features (›_ label / description)
+          Slide 6 (COMO FAZER): headline + 3 numbered steps (title / description)
+          Slide 7 (CTA): 1 optional support line + DM keyword (CAPS, 800 weight)
+      - APPLY voice DNA rules to every line: short sentences, architect frame, no recovery narrative
+      - APPLY cognitive tension test on slide 1 and 3 — is there a gap that creates desire?
+      - OUTPUT the complete brief in the standard format below — ready to paste into Claude Chat
+    output_format: |
+      BRIEF — CAROUSEL @arthsystems_
+      ================================
+      Tema: [assunto]
+      Estilo: [ARCHITECT | MANIFESTO | TERMINAL]
+      Palavra-chave DM: [KEYWORD]
+      Oferta implícita: [produto sendo vendido por baixo]
+      Número de slides: 7
+      Foto de fundo: [sim — descrever referência | não disponível]
+
+      LEGENDA (Instagram caption):
+      [full caption — invisible sales letter format]
+
+      ---
+
+      SLIDE 1 — HERO
+      Declaração: "[bold — paradoxo ou resultado]"
+
+      ---
+
+      SLIDE 2 — PROBLEMA
+      Tag: [CATEGORIA]
+      Título: "[a dor]"
+      Body: "[2-3 linhas]"
+
+      ---
+
+      SLIDE 3 — VIRADA
+      Título: "[perspectiva diferente]"
+      Body: "[1-2 linhas]"
+
+      ---
+
+      SLIDE 4 — SISTEMA
+      Tag: [CATEGORIA]
+      Título: "[o que foi construído]"
+      Steps:
+        01 — [título] / [descrição curta]
+        02 — [título] / [descrição curta]
+        03 — [título] / [descrição curta]
+
+      ---
+
+      SLIDE 5 — PROVA / DETALHE
+      Tag: [CATEGORIA]
+      Título: "[bastidor real]"
+      Features:
+        ›_ [label] / [descrição]
+        ›_ [label] / [descrição]
+        ›_ [label] / [descrição]
+
+      ---
+
+      SLIDE 6 — COMO FAZER
+      Título: "[o processo]"
+      Steps:
+        01 — [título] / [descrição]
+        02 — [título] / [descrição]
+        03 — [título] / [descrição]
+
+      ---
+
+      SLIDE 7 — CTA
+      Suporte: "[1 linha final — fecha o arco]"
+      Palavra-chave: [KEYWORD]
 ```

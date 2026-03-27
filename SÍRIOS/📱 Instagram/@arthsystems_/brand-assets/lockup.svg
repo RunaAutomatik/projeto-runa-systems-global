@@ -1,0 +1,19 @@
+<svg width="400" height="80" viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;display=swap');</style>
+  </defs>
+  <!-- Glyph inline -->
+  <line x1="21.599999999999998" y1="8.0" x2="21.599999999999998" y2="70.4"
+        stroke="#0E9E8E" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="21.599999999999998" y1="25.6" x2="39.744" y2="44.800000000000004"
+        stroke="#0E9E8E" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="21.599999999999998" y1="43.2" x2="39.744" y2="62.400000000000006"
+        stroke="#0E9E8E" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="5.183999999999999" y1="16.0" x2="38.016" y2="16.0"
+        stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" opacity="0.9"/>
+  <!-- Handle text -->
+  <text x="59.199999999999996" y="48.4"
+        font-family="Inter, -apple-system, sans-serif"
+        font-size="24.0" font-weight="600"
+        fill="#C9A84C" letter-spacing="0.5">@arthsystems_</text>
+</svg>
