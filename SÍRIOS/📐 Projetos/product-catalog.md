@@ -5,7 +5,16 @@ project: runa-systems-global
 status: live — evolves as products are built
 type: source-of-truth
 ---
+Beleza só, a gente tem uma questão, um problema: todos os produtos que estão ali com médio ticket, né, mid ticket, são produtos, na verdade, que têm menos valor agregado porque são assistentes GPT, não são nem agentes, são só assistentes ali, GPTs de conversa. Então eu vejo eles mais como low ticket e, na verdade, eles já meio que se tornaram obsoletos, assim. Então fora o ícaros, que serve para criar outros agentes, e também acho que não faz muito sentido porque o produto agentes ele já é para isso, então eu não vejo esses produtos como médio ticket e nem como produtos mais do nosso ecossistema. Já tinha comentado isso em algum outro momento então eu prefiro tirar todos eles do médio ticket. O que entra como médio ticket, o squad, é um médio ticket mais alto, inclusive 2,997, 3,997. Nesse sentido:
 
+- agentes é um médio ticket
+- de posicionamentos é um médio ticket, talvez um pouquinho mais baixo, que a gente consiga trabalhar o orçamento
+- zé um novo ticket
+- os sites pode ser um médio pra lul
+- o creator é um médio pra ai, um médio ali também de 2,997
+- o minds é um médio ticket também
+
+E eu acho que ele já consegue tirar alguns parâmetros de como eu enxergo os produtos assim, médio, low e high, tá tudo certo.
 # Runa Systems Global — Product Catalog
 
 > Source of truth for all products, their status, and their role in the teia.
