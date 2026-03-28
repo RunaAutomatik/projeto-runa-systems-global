@@ -1,6 +1,17 @@
 {
   "language": "portuguese",
   "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "WebFetch",
+      "Grep",
+      "Glob",
+      "NotebookEdit",
+      "WebSearch"
+    ],
     "deny": [
       "Bash(rm -rf .aiox-core/**)",
       "Bash(rm -rf .aiox-core/core/**)",

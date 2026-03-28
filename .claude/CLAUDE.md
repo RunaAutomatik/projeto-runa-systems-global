@@ -145,6 +145,8 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `mcp-usage.md` | MCP server usage rules and tool selection priority |
 | `story-lifecycle.md` | Story status transitions and quality gates |
 | `workflow-execution.md` | 4 primary workflows (SDC, QA Loop, Spec Pipeline, Brownfield) |
+| `product-radar.md` | Continuous product opportunity capture — everything built feeds RUNA SYSTEMS |
+| `capability-map.md` | Tool/skill/MCP assignment per agent and product — check before executing any task |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->
