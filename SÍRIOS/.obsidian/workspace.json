@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "📋 Agentes/ares.md",
+                "file": "📱 Instagram/@arthsystems_/carousel-system-message.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ares"
+              "title": "carousel-system-message"
             }
           }
         ]
@@ -182,8 +182,34 @@
   },
   "active": "f14a3fcbd5beea3f",
   "lastOpenFiles": [
-    "📋 Agentes/freyja.md",
+    "📐 Projetos/capability-map.md",
+    "📋 Agentes/agents-deploy-links.md",
+    "📱 Instagram/@arthsystems_/carousel-system-message.md",
+    "📱 Instagram/@arthsystems_/brand-assets/lockup.svg",
+    "📱 Instagram/@arthsystems_/brand-assets/avatar.svg",
+    "📱 Instagram/@arthsystems_/brand-assets/glyph.svg",
+    "📱 Instagram/@arthsystems_/brand-assets/watermark-800.png",
+    "📱 Instagram/@arthsystems_/brand-assets/lockup-400x80.png",
+    "📱 Instagram/@arthsystems_/brand-assets/avatar-200.png",
+    "📱 Instagram/@arthsystems_/brand-assets/avatar-512.png",
+    "📱 Instagram/@arthsystems_/brand-assets/glyph-dark-512.png",
+    "📱 Instagram/@arthsystems_/brand-assets/glyph-512.png",
+    "📱 Instagram/@arthsystems_/brand-assets/_export-source.html",
+    "📱 Instagram/@arthsystems_/brand-assets",
+    "📱 Instagram/@arthsystems_/📌 pins/pin-01-assets/slide_7.png",
+    "📱 Instagram/@arthsystems_/📌 pins/pin-01-assets/carousel_arthsystems.html",
+    "📱 Instagram/@arthsystems_/📌 pins/pin-01-assets",
+    "📋 Agentes/reel-gpt-instructions.md",
+    "📐 Projetos/product-catalog.md",
+    "📐 Projetos/conversion-framework-cta.md",
+    "📐 Projetos/creator-dollar-prd.md",
     "📱 Instagram/@arthsystems_/📌 pins/pin-01-manifesto.md",
+    "📋 Agentes/ares.md",
+    "📅 Diário/2026-03-25.md",
+    "📐 Projetos/site-movimento-offer-copy.md",
+    "📐 Projetos/content-pipeline-architecture.md",
+    "📚 Referências/analysis-mirofish-2026-03-25.md",
+    "📋 Agentes/freyja.md",
     "📐 Projetos/site-movimento-briefing.md",
     "📱 Instagram/@arthsystems_/posts/post-13-invitation-tudo-que-voce-viu.md",
     "📱 Instagram/@arthsystems_/posts/post-12-twist-equipe-ineficiencia.md",
@@ -197,24 +223,10 @@
     "📱 Instagram/@arthsystems_/posts/post-04-twist-ia-estrutura.md",
     "📱 Instagram/@arthsystems_/posts",
     "📱 Instagram/@arthsystems_/arc-10-posts.md",
-    "📱 Instagram/@arthsystems_/_hub.md",
-    "📱 Instagram/@arthsystems_/📌 pins/pin-02-prova.md",
-    "📐 Projetos/conversion-framework-cta.md",
-    "📚 Referências/extraction-whatsapp-references-2026-03-24.md",
-    "📐 Projetos/tooling-inventory.md",
-    "📱 Instagram/@arthsystems_/📌 pins/pin-03-espelho.md",
-    "📐 Projetos/knowledge-update-2026-03-24-product-cases.md",
     "📱 Instagram/@arthsystems_/📌 pins",
-    "📱 Instagram/@arthsystems_/_template-post.md",
     "📱 Instagram/@arthsystems_",
     "📱 Instagram",
-    "📚 Referências/analysis-instagram-caroldutra.md",
-    "⚙️ Workflows N8N/README.md",
     "⚙️ Workflows N8N/hook-scraper-weekly/workflow.json",
-    "⚙️ Workflows N8N/hook-scraper-weekly/ARCHITECTURE.md",
-    "⚙️ Workflows N8N/hook-scraper-weekly/PRD.md",
-    "⚙️ Workflows N8N/hook-scraper-weekly",
-    "⚙️ Workflows N8N",
-    "📅 Diário"
+    "⚙️ Workflows N8N/hook-scraper-weekly"
   ]
 }

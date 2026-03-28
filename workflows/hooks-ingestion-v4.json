@@ -1,0 +1,429 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "cronExpression", "expression": "0 11 * * 1" }]
+        }
+      },
+      "id": "trigger-1",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [240, 464]
+    },
+    {
+      "parameters": {
+        "jsCode": "const accounts = [\n  { handle: 'byjoeym', platform: 'instagram' },\n  { handle: 'pedrovaleriolopez', platform: 'instagram' },\n  { handle: 'dougdemarco_', platform: 'instagram' },\n  { handle: 'franklim.gui', platform: 'instagram' },\n  { handle: 'thegrowthceo', platform: 'instagram' },\n  { handle: 'chase.h.ai', platform: 'instagram' },\n  { handle: 'thevibefounder', platform: 'instagram' },\n  { handle: 'godofprompt', platform: 'instagram' },\n  { handle: 'philipisberg', platform: 'instagram' },\n  { handle: 'daniel.avell', platform: 'instagram' },\n  { handle: 'stevearnesonofficial', platform: 'instagram' },\n  { handle: 'noevarner.ai', platform: 'instagram' },\n  { handle: 'nateherkai', platform: 'instagram' },\n  { handle: 'nateherk', platform: 'youtube' },\n  { handle: 'oalanicolas', platform: 'youtube' },\n  { handle: 'jovensdenegocios', platform: 'youtube' },\n  { handle: 'horadenegocios', platform: 'youtube' },\n  { handle: 'Academia.Lendaria', platform: 'youtube' },\n  { handle: 'Chase-H-AI', platform: 'youtube' },\n  { handle: 'danmartell', platform: 'youtube' },\n  { handle: 'BenAI92', platform: 'youtube' },\n  { handle: 'Itssssss_Jack', platform: 'youtube' }\n];\nreturn accounts.map(a => ({ json: a }));"
+      },
+      "id": "code-1",
+      "name": "All Accounts",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [464, 464]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "cond-platform",
+              "leftValue": "={{ $json.platform }}",
+              "rightValue": "instagram",
+              "operator": { "type": "string", "operation": "equals" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-1",
+      "name": "Is Instagram?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [688, 464]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/acts/apify~instagram-scraper/run-sync-get-dataset-items",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "Bearer REDACTED_APIFY_TOKEN" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "directUrls", "value": "={{ ['https://www.instagram.com/' + $json.handle + '/'] }}" },
+            { "name": "resultsLimit", "value": 10 },
+            { "name": "addParentData", "value": false }
+          ]
+        },
+        "options": { "timeout": 300000 }
+      },
+      "id": "http-apify",
+      "name": "Apify Instagram Scraper",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [912, 304],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const posts = $input.all();\nconst results = [];\n\nfor (const post of posts) {\n  const p = post.json;\n  if (p.error) continue;\n\n  const handle = p.ownerUsername || (p.owner && p.owner.username) || 'unknown';\n  const caption = (p.caption || '').trim();\n  const lines = caption.split('\\n').filter(l => l.trim().length > 0);\n  const firstLine = lines[0] || '';\n  const hookText = firstLine.length >= 20 ? firstLine : (caption.split('.')[0] || firstLine);\n\n  if (!hookText || hookText.length < 5) continue;\n\n  let format = 'feed';\n  if (p.type === 'Video') format = 'reel';\n  else if (p.type === 'Sidecar') format = 'carousel';\n\n  results.push({\n    json: {\n      post_id: String(p.id || p.shortCode || ''),\n      post_url: p.url || ('https://www.instagram.com/p/' + (p.shortCode || '')),\n      platform: 'instagram',\n      source_account: handle,\n      hook_text: hookText.substring(0, 500),\n      full_caption: caption.substring(0, 1000),\n      format: format,\n      likes: p.likesCount || 0,\n      comments: p.commentsCount || 0,\n      views: null,\n      posted_at: p.timestamp || null\n    }\n  });\n}\n\nreturn results.length > 0 ? results : [{ json: { _skip: true } }];"
+      },
+      "id": "code-ig",
+      "name": "Extract IG Hooks",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1136, 304]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/channels",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "part", "value": "contentDetails" },
+            { "name": "forHandle", "value": "={{ '@' + $json.handle }}" },
+            { "name": "key", "value": "AIzaSyDh5lKDIvet3m5OHXLsTVzLaPFzbTV0wMM" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-yt-channel",
+      "name": "YT Get Channel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [912, 624],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/playlistItems",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "part", "value": "snippet" },
+            { "name": "playlistId", "value": "={{ ($json.items && $json.items[0] && $json.items[0].contentDetails && $json.items[0].contentDetails.relatedPlaylists) ? $json.items[0].contentDetails.relatedPlaylists.uploads : '' }}" },
+            { "name": "maxResults", "value": "10" },
+            { "name": "key", "value": "AIzaSyDh5lKDIvet3m5OHXLsTVzLaPFzbTV0wMM" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-yt-playlist",
+      "name": "YT Get Playlist Items",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1136, 624],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "cond-yt-items",
+              "leftValue": "={{ ($json.items || []).length }}",
+              "rightValue": 0,
+              "operator": { "type": "number", "operation": "gt" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-yt-has-items",
+      "name": "YT Has Items?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [1360, 624]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { _skip: true } }];"
+      },
+      "id": "code-yt-skip",
+      "name": "YT Emit Skip",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1360, 800]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/videos",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "part", "value": "statistics,snippet" },
+            { "name": "id", "value": "={{ ($json.items || []).map(i => i.snippet.resourceId.videoId).join(',') }}" },
+            { "name": "key", "value": "AIzaSyDh5lKDIvet3m5OHXLsTVzLaPFzbTV0wMM" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-yt-stats",
+      "name": "YT Get Video Stats",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1584, 624],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $input.first().json;\nconst handle = $('Is Instagram?').item.json.handle;\nconst videos = (response.items || []);\nconst results = [];\n\nfor (const video of videos) {\n  const stats = video.statistics || {};\n  const snippet = video.snippet || {};\n  const title = (snippet.title || '').trim();\n  if (!title) continue;\n\n  results.push({\n    json: {\n      post_id: String(video.id),\n      post_url: 'https://www.youtube.com/watch?v=' + video.id,\n      platform: 'youtube',\n      source_account: handle,\n      hook_text: title.substring(0, 500),\n      full_caption: (snippet.description || '').substring(0, 1000),\n      format: 'video',\n      likes: parseInt(stats.likeCount || 0),\n      comments: parseInt(stats.commentCount || 0),\n      views: parseInt(stats.viewCount || 0),\n      posted_at: snippet.publishedAt || null\n    }\n  });\n}\n\nreturn results.length > 0 ? results : [{ json: { _skip: true } }];"
+      },
+      "id": "code-yt",
+      "name": "Extract YT Hooks",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1808, 624]
+    },
+    {
+      "parameters": {
+        "mode": "append"
+      },
+      "id": "merge-1",
+      "name": "Merge Posts",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2,
+      "position": [2032, 464]
+    },
+    {
+      "parameters": { "options": {} },
+      "id": "post-loop-v3",
+      "name": "Post Loop",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [2256, 464]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "cond-skip",
+              "leftValue": "={{ $json._skip }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "true" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-skip",
+      "name": "Skip Empty?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [2480, 464]
+    },
+    {
+      "parameters": {
+        "jsCode": "const post = $input.first().json;\nconst text = (post.hook_text || '').toLowerCase();\n\nlet hookType = 'curiosity_gap';\nlet tone = 'emocional';\nlet confidence = 0.55;\n\nif (/\\?/.test(post.hook_text || '')) {\n  hookType = 'question'; tone = 'filosofico'; confidence = 0.82;\n} else if (/\\b(wrong|errado|para de|stop doing|stop using|you're doing it|voce ta errado|erro que|nunca fa|don't do|nao faca|mistake|erro)\\b/.test(text)) {\n  hookType = 'attack'; tone = 'provocativo'; confidence = 0.76;\n} else if (/\\b(but |mas |however|porem|actually|na verdade|contrary|contrario|despite|apesar|isn't|nao e|not what)\\b/.test(text)) {\n  hookType = 'contradiction'; tone = 'polarizador'; confidence = 0.72;\n} else if (/\\b(secret|segredo|never told|nunca contei|confession|confess|revealing|revelando|truth about|real reason|hidden|escondido)\\b/.test(text)) {\n  hookType = 'reveal'; tone = 'emocional'; confidence = 0.78;\n} else if (/\\b(you also|voce tambem|you too|ever feel|ever notice|have you|ja sentiu|ja passou|recognize|reconhece|relate|sound familiar)\\b/.test(text)) {\n  hookType = 'mirror'; tone = 'emocional'; confidence = 0.70;\n} else if (/\\b(client|cliente|result|resultado|transform|proof|prova|people|pessoas|students|alunos|helped|ajudei|\\$[0-9]|[0-9]+k|[0-9]+m|percent|%)\\b/.test(text)) {\n  hookType = 'social_proof'; tone = 'autoritario'; confidence = 0.73;\n} else if (/\\b(never again|nunca mais|i believe|acredito|my truth|minha verdade|promise|prometo|always|sempre|principle|principio|manifesto|vow)\\b/.test(text)) {\n  hookType = 'manifesto'; tone = 'filosofico'; confidence = 0.65;\n}\n\nreturn [{ json: { ...post, hook_type: hookType, tone: tone, classification_confidence: confidence, auto_classified: true } }];"
+      },
+      "id": "code-classify",
+      "name": "Classify Hook",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2704, 352]
+    },
+    {
+      "parameters": {
+        "url": "={{ 'https://uldscgrmxtgovajeknmu.supabase.co/rest/v1/tracked_accounts?handle=eq.' + $('Classify Hook').first().json.source_account + '&platform=eq.' + $('Classify Hook').first().json.platform + '&select=id' }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "REDACTED_SUPABASE_SERVICE_ROLE_JWT" },
+            { "name": "Authorization", "value": "Bearer REDACTED_SUPABASE_SERVICE_ROLE_JWT" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-get-account",
+      "name": "Get Account ID",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [2928, 208],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://uldscgrmxtgovajeknmu.supabase.co/rest/v1/hooks",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "REDACTED_SUPABASE_SERVICE_ROLE_JWT" },
+            { "name": "Authorization", "value": "Bearer REDACTED_SUPABASE_SERVICE_ROLE_JWT" },
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=representation" }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "account_id", "value": "={{ $json.id || null }}" },
+            { "name": "post_id", "value": "={{ $('Classify Hook').first().json.post_id }}" },
+            { "name": "post_url", "value": "={{ $('Classify Hook').first().json.post_url }}" },
+            { "name": "platform", "value": "={{ $('Classify Hook').first().json.platform }}" },
+            { "name": "hook_text", "value": "={{ $('Classify Hook').first().json.hook_text }}" },
+            { "name": "full_caption", "value": "={{ $('Classify Hook').first().json.full_caption }}" },
+            { "name": "format", "value": "={{ $('Classify Hook').first().json.format }}" },
+            { "name": "hook_type", "value": "={{ $('Classify Hook').first().json.hook_type }}" },
+            { "name": "tone", "value": "={{ $('Classify Hook').first().json.tone }}" },
+            { "name": "auto_classified", "value": true },
+            { "name": "classification_confidence", "value": "={{ $('Classify Hook').first().json.classification_confidence }}" },
+            { "name": "posted_at", "value": "={{ $('Classify Hook').first().json.posted_at }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-insert-hook",
+      "name": "Insert Hook",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [3152, 208],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "cond-new-insert",
+              "leftValue": "={{ $json.id }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "notEmpty" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "if-new-insert",
+      "name": "Is New Insert?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [3376, 352]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://uldscgrmxtgovajeknmu.supabase.co/rest/v1/hook_performances",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "REDACTED_SUPABASE_SERVICE_ROLE_JWT" },
+            { "name": "Authorization", "value": "Bearer REDACTED_SUPABASE_SERVICE_ROLE_JWT" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "hook_id", "value": "={{ $json.id || null }}" },
+            { "name": "likes", "value": "={{ $('Classify Hook').first().json.likes || 0 }}" },
+            { "name": "comments", "value": "={{ $('Classify Hook').first().json.comments || 0 }}" },
+            { "name": "views", "value": "={{ $('Classify Hook').first().json.views || null }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-insert-perf",
+      "name": "Insert Performance",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [3600, 208],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://uldscgrmxtgovajeknmu.supabase.co/rest/v1/ingestion_logs",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "REDACTED_SUPABASE_SERVICE_ROLE_JWT" },
+            { "name": "Authorization", "value": "Bearer REDACTED_SUPABASE_SERVICE_ROLE_JWT" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            { "name": "platform", "value": "all" },
+            { "name": "posts_fetched", "value": "={{ $input.all().length }}" },
+            { "name": "status", "value": "success" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "http-log",
+      "name": "Log Ingestion",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [2480, 672],
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": { "main": [[{ "node": "All Accounts", "type": "main", "index": 0 }]] },
+    "All Accounts": { "main": [[{ "node": "Is Instagram?", "type": "main", "index": 0 }]] },
+    "Is Instagram?": {
+      "main": [
+        [{ "node": "Apify Instagram Scraper", "type": "main", "index": 0 }],
+        [{ "node": "YT Get Channel", "type": "main", "index": 0 }]
+      ]
+    },
+    "Apify Instagram Scraper": { "main": [[{ "node": "Extract IG Hooks", "type": "main", "index": 0 }]] },
+    "Extract IG Hooks": { "main": [[{ "node": "Merge Posts", "type": "main", "index": 0 }]] },
+    "YT Get Channel": { "main": [[{ "node": "YT Get Playlist Items", "type": "main", "index": 0 }]] },
+    "YT Get Playlist Items": { "main": [[{ "node": "YT Has Items?", "type": "main", "index": 0 }]] },
+    "YT Has Items?": {
+      "main": [
+        [{ "node": "YT Get Video Stats", "type": "main", "index": 0 }],
+        [{ "node": "YT Emit Skip", "type": "main", "index": 0 }]
+      ]
+    },
+    "YT Emit Skip": { "main": [[{ "node": "Merge Posts", "type": "main", "index": 1 }]] },
+    "YT Get Video Stats": { "main": [[{ "node": "Extract YT Hooks", "type": "main", "index": 0 }]] },
+    "Extract YT Hooks": { "main": [[{ "node": "Merge Posts", "type": "main", "index": 1 }]] },
+    "Merge Posts": { "main": [[{ "node": "Post Loop", "type": "main", "index": 0 }]] },
+    "Post Loop": {
+      "main": [
+        [{ "node": "Skip Empty?", "type": "main", "index": 0 }],
+        [{ "node": "Log Ingestion", "type": "main", "index": 0 }]
+      ]
+    },
+    "Skip Empty?": {
+      "main": [
+        [{ "node": "Post Loop", "type": "main", "index": 0 }],
+        [{ "node": "Classify Hook", "type": "main", "index": 0 }]
+      ]
+    },
+    "Classify Hook": { "main": [[{ "node": "Get Account ID", "type": "main", "index": 0 }]] },
+    "Get Account ID": { "main": [[{ "node": "Insert Hook", "type": "main", "index": 0 }]] },
+    "Insert Hook": { "main": [[{ "node": "Is New Insert?", "type": "main", "index": 0 }]] },
+    "Is New Insert?": {
+      "main": [
+        [{ "node": "Insert Performance", "type": "main", "index": 0 }],
+        [{ "node": "Post Loop", "type": "main", "index": 0 }]
+      ]
+    },
+    "Insert Performance": { "main": [[{ "node": "Post Loop", "type": "main", "index": 0 }]] }
+  },
+  "pinData": {},
+  "staticData": null,
+  "meta": {
+    "instanceId": "1d1daf5c32d4c4eec18531e1c59acbb189361bea16d9590318625cde3c1201ba"
+  }
+}
