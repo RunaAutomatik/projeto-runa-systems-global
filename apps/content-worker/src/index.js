@@ -49,8 +49,8 @@ app.post('/render', async (req, res) => {
     }
 
     if (brief.type === 'reel' || brief.type === 'video') {
-      const result = await composeVideo(brief)
-      return res.json(result)
+      const { content_id, type, videoUrl } = await composeVideo(brief)
+      return res.json({ content_id, type, videoUrl, caption })
     }
 
     res.status(400).json({ error: `Unsupported type: ${brief.type}` })

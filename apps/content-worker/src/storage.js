@@ -47,3 +47,28 @@ export async function uploadSlides(slides, contentId) {
     slides.map(s => uploadImage(s.buffer, contentId, `slide-${s.index}.png`))
   )
 }
+
+/**
+ * Uploads an MP4 video buffer to Supabase Storage and returns the public URL.
+ * Path: content-pipeline/{contentId}/video.mp4
+ *
+ * @param {Buffer} buffer
+ * @param {string} contentId  — e.g. "reel-20260326-001"
+ * @returns {Promise<string>} public URL
+ */
+export async function uploadVideo(buffer, contentId) {
+  const supabase = getClient()
+  const path = `${contentId}/video.mp4`
+
+  const { error } = await supabase.storage
+    .from(BUCKET)
+    .upload(path, buffer, {
+      contentType: 'video/mp4',
+      upsert: true,
+    })
+
+  if (error) throw new Error(`[storage] Video upload failed: ${error.message}`)
+
+  const { data } = supabase.storage.from(BUCKET).getPublicUrl(path)
+  return data.publicUrl
+}

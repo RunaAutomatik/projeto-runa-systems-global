@@ -24,6 +24,9 @@ export const BriefSchema = z.object({
   caption: z.string().optional(),
   hashtags: z.array(z.string()).default([]),
 
+  // Stage 1: Reel/video — duration per slide in seconds (default: 3)
+  slide_duration_s: z.number().positive().default(3),
+
   // Stage 1.5: AI image generation context (stored, not yet used)
   mood: z.string().optional(),
   visual_direction: z.string().optional(),
