@@ -3,7 +3,7 @@ date: 2026-03-24
 tags: [instagram, arthsystems, pin, prova]
 project: runa-systems-global
 type: imagem
-status: draft
+status: ready-to-publish
 post_number: 02
 tema: O sistema rodando enquanto você lê
 objetivo: estado_de_compra

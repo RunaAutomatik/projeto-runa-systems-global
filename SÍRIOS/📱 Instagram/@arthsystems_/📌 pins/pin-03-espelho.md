@@ -4,7 +4,7 @@ tags: [instagram, arthsystems, pin, espelho, avatar]
 project: runa-systems-global
 type: carousel — 7 slides
 estilo: MANIFESTO
-status: brief-ready
+status: ready-to-publish
 post_number: 03
 tema: O avatar se reconhece no problema
 objetivo: lead_gen

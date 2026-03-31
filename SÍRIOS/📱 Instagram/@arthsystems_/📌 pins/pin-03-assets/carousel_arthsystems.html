@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>@arthsystems_ — Carousel MANIFESTO</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --deep-space:     #050D1A;
+    --midnight:       #0A1628;
+    --teal:           #0E9E8E;
+    --military-green: #2D4A2D;
+    --gold:           #C9A84C;
+    --white-star:     #F0F4F8;
+    --muted-silver:   #7A8A9A;
+    --border-subtle:  rgba(14,158,142,0.15);
+    --card-bg:        rgba(5,13,26,0.82);
+    --brand-grad: linear-gradient(165deg, #050D1A 0%, #0A1628 40%, #0D2420 100%);
+    --frame-bg:       #030810;
+  }
+
+  body {
+    background: var(--frame-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* ── INSTAGRAM FRAME ── */
+  .ig-frame {
+    width: 420px;
+    background: var(--frame-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(14,158,142,0.08);
+  }
+
+  /* Header */
+  .ig-header {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid rgba(14,158,142,0.08);
+  }
+  .ig-avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--teal), #063D37);
+    display: flex; align-items: center; justify-content: center;
+    border: 1.5px solid rgba(14,158,142,0.4);
+    flex-shrink: 0;
+  }
+  .ig-username { font-size: 13px; font-weight: 600; color: var(--white-star); letter-spacing: 0.2px; }
+  .ig-follow { font-size: 12px; color: var(--teal); font-weight: 500; margin-left: auto; }
+
+  /* Carousel viewport */
+  .carousel-viewport {
+    width: 420px;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+  }
+  .carousel-viewport:active { cursor: grabbing; }
+
+  .carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Individual slide */
+  .slide {
+    width: 420px;
+    height: 525px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* ── GLIFO (universal) ── */
+  .glyph {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    z-index: 20;
+    opacity: 0.75;
+  }
+  .glyph-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.045;
+    z-index: 2;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-bar {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 14px 28px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 30;
+  }
+  .pb-track {
+    flex: 1; height: 2px;
+    background: rgba(14,158,142,0.15);
+    border-radius: 1px;
+  }
+  .pb-fill {
+    height: 100%;
+    background: var(--teal);
+    border-radius: 1px;
+  }
+  .pb-label {
+    font-size: 10px;
+    color: rgba(120,138,154,0.6);
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  /* ── SWIPE ARROW ── */
+  .swipe-arrow {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, transparent, rgba(5,13,26,0.6));
+    z-index: 25;
+  }
+
+  /* ── MANIFESTO CSS ── */
+  .manifesto-headline {
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.10;
+    letter-spacing: -0.8px;
+    color: var(--white-star);
+    text-align: center;
+    max-width: 86%;
+    margin: 0 auto;
+  }
+  .manifesto-headline .kw {
+    color: var(--teal);
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  .manifesto-headline .dim {
+    font-weight: 300;
+    color: rgba(240,244,248,0.7);
+  }
+  .manifesto-support {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--muted-silver);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 22px;
+  }
+  .manifesto-divider {
+    width: 36px; height: 1px;
+    background: rgba(14,158,142,0.4);
+    margin: 0 auto 22px;
+  }
+  .manifesto-dense {
+    padding: 0 38px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .manifesto-dense p {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--white-star);
+    line-height: 1.45;
+    border-left: 2px solid var(--teal);
+    padding-left: 16px;
+  }
+  .manifesto-dense p .kw {
+    color: var(--teal);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  /* Center layout helper */
+  .slide-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 44px 28px;
+  }
+
+  /* Tag pill */
+  .tag-pill {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: var(--military-green);
+    background: rgba(45,74,45,0.28);
+    padding: 4px 12px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  /* Handle lockup */
+  .handle-lockup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .handle-text {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+
+  /* CTA keyword */
+  .cta-keyword-wrap {
+    margin-top: 28px;
+    text-align: center;
+  }
+  .cta-comente {
+    font-size: 11px;
+    color: var(--muted-silver);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .cta-keyword {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--white-star);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: block;
+  }
+
+  /* Dots */
+  .ig-dots {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 0;
+  }
+  .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: rgba(240,244,248,0.2);
+    transition: background 0.25s;
+  }
+  .dot.active { background: var(--teal); }
+
+  /* Actions */
+  .ig-actions {
+    padding: 10px 16px 6px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .ig-actions svg { color: var(--muted-silver); }
+  .ig-actions .bookmark { margin-left: auto; }
+
+  /* Caption */
+  .ig-caption {
+    padding: 4px 16px 18px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: rgba(240,244,248,0.75);
+  }
+  .ig-caption strong { color: var(--white-star); font-weight: 600; }
+
+  /* Noise overlay for depth */
+  .noise-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.4;
+  }
+</style>
+</head>
+<body>
+
+<div class="ig-frame">
+
+  <!-- HEADER -->
+  <div class="ig-header">
+    <div class="ig-avatar">
+      <!-- mini glifo -->
+      <svg width="14" height="20" viewBox="0 0 20 28" fill="none">
+        <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+        <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+      </svg>
+    </div>
+    <div>
+      <div class="ig-username">arthsystems_</div>
+    </div>
+    <div class="ig-follow">Seguindo</div>
+  </div>
+
+  <!-- CAROUSEL -->
+  <div class="carousel-viewport" id="viewport">
+    <div class="carousel-track" id="track">
+
+      <!-- ═══════════════════════════════════
+           SLIDE 1 — ABERTURA
+      ═══════════════════════════════════ -->
+      <div class="slide" style="background: var(--deep-space);">
+        <div class="noise-overlay"></div>
+
+        <!-- Glifo watermark -->
+        <div class="glyph-watermark">
+          <svg width="160" height="224" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <!-- Glifo small -->
+        <div class="glyph">
+          <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div class="slide-center">
+          <p class="manifesto-headline">
+            Você não tem um problema<br>
+            <span class="dim">de</span> <span class="kw">produtividade.</span>
+          </p>
+        </div>
+
+        <div class="progress-bar">
+          <div class="pb-track"><div class="pb-fill" style="width:14.3%"></div></div>
+          <span class="pb-label">1/7</span>
+        </div>
+        <div class="swipe-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6l6 6-6 6" stroke="rgba(14,158,142,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════
+           SLIDE 2 — TENSÃO
+      ═══════════════════════════════════ -->
+      <div class="slide" style="background: var(--midnight);">
+        <div class="noise-overlay"></div>
+        <div class="glyph">
+          <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div class="slide-center" style="padding: 44px 32px;">
+          <div class="manifesto-divider"></div>
+          <p class="manifesto-headline" style="font-size:30px;">
+            <span class="dim">Você é o</span> <span class="kw">gargalo</span><br>
+            <span class="dim">do próprio negócio.</span>
+          </p>
+          <p class="manifesto-support" style="margin-top:28px; max-width:72%; line-height:1.7;">
+            Funciona quando você está.<br>
+            Para quando você para.
+          </p>
+        </div>
+
+        <div class="progress-bar">
+          <div class="pb-track"><div class="pb-fill" style="width:28.6%"></div></div>
+          <span class="pb-label">2/7</span>
+        </div>
+        <div class="swipe-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6l6 6-6 6" stroke="rgba(14,158,142,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════
+           SLIDE 3 — VIRADA
+      ═══════════════════════════════════ -->
+      <div class="slide" style="background: var(--brand-grad);">
+        <div class="noise-overlay"></div>
+        <!-- Horizontal teal line accent -->
+        <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,rgba(14,158,142,0.3),transparent);z-index:5;"></div>
+
+        <div class="glyph">
+          <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div class="slide-center">
+          <p class="manifesto-headline" style="font-size:32px;">
+            <span class="dim">Isso não é</span> <span class="kw">escala.</span><br>
+            <br>
+            <span class="dim" style="font-size:20px;font-weight:300;letter-spacing:0;line-height:1.5;">É um emprego disfarçado<br>de empresa.</span>
+          </p>
+          <div class="manifesto-divider" style="margin-top:28px;margin-bottom:0;"></div>
+        </div>
+
+        <div class="progress-bar">
+          <div class="pb-track"><div class="pb-fill" style="width:42.9%"></div></div>
+          <span class="pb-label">3/7</span>
+        </div>
+        <div class="swipe-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6l6 6-6 6" stroke="rgba(14,158,142,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════
+           SLIDE 4 — DENSIDADE
+      ═══════════════════════════════════ -->
+      <div class="slide" style="background: var(--deep-space);">
+        <div class="noise-overlay"></div>
+        <div class="glyph">
+          <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;z-index:10;padding:52px 0 44px;">
+          <div class="manifesto-dense">
+            <!-- Slide 4 é left-anchored, 3–4 linhas autônomas -->
+            <p>Decisão — <span class="kw">nenhuma</span> acontece<br>
+            <span style="font-weight:400;font-size:15px;color:rgba(240,244,248,0.55);">sem o seu sinal verde.</span></p>
+
+            <p>Entrega — o processo<br>
+            <span style="font-weight:400;font-size:15px;color:rgba(240,244,248,0.55);">depende da sua atenção direta.</span></p>
+
+            <p>Venda — o cliente compra<br>
+            <span style="font-weight:400;font-size:15px;color:rgba(240,244,248,0.55);">de você. Não do sistema.</span></p>
+
+            <p>Operação — quando você para,<br>
+            <span style="font-weight:400;font-size:15px;color:rgba(240,244,248,0.55);">o negócio para.</span></p>
+          </div>
+        </div>
+
+        <!-- DIAGNÓSTICO tag — top right -->
+        <div style="position:absolute;top:22px;right:24px;z-index:20;">
+          <span class="tag-pill">DIAGNÓSTICO</span>
+        </div>
+
+        <div class="progress-bar">
+          <div class="pb-track"><div class="pb-fill" style="width:57.1%"></div></div>
+          <span class="pb-label">4/7</span>
+        </div>
+        <div class="swipe-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6l6 6-6 6" stroke="rgba(14,158,142,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════
+           SLIDE 5 — PROVA
+      ═══════════════════════════════════ -->
+      <div class="slide" style="background: var(--midnight);">
+        <div class="noise-overlay"></div>
+        <div class="glyph">
+          <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div class="slide-center" style="padding:44px 36px;">
+          <div class="manifesto-divider"></div>
+          <p class="manifesto-headline" style="font-size:26px;line-height:1.25;text-align:center;">
+            <span class="dim">Cada processo tem dono.</span><br>
+            <span class="kw">Não você.</span><br>
+            <br>
+            <span class="dim" style="font-size:17px;font-weight:300;letter-spacing:0;line-height:1.6;">
+              O sistema sabe o que fazer<br>
+              sem ser lembrado.
+            </span>
+          </p>
+          <p class="manifesto-support" style="margin-top:30px;">O problema não é tempo — é arquitetura</p>
+        </div>
+
+        <div class="progress-bar">
+          <div class="pb-track"><div class="pb-fill" style="width:71.4%"></div></div>
+          <span class="pb-label">5/7</span>
+        </div>
+        <div class="swipe-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6l6 6-6 6" stroke="rgba(14,158,142,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════
+           SLIDE 6 — SILÊNCIO
+      ═══════════════════════════════════ -->
+      <div class="slide" style="background: var(--deep-space);">
+        <div class="noise-overlay"></div>
+
+        <!-- Linha horizontal decorativa central -->
+        <div style="position:absolute;left:28px;right:28px;top:50%;transform:translateY(-60px);height:1px;background:linear-gradient(to right,transparent,rgba(14,158,142,0.15),transparent);z-index:5;"></div>
+
+        <div class="glyph">
+          <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div class="slide-center">
+          <p class="manifesto-headline" style="font-size:38px;letter-spacing:-1.5px;">
+            <span class="kw">Arquitetura</span><br>
+            <span class="dim">é a saída.</span>
+          </p>
+        </div>
+
+        <div class="progress-bar">
+          <div class="pb-track"><div class="pb-fill" style="width:85.7%"></div></div>
+          <span class="pb-label">6/7</span>
+        </div>
+        <div class="swipe-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6l6 6-6 6" stroke="rgba(14,158,142,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════
+           SLIDE 7 — CTA
+      ═══════════════════════════════════ -->
+      <div class="slide" style="background: var(--deep-space);">
+        <div class="noise-overlay"></div>
+
+        <!-- Glifo watermark -->
+        <div class="glyph-watermark">
+          <svg width="180" height="252" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div class="glyph">
+          <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+            <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+          </svg>
+        </div>
+
+        <div class="slide-center">
+          <!-- Handle lockup -->
+          <div class="handle-lockup">
+            <svg width="20" height="28" viewBox="0 0 20 28" fill="none">
+              <line x1="10" y1="2" x2="10" y2="26" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="8" x2="18" y2="16" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+              <line x1="10" y1="14" x2="18" y2="22" stroke="#0E9E8E" stroke-width="2" stroke-linecap="round"/>
+              <line x1="3" y1="5" x2="17" y2="5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+            </svg>
+            <span class="handle-text">@arthsystems_</span>
+          </div>
+
+          <!-- Support text -->
+          <p style="font-size:13px;font-weight:400;color:var(--muted-silver);letter-spacing:0.3px;text-align:center;max-width:260px;line-height:1.55;margin-bottom:0;">
+            O diagnóstico já está feito.<br>
+            A arquitetura, ainda não.
+          </p>
+
+          <!-- DM keyword -->
+          <div class="cta-keyword-wrap">
+            <span class="cta-comente">comente</span>
+            <span class="cta-keyword">SISTEMA</span>
+          </div>
+        </div>
+
+        <div class="progress-bar">
+          <div class="pb-track"><div class="pb-fill" style="width:100%"></div></div>
+          <span class="pb-label">7/7</span>
+        </div>
+        <!-- No swipe arrow on last slide -->
+      </div>
+
+    </div><!-- /track -->
+  </div><!-- /viewport -->
+
+  <!-- DOTS -->
+  <div class="ig-dots" id="dots">
+    <div class="dot active" data-idx="0"></div>
+    <div class="dot" data-idx="1"></div>
+    <div class="dot" data-idx="2"></div>
+    <div class="dot" data-idx="3"></div>
+    <div class="dot" data-idx="4"></div>
+    <div class="dot" data-idx="5"></div>
+    <div class="dot" data-idx="6"></div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="ig-actions">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    <svg class="bookmark" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+  </div>
+
+  <!-- CAPTION -->
+  <div class="ig-caption">
+    <strong>arthsystems_</strong> Você não tem um problema de produtividade. Você é o gargalo do próprio negócio... <span style="color:var(--muted-silver)">mais</span>
+  </div>
+
+</div><!-- /ig-frame -->
+
+<script>
+  const track = document.getElementById('track');
+  const dots = document.querySelectorAll('.dot');
+  const TOTAL = 7;
+  let current = 0;
+  let startX = 0;
+  let isDragging = false;
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(TOTAL - 1, idx));
+    track.style.transform = `translateX(${-current * 420}px)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  // Dot clicks
+  dots.forEach(d => d.addEventListener('click', () => goTo(+d.dataset.idx)));
+
+  // Drag / swipe
+  const vp = document.getElementById('viewport');
+  vp.addEventListener('mousedown', e => { isDragging = true; startX = e.clientX; });
+  vp.addEventListener('mousemove', e => { if (!isDragging) return; });
+  vp.addEventListener('mouseup', e => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = startX - e.clientX;
+    if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+  });
+  vp.addEventListener('mouseleave', () => isDragging = false);
+
+  vp.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  vp.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+  });
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') goTo(current + 1);
+    if (e.key === 'ArrowLeft') goTo(current - 1);
+  });
+</script>
+</body>
+</html>
