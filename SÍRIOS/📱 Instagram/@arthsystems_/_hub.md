@@ -82,9 +82,10 @@ POST
 ## Content Index
 
 ### 📌 Pins (permanent)
-- [[pin-01-manifesto]] — Manifesto: "Construo negócios que não precisam de mim" ✅ **ready-to-publish** — assets em `pin-01-assets/`
-- [[pin-02-prova]] — Prova: "Enquanto você lê isso, o Runa Systems está funcionando" _(draft)_
-- [[pin-03-espelho]] — Espelho: "Você não tem um problema de produtividade" _(draft)_
+- [[pin-01-manifesto]] — Manifesto: "Construo negócios que não precisam de mim" ✅ **published**
+- [[pin-02-prova]] — Prova: "Enquanto você lê isso, o Runa Systems está funcionando" ✅ **ready-to-publish** (Seg 31/03)
+- [[pin-03-espelho]] — Espelho: "Você não tem um problema de produtividade" 📋 **brief-ready** (Qua 02/04)
+- [[pin-04-squad]] — Squad Operacional: "O sistema entregou. Eu não solicitei." 📋 **brief-ready** (Sex 04/04)
 
 ### 🖼️ Posts (imagem)
 *(none yet)*
