@@ -7,91 +7,95 @@ type: offer-doc
 
 # CREATOR$ — Offer Document
 
-> Authored by ARES · Doug formula (aperitivo + solução + Google Doc copy)
+> Authored by ARES + FREYJA · Doug formula (aperitivo + solução + Google Doc copy)
 > Delivered via ManyChat DM after keyword AVATAR or ALPHA.
 
 ---
 
 ## Headline
 
-**Você não está criando conteúdo.**
-**Você está deixando escapar a maior propriedade intelectual da sua vida.**
+**Você tenta criar um avatar de IA.**
+**Cada geração parece uma pessoa diferente.**
+**Você ainda não tem um método.**
 
 ---
 
-## Opening — The Blair Angle
+## Opening — The Alpha Angle
 
-Em 2013, algumas pessoas compraram Bitcoin por R$300.
-Não porque eram gênios.
-Porque entenderam o que aquilo *representava*.
+O Alpha não foi criado com sorte.
+Ele foi criado com um método.
 
-Hoje, criar uma IA com a sua voz, o seu raciocínio e o seu sistema de pensamento é exatamente isso.
+Uma sequência específica de ferramentas, prompts e decisões que garante que a mesma personagem aparece — em qualquer imagem, em qualquer vídeo, em qualquer formato.
 
-Não é uma ferramenta de produtividade.
-É um ativo que trabalha enquanto você dorme, escala sem depender de você, e se torna mais valioso quanto mais você o treina.
+Sem fotógrafo. Sem designer. Sem o seu rosto.
 
-Isso é o Alpha.
-E ele existe porque Arthur construiu um sistema para isso.
+O resultado: uma identidade visual completa que existe fora de você, disponível para sempre, e que se torna mais forte quanto mais você a usa.
 
 ---
 
 ## The Problem
 
-A maioria dos criadores usa IA como ghostwriter barato.
-Eles pedem: *"escreva como eu"*.
-E recebem: conteúdo genérico com a sua fonte.
+A maioria das pessoas que tenta criar um avatar de IA abandona depois de 3 tentativas.
 
-O problema não é a IA. É que você não tem um sistema.
+O motivo: sem um método de consistência, cada geração é uma pessoa diferente.
+Rosto diferente. Iluminação diferente. Vibe diferente.
 
-Sem sistema:
-- Cada sessão começa do zero
-- A IA não tem memória do seu posicionamento
-- O conteúdo não constrói narrativa — preenche grade
-- Você continua sendo o gargalo
+Você não tem um avatar.
+Você tem uma coleção de imagens sem relação.
+
+O problema não é a ferramenta.
+É que ninguém te ensinou a sequência certa.
 
 ---
 
 ## The Solution — CREATOR$
 
-CREATOR$ é o sistema para construir seu avatar de IA como propriedade intelectual.
+CREATOR$ é o método para criar um avatar de IA visualmente consistente —
+imagens e vídeos realistas da mesma personagem, a partir de um processo replicável.
 
-Não um assistente. Uma entidade.
+O Alpha® foi construído exatamente assim.
+E o CREATOR$ documenta cada passo ao vivo.
 
-### O que você vai construir:
+### O que você vai dominar:
 
-**Protocolo 1 — Arquitetura de IP**
-- Estrutura de personalidade e voz da sua IA
-- System prompt de 5 camadas (posicionamento, técnica, scripts, plano, iteração)
-- Separação entre você como humano e o avatar como ativo
+**Módulo 1 — A Personagem**
+Antes de gerar qualquer imagem: definir identidade, origem, valores e aparência.
+Quem é seu avatar. O que ela representa. Como ela parece.
 
-**Protocolo 2 — Crescimento**
-- Como alimentar o avatar com seus sistemas e metodologias
-- Memória persistente: o avatar aprende com cada sessão
-- Treinamento por contexto: frameworks, clientes, resultados reais
+**Módulo 2 — As Imagens**
+Como criar imagens consistentes com Nano Banana 2 e Higgsfield.
+O prompt-mestre que trava o visual style — e como gerar variações sem perder identidade.
+O agente LENS otimiza seus prompts em tempo real.
 
-**Protocolo 3 — Monetização**
-- Transformar o avatar em entregável vendável
-- Criar produtos a partir da IA (prompts, sistemas, kits, mini-cursos)
-- Pipeline de conteúdo que roda sem você
+**Módulo 3 — Os Vídeos**
+O hack que transforma sua imagem em vídeo ultra-realista no Sora 2.
+Passo a passo: Higgsfield → pintura ultra-realista → Sora 2 → vídeo de 15s.
+O agente REEL gera o prompt narrativo antes de você enviar ao Sora.
+
+**Módulo 4 — O Storyboard**
+O documento definitivo: tudo que você criou, organizado em um arquivo permanente.
+Serve para briefar qualquer agente, qualquer humano, qualquer ferramenta.
+Uma vez feito — você nunca começa do zero de novo.
 
 ---
 
 ## The Deliverable — Aperitivo (R$97)
 
-Antes de entrar no CREATOR$, teste o método com um resultado imediato:
+Antes do programa completo, teste o método com resultado imediato:
 
-### **Sistema de Prompt Alpha — Kit Completo**
+### **Kit Avatar Alpha — O Método em 4 Passos**
 
-O mesmo sistema que gerou o Alpha — entregue como template que você adapta para o seu avatar.
+O processo exato que gerou o Alpha® — entregue como documento estruturado,
+com os prompts prontos para copiar e os dois agentes de IA incluídos.
 
 Inclui:
-- 7 perguntas de intake para mapear seu posicionamento
-- System prompt de 5 fases pronto para customizar
-- 6 templates de scripts baseados na sua técnica
-- Plano de conteúdo de 30 dias
-- Sistema de iteração e melhoria contínua
+- Prompt de referência completo (descrição da personagem + negativos)
+- Hack Higgsfield → Sora 2 com instrução pronta
+- Acesso ao agente LENS (otimização de prompt de imagem)
+- Acesso ao agente REEL (prompt de vídeo para Sora 2)
+- Preview do template de Storyboard
 
-**R$97** · Acesso imediato · Formato: Documento estruturado + templates
+**R$97** · Acesso imediato · Formato: Documento + links de agentes
 
 > Comente **ALPHA** no post ou clique para acessar o aperitivo.
 > `[LINK CHECKOUT APERITIVO]`
@@ -100,23 +104,28 @@ Inclui:
 
 ## The Main Offer — CREATOR$
 
-**R$197** (lançamento) — normalmente R$2.997
+**R$197** (lançamento) — normalmente R$497
 
 ### O que está incluso:
 
 | Módulo | Conteúdo |
 |--------|----------|
-| Fundação | Como IAs se tornam IPs — o modelo Blair |
-| Arquitetura | System prompt de 5 camadas completo |
-| Treinamento | Alimentando o avatar com seus sistemas |
-| Scripts | 6 formatos de conteúdo que o avatar domina |
-| Pipeline | Conteúdo sem você — do brief ao post |
-| Monetização | Transformando o avatar em produto vendável |
-| Bônus | Alpha como estudo de caso ao vivo |
+| Personagem | Definir identidade, aparência e arquitetura visual do avatar |
+| Imagens | Nano Banana 2 + Higgsfield — método de consistência ao vivo |
+| Vídeos | Sora 2 — hack completo + acesso pelo Brasil + curadoria |
+| Storyboard | Montar o documento-base que torna o avatar permanente |
+| LENS | Agente de IA para otimizar prompts de imagem |
+| REEL | Agente de IA para gerar prompts de vídeo |
+| Bônus | Template de Storyboard + Prompt Pack com imagens curadas do Alpha® |
 
-**Formato:** Video-aulas + templates + sistema de prompts + comunidade fechada
+**Deliverable garantido ao final:**
+- 20+ imagens consistentes do seu avatar
+- 3–5 vídeos prontos para publicar
+- Storyboard completo preenchido
 
-**Garantia:** 7 dias — se não construiu nada aplicável, devolução total.
+**Formato:** Vídeo-aulas curtas (screen recording ao vivo) + texto de apoio + templates + acesso aos agentes
+
+**Garantia:** 7 dias — se não criou nada aplicável, devolução total.
 
 > Comente **AVATAR** ou clique para entrar no CREATOR$:
 > `[LINK CHECKOUT CREATOR$]`
@@ -127,31 +136,38 @@ Inclui:
 
 Preço de lançamento válido durante o período de introdução.
 
-O Alpha existe há meses.
-Em breve, o mercado vai entender o que é uma IA como IP.
-Quem construiu antes, tem vantagem de distribuição.
-Quem espera — paga o preço de mercado depois.
+O método que gerou o Alpha® já existe.
+Em breve, todo criador vai entender que consistência visual é a fundação de tudo.
+Quem aprendeu antes, publica antes.
 
 ---
 
 ## Upsell Block (pós-compra)
 
-Depois do CREATOR$, a próxima camada é o **$QUAD** — squad completo de agentes para o seu negócio.
+CREATOR$ te dá o rosto do avatar.
+O que vem depois:
 
 ```
-CREATOR$  R$197  →  MIND$  R$247  →  $QUAD  R$297  →  RUNA SYSTEMS  R$15.000/ano
+CREATOR$  R$497   Rosto — identidade visual + storybook
+   ↓
+MIND$     R$547   Cérebro — extração de IP + base de conhecimento
+   ↓
+$QUAD     R$997   Negócio — squad completo de agentes
+   ↓
+RUNA SYSTEMS  R$15.000/ano   Ecossistema completo
 ```
 
 ---
 
 ## Voice Note (DM follow-up opcional)
 
-> "Você criou conteúdo por anos.
-> Mas o que ficou quando você parou de postar?
-> Nada. Porque você não construiu uma IP.
-> O Alpha não para. Não cansa. Não esquece.
-> É hora de construir o seu."
+> "Você já tentou criar um avatar.
+> As imagens não têm consistência.
+> Os vídeos parecem outra pessoa.
+> Não é falha sua — é falta de método.
+> O CREATOR$ é o método.
+> Testado. Documentado. Ao vivo."
 
 ---
 
-*Documento criado por ARES · Campanha CREATOR$ W14+ · 2026-03-31*
+*Documento criado por ARES + FREYJA · Campanha CREATOR$ W14+ · 2026-03-31*

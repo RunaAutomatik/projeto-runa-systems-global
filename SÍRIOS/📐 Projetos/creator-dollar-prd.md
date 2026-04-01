@@ -96,7 +96,7 @@ The demo case built live throughout the product: **Alpha®** — a mentor person
 | 2.4 — Generating looks and scenarios | Video (12min) + Text | Expressions, outfits, locations; prompting for variations without losing identity |
 | 2.5 — Selecting and curating | Video (5min) + Text | Criteria for choosing images; what to discard; building the visual library |
 
-**Deliverable at end of module:** 20+ curated, consistent images of the avatar.
+**Deliverable at end of module:** 30+ curated, consistent images of the avatar.
 
 ---
 
@@ -129,7 +129,7 @@ The demo case built live throughout the product: **Alpha®** — a mentor person
 
 ### BONUS — PROMPT PACK + STORYBOARD TEMPLATE
 **Contents:**
-- 30+ validated prompts for image generation (organized by: portrait / scenario / expression / variation)
+- 20+ validated prompts for image generation (organized by: portrait / scenario / expression / variation)
 - Alpha®'s master reference prompt (fully annotated)
 - Storyboard template (the exact template used to build Alpha® — fill in your data)
 - Quick-reference guide: "Which tool for which result"
@@ -138,10 +138,10 @@ The demo case built live throughout the product: **Alpha®** — a mentor person
 
 ## Pricing
 
-| Tier | Price | What's included |
-|------|-------|-----------------|
-| Base | R$247 | All modules + bonus |
-| Launch | R$197 | (first 72h) |
+| Tier   | Price   | What's included                               |
+| ------ | ------- | --------------------------------------------- |
+| Base   | R$497   | All modules + bonus                           |
+| Launch | R$197   | (first 72h)                                   |
 | Upsell | → MIND$ | "Now that you have the face, give it a brain" |
 
 ---
@@ -180,14 +180,14 @@ Alpha® then becomes:
 
 ### What Arthur needs to record:
 - [ ] Screen recording: filling Alpha®'s storyboard (Module 1.3)
-- [ ] Screen recording: building master prompt in Midjourney/Flux (Module 2.2)
-- [ ] Screen recording: generating 20+ Alpha® images (Modules 2.3–2.5)
-- [ ] Screen recording: generating 3 Alpha® videos in Kling/Runway (Module 3.2)
+- [ ] Screen recording: building master prompt in Nano Banana 2 or Midjourney/Flux (Module 2.2)
+- [ ] Screen recording: generating 5+ Alpha® images (Modules 2.3–2.5)
+- [ ] Screen recording: generating 3 Alpha® videos in Sora 2 (Module 3.2)
 - [ ] Screen recording: assembling final storybook in Notion/Google Docs (Module 4.2)
 - [ ] Talking head or voiceover: intros for each module
 
 ### What gets produced alongside (raw material for other products):
-- Alpha® visual library (20+ images) → used in $QUAD, content, RUNA SYSTEMS
+- Alpha® visual library (5+ images) → used in $QUAD, content, RUNA SYSTEMS
 - Alpha®'s videos → used on Instagram, in $QUAD demo, in RUNA SYSTEMS
 - The storyboard itself → becomes the MIND$ input document
 

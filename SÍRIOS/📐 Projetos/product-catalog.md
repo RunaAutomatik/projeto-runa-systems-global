@@ -36,15 +36,20 @@ Every product in this catalog was (or will be) built for real first.
 ## Product Teia — Full Map
 
 ```
-LOW TICKET (R$47–297)                MID TICKET (R$997–2.997)           HIGH TICKET (R$15k–50k)
-─────────────────────                ────────────────────────           ───────────────────────
-ORÇAMENTO$                           ALPHA®                             RUNA SYSTEMS R$15k/ano
-$QUAD                                MAYA®                              RUNA MENTORIA R$30k
-POSICIONAMENTO$                      ICARUS®                            RUNA INTERVENÇÃO R$50k
-CREATOR$
-AGENTE$
-Lives R$97
+LOW TICKET (R$97–297)               MID TICKET (R$297–997)             HIGH TICKET (R$15k–50k)
+─────────────────────               ──────────────────────             ───────────────────────
+ORÇAMENTO$  R$97–197                CREATOR$    R$497                  RUNA SYSTEMS R$15k/ano
+Lives       R$97                    MIND$       R$547                  RUNA MENTORIA R$30k
+Kit Avatar Alpha R$97 (aperitivo)   POSICIONAMENTO$ R$297–397          RUNA INTERVENÇÃO R$50k
+                                    PRODUTIZADO$ TBD
+                                    AGENTE$     R$197–247
+                                    SITE$       R$197–297
+                                    $QUAD       R$997
 ```
+
+> NOTE: ALPHA®, MAYA®, ICARUS® are deprecated (GPT assistants, not agents — superseded by current stack).
+> Alpha® is the demo case/persona, NOT a product tier.
+> The avatar IP stack: CREATOR$ → MIND$ → POSICIONAMENTO$ → PRODUTIZADO$ → $QUAD → RUNA SYSTEMS
 
 **Flow:** Low ticket → builds desire → Mid ticket → builds ecosystem → High ticket → full transformation
 
@@ -95,25 +100,50 @@ Lives R$97
 ### CREATOR$ *(in development)*
 **Status:** PRD complete → production phase
 **PRD:** [[creator-dollar-prd]]
-**What it is:** How to create a consistent AI-generated visual avatar (fictional character or the expert themselves) + storybook that serves as the creative foundation for all future content and products.
+**What it is:** How to create a consistent AI-generated visual avatar (fictional character or the expert themselves) — images + videos + storybook as the permanent creative foundation.
 **Core promise:** Create your avatar. Own your narrative. Appear without appearing.
-**Format:** Skool classroom — short build-in-public videos (screen recording) + text support
-**Demo case:** Alpha® built live throughout the entire product — avatar creation for the Alpha® program
-**Price:** R$247 (launch: R$197 first 72h)
-**Upsell to:** MIND$ ("now give it a brain") → $QUAD
-**Agent responsible:** FREYJA (copy) + @dev (technical) + ARES (offer structure)
+**Method:** Nano Banana 2 → Higgsfield → Sora 2 (with access hack). LENS agent for image prompts, REEL agent for video prompts.
+**Format:** Skool classroom — short build-in-public screen recordings + text support
+**Demo case:** Alpha® built live throughout the entire product
+**Price:** R$497 (launch: R$197 first 72h)
+**Aperitivo:** Kit Avatar Alpha — R$97 (4-step method doc + LENS + REEL agents)
+**Deliverables:** 30+ images + 3–5 videos + complete storyboard + 20+ prompt pack
+**Upsell to:** MIND$ ("now give it a brain") → POSICIONAMENTO$ → $QUAD
+**Agent responsible:** FREYJA (copy) + ARES (offer) + MAYA (demo assets)
+**Boundary note:** CREATOR$ = face + visual identity only. NOT: system prompts (MIND$), content scripts (POSICIONAMENTO$), monetization (PRODUTIZADO$).
 
 ### MIND$ *(in development)*
 **Status:** PRD complete → production phase
 **PRD:** [[mind-dollar-prd]]
-**What it is:** How to extract intellectual property — cognitive patterns, mental frameworks, decision processes — from any expert (external reference or self) and build an AI knowledge base.
+**What it is:** How to extract intellectual property — cognitive patterns, mental frameworks, decision processes — from any expert and build an AI knowledge base. System prompt architecture, training the avatar on your methodologies.
 **Core promise:** Extract the expert. Build the brain. Scale the knowledge.
 **Two routes:** (1) Extract from references like Hormozi → power your agents / (2) Extract your own methodology → your knowledge becomes a transferable asset
 **Format:** Skool classroom — build-in-public videos + text support + extraction protocol PDF
-**Demo case:** ARES agent (Hormozi extraction, already built) + Alpha®'s self-extraction
-**Price:** R$247 (bundle with CREATOR$: R$397)
-**Upsell to:** $QUAD
+**Demo case:** Alpha® self-extraction + ARES Hormozi knowledge base
+**Price:** R$547
+**Upsell to:** POSICIONAMENTO$ → $QUAD
 **Agent responsible:** ORION documents + ARES structures offer + FREYJA sells
+**Boundary note:** MIND$ = IP architecture + system prompt + avatar training. NOT visual identity (CREATOR$).
+
+### POSICIONAMENTO$ *(in development)*
+**Status:** Being built live
+**What it is:** How to turn the trained avatar into a content machine — scripts, formats, pipeline, and organic authority. Content without you.
+**Core promise:** Organic authority. Sales letters disguised as posts. Pipeline that runs without you.
+**Format:** Mini-course + content strategy template + FREYJA methodology
+**Price:** R$297–397
+**Upsell to:** $QUAD
+**Agent responsible:** FREYJA (this IS her methodology documented)
+**Boundary note:** POSICIONAMENTO$ = scripts, content formats, posting pipeline. NOT visual identity (CREATOR$) or IP extraction (MIND$).
+
+### PRODUTIZADO$ *(new — concept)*
+**Status:** Concept — added 2026-03-31
+**What it is:** How to transform the avatar (with visual identity + IP + content system) into a sellable product. Monetizing the avatar as intellectual property — deliverables, offers, funnels.
+**Core promise:** Your avatar becomes a business. One method → infinite products.
+**Format:** TBD
+**Price:** TBD
+**Upsell to:** $QUAD → RUNA SYSTEMS
+**Agent responsible:** ARES (offer structure) + FREYJA (positioning)
+**Boundary note:** PRODUTIZADO$ = monetização do avatar. The Alpha® teia (CREATOR$ + MIND$ + POSICIONAMENTO$ + PRODUTIZADO$) = full IP business.
 
 ---
 
