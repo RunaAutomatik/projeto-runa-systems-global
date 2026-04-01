@@ -220,6 +220,15 @@ commands:
     args: '{file-path} [preset-name]'
     description: 'Create tech-preset from documentation file'
 
+  # Knowledge Management
+  - name: extract-knowledge
+    args: '{source-path|url} [--mode=quick|standard|deep] [--agent={agent}] [--vault={path}]'
+    description: 'Extract and structure content into AKASHA-compatible knowledge base (uses knowledge-extraction skill)'
+    elicit: true
+  - name: update-kb
+    args: '{kb-path} [--section={section}]'
+    description: 'Update existing knowledge base in AKASHA with new content or corrections'
+
   # Story Creation
   - name: create-next-story
     description: 'Create next user story'

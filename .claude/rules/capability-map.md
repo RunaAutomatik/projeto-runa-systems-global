@@ -17,7 +17,7 @@ Never guess or reinvent — if the capability exists, use it.
 | ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch** | — |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
-| ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering** | Gmail, Google Calendar, Netlify |
+| ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
 | @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render** | Figma, Supabase, Neon |
 | @qa | code-review, testing-strategy, pr-review-toolkit | — |
 | @devops | devops-automation, commit-commands, hookify | Netlify |

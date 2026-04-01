@@ -125,6 +125,10 @@ project: runa-systems-global
 | Create calendar event | `claude.ai Google Calendar` | `mcp__claude_ai_Google_Calendar__gcal_create_event` |
 | Deploy to Netlify | `claude.ai Netlify` | `mcp__claude_ai_Netlify__*` |
 | Orchestrate multi-agent workflow | `agent-workflows` | `/agent-workflows` |
+| Extract content → AKASHA knowledge base | `knowledge-extraction` | `*extract-knowledge` |
+| Update existing AKASHA knowledge base | `knowledge-extraction` | `*update-kb` |
+| Generate NotebookLM podcast from AKASHA | notebooklm-mcp | `mcp__notebooklm-mcp__add_notebook` |
+| Query AKASHA via NotebookLM | notebooklm-mcp | `mcp__notebooklm-mcp__ask_question` |
 
 ### @dev (Dex — Implementation)
 | Task | Tool/Skill | How |
