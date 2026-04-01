@@ -45,17 +45,19 @@ Based on the "Framework Universal de Extração e Estruturação de Conhecimento
 
 | Content | Path |
 |---------|------|
-| Alex Hormozi | `bases/📚 Alex Hormozi/` |
-| Sales frameworks | `bases/📚 Vendas Alto Ticket/` |
-| Agent knowledge | `bases/🧠 Agent Knowledge Maps/` |
-| General index | `bases/🔗 Index/` |
+| Alex Hormozi | `AKASHA/📚 Alex Hormozi/` |
+| Hormozi frameworks (curated) | `AKASHA/📚 Hormozi Frameworks/` |
+| Sales frameworks | `AKASHA/📚 Vendas Alto Ticket/` |
+| Agent knowledge | `AKASHA/🧠 Agent Knowledge Maps/` |
+| General index | `AKASHA/🔗 Index/` |
+| Study base | `AKASHA/📖 Base de Estudo/` |
 
 ## Workflow
 
 ```
 Source content
   → ORION *extract-knowledge (mode selection)
-  → AKASHA vault (bases/)
+  → AKASHA vault (C:/runa-systems-global/AKASHA/)
   → [optional] ALEX ai-rag-pipeline
   → [optional] notebooklm-mcp
   → Agents consume via memory or RAG query
@@ -65,4 +67,4 @@ Source content
 
 - [[capability-map]] — skill listed under ORION
 - [[akasha-index]] — AKASHA vault structure
-- `bases/📚 Alex Hormozi/` — first large corpus organized with this skill
+- `AKASHA/📚 Alex Hormozi/` — first large corpus organized with this skill (602 files)
