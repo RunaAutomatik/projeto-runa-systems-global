@@ -47,6 +47,60 @@ Other agents (Dev, Architect, etc.) are MCP **consumers**, not administrators. I
 > EXA, Context7, and Apify referenced in legacy docs are NOT available.
 > Do NOT attempt to use `mcp__docker-gateway__*` tools — they will fail.
 
+---
+
+## Google Workspace CLI (`gws`) — PRIMARY for Drive/Docs/Sheets
+
+**CRITICAL:** For Google Drive, Docs, Sheets, Presentations, and Tasks — use the `gws` CLI, NOT an MCP.
+There is NO Google Drive MCP in this project. The `gws` CLI is the correct and ONLY tool.
+
+```
+Account:  automatikruna@gmail.com
+Binary:   gws (global, available in any Bash call)
+Auth:     ~/.config/gws/credentials.enc (already authenticated — do not re-auth)
+```
+
+### gws Command Pattern
+```bash
+gws <service> <resource> <method> [flags]
+```
+
+### Service Coverage
+| Service | Use For | Example |
+|---------|---------|---------|
+| `drive` | Upload/download files, create folders, share | `gws drive files create --json '{"name":"doc.md"}' --upload ./file.md` |
+| `sheets` | Read/write spreadsheets | `gws sheets spreadsheets values get --params '{"spreadsheetId":"ID","range":"A1:Z"}'` |
+| `docs` | Create/read Google Docs | `gws docs documents get --params '{"documentId":"ID"}'` |
+| `gmail` | Send/read email (alt to MCP) | `gws gmail users messages send --json '{...}'` |
+| `calendar` | Events (alt to MCP) | `gws calendar events list --params '{"calendarId":"primary"}'` |
+| `presentations` | Slides | `gws slides presentations get --params '{"presentationId":"ID"}'` |
+| `tasks` | Task lists | `gws tasks tasklists list` |
+
+### When to use `gws` vs MCP
+| Task | Use |
+|------|-----|
+| Upload file to Google Drive | `gws drive files create --upload` |
+| Create Google Doc | `gws docs documents create` |
+| Read/write Google Sheet | `gws sheets spreadsheets values` |
+| Send email | `claude_ai_Gmail` MCP **or** `gws gmail` |
+| Read calendar | `claude_ai_Google_Calendar` MCP **or** `gws calendar` |
+| Google Slides | `gws presentations` (no MCP available) |
+| Google Tasks | `gws tasks` (no MCP available) |
+
+> ⚠️ If any agent says "I don't have access to Google Drive/Docs/Sheets/Slides/Tasks" — that is WRONG.
+> The correct answer is: **use `gws` CLI via Bash tool.**
+
+### Agent Routing for Google
+| Agent | Google tasks they own |
+|-------|----------------------|
+| ORION | Drive uploads, Docs creation, Sheets writes — orchestration layer |
+| HERMES | Gmail automation, Calendar events (also via MCPs) |
+| FREYJA | Export content to Google Docs/Drive for client delivery |
+| @dev | Sheets API for data, Drive for asset management |
+| ARES | Drive for offer docs, Sheets for pricing tables |
+
+---
+
 ## CRITICAL: Tool Selection Priority
 
 ALWAYS prefer native Claude Code tools over MCP servers:

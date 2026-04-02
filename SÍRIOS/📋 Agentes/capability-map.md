@@ -28,6 +28,7 @@ project: runa-systems-global
 | Approve AV assets for publishing | `*approve-output` command | FREYJA → Editor Workers |
 | Save content to vault | `obsidian-cli`, `obsidian-markdown` | `/obsidian-cli` |
 | Build Obsidian canvas (content calendar) | `json-canvas` | `/json-canvas` |
+| Export content to Google Drive/Docs | `gws` CLI | `gws drive files create --upload` / `gws docs documents create` |
 
 ### MAYA (Audio-Visual Production Agent)
 | Task | Tool/Skill | How |
@@ -72,6 +73,8 @@ project: runa-systems-global
 | Build multi-step content pipeline | `ai-content-pipeline` | `/ai-content-pipeline` |
 | Automate social media content | `ai-social-media-content` | `/ai-social-media-content` |
 | Twitter/X automation | `twitter-automation` | `/twitter-automation` |
+| Send email (alt to MCP) | `gws` CLI | `gws gmail users messages send` |
+| Create calendar event (alt to MCP) | `gws` CLI | `gws calendar events insert` |
 
 ### ARES (Offer/Business Agent)
 | Task | Tool/Skill | How |
@@ -129,6 +132,11 @@ project: runa-systems-global
 | Update existing AKASHA knowledge base | `knowledge-extraction` | `*update-kb` |
 | Generate NotebookLM podcast from AKASHA | notebooklm-mcp | `mcp__notebooklm-mcp__add_notebook` |
 | Query AKASHA via NotebookLM | notebooklm-mcp | `mcp__notebooklm-mcp__ask_question` |
+| **Upload file to Google Drive** | `gws` CLI | `gws drive files create --upload ./file` |
+| **Create Google Doc** | `gws` CLI | `gws docs documents create --json '{"title":"..."}'` |
+| **Read/write Google Sheets** | `gws` CLI | `gws sheets spreadsheets values get/update` |
+| **Google Slides** | `gws` CLI | `gws slides presentations get/create` |
+| **Google Tasks** | `gws` CLI | `gws tasks tasklists list` |
 
 ### @dev (Dex — Implementation)
 | Task | Tool/Skill | How |

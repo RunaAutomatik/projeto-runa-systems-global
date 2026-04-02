@@ -1,1 +1,7 @@
-inference.sh - 1nfsh-05qb44ngx249t5sp3zp5n96arg
+---
+date: 2026-04-02
+tags: [temp, cleanup]
+---
+
+> This file was cleared. API tokens moved to `.env`.
+> See `.env` sections: INFSH_TOKEN, PIPECLIP_TOKEN.
