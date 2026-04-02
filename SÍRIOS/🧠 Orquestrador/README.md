@@ -19,9 +19,13 @@ Read that file first. Everything is there.
 
 | Folder | Purpose |
 |--------|---------|
-| [[📋 Agentes/orion\|📋 Agentes/]] | Agent cards — ORION, ARES, HERMES, FREYJA + AIOX core |
-| [[📐 Projetos/runa-systems-business-context\|📐 Projetos/]] | Business context, PRDs, roadmaps |
-| [[📚 Referências/analysis-instagram-arthur-diagnosis\|📚 Referências/]] | Analyses, research, external documentation |
+| [[📋 Agentes/orion\|📋 Agentes/]] | Agent cards + capability-map |
+| [[📐 Projetos/product-catalog\|📐 Projetos/]] | Product PRDs only — CREATOR$, MIND$, $QUAD, etc. |
+| [[📐 Arquitetura/_index\|📐 Arquitetura/]] | Technical blueprints — pipelines, workers, squad architecture |
+| [[💰 Ofertas/creator-dollar-offer\|💰 Ofertas/]] | Offer docs per product (Google Doc style) |
+| [[📱 Instagram/📅 Campanhas/creator-dollar-campaign-W14\|📱 Instagram/📅 Campanhas/]] | Campaign and marketing action docs |
+| [[📦 Entregáveis/deliverable-alpha-system-prompt\|📦 Entregáveis/]] | Deliverables sent via DM/comment automations |
+| [[📚 Referências/runa-systems-business-context\|📚 Referências/]] | Business context, analyses, brand, tools inventory |
 | [[🛠️ Skills/\|🛠️ Skills/]] | Installed skills documentation |
 | [[🔗 Templates/README\|🔗 Templates/]] | Reusable document templates |
 | [[📅 Diário/\|📅 Diário/]] | Session diary — cognitive memory |
