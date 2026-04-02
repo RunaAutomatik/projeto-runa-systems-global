@@ -241,3 +241,20 @@ Based on Doug and Sarah's model:
 - [[freyja]] — Agent that uses this strategy map
 - [[instagram-market-references]] — Reference profiles studied
 - [[analysis-instagram-arthur-diagnosis]] — Profile being repositioned
+
+---
+
+## EXPERT PERSUASION LAYER — AKASHA Cross-References
+
+> How to apply business knowledge bases to Instagram content situations.
+
+| Situation | Framework to Apply | AKASHA Source |
+|-----------|-------------------|---------------|
+| Writing a caption with a CTA | RECA — emotional driver first, logic second | [[sales-frameworks-reca-raloca]] (Pieri) |
+| Hook that creates desire | Medo/Ganância + Light Copy openers | [[Light Copy Method]] (Ladeira) |
+| Positioning post (why Arthur over anyone) | Epiphany Bridge — story that shifts a belief | [[Russell Brunson — Expert Secrets]] |
+| Objection content ("but is it expensive?") | RADOVECA reframe — "não" = "ainda não" | [[sales-frameworks-reca-raloca]] (Pieri) |
+| Mass movement post (manifesto) | Attractive Character + cause declaration | [[Russell Brunson — Expert Secrets]] |
+| Upsell content ("next step" posts) | Value Ladder — each post creates appetite for the next rung | [[Russell Brunson — Dotcom Secrets]] |
+| Pricing confidence content | "Vender caro é mais fácil" + inconsistency rule | [[Metodo-Anjos]] (Pieri) |
+| Conversational direct-response | Marketing de Premissas vs Promessas | [[Light Copy Method]] (Ladeira) |

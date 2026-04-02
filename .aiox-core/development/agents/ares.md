@@ -26,10 +26,12 @@ activation-instructions:
   - STAY IN CHARACTER at all times
   - CRITICAL: On activation, ONLY greet and HALT. Never auto-run discovery.
   - KNOWLEDGE BASE: When analyzing offers or designing products, load from:
-      - C:/runa-systems-global/bases/📚 Alex Hormozi/Frameworks/offer-building-framework.md
-      - C:/runa-systems-global/bases/📚 Alex Hormozi/Frameworks/growth-levers.md
-      - C:/runa-systems-global/bases/📚 Alex Hormozi/Mental Models/hormozi-mental-models.md
-      - C:/runa-systems-global/bases/📚 Vendas Alto Ticket/sales-frameworks-reca-raloca.md
+      - C:/runa-systems-global/AKASHA/📚 Alex Hormozi/Frameworks/offer-building-framework.md
+      - C:/runa-systems-global/AKASHA/📚 Alex Hormozi/Frameworks/growth-levers.md
+      - C:/runa-systems-global/AKASHA/📚 Alex Hormozi/Mental Models/hormozi-mental-models.md
+      - C:/runa-systems-global/AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+      - C:/runa-systems-global/AKASHA/📚 Russell Brunson/Dotcom Secrets.md
+      - C:/runa-systems-global/AKASHA/📚 Everton Pieri/Metodo-Anjos.md
     ONLY load these when a command explicitly requires offer analysis or design.
 
 agent:
@@ -139,18 +141,26 @@ commands:
 
 dependencies:
   knowledge_bases:
-    - path: bases/📚 Alex Hormozi/Frameworks/offer-building-framework.md
+    - path: AKASHA/📚 Alex Hormozi/Frameworks/offer-building-framework.md
       purpose: Grand Slam Offer system, Value Equation, de-commoditization
-    - path: bases/📚 Alex Hormozi/Frameworks/growth-levers.md
+    - path: AKASHA/📚 Alex Hormozi/Frameworks/growth-levers.md
       purpose: Revenue levers, LTV, market expansion
-    - path: bases/📚 Alex Hormozi/Mental Models/hormozi-mental-models.md
+    - path: AKASHA/📚 Alex Hormozi/Mental Models/hormozi-mental-models.md
       purpose: Decision frameworks, mental models
-    - path: bases/📚 Vendas Alto Ticket/sales-frameworks-reca-raloca.md
-      purpose: High-ticket sales process, RECA/RALOCA/RADOVECA
+    - path: AKASHA/📚 Alex Hormozi/Books/100M Offers.md
+      purpose: Complete offer-building methodology — Grand Slam anatomy, pricing, scarcity, guarantees
+    - path: AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+      purpose: RECA/RALOCA/RADOVECA — emotional buying drivers, 4-level questioning, objection neutralization
+    - path: AKASHA/📚 Everton Pieri/Metodo-Anjos.md
+      purpose: DNB, premium pricing psychology, Vida Rica model, specialist vs generalist, "vender caro é mais fácil"
+    - path: AKASHA/📚 Russell Brunson/Dotcom Secrets.md
+      purpose: Value Ladder, funnel architecture, upsell chain design, 3 traffic types
+    - path: AKASHA/📚 Leandro Ladeira VTSD/Light Copy Method.md
+      purpose: Conversational persuasion layer for offer copy, Marketing de Premissas vs Promessas
 
   templates:
     - name: offer-draft-tmpl
-      path: bases/🔗 Index/knowledge-base-index.md
+      path: AKASHA/🔗 Index/knowledge-base-index.md
 
 workflows:
   consult_mode:

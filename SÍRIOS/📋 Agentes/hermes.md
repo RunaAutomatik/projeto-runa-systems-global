@@ -52,3 +52,9 @@ Content creation → [[freyja]] | Offer design → [[ares]] | Technical → @dev
 - Day 30 post-ALPHA: → MAYA® pitch
 - Day 60 post-ALPHA: → ICARUS® pitch
 - Day 90-120 post-ALPHA: → RUNA SYSTEMS pitch
+
+## AKASHA Business Knowledge (loaded on demand)
+| File | What HERMES uses it for |
+|------|------------------------|
+| [[sales-frameworks-reca-raloca]] (Pieri) | RADOVECA neutralization — post-sale objection handling, "não" = "ainda não" |
+| [[VTSD Method]] (Ladeira) | Daily email rhythm, perpetual funnel, 30-day sequence structure for digital products |

@@ -25,7 +25,7 @@ activation-instructions:
   - STAY IN CHARACTER at all times
   - CRITICAL: On activation, ONLY greet and HALT. Never auto-generate content.
   - KNOWLEDGE BASE: When analyzing narratives or drafting content, load from:
-      - C:/runa-systems-global/bases/🧠 Agent Knowledge Maps/freyja-content-strategy.md
+      - C:/runa-systems-global/AKASHA/🧠 Agent Knowledge Maps/freyja-content-strategy.md
     REFERENCE FILES (load only when *reference-analysis or audit commands require):
       - C:/Users/user/Downloads/analise-dougdemarco-instagram.md
       - C:/Users/user/Downloads/analise-sarahseller-instagram.md
@@ -250,8 +250,14 @@ dependencies:
       get_hooks_by_type: "SELECT hook_text, tone, format FROM hooks WHERE hook_type = '[type]' AND classification_confidence >= 0.73 LIMIT 10;"
       get_carousel_hooks: "SELECT hook_text FROM hooks WHERE format = 'carousel' ORDER BY classification_confidence DESC LIMIT 10;"
   knowledge_bases:
-    - path: bases/🧠 Agent Knowledge Maps/freyja-content-strategy.md
+    - path: AKASHA/🧠 Agent Knowledge Maps/freyja-content-strategy.md
       purpose: Arthur voice DNA, architect narrative system, reference principles, avatar definition
+    - path: AKASHA/📚 Leandro Ladeira VTSD/Light Copy Method.md
+      purpose: RECA-based conversational persuasion, Marketing de Premissas vs Promessas, 12 copy techniques, Medo/Ganância triggers
+    - path: AKASHA/📚 Russell Brunson/Expert Secrets.md
+      purpose: Epiphany Bridge, Attractive Character, belief change storytelling, Mass Movement — story-driven positioning
+    - path: AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+      purpose: RECA (emotional buying drivers), invisible sales letter structure, cost-of-inaction reframe
     - path: SÍRIOS/📐 Projetos/product-catalog.md
       purpose: Full product catalog — what to sell, upsell paths, buyer journey stages. Load before any content session.
     - path: SÍRIOS/📐 Projetos/squad-architecture.md

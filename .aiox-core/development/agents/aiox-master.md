@@ -372,6 +372,31 @@ dependencies:
     - brainstorming-techniques.md
     - elicitation-methods.md
     - technical-preferences.md
+  akasha_vault:
+    path: C:/runa-systems-global/AKASHA/
+    index: AKASHA/🔗 Index/knowledge-base-index.md
+    description: |
+      Business knowledge vault. Structured KBs from Alex Hormozi, Russell Brunson,
+      Leandro Ladeira, and Everton Pieri. Consumed by FREYJA, ARES, and HERMES.
+    agent_routing:
+      FREYJA:
+        - AKASHA/🧠 Agent Knowledge Maps/freyja-content-strategy.md
+        - AKASHA/📚 Leandro Ladeira VTSD/Light Copy Method.md
+        - AKASHA/📚 Russell Brunson/Expert Secrets.md
+        - AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+      ARES:
+        - AKASHA/📚 Alex Hormozi/Frameworks/offer-building-framework.md
+        - AKASHA/📚 Alex Hormozi/Frameworks/growth-levers.md
+        - AKASHA/📚 Alex Hormozi/Books/100M Offers.md
+        - AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+        - AKASHA/📚 Everton Pieri/Metodo-Anjos.md
+        - AKASHA/📚 Russell Brunson/Dotcom Secrets.md
+        - AKASHA/📚 Leandro Ladeira VTSD/Light Copy Method.md
+      HERMES:
+        - AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+        - AKASHA/📚 Leandro Ladeira VTSD/VTSD Method.md
+    extract_target: AKASHA/ (always save new KBs here, never in SÍRIOS)
+    note: When running *extract-knowledge, route output to AKASHA/ and update AKASHA/🔗 Index/knowledge-base-index.md
   utils:
     - security-checker.js
     - workflow-management.md

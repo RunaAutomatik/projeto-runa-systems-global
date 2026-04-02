@@ -182,8 +182,10 @@ dependencies:
   context:
     - path: SÍRIOS/📐 Projetos/runa-systems-business-context.md
       purpose: Full product architecture and client profiles
-    - path: bases/📚 Vendas Alto Ticket/sales-frameworks-reca-raloca.md
-      purpose: Sales frameworks for objection handling and upsell logic
+    - path: AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+      purpose: RECA/RALOCA/RADOVECA — objection handling, emotional buying triggers, upsell logic
+    - path: AKASHA/📚 Leandro Ladeira VTSD/VTSD Method.md
+      purpose: Daily sales engine — perpetual funnel, 30-day email rhythm, digital product retention
 
 workflows:
   digital_onboarding:

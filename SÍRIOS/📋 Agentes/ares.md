@@ -37,10 +37,16 @@ Content creation → [[freyja]] | Client success → [[hermes]] | Technical → 
 | `*runa-product-web` | Design/review the product teia |
 
 ## Knowledge Base (AKASHA)
-- [[growth-levers]] — Hormozi growth levers framework
-- [[offer-building-framework]] — Grand Slam Offer construction
-- [[hormozi-mental-models]] — Mental models for pricing and positioning
-- [[sales-frameworks-reca-raloca]] — RECA/RALOCA/RADOVECA alto ticket
+| File | Purpose |
+|------|---------|
+| [[100M Offers]] | Complete Grand Slam Offer methodology, pricing, scarcity, guarantees |
+| [[offer-building-framework]] | Value Equation, offer anatomy, de-commoditization |
+| [[growth-levers]] | $0–$10M roadmap, LTV levers, market expansion |
+| [[hormozi-mental-models]] | Decision frameworks, mental models for pricing |
+| [[sales-frameworks-reca-raloca]] (Pieri) | RECA/RALOCA/RADOVECA — emotional buying triggers, objection neutralization |
+| [[Metodo-Anjos]] (Pieri) | DNB, premium pricing psychology, Vida Rica, specialist vs generalist |
+| [[Russell Brunson — Dotcom Secrets]] | Value Ladder, funnel architecture, upsell chain design |
+| [[Light Copy Method]] (Ladeira) | Conversational copy layer for offer communications |
 
 ## Connected Agents
 - [[freyja]] — narrative arm (positioning feeds offer design)

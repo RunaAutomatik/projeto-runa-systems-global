@@ -42,12 +42,19 @@ Offer design → [[ares]] | Client success → [[hermes]] | Data analysis → @a
 | `*profile-design` | Bio + pinned posts + highlights strategy |
 
 ## Knowledge Base
-- `bases/🧠 Agent Knowledge Maps/freyja-content-strategy.md` — full strategy synthesis
+- `AKASHA/🧠 Agent Knowledge Maps/freyja-content-strategy.md` — voice DNA, architect narrative, reference profiles
 - [[instagram-market-references]] — Hub de referências de mercado do Instagram
 - [[analysis-instagram-arthur-diagnosis]] — Diagnóstico do perfil do Arthur
 - [[analysis-instagram-dougdemarco]] — Referência: Doug D'Marco
 - [[analysis-instagram-sarahseller]] — Referência: Sarah Seller
 - [[analysis-instagram-caroldutra]] — Referência: Carol Dutra
+
+## AKASHA Business Knowledge (loaded on demand)
+| File | What FREYJA uses it for |
+|------|------------------------|
+| [[Light Copy Method]] (Ladeira) | RECA-based conversational copy, Medo/Ganância, 12 copy techniques |
+| [[Russell Brunson — Expert Secrets]] | Epiphany Bridge, belief change storytelling, Attractive Character |
+| [[sales-frameworks-reca-raloca]] (Pieri) | Emotional buying drivers (RECA), invisible sales letter structure |
 
 ## The Architect Narrative
 | Wrong | Right |

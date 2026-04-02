@@ -125,7 +125,17 @@ source: []
 
 | File | Description |
 |------|-------------|
-| [[freyja-content-strategy]] | FREYJA-specific content strategy knowledge |
+| [[freyja-content-strategy]] | FREYJA — Arthur voice DNA, architect narrative, reference profiles (Doug/Sarah/Carol) |
+
+### Agent → AKASHA Routing Table
+
+| Agent | Knowledge Bases Consumed |
+|-------|--------------------------|
+| **FREYJA** | `freyja-content-strategy.md` · [[Light Copy Method]] · [[Russell Brunson — Expert Secrets]] · [[sales-frameworks-reca-raloca]] |
+| **ARES** | [[100M Offers]] · [[offer-building-framework]] · [[growth-levers]] · [[hormozi-mental-models]] · [[sales-frameworks-reca-raloca]] · [[Metodo-Anjos]] · [[Russell Brunson — Dotcom Secrets]] · [[Light Copy Method]] |
+| **HERMES** | [[sales-frameworks-reca-raloca]] · [[VTSD Method]] |
+| **ORION** | Full vault awareness — routes extraction to correct expert folder |
+| **ALEX** | Full vault — queries via NotebookLM for synthesis |
 
 ---
 
