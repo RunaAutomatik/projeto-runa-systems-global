@@ -87,11 +87,29 @@ source: []
 
 ---
 
-## 📚 Vendas Alto Ticket
+## 📚 Everton Pieri
 
+### Expert Profile
 | File | Description |
 |------|-------------|
-| [[sales-frameworks-reca-raloca]] | RECA, RALOCA, RADOVECA frameworks — 4-level emotional questioning, objection neutralization, StoryBrand adaptation |
+| [[Profile]] | Biography, Anjos Business trajectory, R$1.3B generated for clients, MLS co-founder, Eternum Club |
+
+### Methods
+| File | Description |
+|------|-------------|
+| [[Metodo-Anjos]] | DNB (Dinheiro no Bolso), 4 Pillars (Marketing/Vendas/Finanças/Operações), Vida Rica, price psychology, specialist vs generalist, funil invertido |
+| [[sales-frameworks-reca-raloca]] | RECA, RALOCA, RADOVECA — 4-level emotional questioning, objection neutralization, 90% false objections rule, cost of inaction |
+
+### Source Videos
+| Video | Topic |
+|-------|-------|
+| [COMO VENDER MAIS CARO? — Como Você Fez Isso? #127](https://www.youtube.com/watch?v=p2gjDUU_5e0) | Origin story, high-ticket philosophy |
+| [Vender MAIS CARO É Mais Fácil — JOTA JOTA #260](https://www.youtube.com/watch?v=Y6P7t_oPK1s) | Core thesis, Vida Rica, brand building |
+| [Destrave seu NEGÓCIO — Mentalidade](https://www.youtube.com/watch?v=JYilM72RP3Q) | Business as reflection of owner, CPF/CNPJ principle |
+| [QUEM VENDE CARO, VENDE MAIS](https://www.youtube.com/watch?v=GbtsS9hgsSM) | DNB methodology, RECA/RALOCA intro, funil invertido |
+| [OS ANJOS DO EMPREENDEDORISMO](https://www.youtube.com/watch?v=noZoK1AVsB0) | Prosperity definition, business errors |
+| [Como vender MENTORIAS de R$140 MIL](https://www.youtube.com/watch?v=BNze7NdVoU8) | High-ticket mentoring, time/money/frustration savings |
+| [Treinamento Venda de Alta Performance](https://www.youtube.com/watch?v=hb7x4ccd7qU) | Full sales training (no subtitles) |
 
 ---
 
@@ -118,21 +136,30 @@ OFFER DESIGN
   Alex Hormozi → Grand Slam Offer → What goes in the funnel
   Russell Brunson → Value Ladder → Where the offer sits in ascension
   Leandro Ladeira → Light Copy → How the offer is written and communicated
+  Everton Pieri → DNB + Vida Rica → How the offer is PRICED and positioned
 
 SALES SYSTEMS
   Alex Hormozi → Charge premium, deliver premium, guarantee
   Russell Brunson → Perpetual funnel architecture (DotCom Secrets)
   Leandro Ladeira → VTSD daily sales engine (runs inside the funnel)
+  Everton Pieri → RECA/RALOCA/RADOVECA → How each conversation closes
 
 PERSUASION LAYER
   Alex Hormozi → Social proof + ROI-based logic
   Russell Brunson → Epiphany Bridge + belief change stories
   Leandro Ladeira → Light Copy conversational persuasion
+  Everton Pieri → Price psychology + emotional buying brain + objection neutralization
 
 AUDIENCE BUILDING
   Alex Hormozi → Hungry market selection
   Russell Brunson → Mass Movement + Attractive Character (Expert Secrets)
   Leandro Ladeira → Organic daily content + community (VTSD Pillar 4)
+  Everton Pieri → Specialist positioning + Vida Rica aspiration
+
+PRICING PHILOSOPHY
+  Alex Hormozi → Charge what it's worth (100M Offers Value Equation)
+  Leandro Ladeira → N/A (content-first, not pricing-focused)
+  Everton Pieri → "Vender caro é mais fácil" — brain trusts expensive = better
 ```
 
 ---
@@ -149,6 +176,8 @@ AUDIENCE BUILDING
 | FREYJA copy briefs | [[Light Copy Method]] | [[VTSD Method]] |
 | ARES ad campaigns | [[100M Offers]] | [[VTSD Method]] |
 | High-ticket sales (RUNA) | [[sales-frameworks-reca-raloca]] | [[100M Offers]] |
+| Arthur's pricing confidence | [[Metodo-Anjos]] | [[sales-frameworks-reca-raloca]] |
+| @arthsystems_ Vida Rica framing | [[Profile]] (Everton Pieri) | [[Light Copy Method]] |
 
 ---
 
@@ -170,8 +199,12 @@ AUDIENCE BUILDING
 | Light Copy method | ✅ Covered | [[Light Copy Method]] |
 | Daily sales system | ✅ Covered | [[VTSD Method]] |
 | Mental triggers (PT-BR) | ✅ Covered | [[Light Copy Method]] |
-| RECA / RALOCA / RADOVECA | ✅ Covered | [[sales-frameworks-reca-raloca]] |
+| RECA / RALOCA / RADOVECA | ✅ Covered | [[sales-frameworks-reca-raloca]] (Everton Pieri) |
 | High-ticket objection handling | ✅ Covered | [[sales-frameworks-reca-raloca]] |
+| DNB — Dinheiro no Bolso | ✅ Covered | [[Metodo-Anjos]] |
+| Vida Rica premium positioning | ✅ Covered | [[Metodo-Anjos]], [[Profile]] (Everton Pieri) |
+| Price psychology (cérebro odeia inconsistência) | ✅ Covered | [[Metodo-Anjos]] |
+| Specialist vs Generalist positioning | ✅ Covered | [[Metodo-Anjos]] |
 | $0–$10M scale roadmap | ✅ Covered | [[growth-levers]] |
 | Runa product architecture | ⚠️ Partial | Source: RUNA_SYSTEMS_GLOBAL_RELEASE_COMPLETO.md |
 | Traffic Secrets (Brunson book 3) | ❌ Not yet | Source: book not provided |
