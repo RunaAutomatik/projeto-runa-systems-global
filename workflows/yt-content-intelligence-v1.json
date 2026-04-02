@@ -1,0 +1,219 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "cronExpression", "expression": "0 10 * * 3" }]
+        }
+      },
+      "id": "yti-trigger",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [240, 464]
+    },
+    {
+      "parameters": {
+        "jsCode": "const accounts = [\n  { handle: 'nateherk', platform: 'youtube' },\n  { handle: 'oalanicolas', platform: 'youtube' },\n  { handle: 'jovensdenegocios', platform: 'youtube' },\n  { handle: 'horadenegocios', platform: 'youtube' },\n  { handle: 'Academia.Lendaria', platform: 'youtube' },\n  { handle: 'Chase-H-AI', platform: 'youtube' },\n  { handle: 'danmartell', platform: 'youtube' },\n  { handle: 'BenAI92', platform: 'youtube' },\n  { handle: 'Itssssss_Jack', platform: 'youtube' }\n];\nreturn accounts.map(a => ({ json: a }));"
+      },
+      "id": "yti-accounts",
+      "name": "All YT Accounts",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [464, 464]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/channels",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "part", "value": "contentDetails" },
+            { "name": "forHandle", "value": "={{ '@' + $json.handle }}" },
+            { "name": "key", "value": "AIzaSyDh5lKDIvet3m5OHXLsTVzLaPFzbTV0wMM" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "yti-channel",
+      "name": "YT Get Channel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [688, 464],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/playlistItems",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "part", "value": "snippet" },
+            { "name": "playlistId", "value": "={{ ($json.items && $json.items[0] && $json.items[0].contentDetails && $json.items[0].contentDetails.relatedPlaylists) ? $json.items[0].contentDetails.relatedPlaylists.uploads : '' }}" },
+            { "name": "maxResults", "value": "15" },
+            { "name": "key", "value": "AIzaSyDh5lKDIvet3m5OHXLsTVzLaPFzbTV0wMM" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "yti-playlist",
+      "name": "YT Get Playlist Items",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [912, 464],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "cond-yt-items",
+              "leftValue": "={{ ($json.items || []).length }}",
+              "rightValue": 0,
+              "operator": { "type": "number", "operation": "gt" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "yti-has-items",
+      "name": "Has Videos?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [1136, 464]
+    },
+    {
+      "parameters": {
+        "url": "https://www.googleapis.com/youtube/v3/videos",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "part", "value": "statistics,snippet" },
+            { "name": "id", "value": "={{ ($json.items || []).map(i => i.snippet.resourceId.videoId).join(',') }}" },
+            { "name": "key", "value": "AIzaSyDh5lKDIvet3m5OHXLsTVzLaPFzbTV0wMM" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "yti-stats",
+      "name": "YT Get Video Stats",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1360, 464],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const results = [];\n\nfor (const item of $input.all()) {\n  const response = item.json;\n  let handle = 'unknown';\n  try { handle = $('All YT Accounts').item.json.handle; } catch(e) {}\n\n  for (const video of (response.items || [])) {\n    const stats = video.statistics || {};\n    const snippet = video.snippet || {};\n    const title = (snippet.title || '').trim();\n    if (!title) continue;\n\n    const likes = parseInt(stats.likeCount || 0);\n    const comments = parseInt(stats.commentCount || 0);\n    const views = parseInt(stats.viewCount || 1);\n\n    // Engagement score: (likes + comments*10) / views — ratio of active interaction to reach\n    const engagementScore = parseFloat(((likes + comments * 10) / Math.max(views, 1) * 100).toFixed(6));\n\n    results.push({\n      json: {\n        video_id: String(video.id),\n        video_url: 'https://www.youtube.com/watch?v=' + video.id,\n        source_account: handle,\n        title: title,\n        description_as_script: (snippet.description || '').substring(0, 2000),\n        likes: likes,\n        comments: comments,\n        views: views,\n        engagement_score: engagementScore,\n        published_at: snippet.publishedAt || null\n      }\n    });\n  }\n}\n\n// Sort by engagement score, return top 3\nresults.sort((a, b) => b.json.engagement_score - a.json.engagement_score);\nreturn results.slice(0, 3);"
+      },
+      "id": "yti-score",
+      "name": "Score & Filter Videos",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1584, 464]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "{{ANTHROPIC_API_KEY}}" },
+            { "name": "anthropic-version", "value": "2023-06-01" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"claude-haiku-4-5-20251001\",\n  \"max_tokens\": 1200,\n  \"messages\": [{\n    \"role\": \"user\",\n    \"content\": \"Analyze this YouTube video for content intelligence. Return ONLY a valid JSON object, no markdown, no explanation.\\n\\nChannel: {{ $json.source_account }}\\nTitle: {{ $json.title }}\\nLikes: {{ $json.likes }} | Comments: {{ $json.comments }} | Views: {{ $json.views }}\\nEngagement Score: {{ $json.engagement_score }}\\n\\nDescription (Script):\\n{{ $json.description_as_script }}\\n\\nContext: This analysis feeds FREYJA, an AI content strategist for a high-ticket AI consulting brand (Runa Systems) focused on Claude Code, AI agent orchestration, cloud infrastructure, and business scaling. We want to identify educational content worth adapting for Instagram Reels and a future YouTube education channel.\\n\\nReturn exactly this JSON structure:\\n{\\n  \\\"hook_text\\\": \\\"the title rephrased as a compelling opening hook max 120 chars\\\",\\n  \\\"content_topic\\\": \\\"main educational subject in 3-5 words\\\",\\n  \\\"is_timeless\\\": true,\\n  \\\"tech_stack\\\": [\\\"claude\\\",\\\"n8n\\\",\\\"supabase\\\"],\\n  \\\"narrative_structure\\\": {\\n    \\\"hook\\\": \\\"attention opening\\\",\\n    \\\"main_content\\\": \\\"core educational value delivered\\\",\\n    \\\"conclusion\\\": \\\"takeaway or next step\\\"\\n  },\\n  \\\"why_it_worked\\\": \\\"2-3 sentences explaining the engagement drivers\\\",\\n  \\\"reel_adaptation\\\": \\\"1-2 sentences: how to turn this into a 60s Instagram Reel hook and script\\\",\\n  \\\"youtube_channel_fit\\\": \\\"1 sentence: how this fits a Runa Systems YouTube education channel\\\",\\n  \\\"relevance_score\\\": 0.0\\n}\\n\\nFor is_timeless: true if content is about principles/infrastructure (not a specific hype tool release). For tech_stack: only include from this list: claude, claude-code, anthropic, n8n, supabase, neon, vercel, netlify, google-cloud, aws, docker, typescript, python, ai-agents, mcp, automation. For relevance_score: 0.0-1.0 how relevant to AI systems, Claude Code, agent orchestration, cloud infra, high-ticket business scaling.\"\n  }]\n}",
+        "options": { "timeout": 30000 }
+      },
+      "id": "yti-claude",
+      "name": "Analyze with Claude",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [1808, 464],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const claudeResponse = $input.first().json;\nconst videoData = $('Score & Filter Videos').item.json;\n\nlet analysis = {};\ntry {\n  const text = claudeResponse.content && claudeResponse.content[0] && claudeResponse.content[0].text\n    ? claudeResponse.content[0].text.trim()\n    : '{}';\n  const cleaned = text.replace(/^```json?\\n?|```$/gm, '').trim();\n  analysis = JSON.parse(cleaned);\n} catch(e) {\n  analysis = {\n    hook_text: videoData.title ? videoData.title.substring(0, 120) : '',\n    content_topic: 'unknown',\n    is_timeless: false,\n    tech_stack: [],\n    narrative_structure: { hook: '', main_content: '', conclusion: '' },\n    why_it_worked: 'Analysis failed: ' + e.message,\n    reel_adaptation: '',\n    youtube_channel_fit: '',\n    relevance_score: 0\n  };\n}\n\nreturn [{ json: { ...videoData, ...analysis } }];"
+      },
+      "id": "yti-parse",
+      "name": "Parse Claude Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2032, 464]
+    },
+    {
+      "parameters": {
+        "url": "={{ 'https://uldscgrmxtgovajeknmu.supabase.co/rest/v1/tracked_accounts?handle=eq.' + encodeURIComponent($json.source_account) + '&platform=eq.youtube&select=id' }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsZHNjZ3JteHRnb3ZhamVrbm11Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDM1NTA0MSwiZXhwIjoyMDg5OTMxMDQxfQ.AhNH1tef8IgCLPvuYJVVmOf7oXEnqYQ37bR0rRF5G20" },
+            { "name": "Authorization", "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsZHNjZ3JteHRnb3ZhamVrbm11Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDM1NTA0MSwiZXhwIjoyMDg5OTMxMDQxfQ.AhNH1tef8IgCLPvuYJVVmOf7oXEnqYQ37bR0rRF5G20" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "yti-get-account",
+      "name": "Get Account ID",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [2256, 464],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://uldscgrmxtgovajeknmu.supabase.co/rest/v1/yt_content_intelligence",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "apikey", "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsZHNjZ3JteHRnb3ZhamVrbm11Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDM1NTA0MSwiZXhwIjoyMDg5OTMxMDQxfQ.AhNH1tef8IgCLPvuYJVVmOf7oXEnqYQ37bR0rRF5G20" },
+            { "name": "Authorization", "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVsZHNjZ3JteHRnb3ZhamVrbm11Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NDM1NTA0MSwiZXhwIjoyMDg5OTMxMDQxfQ.AhNH1tef8IgCLPvuYJVVmOf7oXEnqYQ37bR0rRF5G20" },
+            { "name": "Content-Type", "value": "application/json" },
+            { "name": "Prefer", "value": "return=representation,resolution=ignore-duplicates" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"account_id\": {{ $json.id ? '\"' + $json.id + '\"' : 'null' }},\n  \"video_id\": \"{{ $('Parse Claude Response').item.json.video_id }}\",\n  \"video_url\": \"{{ $('Parse Claude Response').item.json.video_url }}\",\n  \"title\": {{ JSON.stringify($('Parse Claude Response').item.json.title || '') }},\n  \"description_as_script\": {{ JSON.stringify($('Parse Claude Response').item.json.description_as_script || '') }},\n  \"hook_text\": {{ JSON.stringify($('Parse Claude Response').item.json.hook_text || '') }},\n  \"content_topic\": {{ JSON.stringify($('Parse Claude Response').item.json.content_topic || '') }},\n  \"is_timeless\": {{ $('Parse Claude Response').item.json.is_timeless === true ? 'true' : 'false' }},\n  \"tech_stack\": {{ JSON.stringify($('Parse Claude Response').item.json.tech_stack || []) }},\n  \"narrative_structure\": {{ JSON.stringify($('Parse Claude Response').item.json.narrative_structure || {}) }},\n  \"why_it_worked\": {{ JSON.stringify($('Parse Claude Response').item.json.why_it_worked || '') }},\n  \"reel_adaptation\": {{ JSON.stringify($('Parse Claude Response').item.json.reel_adaptation || '') }},\n  \"youtube_channel_fit\": {{ JSON.stringify($('Parse Claude Response').item.json.youtube_channel_fit || '') }},\n  \"relevance_score\": {{ $('Parse Claude Response').item.json.relevance_score || 0 }},\n  \"likes\": {{ $('Parse Claude Response').item.json.likes || 0 }},\n  \"comments\": {{ $('Parse Claude Response').item.json.comments || 0 }},\n  \"views\": {{ $('Parse Claude Response').item.json.views || 0 }},\n  \"engagement_score\": {{ $('Parse Claude Response').item.json.engagement_score || 0 }},\n  \"published_at\": {{ $('Parse Claude Response').item.json.published_at ? '\"' + $('Parse Claude Response').item.json.published_at + '\"' : 'null' }},\n  \"analyzed_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {}
+      },
+      "id": "yti-insert",
+      "name": "Insert YT Intelligence",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [2480, 464],
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": { "main": [[{ "node": "All YT Accounts", "type": "main", "index": 0 }]] },
+    "All YT Accounts": { "main": [[{ "node": "YT Get Channel", "type": "main", "index": 0 }]] },
+    "YT Get Channel": { "main": [[{ "node": "YT Get Playlist Items", "type": "main", "index": 0 }]] },
+    "YT Get Playlist Items": { "main": [[{ "node": "Has Videos?", "type": "main", "index": 0 }]] },
+    "Has Videos?": {
+      "main": [
+        [{ "node": "YT Get Video Stats", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "YT Get Video Stats": { "main": [[{ "node": "Score & Filter Videos", "type": "main", "index": 0 }]] },
+    "Score & Filter Videos": { "main": [[{ "node": "Analyze with Claude", "type": "main", "index": 0 }]] },
+    "Analyze with Claude": { "main": [[{ "node": "Parse Claude Response", "type": "main", "index": 0 }]] },
+    "Parse Claude Response": { "main": [[{ "node": "Get Account ID", "type": "main", "index": 0 }]] },
+    "Get Account ID": { "main": [[{ "node": "Insert YT Intelligence", "type": "main", "index": 0 }]] }
+  },
+  "pinData": {},
+  "staticData": null,
+  "meta": {
+    "instanceId": "1d1daf5c32d4c4eec18531e1c59acbb189361bea16d9590318625cde3c1201ba"
+  }
+}
