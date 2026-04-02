@@ -214,11 +214,26 @@ Alpha® then becomes:
 - **Uses in:** [[squad-dollar-prd]], runa-systems-prd
 - **Catalog entry:** [[product-catalog]]
 
+### Offer & Campaign
+- **Offer doc (Google Doc / DM):** [[creator-dollar-offer]]
+- **Campaign W14:** [[creator-dollar-campaign-W14]]
+
+### Deliverables
+- **Aperitivo DM (keyword ALPHA):** [[aperitivo-creator-dollar]] — single prompt, R$97
+- **Método completo (referência):** [[deliverable-alpha-system-prompt]] — doc de apoio base
+
+### Course Support Docs (Skool — a criar por módulo)
+- **Mod 1 template:** [[creator-dollar-storyboard-template]] *(a criar)*
+- **Mod 2 prompt guide:** [[creator-dollar-master-prompt-guide]] *(a criar)*
+- **Mod 3 video hack:** [[creator-dollar-sora-hack-guide]] *(a criar)*
+- **Mod 4 storybook assembly:** [[creator-dollar-storybook-assembly]] *(a criar)*
+- **Bonus prompt pack:** [[creator-dollar-prompt-pack]] *(a criar)*
+
 ### Personas & Storyboards
 - **Avatar demo:** [[alpha-storyboard]] — Alpha® visual storyboard (built live in Module 1)
 - **Creator persona:** [[arthur-storyboard]] — Arthur / @arthsystems_ visual storyboard
 
-### Agents (CREATOR$ Deliverables)
+### Agents (included in CREATOR$)
 - **LENS** — AI image direction agent
   - System message: [[lens-gpt-instructions]]
   - Knowledge base: [[lens-gpt-kb]]

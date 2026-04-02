@@ -1,10 +1,11 @@
 ---
 date: 2026-03-31
-tags: [deliverable, creator-dollar, alpha, avatar, method, arthsystems, product]
+tags: [deliverable, creator-dollar, alpha, avatar, method, skool, course-support]
 project: runa-systems-global
-type: deliverable
-price: R$97
-product: CREATOR$ aperitivo
+type: course-reference
+produto: [[creator-dollar-prd]]
+nota: Este doc é a referência base. Cada passo será um doc de apoio separado por aula no Skool.
+dm-aperitivo: [[aperitivo-creator-dollar]]
 ---
 
 # Kit Avatar Alpha® — O Método em 4 Passos
