@@ -351,3 +351,26 @@ Via API this requires Levenshtein distance implementation server-side.
 - [ ] Module: Comment automation with fuzzy keyword matching (the RUNA → RUNNA problem)
 - [ ] Module: Token lifecycle management — renewal flow for 60-day tokens
 - [ ] Module: Environment variables as credential source of truth
+
+---
+
+## [2026-03-30] — Paperclip: Empresarizando o Squad
+
+**What was built/decided:**
+Designed the complete integration of Paperclip AI (open-source agent orchestration) as the final module of $QUAD. Created a 16-section minicurso with full YAML configurations for all 8 Runa Systems agents, and the PRD for Module 8. Key insight: the AIOX agent `.md` files become `promptTemplate` directly — zero rewrite needed.
+
+**Product module this feeds:**
+$QUAD — Module 8 (final) | RUNA SYSTEMS — Squad Architecture + Tooling Stack
+
+**Raw material value:**
+Paperclip is the architectural leap from "having agents" to "running a company." This took 30 minutes to architect because we already had all agents defined. A student building from scratch would need days to understand how to connect all the pieces. This session IS the module content.
+
+**Key artifacts:**
+- `SÍRIOS/📐 Projetos/paperclip-minicurso.md` — Complete 16-section guide with agent configs
+- `SÍRIOS/📐 Projetos/squad-dollar-paperclip-module.md` — PRD for Module 8
+- `SÍRIOS/📐 Projetos/squad-dollar-prd.md` — Updated with Module 8 added
+- Paperclip: `npx paperclipai onboard --yes` → localhost:3100
+- Adapter: `claude_local` with `promptTemplate` + `{{variable}}` interpolation
+- AGENTS.md pattern: shared context injected on every heartbeat
+- Squad cost estimate: ~$160/mês for 8 agents with auto-pause controls
+- Upsell moment: Module 8 end → RUNA SYSTEMS R$15k/ano (3-5% conversion expected)

@@ -159,9 +159,31 @@ Each agent is built from the knowledge bases created in MIND$. The orchestrator 
 
 ---
 
+### MODULE 8 — A EMPRESA QUE SE GOVERNA *(Paperclip Final Module — ADDED 2026-03-30)*
+**Objective:** Empresarialize the squad built in Modules 2-7 into a self-governing company with org chart, heartbeat automation, budget control, and governance
+
+> Full PRD: [[squad-dollar-paperclip-module]]
+> Technical Guide: [[paperclip-minicurso]]
+
+| Lesson | Format | Content |
+|--------|--------|---------|
+| 8.0 — Why this changes everything | Video (10min) | Before/after demo: agents in Claude vs company in Paperclip |
+| 8.1 — Install & Configure | Screen recording (20min) | `npx paperclipai onboard --yes` → full setup |
+| 8.2 — Building the Org Chart | Screen recording (25min) | Alpha®'s squad mapped to Paperclip roles |
+| 8.3 — Importing Your Agents | Screen recording (45min) | System prompts from Modules 2-7 → `promptTemplate` + AGENTS.md |
+| 8.4 — Heartbeats, Budget & Governance | Screen recording (30min) | Automation schedules, budget caps, goal creation |
+| 8.5 — The Company Running Live | Live demo (30min) | Full end-to-end workflow: ticket → heartbeat → delivery |
+
+**Deliverable:** Student's complete squad running in Paperclip as an autonomous company.
+
+---
+
 ### BONUS
 - **Squad Framework Document (PDF):** The complete framework — architecture diagram, delegation matrix template, agent brief template, orchestrator design checklist
 - **Alpha®'s Full Squad Config:** The actual system prompts and configuration used to build Alpha®'s squad — annotated and ready to adapt
+- **Bonus 8A — Template Squad Config Export:** Complete YAML for immediate Paperclip import (fill system prompts → live in 30 min)
+- **Bonus 8B — The $QUAD Company Blueprint:** PDF with org chart template, goal hierarchy, budget calculator, AGENTS.md template
+- **Bonus 8C — Command Center V2 (Optional Tech Path):** For students who want to build a custom interface instead of Paperclip
 - **Micro-product map:** How the byproduct processes (Instagram mapping, extraction workflow) can be packaged as separate low-ticket products
 
 ---
