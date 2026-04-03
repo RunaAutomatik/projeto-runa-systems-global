@@ -48,3 +48,10 @@ obsidian-skills/
 # Obsidian plugins (installed locally, not committed)
 AKASHA/.obsidian/plugins/
 SÍRIOS/.obsidian/plugins/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Ephemeral
+transcript.json
