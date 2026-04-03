@@ -1,0 +1,150 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CREATOR$  ·  Bônus
+  GUIA RÁPIDO DE REFERÊNCIA
+  O método completo em uma página
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  O MÉTODO EM 4 PASSOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  PASSO 1 — IMAGEM BASE
+  ─────────────────────
+  Ferramenta:  Nano Banana Pro  ou  Higgsfield
+  Agente:      LENS  (otimiza o prompt antes de gerar)
+  Meta:        1 imagem-referência aprovada
+               + 20–30 variações curadas
+
+
+  PASSO 2 — HACK DA PINTURA
+  ──────────────────────────
+  Ferramenta:  Higgsfield
+  Prompt:      "transforme essa imagem em uma pintura
+                ultra realista com todas as características
+                da personagem, mas traga marcas de tinta
+                visíveis"
+  Salvar como: pintura-higgsfield.png
+  Meta:        imagem-pintura pronta para o Sora 2
+
+
+  PASSO 3 — VÍDEO
+  ────────────────
+  Ferramenta:  Sora 2  (via Opera + VPS — Módulo 3)
+  Agente:      REEL  (gera o prompt antes de abrir o Sora)
+  Config:      Style = Selfie  ·  Duração = 15s
+  Input:       pintura-higgsfield.png  (não a foto original)
+  Meta:        3 gerações → selecionar o melhor take
+
+
+  PASSO 4 — CURAR E ORGANIZAR
+  ────────────────────────────
+  Pasta:       avatar-[nome]/imagens/curadas/
+               avatar-[nome]/videos/curados/
+  Meta:        Storyboard completo preenchido
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  AGENTES — ACESSO RÁPIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ★ LENS — Diretor de Imagem
+    Otimiza prompts antes de gerar
+    https://chatgpt.com/g/g-69be9c381dcc81919e85d56ace38c9f4-lens-r
+
+  ★ REEL — Diretor de Vídeo
+    Gera prompts para o Sora 2
+    https://chatgpt.com/g/g-69bebdb35f748191952d6500f350c386-reel-r
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  FERRAMENTAS — ACESSO RÁPIDO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Nano Banana Pro  →  nanobananapro.com
+  Higgsfield       →  higgsfield.ai
+  Sora 2           →  sora.com  (via Opera + VPS)
+  vmake.ai         →  vmake.ai  (remover marca d'água)
+  CapCut           →  capcut.com  (recortar para Reels 9:16)
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CRITÉRIOS DE SELEÇÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+─────────────────────────────────────────────────
+  Imagem  —  Aprovar se:
+─────────────────────────────────────────────────
+
+  ✓  Rosto consistente com a identidade da personagem
+  ✓  Roupa exatamente como descrita no prompt
+  ✓  Iluminação natural (não de estúdio)
+  ✓  Expressão espontânea, não posada
+  ✓  Fundo neutro e sem distrações
+
+  ✗  Artefatos visíveis (mãos deformadas, objetos duplicados)
+  ✗  Texto ou letras geradas pela IA
+  ✗  Parece rendering 3D ou boneco
+
+
+─────────────────────────────────────────────────
+  Vídeo  —  Aprovar se:
+─────────────────────────────────────────────────
+
+  ✓  Movimento fluido (sem teleportes ou artefatos)
+  ✓  Rosto consistente durante todo o vídeo
+  ✓  Roupa não muda no meio do take
+  ✓  Parece gravado, não gerado
+
+  ✗  Piscar assimétrico dos olhos
+  ✗  Deformação de pescoço ou mãos
+  ✗  Fundo com elementos que aparecem e somem
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ERROS MAIS COMUNS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Parece foto de estúdio
+  → Adicione "iPhone photo by a friend, slightly off-center"
+
+  Roupa inconsistente
+  → Detalhe tecido + modelagem no prompt; mova roupa para cima
+
+  Rosto muda no vídeo
+  → Certifique que a pintura-higgsfield.png tem fundo neutro
+
+  Movimento rígido no Sora 2
+  → Use sempre Style: Selfie (nunca outro style)
+
+  Imagens aprovando inconsistentes
+  → Compare sempre com a referencia-base.png antes de aprovar
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CHECKLIST DE CONCLUSÃO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Módulo 1
+  □  Worksheets de identidade e voz preenchidos
+  □  Storyboard Blocos 1 e 6 completos
+
+  Módulo 2
+  □  Referência-base aprovada e salva
+  □  20+ imagens curadas organizadas
+  □  Prompt Mestre no Storyboard (Bloco 3)
+
+  Módulo 3
+  □  Imagem-pintura do Higgsfield salva
+  □  3–5 vídeos curados na biblioteca
+  □  Prompt de vídeo no Storyboard (Bloco 5)
+
+  Módulo 4
+  □  Storyboard completo (todos os 6 blocos)
+  □  Documento final em Notion ou Google Docs
+  □  Testado: alguém externo conseguiu descrever o avatar
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CREATOR$  ·  Guia Rápido  ·  Kit Completo
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

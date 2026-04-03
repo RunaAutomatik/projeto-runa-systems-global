@@ -1,0 +1,158 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CREATOR$  ·  Módulo 4 · Aula 4.2
+  MONTANDO O STORYBOOK FINAL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+O Storybook é o documento definitivo do seu avatar. Ele
+transforma tudo que foi construído nos módulos anteriores em
+uma referência permanente — usável por IA, por humanos,
+por equipes inteiras.
+
+
+─────────────────────────────────────────────────
+  O QUE VOCÊ JÁ TEM NESTE PONTO
+─────────────────────────────────────────────────
+
+  ✓  Identidade da personagem      (Módulo 1 — Aulas 1.1 e 1.2)
+  ✓  Voz e tom                     (Módulo 1 — Aula 1.2)
+  ✓  Prompt Mestre validado        (Módulo 2 — Aula 2.2)
+  ✓  Biblioteca de imagens         (Módulo 2 — Aulas 2.3 a 2.5)
+  ✓  Prompt de vídeo validado      (Módulo 3 — Aula 3.2)
+  ✓  Formatos aprovados            (Módulo 3 — Aula 3.4)
+
+A montagem é consolidar tudo isso em um único documento.
+Se você foi preenchendo o template ao longo do programa,
+a maior parte já está lá.
+
+
+─────────────────────────────────────────────────
+  ONDE MONTAR
+─────────────────────────────────────────────────
+
+  Notion    →  ideal para banco de imagens embutido,
+                fácil de compartilhar via link
+
+  Google Docs  →  mais simples, mais universal,
+                   ótimo para colaboradores externos
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  REVISÃO BLOCO A BLOCO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+─────────────────────────────────────────────────
+  Bloco 1 — Identidade
+─────────────────────────────────────────────────
+
+  □  Nome e tagline definidos
+  □  Origem / backstory em 3 a 5 frases
+  □  Transformação: antes → depois → futuro
+  □  Vulnerabilidade documentada
+  □  Missão em 1 frase
+  □  3 a 5 valores em ordem de prioridade
+
+  Teste: alguém que nunca ouviu falar do avatar
+  consegue descrevê-la após ler este bloco?
+
+
+─────────────────────────────────────────────────
+  Bloco 2 — Descrição Visual
+─────────────────────────────────────────────────
+
+  □  Aparência física completa
+  □  Look principal descrito peça a peça
+  □  2 looks alternativos definidos e nomeados
+  □  Paleta de cores documentada
+  □  3 ambientes definidos
+  □  Estilo de iluminação especificado
+
+  Teste: um designer consegue gerar a personagem
+  sem ver nenhuma foto — só com este bloco?
+
+
+─────────────────────────────────────────────────
+  Bloco 3 — Prompt Mestre
+─────────────────────────────────────────────────
+
+  □  Prompt principal em inglês (mínimo 6 linhas)
+  □  Bloco NEGATIVE com 5 a 8 elementos
+  □  Tabela de variações aprovadas
+  □  Seed da referência-base anotado (se disponível)
+
+  Teste: colar o prompt e gerar uma imagem
+  reconhecível como o avatar?
+
+
+─────────────────────────────────────────────────
+  Bloco 4 — Biblioteca de Imagens
+─────────────────────────────────────────────────
+
+  □  referencia-base.png identificada
+  □  pintura-higgsfield.png salva
+  □  20+ imagens curadas e organizadas por look
+
+  Teste: 20 a 30 imagens aprovadas prontas para uso?
+
+
+─────────────────────────────────────────────────
+  Bloco 5 — Prompt de Vídeo
+─────────────────────────────────────────────────
+
+  □  Prompt do REEL documentado
+  □  Configurações do Sora 2 registradas
+  □  3 a 5 vídeos curados salvos
+
+  Teste: replicar um vídeo de qualidade igual
+  sem rever as aulas?
+
+
+─────────────────────────────────────────────────
+  Bloco 6 — Voz e Tom
+─────────────────────────────────────────────────
+
+  □  Vocabulário frequente listado
+  □  Palavras proibidas listadas
+  □  Tom emocional descrito
+  □  Estrutura típica de copy definida
+  □  2 exemplos de copy aprovados incluídos
+
+  Teste: um copywriter externo consegue escrever
+  como o avatar após ler este bloco?
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  COMO USAR O STORYBOOK PRONTO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Para você mesmo
+  → Abra o Bloco 3 antes de gerar qualquer imagem nova
+  → Não tente lembrar de memória — use o documento
+
+  Para agentes de IA
+  → Cole o Storyboard completo no contexto do agente
+  → "Este é o documento de referência de [Nome].
+     Use-o para orientar todas as gerações e textos."
+
+  Para colaboradores humanos
+  → Compartilhe o link (Notion / Google Docs)
+  → Não precisa de briefing verbal
+
+  Para os próximos produtos
+  → MIND$: Bloco 6 + Bloco 1 = input do sistema de prompts
+  → $QUAD: Storyboard completo = briefing da squad de conteúdo
+
+
+─────────────────────────────────────────────────
+  Sinais de que o Storybook está pronto
+─────────────────────────────────────────────────
+
+  ✓  Você gera uma nova imagem sem abrir o histórico
+  ✓  Alguém externo leu e descreveu o avatar corretamente
+  ✓  O Prompt Mestre gera resultados consistentes em 3 de 5
+  ✓  20+ imagens e 3+ vídeos aprovados na biblioteca
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CREATOR$  ·  Módulo 4 completo
+  Você tem o seu avatar. Para sempre.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

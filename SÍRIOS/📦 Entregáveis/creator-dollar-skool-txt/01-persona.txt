@@ -1,0 +1,161 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  CREATOR$  ·  Módulo 1 · Aulas 1.1 e 1.2
+  CONSTRUINDO A PERSONAGEM
+  Identidade · Voz · Tom
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Antes de abrir qualquer ferramenta de imagem, você precisa
+de uma definição completa da personagem.
+
+É aqui que a maioria das pessoas erra: elas tentam construir
+o visual antes de saber quem é o avatar.
+
+  A identidade vem antes da imagem.
+  A imagem é a tradução visual da identidade.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PARTE 1 — IDENTIDADE DA PERSONAGEM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Preencha com o máximo de detalhe. Quanto mais específico,
+melhor será o seu Prompt Mestre.
+
+
+─────────────────────────────────────────────────
+  NOME E ORIGEM
+─────────────────────────────────────────────────
+
+Nome do avatar:
+_______________________________________________
+
+Origem / backstory
+(de onde ela vem, o que formou quem ela é):
+_______________________________________________
+_______________________________________________
+_______________________________________________
+
+
+─────────────────────────────────────────────────
+  TRANSFORMAÇÃO E MISSÃO
+─────────────────────────────────────────────────
+
+O que ela superou
+(vulnerabilidade que a torna real, não perfeita):
+_______________________________________________
+_______________________________________________
+
+Transformação  →  antes / depois:
+_______________________________________________
+_______________________________________________
+
+Missão — o que ela quer construir no mundo:
+_______________________________________________
+_______________________________________________
+
+
+─────────────────────────────────────────────────
+  VALORES  (3 a 5, em ordem de prioridade)
+─────────────────────────────────────────────────
+
+  1. ___________________________________________
+  2. ___________________________________________
+  3. ___________________________________________
+  4. ___________________________________________
+  5. ___________________________________________
+
+
+─────────────────────────────────────────────────
+  APARÊNCIA FÍSICA
+─────────────────────────────────────────────────
+
+Tom de pele
+(ex: médio, oliva, claro com sardas, escuro):
+_______________________________________________
+
+Cabelo  (cor, comprimento, textura):
+_______________________________________________
+
+Biótipo  (ex: esguia, atlética, curvilínea, alta):
+_______________________________________________
+
+Característica marcante  (opcional):
+_______________________________________________
+
+
+─────────────────────────────────────────────────
+  ESTILO VISUAL
+─────────────────────────────────────────────────
+
+Paleta de cores preferida para roupa
+(ex: neutros, tons terrosos, monocromático):
+_______________________________________________
+
+Roupa mais frequente — descreva em detalhes:
+(peça + cor exata + tecido + modelagem)
+_______________________________________________
+_______________________________________________
+
+Ambiente típico onde ela aparece:
+_______________________________________________
+
+Estética geral
+(ex: iPhone casual, editorial minimalista, Lo-Fi criadora):
+_______________________________________________
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  PARTE 2 — VOZ E TOM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+─────────────────────────────────────────────────
+  COMO ELA SE COMUNICA
+─────────────────────────────────────────────────
+
+Vocabulário que ela usa com frequência
+(palavras, expressões, gírias — se aplicável):
+_______________________________________________
+_______________________________________________
+
+O que ela NUNCA diz
+(palavras que quebrariam a consistência da persona):
+_______________________________________________
+
+Tom emocional
+(ex: direta e confiante / acolhedora e próxima / séria e intelectual):
+_______________________________________________
+
+
+─────────────────────────────────────────────────
+  FORMATO DE CONTEÚDO
+─────────────────────────────────────────────────
+
+Como ela normalmente inicia um post ou vídeo:
+_______________________________________________
+
+Comprimento típico das mensagens:
+(curtas e diretas / médias / longas e detalhadas)
+_______________________________________________
+
+O que ela trata com profundidade:
+_______________________________________________
+
+O que ela evita ou nunca aborda:
+_______________________________________________
+
+
+─────────────────────────────────────────────────
+  O QUE FAZER COM ISSO
+─────────────────────────────────────────────────
+
+Quando os dois worksheets estiverem preenchidos:
+
+  → Leve para a Aula 1.3 — Preenchendo o Storyboard
+  → Use como input para o agente LENS (Módulo 2)
+  → Guarde: é a base de todo conteúdo futuro do avatar
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Próxima aula → 1.3: Preenchendo o Storyboard
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
