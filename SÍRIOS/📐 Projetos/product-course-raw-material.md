@@ -19,6 +19,34 @@ For now: capture everything as it happens.
 
 ---
 
+## [2026-04-02] — LP RUNA SYSTEMS: Build Completo com Squad de IA
+
+**What was built/decided:**
+LP de alta conversão para RUNA SYSTEMS reconstruída do zero em React + TypeScript + Vite + Tailwind + Framer Motion. Design system Nordic/cosmic dark com squad completo: FREYJA (copy), ARES (oferta), ui-ux-pro-max (design intelligence), @dev (implementação). 3 planos de preço com checkout Herospark. Deploy Netlify com `netlify.toml`.
+
+**Product module this feeds:**
+SITE$ — construção de LP de alto ticket com IA + squad de agentes. Processo completo documentado de ponta a ponta.
+
+**Raw material value:**
+Este processo mostra como construir uma LP de R$15k+ de valor usando IA do zero em uma sessão — design system, copy, arquitetura de oferta, implementação e deploy. Isso que agências cobram R$8k–20k para fazer.
+
+**Key artifacts:**
+- `apps/lp-runa/` — código completo da LP (React + TS + Vite + Tailwind + Framer Motion)
+- Design system: paleta Nordic/cosmic (teal #0FFCF7, violet #7C3AED, space black #020818)
+- Tipografia: Space Grotesk (heading) + Inter (body)
+- Estrutura de 10 seções: Hero, Dor, Solução, Como Funciona, Planos, Prova Social, Para Quem, Garantia, FAQ, CTA
+- 3 planos: RUNA SYSTEMS R$5k (destaque) / INTERVENÇÃO R$8k / MENTORIA R$15k
+- `netlify.toml` — build config + SPA redirect automático
+
+**Squad decision log:**
+- FREYJA: narrativa "não é curso, é infraestrutura do negócio pós-humano" — sem hype, sem recovery story
+- ARES: Value Equation aplicada — R$5k como âncora principal (menor barreira + maior escala)
+- ui-ux-pro-max: Dark Mode OLED + Liquid Glass para premium SaaS high-ticket
+- Framer Motion: staggered reveals com useInView (IntersectionObserver — performance nativa)
+- Garantia 30 dias incondicional como alavanca de conversão principal (Hormozi)
+
+---
+
 ## Key Decisions & Strategies Captured
 
 ### Session 2026-03-17
