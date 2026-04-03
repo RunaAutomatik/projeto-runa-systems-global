@@ -139,23 +139,23 @@ project: runa-systems-global
 | **Google Tasks** | `gws` CLI | `gws tasks tasklists list` |
 
 ### @dev (Dex — Implementation)
-| Task | Tool/Skill | How |
-|------|-----------|-----|
-| Design UI/UX | `ui-ux-pro-max`, `frontend-design` | `/ui-ux-pro-max` |
-| Build frontend | `frontend-design` plugin | Via plugin agents |
-| Read Figma design | `claude.ai Figma` | `mcp__claude_ai_Figma__get_design_context` |
-| Database schema | `claude.ai Supabase` | `mcp__claude_ai_Supabase__*` |
-| PostgreSQL (Neon) | Neon MCP | `mcp__Neon__*` |
-| Build Agent SDK app | `agent-sdk-dev` plugin | `/agent-sdk-dev:new-sdk-app` |
-| Build inference.sh app | `building-inferencesh-apps` | `/building-inferencesh-apps` |
-| Video → website | `video-to-website` | `/video-to-website` |
-| Build agent UI components (React) | `agent-ui`, `chat-ui`, `tools-ui`, `widgets-ui` | `/agent-ui` |
-| Browser automation for agents | `agent-browser` | `/agent-browser` |
-| Use inference.sh JS SDK | `javascript-sdk` | `/javascript-sdk` |
-| Use inference.sh Python SDK | `python-sdk` | `/python-sdk` |
-| Execute Python in sandbox | `python-executor` | `/python-executor` |
-| Render React/Remotion video | `remotion-render` | `/remotion-render` |
-| Code review (self) | `code-review` plugin | `/code-review` |
+| Task                              | Tool/Skill                                      | How                                        |
+| --------------------------------- | ----------------------------------------------- | ------------------------------------------ |
+| Design UI/UX                      | `ui-ux-pro-max`, `frontend-design`              | `/ui-ux-pro-max`                           |
+| Build frontend                    | `frontend-design` plugin                        | Via plugin agents                          |
+| Read Figma design                 | `claude.ai Figma`                               | `mcp__claude_ai_Figma__get_design_context` |
+| Database schema                   | `claude.ai Supabase`                            | `mcp__claude_ai_Supabase__*`               |
+| PostgreSQL (Neon)                 | Neon MCP                                        | `mcp__Neon__*`                             |
+| Build Agent SDK app               | `agent-sdk-dev` plugin                          | `/agent-sdk-dev:new-sdk-app`               |
+| Build inference.sh app            | `building-inferencesh-apps`                     | `/building-inferencesh-apps`               |
+| Video → website                   | `video-to-website`                              | `/video-to-website`                        |
+| Build agent UI components (React) | `agent-ui`, `chat-ui`, `tools-ui`, `widgets-ui` | `/agent-ui`                                |
+| Browser automation for agents     | `agent-browser`                                 | `/agent-browser`                           |
+| Use inference.sh JS SDK           | `javascript-sdk`                                | `/javascript-sdk`                          |
+| Use inference.sh Python SDK       | `python-sdk`                                    | `/python-sdk`                              |
+| Execute Python in sandbox         | `python-executor`                               | `/python-executor`                         |
+| Render React/Remotion video       | `remotion-render`                               | `/remotion-render`                         |
+| Code review (self)                | `code-review` plugin                            | `/code-review`                             |
 
 ### @devops (Gage — EXCLUSIVE)
 | Task | Tool/Skill | How |

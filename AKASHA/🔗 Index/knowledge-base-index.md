@@ -222,6 +222,27 @@ PRICING PHILOSOPHY
 
 ---
 
+## 🤖 Claude Code Source Analysis (2026-04-02)
+
+> Knowledge extracted from source snapshot exposed via npm source map on 2026-03-31.
+> ~1,900 files | 512,000+ lines TypeScript — the full internal architecture of the tool we use daily.
+
+| File | Description |
+|------|-------------|
+| [[📚 Claude Code Source/00-index\|00-index]] | Master index + quick reference table of unexplored capabilities |
+| [[📚 Claude Code Source/01-architecture-overview\|01-architecture-overview]] | Stack, startup sequence, QueryEngine, folder structure |
+| [[📚 Claude Code Source/02-tools-complete\|02-tools-complete]] | All 40+ tools including hidden/feature-gated + AgentTool deep dive |
+| [[📚 Claude Code Source/03-skills-native\|03-skills-native]] | 15 bundled skills: /simplify, /batch, /loop, /remember, /dream |
+| [[📚 Claude Code Source/04-hidden-features\|04-hidden-features]] | Feature flags: KAIROS, PROACTIVE, COORDINATOR_MODE, env vars |
+| [[📚 Claude Code Source/05-token-optimization\|05-token-optimization]] | Auto-compact, microcompact, prompt cache, ToolSearch, strategies |
+| [[📚 Claude Code Source/06-memory-system\|06-memory-system]] | Memory layers, auto-extraction, relevance matching, team memory |
+| [[📚 Claude Code Source/07-agent-system\|07-agent-system]] | Subagents, worktree isolation, batch parallelism, coordinator mode |
+| [[📚 Claude Code Source/08-hooks-and-permissions\|08-hooks-and-permissions]] | Hooks (PreToolUse/PostToolUse/Stop), permission rules, allow/deny |
+| [[📚 Claude Code Source/09-slash-commands-complete\|09-slash-commands-complete]] | All 80+ slash commands including Ant-only and feature-gated |
+| [[📚 Claude Code Source/10-runa-action-plan\|10-runa-action-plan]] | Actionable plan: what to implement immediately in Runa Systems |
+
+---
+
 ## SOURCE MATERIAL CATALOG
 
 | Source | Type | Location |

@@ -76,6 +76,8 @@ POST
 | `ARQUITETO` | Pin 01 — Manifesto | Mapa de Soberania Operacional — os 5 sistemas de um negócio pós-humano | Gratuito ou R$19,90 | Runa Systems Method | — |
 | `RUNA` | Pin 02 — Prova | Template de Squad Setup — escopo + memória para 3 agentes (mini $QUAD) | R$19,90–29,90 | $QUAD | Runa Systems Method |
 | `SISTEMA` | Pin 03 — Espelho | Diagnóstico de Gargalo — framework para mapear onde o fundador é o bottleneck | R$19,90 | POSICIONAMENTO$ | Runa Systems Method |
+| `AVATAR` | Pin 04 — Creator Teaser | Storybook do Avatar — método completo para criar seu avatar de IA | R$19,90–29,90 | CREATOR$ | Runa Systems Method |
+| `SQUAD` | Pin 04 alt — Squad Operacional | Squad Starter Kit — escopo + roles para 3 agentes operacionais | R$29,90 | $QUAD | Runa Systems Method |
 
 ---
 
@@ -83,9 +85,10 @@ POST
 
 ### 📌 Pins (permanent)
 - [[pin-01-manifesto]] — Manifesto: "Construo negócios que não precisam de mim" ✅ **published**
-- [[pin-02-prova]] — Prova: "Enquanto você lê isso, o Runa Systems está funcionando" ✅ **ready-to-publish** (Seg 31/03)
-- [[pin-03-espelho]] — Espelho: "Você não tem um problema de produtividade" ✅ **ready-to-publish** (Qua 02/04)
-- [[pin-04-squad]] — Squad Operacional: "O sistema entregou. Eu não solicitei." 📋 **brief-ready** (Sex 04/04)
+- [[pin-02-prova]] — Prova: "Enquanto você lê isso, o Runa Systems está funcionando" ⏳ **ready-to-publish** (atrasado — era Seg 31/03)
+- [[pin-03-espelho]] — Espelho: "Você não tem um problema de produtividade" ⏳ **ready-to-publish** (atrasado — era Qua 02/04)
+- [[pin-04-creator-teaser]] — Creator Teaser: "Seu avatar de IA é uma propriedade intelectual" 📋 **brief-ready** · keyword AVATAR · CREATOR$ campaign (Sex 04/04)
+- [[pin-04-squad]] — Squad Operacional: "O sistema entregou. Eu não solicitei." 📋 **brief-ready** · keyword SQUAD · $QUAD (backup / próxima semana)
 
 ### 🖼️ Posts (imagem)
 *(none yet)*

@@ -1,5 +1,5 @@
 ---
-date: 2026-03-19
+date: 2026-04-03
 tags: [orquestrador, sistema, memoria, estado, agentes]
 project: runa-systems-global
 status: live — update each session
@@ -36,8 +36,13 @@ status: live — update each session
 2. **Done-For-You Services** — websites, software, AI squad implementation
 
 **Product teia:**
-`ALPHA® → MAYA® → ICARUS® → RUNA SYSTEMS → RUNA MENTORIA`
-Each product leads naturally to the next. ALPHA is the entry door.
+```
+LOW (R$97–297)          MID (R$997–3.997)                     HIGH (R$15k–50k)
+ORÇAMENTO$              CREATOR$ / MIND$ / $QUAD               RUNA SYSTEMS
+Lives R$97              POSICIONAMENTO$ / SITE$ / AGENT$       RUNA MENTORIA
+                                                               RUNA INTERVENÇÃO
+```
+NOTE: ALPHA®, MAYA®, ICARUS® are **deprecated** GPT assistants — fully superseded by current agent stack. Do not reference them as active products.
 
 ---
 
@@ -70,12 +75,23 @@ Each product leads naturally to the next. ALPHA is the entry door.
 ## 4. Current Work State (update each session)
 
 ### Arthur's Instagram (@arthsystems_)
-- **Status:** 21 followers, 5 posts — recovery narrative (WRONG positioning)
-- **Mission:** Shift to architect narrative ("I build post-human businesses")
-- **Agent:** [[freyja]] handles this
-- **References:** [[instagram-market-references]] — hub com Doug, Sarah, Carol
-- **Diagnosis:** [[analysis-instagram-arthur-diagnosis]]
-- **Next action:** `@freyja *content-plan` — design first 10 posts
+- **Hub:** [[_hub]] — source of truth for all content
+- **Content system:** FREYJA briefs → carousel watcher → instagram-worker publish
+- **Carousel keywords:** ARQUITETO (pin-01) · RUNA (pin-02) · SISTEMA (pin-03) · AVATAR (pin-04) · SQUAD (pin-04 alt)
+- **Pin status:** Pin-01 ✅ published · Pin-02 ⏳ ready-to-publish · Pin-03 ⏳ ready-to-publish · Pin-04 📋 brief-ready
+- **Active campaign:** CREATOR$ — W14 (04/04) · keyword AVATAR → ManyChat DM → creator-dollar-offer.md
+- **Stories sequence:** 14 dias × 3 stories/dia criada em `stories-creator-sequence.md`
+
+### Products — Active PRDs
+- [[creator-dollar-prd]] ✅ · [[mind-dollar-prd]] ✅ · [[squad-dollar-prd]] ✅
+- [[runa-command-center-prd]] ✅ · [[product-catalog]] ✅
+- Entregáveis CREATOR$ Skool: 11 .docx + 10 .txt em `📦 Entregáveis/creator-dollar-skool-*/`
+
+### Apps
+- `apps/command-center/` — Runa Command Center V2 (Next.js, port 3000)
+- `apps/content-worker/` — carousel render + reel compositor (port 3001)
+- `apps/instagram-worker/` — Meta Graph API publish (port 3000)
+- `apps/lp-runa/` — Landing page RUNA SYSTEMS (React + Vite + Tailwind, port 5173) ⚠️ gitlink
 
 ### Knowledge Bases (AKASHA)
 - ✅ Alex Hormozi: [[growth-levers]], [[offer-building-framework]], [[hormozi-mental-models]]
@@ -83,13 +99,13 @@ Each product leads naturally to the next. ALPHA is the entry door.
 - ✅ FREYJA strategy: [[freyja-content-strategy]]
 
 ### Business Context & Architecture
-- [[runa-systems-business-context]] — full business briefing + Arthur's voice + tone
+- [[runa-systems-business-context]] — `📚 Referências/` (NOT `📐 Projetos/`)
 - [[product-catalog]] — all products, status, upsell paths, priority order
-- [[squad-architecture]] — squad roles, communication flows, Obsidian authority
 - [[product-course-raw-material]] — raw material accumulated for course product
 
-### Git State
-- All files untracked — commit pending (@devops)
+### Git State (2026-04-03)
+- Working tree clean — all changes committed
+- `apps/lp-runa/` committed as gitlink (has own .git with 50+ commits — preserve)
 
 ---
 
@@ -159,6 +175,9 @@ Figma, Gmail, Google Calendar, Netlify, Supabase — all active every session.
 - **ARES:** 18 ads-* skills (ads-meta, ads-google, ads-tiktok...)
 - **HELIOS:** 13 seo-* skills (seo-technical, seo-content, seo-geo...)
 - **@ux-design-expert / @dev:** ui-ux-pro-max (67 styles, 96 palettes), frontend-design
+- **MAYA (inference.sh):** 80 skills ✅ ATIVO desde 2026-03-29 — `infsh` CLI global, token `~/.infsh-token`
+  - Image: flux-image, nano-banana, p-image · Video: google-veo, p-video · Voice: elevenlabs-tts/dialogue/music
+- **Paperclip:** minicurso criado em `📐 Projetos/paperclip-minicurso.md` — todos os agentes Runa configurados
 
 ### CLIs
 | Tool | Status | Purpose |
@@ -172,4 +191,4 @@ Figma, Gmail, Google Calendar, Netlify, Supabase — all active every session.
 
 ---
 
-*Updated: 2026-03-19 | Next update: at start of next session*
+*Updated: 2026-04-03 | Next update: at start of next session*
