@@ -20,7 +20,7 @@ Never guess or reinvent — if the capability exists, use it.
 | ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
 | @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render** | Figma, Supabase, Neon |
 | @qa | code-review, testing-strategy, pr-review-toolkit | — |
-| @devops | devops-automation, commit-commands, hookify | Netlify |
+| @devops | devops-automation, commit-commands, hookify, **stop-notification**, **post-tool-format** | Netlify |
 | @architect | architecture-design, agent-workflows | — |
 | @ux-design-expert | **stitch-design**, **taste-design**, ui-ux-pro-max, frontend-design | StitchMCP (⚠️ requires setup) |
 | @data-engineer | (code tools) | Supabase, Neon |
