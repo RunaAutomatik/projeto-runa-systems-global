@@ -148,6 +148,12 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `product-radar.md` | Continuous product opportunity capture — everything built feeds RUNA SYSTEMS |
 | `capability-map.md` | Tool/skill/MCP assignment per agent and product — check before executing any task |
 | `stitch-usage.md` | Google Stitch design generation — when/how/who uses stitch-design, stitch-loop, taste-design |
+| `carousel-workflow.md` | Mandatory 6-step protocol for all carousel creation (FREYJA brief → pin.md → hub → keywords → instructions → commit) |
+| `inference-sh-usage.md` | inference.sh skills (MAYA image/video/audio, FREYJA content, ARES intel) — app IDs, patterns, anti-patterns |
+| `language-policy.md` | English for all internal docs/inter-agent communication; Portuguese only for direct user interaction |
+| `obsidian-memory.md` | All project docs → save to Obsidian vault SÍRIOS/; date injection rules; dia:abrir/dia:fechar workflow |
+| `tool-examples.md` | Concrete input examples for tool selection (context7, git, coderabbit, Supabase, GitHub CLI) |
+| `tool-onboarding.md` | T1/T2/T3 protocol — every new tool/skill/MCP/CLI/worker MUST be documented before use |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->

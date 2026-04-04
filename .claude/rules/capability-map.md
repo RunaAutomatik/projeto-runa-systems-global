@@ -105,6 +105,17 @@ infsh app run <app-id> --input '{"prompt":"..."}'
 
 **Products:** SITE$ (primary), $QUAD, CREATOR$, RUNA SYSTEMS (teaching clients).
 
+## Claude Code Hooks
+
+Project hooks registered in `.claude/settings.local.json`:
+
+| Hook | Event | File | What it does |
+|------|-------|------|-------------|
+| code-intel-pretool | PreToolUse (Write\|Edit) | `code-intel-pretool.cjs` | Code intelligence enrichment before file edits |
+| precompact-session-digest | PreCompact | `precompact-session-digest.cjs` | Session digest before context compaction |
+| synapse-engine | UserPromptSubmit | `synapse-engine.cjs` | Prompt enrichment on every user message |
+| stop-notification | Stop | `stop-notification.cjs` | Windows balloon tip when Claude finishes responding |
+
 ## Gaps
 
 | Gap | Status |
@@ -112,4 +123,4 @@ infsh app run <app-id> --input '{"prompt":"..."}'
 | StitchMCP not configured | ⚠️ Pending — user must set up at labs.google.com/stitch |
 | Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
 
-Last updated: 2026-04-03
+Last updated: 2026-04-04
