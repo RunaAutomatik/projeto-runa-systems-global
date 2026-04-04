@@ -147,6 +147,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `workflow-execution.md` | 4 primary workflows (SDC, QA Loop, Spec Pipeline, Brownfield) |
 | `product-radar.md` | Continuous product opportunity capture — everything built feeds RUNA SYSTEMS |
 | `capability-map.md` | Tool/skill/MCP assignment per agent and product — check before executing any task |
+| `stitch-usage.md` | Google Stitch design generation — when/how/who uses stitch-design, stitch-loop, taste-design |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->

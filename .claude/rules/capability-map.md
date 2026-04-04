@@ -18,10 +18,11 @@ Never guess or reinvent — if the capability exists, use it.
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
 | ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
-| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render** | Figma, Supabase, Neon |
+| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render** | Figma, Supabase, Neon |
 | @qa | code-review, testing-strategy, pr-review-toolkit | — |
 | @devops | devops-automation, commit-commands, hookify | Netlify |
 | @architect | architecture-design, agent-workflows | — |
+| @ux-design-expert | **stitch-design**, **taste-design**, ui-ux-pro-max, frontend-design | StitchMCP (⚠️ requires setup) |
 | @data-engineer | (code tools) | Supabase, Neon |
 
 ## Tool Selection Priority (always follow this order)
@@ -88,7 +89,27 @@ Full usage rules: `.claude/rules/inference-sh-usage.md`
 infsh app run <app-id> --input '{"prompt":"..."}'
 ```
 
-## Gaps (all resolved)
+## Google Stitch Skills (UI Design Generation)
 
-All capabilities now covered. No pending gaps.
-Last updated: 2026-03-29
+**Owner:** `@ux-design-expert` (Uma) — primary | `@dev` (Dex) — stitch-loop only
+**Rule file:** `.claude/rules/stitch-usage.md`
+**Prerequisite:** StitchMCP must be configured in `~/.claude.json` (⚠️ pending setup)
+
+| Skill | When to invoke | Output |
+|-------|---------------|--------|
+| `taste-design` | First step on any new project before generating screens | `.stitch/DESIGN.md` — anti-generic design system |
+| `stitch-design` | Generate or edit a specific page/screen | `.stitch/designs/{page}.html` + screenshot |
+| `stitch-loop` | Build full multi-page site autonomously | All pages via baton system |
+
+**Decision:** "Design it" → Stitch (Uma). "Code it" → ui-ux-pro-max + @dev.
+
+**Products:** SITE$ (primary), $QUAD, CREATOR$, RUNA SYSTEMS (teaching clients).
+
+## Gaps
+
+| Gap | Status |
+|-----|--------|
+| StitchMCP not configured | ⚠️ Pending — user must set up at labs.google.com/stitch |
+| Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
+
+Last updated: 2026-04-03
