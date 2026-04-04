@@ -55,3 +55,6 @@ __pycache__/
 
 # Ephemeral
 transcript.json
+
+# AIOX Runtime (ephemeral)
+.aiox/handoffs/
