@@ -78,6 +78,7 @@ POST
 | `SISTEMA` | Pin 03 — Espelho | Diagnóstico de Gargalo — framework para mapear onde o fundador é o bottleneck | R$19,90 | POSICIONAMENTO$ | Runa Systems Method |
 | `AVATAR` | Pin 04 — Creator Teaser | Storybook do Avatar — método completo para criar seu avatar de IA | R$19,90–29,90 | CREATOR$ | Runa Systems Method |
 | `SQUAD` | Pin 04 alt — Squad Operacional | Squad Starter Kit — escopo + roles para 3 agentes operacionais | R$29,90 | $QUAD | Runa Systems Method |
+| `AGENTE` | Pin 05 — NemoClaw | Arquitetura de Agente Neural — blueprint para construir seu primeiro agente de negócio | R$19,90–29,90 | AGENT$ | Runa Systems Method |
 
 ---
 
@@ -89,15 +90,17 @@ POST
 - [[pin-03-espelho]] — Espelho: "Você não tem um problema de produtividade" ⏳ **ready-to-publish** (atrasado — era Qua 02/04)
 - [[pin-04-creator-teaser]] — Creator Teaser: "Seu avatar de IA é uma propriedade intelectual" 📋 **brief-ready** · keyword AVATAR · CREATOR$ campaign (Sex 04/04)
 - [[pin-04-squad]] — Squad Operacional: "O sistema entregou. Eu não solicitei." 📋 **brief-ready** · keyword SQUAD · $QUAD (backup / próxima semana)
+- [[pin-05-nemoclaw]] — NemoClaw: "A NVIDIA Entrou no Jogo" 📋 **brief-ready** · keyword AGENTE · AGENT$ (próxima semana)
 
 ### 🖼️ Posts (imagem)
-*(none yet)*
+- [[post-nemoclaw-01]] — "O mercado escolheu" 📝 **draft** · keyword AGENTE · AGENT$
+- [[post-nemoclaw-02]] — "Sandbox vs Governança" 📝 **draft** · keyword AGENTE · AGENT$
 
 ### 🎠 Carrosseis
 - Pin 01 — 7 slides gerados ✅ — aguardando publish via instagram-worker
 
 ### 🎬 Reels
-*(none yet)*
+- [[reel-hook-nemoclaw]] — NemoClaw hook 📝 **draft** · keyword AGENTE · AGENT$
 
 ---
 
