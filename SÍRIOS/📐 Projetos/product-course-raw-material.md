@@ -47,6 +47,31 @@ Este processo mostra como construir uma LP de R$15k+ de valor usando IA do zero 
 
 ---
 
+## [2026-04-04] — ORÇAMENTO$: Primeiro Orçamento como LP Animada (Pilot — Supermercado Maísa)
+
+**What was built/decided:**
+Descoberta do diferencial central do produto ORÇAMENTO$: orçamentos entregues como mini-sites animados (LP) em vez de PDF/slides/docs. Piloto construído para Supermercado Maísa — agente neural de atendimento WhatsApp com Avatar Digital. LP completa em HTML autocontido com 11 seções (Hero, Dor, Transformação, Entregáveis, Bônus, Autoridade, Investimento, Garantia, Prazo, Sobre, CTA), scroll animations via IntersectionObserver, counter animation, design system dark com accent verde. Estrutura de oferta revisada por ARES usando framework Hormozi: DOR → TRANSFORMAÇÃO → ENTREGÁVEIS → PREÇO (sem Stack técnico).
+
+**Product module this feeds:**
+ORÇAMENTO$ — Sistema de geração de orçamentos/propostas como LP animada. Também alimenta $QUAD e RUNA SYSTEMS (módulo Projetos & Produtos Neural).
+
+**Raw material value:**
+O processo inteiro — do briefing à LP animada — mostra como transformar um orçamento comum num entregável de alta conversão com estrutura de oferta correta. Isso que assessorias cobram R$3k–5k para criar, o squad faz em uma sessão a partir de um briefing simples.
+
+**Key artifacts:**
+- `SÍRIOS/📐 Projetos/RAS/orcamentos/orcamento-maisa.html` — LP animada piloto (HTML autocontido)
+- Pricing model: Base R$3k-4k impl + R$1.800/mês; cada plus +R$1.000 impl +R$700-800/mês
+- 3 clientes reais: Supermercado Maísa, Praça de Esportes de Sacramento, Gabriel Eventos
+- n8n base: Isis SDR/Closer (124 nodes — Supabase RAG + Redis buffer + áudio + imagem)
+- Estrutura LP 11 seções validada por ARES (Hormozi framework)
+
+**Squad decision log:**
+- ARES: removeu "Stack Técnico" — cliente compra resultado, não tecnologia
+- ARES: âncora vs funcionário humano (R$2.500/mês encargos vs R$1.800/mês 24h)
+- HTML autocontido: máxima portabilidade, zero setup para o cliente
+
+---
+
 ## Key Decisions & Strategies Captured
 
 ### Session 2026-03-17

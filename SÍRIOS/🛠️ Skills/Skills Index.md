@@ -23,6 +23,7 @@ project: runa-systems-global
 | [[Skills AIOX]] | Sistema de 10 agentes + master, SDC workflow | Todos os agentes |
 | [[Skills GSD]] | Planejamento, execução, verificação de projetos | @dev, @architect |
 | [[Skills Plugins]] | Commits, code review, hooks, SDK, segurança | @devops, @qa |
+| [[Skills Claude Code]] | Configuração, Stitch, Paperclip, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
 
 ---
 
@@ -94,6 +95,24 @@ project: runa-systems-global
 ### Quero ativar um agente especializado
 → [[Skills AIOX]] → seção do agente desejado
 
+### Quero configurar hook ou permissão no Claude Code
+→ [[Skills Claude Code]] → `/update-config`
+
+### Quero extrair conteúdo de página web
+→ [[Skills Claude Code]] → `/defuddle`
+
+### Quero processar PDF ou transcrição para base de conhecimento
+→ [[Skills Claude Code]] → `/knowledge-extraction`
+
+### Quero criar um design system para projeto (Stitch)
+→ [[Skills Claude Code]] → `/taste-design` (primeiro) → `/stitch-design`
+
+### Quero governar o squad de agentes via Paperclip
+→ [[Skills Claude Code]] → seção PAPERCLIP
+
+### Quero inicializar uma aplicação Agent SDK
+→ [[Skills Claude Code]] → `/agent-sdk-dev:new-sdk-app`
+
 ---
 
 ## Status do Sistema
@@ -108,5 +127,6 @@ project: runa-systems-global
 | AIOX Agentes | 10 + master | ✅ ATIVO |
 | GSD | 20 comandos | ✅ ATIVO |
 | Plugins | 13 plugins | ✅ ATIVO |
+| Claude Code | 18 skills nativas | ✅ ATIVO |
 
-**Total de capacidades: 150+ modelos IA + 75+ comandos de workflow**
+**Total de capacidades: 150+ modelos IA + 90+ comandos de workflow**

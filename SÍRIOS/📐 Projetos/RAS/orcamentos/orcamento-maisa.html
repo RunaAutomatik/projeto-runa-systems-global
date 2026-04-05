@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposta Digital — Supermercado Maísa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0e0e0e;
+      --bg2:       #131313;
+      --card:      #1a1a1a;
+      --accent:    #ea580c;
+      --accent2:   #f97316;
+      --accent3:   #fdba74;
+      --glow:      rgba(234,88,12,0.2);
+      --border:    rgba(234,88,12,0.18);
+      --border2:   rgba(255,255,255,0.07);
+      --text:      #fff7ed;
+      --text2:     #fdba74;
+      --muted:     #a8a29e;
+      --faint:     #57534e;
+      --red:       #ef4444;
+      --r:         14px;
+      --rl:        22px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* reveal */
+    .r {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+    .r.on { opacity: 1; transform: none; }
+    .d1 { transition-delay: .08s; }
+    .d2 { transition-delay: .16s; }
+    .d3 { transition-delay: .24s; }
+    .d4 { transition-delay: .32s; }
+    .d5 { transition-delay: .40s; }
+
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    section { padding: 88px 0; }
+
+    h1 {
+      font-size: clamp(2.1rem, 5.5vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+    h2 {
+      font-size: clamp(1.65rem, 3.8vw, 2.5rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+    }
+    h3 { font-size: 1.0625rem; font-weight: 700; }
+    p  { color: var(--muted); font-size: 1.0625rem; }
+
+    .mark   { color: var(--accent2); }
+    .warm   { color: var(--accent3); }
+    .bright { color: var(--text); }
+
+    .eye {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 18px;
+    }
+    .eye::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ━━━━━━━━━━━━━ HERO ━━━━━━━━━━━━━ */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 130px 0 90px;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      top: -80px; right: -120px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(234,88,12,.13) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: rgba(234,88,12,.1);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent2);
+      width: fit-content;
+      margin-bottom: 32px;
+    }
+    .badge-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent2);
+      animation: blink 2s ease-in-out infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:.4; transform:scale(.7); }
+    }
+
+    #hero h1 { margin-bottom: 22px; }
+    #hero .sub {
+      font-size: 1.125rem;
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 48px;
+      line-height: 1.7;
+    }
+
+    .stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      padding-top: 8px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent2);
+      letter-spacing: -.04em;
+      line-height: 1;
+    }
+    .stat span { font-size: .8rem; color: var(--faint); margin-top: 4px; display: block; }
+
+    /* ━━━━━━━━━━━━━ FRENTE NUMBER ━━━━━━━━━━━━━ */
+    .frente-num {
+      font-size: 5rem;
+      font-weight: 900;
+      color: var(--accent);
+      opacity: .18;
+      line-height: 1;
+      letter-spacing: -.05em;
+      margin-bottom: -16px;
+    }
+
+    /* ━━━━━━━━━━━━━ FRENTE 01 — AVATAR ━━━━━━━━━━━━━ */
+    #avatar { background: var(--bg2); }
+
+    .avatar-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 36px;
+    }
+    @media (max-width: 600px) { .avatar-grid { grid-template-columns: 1fr; } }
+
+    .av-card {
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: var(--r);
+      padding: 22px 24px;
+    }
+    .av-card h3 { color: var(--text); margin-bottom: 8px; }
+    .av-card p { font-size: .9375rem; }
+
+    .av-card.highlight {
+      border-color: var(--border);
+      background: rgba(234,88,12,.06);
+    }
+
+    .deliverables {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .dlv {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: var(--r);
+    }
+    .dlv-num {
+      font-size: .75rem;
+      font-weight: 800;
+      color: var(--accent);
+      background: rgba(234,88,12,.12);
+      border-radius: 6px;
+      padding: 3px 8px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .dlv-text { font-size: .9375rem; color: var(--text); }
+    .dlv-text span { display: block; font-size: .8125rem; color: var(--muted); margin-top: 3px; }
+
+    /* price card */
+    .price-block {
+      margin-top: 40px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--rl);
+      padding: 32px 36px;
+    }
+    .price-block .eye { margin-bottom: 12px; }
+    .price-main {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -.04em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .price-main sup { font-size: 1.4rem; vertical-align: super; color: var(--accent2); }
+    .price-note { font-size: .9375rem; color: var(--muted); margin-bottom: 20px; }
+    .price-items {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border2);
+    }
+    .price-items li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .9375rem;
+      color: var(--muted);
+    }
+    .price-items li::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .price-items li strong { color: var(--text); }
+
+    /* pacotes */
+    .pacotes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+    @media (max-width: 600px) { .pacotes { grid-template-columns: 1fr; } }
+    .pac {
+      background: rgba(234,88,12,.06);
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 16px 18px;
+      text-align: center;
+    }
+    .pac strong {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--accent2);
+      letter-spacing: -.03em;
+    }
+    .pac span { font-size: .8rem; color: var(--muted); margin-top: 4px; display: block; }
+    .pac .pac-desc { font-size: .8125rem; color: var(--faint); margin-top: 8px; }
+
+    /* ━━━━━━━━━━━━━ FRENTE 02 — WHATSAPP ━━━━━━━━━━━━━ */
+    #whatsapp { background: var(--bg); }
+
+    /* demo videos */
+    .demo-row {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      margin-top: 44px;
+      flex-wrap: wrap;
+    }
+    .demo-phone {
+      flex: 1;
+      min-width: 200px;
+      max-width: 260px;
+    }
+    .demo-phone .demo-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .demo-phone .demo-label::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .phone-frame {
+      border: 2px solid rgba(234,88,12,.3);
+      border-radius: 28px;
+      overflow: hidden;
+      background: #000;
+      box-shadow: 0 16px 48px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.04);
+    }
+    .phone-frame video {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+    }
+    .demo-note {
+      font-size: .75rem;
+      color: var(--faint);
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    .flow-steps {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+    .flow-steps::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 40px;
+      bottom: 40px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent), rgba(234,88,12,.1));
+    }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px 0;
+    }
+    .flow-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(234,88,12,.12);
+      border: 2px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .flow-content { padding-top: 10px; }
+    .flow-content h3 { color: var(--text); margin-bottom: 6px; }
+    .flow-content p { font-size: .9375rem; }
+
+    .wpp-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 36px;
+    }
+    @media (max-width: 600px) { .wpp-cards { grid-template-columns: 1fr; } }
+    .wpp-card {
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: var(--r);
+      padding: 22px 24px;
+    }
+    .wpp-card h3 { color: var(--text); margin-bottom: 8px; }
+    .wpp-card p { font-size: .9375rem; }
+
+    /* ━━━━━━━━━━━━━ SINERGIA ━━━━━━━━━━━━━ */
+    #sinergia { background: var(--bg2); }
+
+    .sin-box {
+      margin-top: 40px;
+      background: rgba(234,88,12,.06);
+      border: 1px solid var(--border);
+      border-radius: var(--rl);
+      padding: 36px;
+    }
+    .sin-box blockquote {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.5;
+      font-style: italic;
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+      margin-bottom: 28px;
+    }
+    .sin-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .sin-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: .9375rem;
+      color: var(--muted);
+    }
+    .sin-item::before {
+      content: '→';
+      color: var(--accent2);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .sin-item strong { color: var(--text); }
+
+    /* ━━━━━━━━━━━━━ INVESTIMENTO ━━━━━━━━━━━━━ */
+    #investimento { background: var(--bg); }
+
+    .inv-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 40px;
+    }
+    @media (max-width: 600px) { .inv-cards { grid-template-columns: 1fr; } }
+
+    .inv-card {
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: var(--rl);
+      padding: 28px 30px;
+    }
+    .inv-card.featured {
+      border-color: var(--accent);
+      background: rgba(234,88,12,.05);
+      grid-column: 1 / -1;
+    }
+    .inv-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 4px;
+      padding: 3px 10px;
+      margin-bottom: 14px;
+    }
+    .inv-card h3 { font-size: 1.1rem; color: var(--text); margin-bottom: 16px; }
+    .inv-price {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--text);
+      letter-spacing: -.04em;
+      line-height: 1;
+    }
+    .inv-price sup { font-size: 1.1rem; color: var(--accent2); vertical-align: super; }
+    .inv-price-note { font-size: .8rem; color: var(--muted); margin-top: 4px; margin-bottom: 20px; }
+    .inv-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border2);
+    }
+    .inv-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .875rem;
+      color: var(--muted);
+    }
+    .inv-list li::before {
+      content: '✓';
+      color: var(--accent2);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ━━━━━━━━━━━━━ GARANTIA ━━━━━━━━━━━━━ */
+    #garantia { background: var(--bg2); }
+
+    .garantia-box {
+      margin-top: 32px;
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: var(--rl);
+      padding: 36px;
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+    }
+    .garantia-icon { font-size: 2.4rem; flex-shrink: 0; }
+    .garantia-text h3 { color: var(--text); margin-bottom: 10px; font-size: 1.15rem; }
+    .garantia-text p { font-size: .9375rem; }
+
+    /* ━━━━━━━━━━━━━ PRAZO ━━━━━━━━━━━━━ */
+    #prazo { background: var(--bg); }
+
+    .timeline {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0;
+    }
+    .tl-step {
+      padding: 28px 24px;
+      position: relative;
+    }
+    .tl-step:not(:last-child)::after {
+      content: '→';
+      position: absolute;
+      right: -8px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--accent);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    @media (max-width: 600px) {
+      .timeline { grid-template-columns: 1fr; }
+      .tl-step::after { display: none; }
+    }
+    .tl-week {
+      font-size: .75rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .tl-step h3 { color: var(--text); font-size: .9375rem; margin-bottom: 6px; }
+    .tl-step p { font-size: .8125rem; }
+
+    /* ━━━━━━━━━━━━━ SOBRE ━━━━━━━━━━━━━ */
+    #sobre { background: var(--bg2); }
+
+    .sobre-box {
+      margin-top: 36px;
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-top: 3px solid var(--accent);
+      border-radius: var(--rl);
+      padding: 36px;
+    }
+    .sobre-box h3 { color: var(--text); margin-bottom: 14px; }
+    .sobre-box p { margin-bottom: 12px; font-size: .9375rem; }
+    .sobre-box p:last-child { margin-bottom: 0; }
+
+    /* ━━━━━━━━━━━━━ CTA ━━━━━━━━━━━━━ */
+    #cta {
+      background: var(--bg);
+      text-align: center;
+      padding: 100px 0;
+    }
+    #cta h2 { margin-bottom: 16px; }
+    #cta p { margin-bottom: 44px; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+    .cta-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      padding: 18px 42px;
+      border-radius: 100px;
+      text-decoration: none;
+      animation: pulse-cta 3s ease-in-out infinite;
+      transition: background .2s;
+    }
+    .cta-btn:hover { background: var(--accent2); }
+    @keyframes pulse-cta {
+      0%,100% { box-shadow: 0 0 0 0 rgba(234,88,12,.5); }
+      50%      { box-shadow: 0 0 0 18px rgba(234,88,12,0); }
+    }
+    .cta-note { margin-top: 20px; font-size: .8125rem; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section id="hero">
+  <div class="wrap">
+    <div class="badge r d1"><span class="badge-dot"></span> Proposta Exclusiva — Supermercado Maísa</div>
+    <h1 class="r d2">
+      Duas frentes.<br>
+      Um orçamento.<br>
+      <span class="mark">Resultado concreto.</span>
+    </h1>
+    <p class="sub r d3">
+      Uma avatar digital com a cara do Maísa para o Instagram. Uma automação de WhatsApp que leva o pedido do cliente direto para a mão do funcionário dentro do mercado. Juntos, os dois transformam como o Maísa se comunica e vende.
+    </p>
+    <div class="stats r d4">
+      <div class="stat">
+        <strong>2</strong>
+        <span>soluções integradas</span>
+      </div>
+      <div class="stat">
+        <strong>24h</strong>
+        <span>atendimento automático</span>
+      </div>
+      <div class="stat">
+        <strong>0</strong>
+        <span>ligações para fazer pedido</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FRENTE 01 — AVATAR ═══════════════ -->
+<section id="avatar">
+  <div class="wrap">
+    <div class="frente-num r">01</div>
+    <div class="eye r">Avatar Digital</div>
+    <h2 class="r">A cara do Maísa<br>no <span class="mark">Instagram</span></h2>
+    <p class="r" style="max-width:560px; margin-top:14px;">
+      Uma personagem completa, hiperpersonalizada para o Supermercado Maísa — com personalidade definida, voz, tom de comunicação e identidade visual alinhada à marca. Não é um curso. É a avatar pronta, entregue e funcionando.
+    </p>
+
+    <div class="avatar-grid">
+      <div class="av-card r d1">
+        <h3>Personalidade construída</h3>
+        <p>Nome, história, valores, maneira de falar, expressões. Uma personagem que parece real porque é tratada como real.</p>
+      </div>
+      <div class="av-card r d2">
+        <h3>Voz e tom definidos</h3>
+        <p>Comunicação próxima, simpática e alinhada ao jeito do Maísa de tratar o cliente — sem parecer robô.</p>
+      </div>
+      <div class="av-card r d3">
+        <h3>Identidade visual</h3>
+        <p>Estilo visual da avatar coerente com a marca: cores, referências, estética do mercado.</p>
+      </div>
+      <div class="av-card highlight r d4">
+        <h3>Protocolo <span class="mark">CREATOR$</span></h3>
+        <p>Mesma metodologia usada para criar personas de alto impacto para criadores de conteúdo — aplicada aqui para o varejo.</p>
+      </div>
+    </div>
+
+    <div class="deliverables" style="margin-top:40px;">
+      <div class="dlv r d1">
+        <span class="dlv-num">01</span>
+        <div class="dlv-text">Documento de personagem completo
+          <span>Nome, backstory, personalidade, vocabulário, expressões, o que fala e o que jamais fala.</span>
+        </div>
+      </div>
+      <div class="dlv r d2">
+        <span class="dlv-num">02</span>
+        <div class="dlv-text">Guia de tom e voz
+          <span>Como a avatar escreve, como responde comentários, como reage a reclamações e elogios.</span>
+        </div>
+      </div>
+      <div class="dlv r d3">
+        <span class="dlv-num">03</span>
+        <div class="dlv-text">Identidade visual da avatar
+          <span>Referências de estilo, paleta, estética para geração de imagens e vídeos.</span>
+        </div>
+      </div>
+      <div class="dlv r d4">
+        <span class="dlv-num">04</span>
+        <div class="dlv-text">Prompt-base configurado
+          <span>O prompt completo para usar a avatar em qualquer ferramenta de IA — pronto para o dia a dia.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-block r" style="margin-top:40px;">
+      <div class="eye">Investimento — Frente 01</div>
+      <div class="price-main"><sup>R$</sup>2.000</div>
+      <p class="price-note">Pagamento único para criação completa da avatar</p>
+      <ul class="price-items">
+        <li><strong>Entrega em até 7 dias úteis</strong> após briefing aprovado</li>
+        <li>Suporte por 30 dias para ajustes de personalidade</li>
+        <li>Transferência total — a avatar é 100% do Maísa</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:32px;">
+      <p class="r" style="margin-bottom:16px; color: var(--accent3); font-weight:600;">+ Pacotes de criativos mensais (opcional)</p>
+      <div class="pacotes">
+        <div class="pac r d1">
+          <strong>Starter</strong>
+          <span>R$800/mês</span>
+          <p class="pac-desc">8 posts com a avatar + 2 reels</p>
+        </div>
+        <div class="pac r d2">
+          <strong>Crescimento</strong>
+          <span>R$1.400/mês</span>
+          <p class="pac-desc">16 posts + 4 reels + stories semanais</p>
+        </div>
+        <div class="pac r d3">
+          <strong>Presença Total</strong>
+          <span>a definir</span>
+          <p class="pac-desc">Calendário completo personalizado</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FRENTE 02 — WHATSAPP ═══════════════ -->
+<section id="whatsapp">
+  <div class="wrap">
+    <div class="frente-num r">02</div>
+    <div class="eye r">Automação de Pedidos</div>
+    <h2 class="r">Do WhatsApp direto<br>para a <span class="mark">mão do funcionário</span></h2>
+    <p class="r" style="max-width:560px; margin-top:14px;">
+      O cliente manda o pedido no WhatsApp. A automação organiza a lista, confirma com o cliente e envia direto para o funcionário dentro do mercado — onde quer que ele esteja. Sem ligação, sem papel, sem retrabalho.
+    </p>
+
+    <div class="demo-row">
+      <div class="demo-phone r d1">
+        <div class="demo-label">Isis responde em texto</div>
+        <div class="phone-frame">
+          <video src="assets/isis-text-response.mp4" autoplay loop muted playsinline></video>
+        </div>
+        <p class="demo-note">Confirmação de dados enviada diretamente na conversa</p>
+      </div>
+      <div class="demo-phone r d2">
+        <div class="demo-label">Isis responde em áudio</div>
+        <div class="phone-frame">
+          <video src="assets/isis-audio-response.mp4" controls playsinline></video>
+        </div>
+        <p class="demo-note">Resposta em voz — clique para ouvir</p>
+      </div>
+    </div>
+
+    <div class="flow-steps r" style="margin-top:48px;">
+      <div class="flow-step">
+        <div class="flow-icon">💬</div>
+        <div class="flow-content">
+          <h3>Cliente faz o pedido</h3>
+          <p>Manda os itens pelo WhatsApp, da forma que quiser — por escrito, por áudio ou em partes.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">🧠</div>
+        <div class="flow-content">
+          <h3>IA organiza a lista</h3>
+          <p>Agrupa os produtos, confirma com o cliente se algo ficou confuso e formata a lista limpa para o próximo passo.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">📲</div>
+        <div class="flow-content">
+          <h3>Funcionário recebe na hora</h3>
+          <p>A lista chega no WhatsApp do funcionário dentro do mercado — ele coleta os produtos, passa no caixa e repassa para a entrega.</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-icon">🚀</div>
+        <div class="flow-content">
+          <h3>Entrega rápida, certa e rastreada</h3>
+          <p>O pedido sai correto porque foi organizado antes de chegar no balcão — zero retrabalho, zero produto errado.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="wpp-cards">
+      <div class="wpp-card r d1">
+        <h3>Entende áudio</h3>
+        <p>O cliente pode falar o pedido — a automação transcreve e organiza sem precisar digitar nada.</p>
+      </div>
+      <div class="wpp-card r d2">
+        <h3>Sem app novo</h3>
+        <p>Tudo no WhatsApp que o cliente já usa. Zero barreira de entrada, zero instalação.</p>
+      </div>
+      <div class="wpp-card r d3">
+        <h3>Funciona 24h</h3>
+        <p>Pedido de madrugada? A automação registra, confirma e já deixa pronto para quando o mercado abrir.</p>
+      </div>
+      <div class="wpp-card r d4">
+        <h3>Banco simples e confiável</h3>
+        <p>Histórico de pedidos de cada cliente armazenado — facilita pedidos recorrentes e preferências.</p>
+      </div>
+    </div>
+
+    <div class="price-block r" style="margin-top:40px;">
+      <div class="eye">Investimento — Frente 02</div>
+      <div class="price-main"><sup>R$</sup>4.000</div>
+      <p class="price-note">Implementação completa — entrega em até 21 dias</p>
+      <ul class="price-items">
+        <li>+ <strong>R$1.800/mês</strong> de manutenção e suporte contínuo</li>
+        <li>Configuração do fluxo no WhatsApp Business</li>
+        <li>Treinamento da equipe para receber as listas</li>
+        <li>Ajustes nos primeiros 60 dias sem custo adicional</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SINERGIA ═══════════════ -->
+<section id="sinergia">
+  <div class="wrap">
+    <div class="eye r">Por que contratar os dois</div>
+    <h2 class="r">Juntos, é outro nível</h2>
+
+    <div class="sin-box r">
+      <blockquote>
+        "A avatar Maísa publica, engaja e gera desejo no Instagram. A automação converte esse desejo em pedido real — sem precisar de nenhum humano no meio."
+      </blockquote>
+      <div class="sin-items">
+        <div class="sin-item"><strong>Avatar no Instagram</strong> gera audiência e confiança na marca.</div>
+        <div class="sin-item"><strong>Cliente quer comprar</strong> — manda mensagem pelo WhatsApp.</div>
+        <div class="sin-item"><strong>Automação processa</strong> o pedido sem enrolar o cliente.</div>
+        <div class="sin-item"><strong>Funcionário recebe</strong> a lista limpa, já pronta para separar.</div>
+        <div class="sin-item"><strong>Entrega acontece</strong> rápida, correta, sem ligação, sem papel.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ INVESTIMENTO ═══════════════ -->
+<section id="investimento">
+  <div class="wrap">
+    <div class="eye r">Resumo de valores</div>
+    <h2 class="r">O que está<br>no <span class="mark">orçamento</span></h2>
+
+    <div class="inv-cards">
+      <div class="inv-card r">
+        <div class="inv-tag">Frente 01</div>
+        <h3>Avatar Digital Maísa</h3>
+        <div class="inv-price"><sup>R$</sup>2.000</div>
+        <p class="inv-price-note">Pagamento único</p>
+        <ul class="inv-list">
+          <li>Personagem completa com protocolo CREATOR$</li>
+          <li>Documento de personalidade e voz</li>
+          <li>Prompt-base configurado</li>
+          <li>Suporte 30 dias</li>
+        </ul>
+      </div>
+
+      <div class="inv-card r">
+        <div class="inv-tag">Frente 02</div>
+        <h3>Automação de Pedidos WhatsApp</h3>
+        <div class="inv-price"><sup>R$</sup>4.000</div>
+        <p class="inv-price-note">Implementação + R$1.800/mês</p>
+        <ul class="inv-list">
+          <li>Fluxo completo de pedidos no WhatsApp</li>
+          <li>Organização automática de listas</li>
+          <li>Notificação direta para o funcionário</li>
+          <li>Histórico de clientes</li>
+        </ul>
+      </div>
+
+      <div class="inv-card featured r">
+        <div class="inv-tag">Combo — as duas juntas</div>
+        <h3>Avatar + Automação — Solução completa</h3>
+        <div class="inv-price"><sup>R$</sup>6.000</div>
+        <p class="inv-price-note">Implementação total + R$1.800/mês manutenção</p>
+        <ul class="inv-list">
+          <li>Tudo da Frente 01 + Frente 02 integrados</li>
+          <li>Identidade da avatar alinhada ao fluxo de pedidos</li>
+          <li>Prioridade de entrega e suporte unificado</li>
+          <li>Pacotes de criativos mensais disponíveis como add-on</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ GARANTIA ═══════════════ -->
+<section id="garantia">
+  <div class="wrap">
+    <div class="eye r">Garantia</div>
+    <h2 class="r">Se não ficar certo,<br>a gente refaz</h2>
+
+    <div class="garantia-box r">
+      <div class="garantia-icon">🔒</div>
+      <div class="garantia-text">
+        <h3>Revisões ilimitadas até a aprovação</h3>
+        <p>A avatar não sai daqui sem que o Maísa esteja satisfeito com a personalidade e o tom. A automação não entra em produção antes dos testes com a equipe. Entregamos quando estiver certo — não quando o prazo acabar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRAZO ═══════════════ -->
+<section id="prazo">
+  <div class="wrap">
+    <div class="eye r">Cronograma</div>
+    <h2 class="r">Da aprovação até<br>o <span class="mark">ar</span></h2>
+
+    <div class="timeline">
+      <div class="tl-step r d1">
+        <div class="tl-week">Semana 1</div>
+        <h3>Briefing e alinhamento</h3>
+        <p>Entrevista, identidade visual, referências, fluxo de pedidos atual.</p>
+      </div>
+      <div class="tl-step r d2">
+        <div class="tl-week">Semana 2</div>
+        <h3>Criação da avatar</h3>
+        <p>Personagem, voz, prompt. Revisão e aprovação pelo Maísa.</p>
+      </div>
+      <div class="tl-step r d3">
+        <div class="tl-week">Semana 3</div>
+        <h3>Automação configurada</h3>
+        <p>Fluxo de WhatsApp montado, testado internamente.</p>
+      </div>
+      <div class="tl-step r d4">
+        <div class="tl-week">Dia 21</div>
+        <h3>Testes reais + lançamento</h3>
+        <p>Equipe treinada, testes ao vivo, ajustes finais e tudo no ar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SOBRE ═══════════════ -->
+<section id="sobre">
+  <div class="wrap">
+    <div class="eye r">Quem entrega</div>
+    <h2 class="r">Runa Service</h2>
+
+    <div class="sobre-box r">
+      <h3>Feito para quem quer resultado, não aula</h3>
+      <p>A Runa Service é o braço de implementação da Runa Systems. Enquanto outros ensinam a usar IA, nós chegamos na sua empresa, entendemos o negócio e entregamos funcionando.</p>
+      <p>A Avatar Maísa foi desenhada com a mesma metodologia que usamos para criar personas de alto impacto para criadores de conteúdo. A automação de pedidos foi construída para funcionar no mundo real — não em demo de laboratório.</p>
+      <p>Duas soluções pensadas juntas. Um negócio mais inteligente no final.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA ═══════════════ -->
+<section id="cta">
+  <div class="wrap">
+    <h2 class="r">Pronto para começar?</h2>
+    <p class="r">Manda uma mensagem e a gente marca uma conversa rápida para tirar as últimas dúvidas e fechar o projeto.</p>
+    <a href="https://wa.me/55SEUNUMERO?text=Quero%20saber%20mais%20sobre%20a%20proposta%20para%20o%20Maisa" class="cta-btn r">
+      Falar com a Runa Service →
+    </a>
+    <p class="cta-note r">Resposta em até 2 horas em horário comercial</p>
+  </div>
+</section>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('on'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.r').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

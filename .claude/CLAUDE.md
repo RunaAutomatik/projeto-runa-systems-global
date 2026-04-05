@@ -154,6 +154,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `obsidian-memory.md` | All project docs → save to Obsidian vault SÍRIOS/; date injection rules; dia:abrir/dia:fechar workflow |
 | `tool-examples.md` | Concrete input examples for tool selection (context7, git, coderabbit, Supabase, GitHub CLI) |
 | `tool-onboarding.md` | T1/T2/T3 protocol — every new tool/skill/MCP/CLI/worker MUST be documented before use |
+| `product-delivery-standard.md` | 4-layer product delivery architecture (PRD → aperitivo → offer .docx → Skool docs) — standard for all products |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->

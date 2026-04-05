@@ -248,8 +248,33 @@ CREATOR$ images + storyboard must be complete before recording $QUAD, since Alph
 
 ## Connections
 
+### Dependencies
 - **Requires:** [[creator-dollar-prd]] (Alpha®'s visual identity + storybook)
 - **Requires:** [[mind-dollar-prd]] (Alpha®'s knowledge base + extraction methodology)
 - **Feeds into:** [[runa-systems-prd]] (CREATOR$ + MIND$ + $QUAD = 3 modules of RUNA)
 - **Built from:** This project (Runa Systems Global) is the raw material
 - **Catalog entry:** [[product-catalog]]
+
+### Layer 2 — Aperitivo DM
+- [[aperitivo-squad-dollar]] — Keyword: SQUAD → entregável enviado via ManyChat ao comentar
+
+### Layer 3 — Offer Documents
+- [[squad-dollar-offer-freela]] — Oferta para freelancer/prestador de serviço
+- [[squad-dollar-offer-mentor]] — Oferta para mentor/consultor/coach
+- [[squad-dollar-sales-script]] — Script de vendas para conversas 1:1
+
+### Layer 4 — Skool Course Support Docs
+- [[squad-dollar-skool/_index]] — Índice de todos os materiais de apoio
+- [[squad-dollar-skool/00-antes-de-comecar]] — Pré-requisitos e ferramentas
+- [[squad-dollar-skool/01-mapeamento-negocio]] — Mapeamento de funções + matriz de delegação
+- [[squad-dollar-skool/02-orquestrador]] — 5-block architecture + Alpha®/ORION example
+- [[squad-dollar-skool/03-agente-oferta]] — Knowledge base worksheet + ARES example
+- [[squad-dollar-skool/04-agente-conteudo]] — DNA de voz + FREYJA example
+- [[squad-dollar-skool/05-agente-automacao]] — Fluxos de DM + HERMES example
+- [[squad-dollar-skool/06-agente-inteligencia]] — Competitor mapping + ALEX example
+- [[squad-dollar-skool/07-squad-ao-vivo]] — Adaptação por modelo + manutenção
+- [[squad-dollar-skool/08-empresa-paperclip]] — Paperclip setup completo
+- [[squad-dollar-skool/09-templates-bundle]] — Bundle com todos os templates do curso
+
+### Related Modules
+- [[squad-dollar-paperclip-module]] — PRD detalhado do Módulo 8 (Paperclip)
