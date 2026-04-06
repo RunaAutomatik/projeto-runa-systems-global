@@ -13,9 +13,9 @@ MCP identifier: `StitchMCP`
 
 | Skill | Path | Purpose |
 |-------|------|---------|
-| `stitch-design` | `~/.agents/skills/stitch-design` | Unified entry: generate screens, edit screens, create DESIGN.md |
-| `stitch-loop` | `~/.agents/skills/stitch-loop` | Autonomous iterative site builder via baton system |
-| `taste-design` | `~/.agents/skills/taste-design` | Generate opinionated anti-generic DESIGN.md files |
+| `stitch-design` | `~/.agents/skills/stitch-design/` (symlink: `~/.claude/skills/stitch-design`) | Unified entry: generate screens, edit screens, create DESIGN.md |
+| `stitch-loop` | `~/.agents/skills/stitch-loop/` (symlink: `~/.claude/skills/stitch-loop`) | Autonomous iterative site builder via baton system |
+| `taste-design` | `~/.claude/skills/taste-design/` | Generate opinionated anti-generic DESIGN.md files |
 
 ## MCP Status — REQUIRED BEFORE USE
 

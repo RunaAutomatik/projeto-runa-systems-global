@@ -24,6 +24,7 @@ project: runa-systems-global
 | [[Skills GSD]] | Planejamento, execução, verificação de projetos | @dev, @architect |
 | [[Skills Plugins]] | Commits, code review, hooks, SDK, segurança | @devops, @qa |
 | [[Skills Claude Code]] | Configuração, Stitch, Paperclip, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
+| [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
 
 ---
 
@@ -105,7 +106,13 @@ project: runa-systems-global
 → [[Skills Claude Code]] → `/knowledge-extraction`
 
 ### Quero criar um design system para projeto (Stitch)
-→ [[Skills Claude Code]] → `/taste-design` (primeiro) → `/stitch-design`
+→ [[stitch-skills]] → pipeline: `/taste-design` → `/stitch-design` → `/stitch-loop`
+
+### Quero gerar um mockup de tela específica
+→ [[stitch-skills]] → `/stitch-design`
+
+### Quero construir um site inteiro com Stitch autonomamente
+→ [[stitch-skills]] → `/stitch-loop`
 
 ### Quero governar o squad de agentes via Paperclip
 → [[Skills Claude Code]] → seção PAPERCLIP
@@ -128,5 +135,6 @@ project: runa-systems-global
 | GSD | 20 comandos | ✅ ATIVO |
 | Plugins | 13 plugins | ✅ ATIVO |
 | Claude Code | 18 skills nativas | ✅ ATIVO |
+| Stitch (trio) | taste-design + stitch-design + stitch-loop | ✅ INSTALADO (⚠️ MCP pendente) |
 
 **Total de capacidades: 150+ modelos IA + 90+ comandos de workflow**
