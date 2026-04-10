@@ -33,14 +33,20 @@ Other agents (Dev, Architect, etc.) are MCP **consumers**, not administrators. I
 | **claude_ai_Netlify** | Deploy and hosting | @devops |
 | **claude_ai_Supabase** | Database and auth | @data-engineer |
 
-### Configured in ~/.claude.json (require session restart)
+### Configured in .mcp.json (project root — require session restart)
+| MCP | Purpose | Agent | Status |
+|-----|---------|-------|--------|
+| **n8n-mcp** | n8n workflow automation — 1,084 nodes, HERMES automations | HERMES / ORION | ⚠️ DISABLED (`disabledMcpjsonServers`) |
+| **notebooklm-mcp** | Google NotebookLM — podcast/content generation | FREYJA / ARES | ✅ Active |
+
+### Configured in ~/.claude.json (global — require session restart)
 | MCP | Purpose | Agent | Command |
 |-----|---------|-------|---------|
 | **Neon** | PostgreSQL database | @data-engineer | HTTP |
-| **n8n-mcp** | n8n workflow automation — 1,084 nodes, HERMES automations | HERMES / ORION | `npx -y n8n-mcp` |
-| **notebooklm-mcp** | Google NotebookLM — podcast/content generation | FREYJA / ARES | `npx -y notebooklm-mcp` |
 
+> ⚠️ **n8n-mcp disabled:** Listed in `disabledMcpjsonServers` in `.claude/settings.local.json`. To re-enable, remove from that array and restart the session.
 > ⚠️ **notebooklm-mcp fix (2026-03-19):** Command must be `npx -y notebooklm-mcp`, NOT bare `notebooklm-mcp`. Bare command fails silently — always use npx pattern for stdio MCPs.
+> ✅ **ManyChat:** Removed from stack — using Zernio API integration instead. Do NOT add manychat-mcp back.
 
 ### NOT available (Docker not installed)
 > ⚠️ Docker is NOT installed in this environment.

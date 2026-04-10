@@ -14,12 +14,12 @@ Never guess or reinvent — if the capability exists, use it.
 | FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing** | Supabase |
 | MAYA | **ai-image-generation**, **flux-image**, **nano-banana**, **ai-video-generation**, **google-veo**, **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, **talking-head-production** | — |
 | HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content** | n8n-mcp, Gmail, Google Calendar |
-| ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch** | — |
+| ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours** | — |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
 | ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
-| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render** | Figma, Supabase, Neon |
-| @qa | code-review, testing-strategy, pr-review-toolkit | — |
+| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Figma, Supabase, Neon |
+| @qa | code-review, testing-strategy, pr-review-toolkit, **gstack/review**, **gstack/cso**, **gstack/qa** | — |
 | @devops | devops-automation, commit-commands, hookify, **stop-notification**, **post-tool-format** | Netlify |
 | @architect | architecture-design, agent-workflows | — |
 | @ux-design-expert | **stitch-design**, **taste-design**, ui-ux-pro-max, frontend-design | StitchMCP (⚠️ requires setup) |
@@ -112,9 +112,29 @@ Project hooks registered in `.claude/settings.local.json`:
 | Hook | Event | File | What it does |
 |------|-------|------|-------------|
 | code-intel-pretool | PreToolUse (Write\|Edit) | `code-intel-pretool.cjs` | Code intelligence enrichment before file edits |
-| precompact-session-digest | PreCompact | `precompact-session-digest.cjs` | Session digest before context compaction |
 | synapse-engine | UserPromptSubmit | `synapse-engine.cjs` | Prompt enrichment on every user message |
 | stop-notification | Stop | `stop-notification.cjs` | Windows balloon tip when Claude finishes responding |
+
+## gstack Skills (via `~/.claude/skills/gstack/` — ACTIVE ✓)
+
+Instalado em 2026-04-10. 23 skills de engineering virtual por Garry Tan (YC).
+Full doc: `SÍRIOS/🛠️ Skills/Skills gstack.md`
+
+| Skill | Comando | Agent Owner | Quando usar |
+|-------|---------|-------------|-------------|
+| office-hours | `/office-hours` | ARES / @pm | Validar produto antes de codar — método YC |
+| autoplan | `/autoplan` | @dev / @architect | Pipeline CEO→Design→Eng→DX automático |
+| review | `/review` | @qa | Code review pré-PR com Claude + Codex paralelo |
+| qa | `/qa` | @qa | QA com Chromium real (Playwright) |
+| browse | `/browse` | HERMES / @dev | Browser daemon sub-100ms com estado persistente |
+| cso | `/cso` | @qa | Security audit OWASP Top 10 + STRIDE |
+| pair-agent | `/pair-agent` | @dev | Compartilhar browser entre múltiplos agentes |
+| investigate | `/investigate` | @qa / @dev | Debug profundo de bugs |
+| design-shotgun | `/design-shotgun` | @ux-design-expert | Múltiplas variações de design em paralelo |
+| careful | `/careful` | qualquer | Tasks de alto risco — execução lenta e cuidadosa |
+
+**IMPORTANTE:** `/ship` do gstack inclui git push — protocolo AIOX exige que push seja feito via @devops.
+Usar `/review` do gstack, mas delegar push para `@devops *push`.
 
 ## Gaps
 
@@ -123,4 +143,4 @@ Project hooks registered in `.claude/settings.local.json`:
 | StitchMCP not configured | ⚠️ Pending — user must set up at labs.google.com/stitch |
 | Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
 
-Last updated: 2026-04-04
+Last updated: 2026-04-10
