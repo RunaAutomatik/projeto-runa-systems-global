@@ -1,0 +1,296 @@
+[00:00:04] completamente absurda. Toda semana eles lançam alguma coisa nova e toda vez que
+[00:00:09] conceito novo que você precisa aprender. E eu sei que aprender todos esses
+[00:00:13] conceitos não é uma coisa muito fácil. No YouTube até tem um monte de vídeo,
+[00:00:15] No YouTube até tem um monte de vídeo, né, falando de clot code, só que a
+[00:00:22] normais, como eu acredito que seja o seu caso. Por isso, no vídeo de hoje, eu vou
+[00:00:27] importantes que você precisa conhecer do Cloud Code, dos mais básicos aos mais
+[00:00:33] depois de gastar milhares de reais em assinatura do Cloud Code desenvolvendo
+[00:00:35] assinatura do Cloud Code desenvolvendo produtos com IA, como é o caso do Epic,
+[00:00:44] usuários. No final desse vídeo, você vai saber exatamente o que usar e quando
+[00:00:46] saber exatamente o que usar e quando usar para conseguir extrair o máximo do
+[00:00:52] desenvolvedor faria, mesmo que você não seja um. Então, bora começar. Número um,
+[00:00:56] seja um. Então, bora começar. Número um, terminal. O que é um terminal? Se você
+[00:01:03] vendo. E ele nada mais é do que uma outra maneira de interagir com o seu
+[00:01:05] outra maneira de interagir com o seu computador. Então, no seu computador,
+[00:01:14] pastinha você quer entrar, etc. No terminal, você consegue fazer exatamente
+[00:01:16] terminal, você consegue fazer exatamente a mesma coisa, só que ao invés de clicar
+[00:01:21] através de comandos que você vai rodar no seu terminal. Inclusive, gente, os
+[00:01:25] primeiros computadores que saíram na história, você só conseguia interagir
+[00:01:33] comandos ali no terminal. E aí quem mudou isso foi a Apple, foi a primeira
+[00:01:37] empresa que criou um computador com uma interface, né, com uma UI, com uma user
+[00:01:41] interface, que você consegue clicar ali nas coisinhas e não precisa ficar
+[00:01:48] Então, só para demonstrar para vocês como que o terminal funciona, da mesma
+[00:01:51] como que o terminal funciona, da mesma forma que eu poderia, por exemplo, abrir
+[00:01:56] exemplo, até a pasta que eu vou criar aqui, que é a pasta de teste, eu poderia
+[00:02:00] aqui, que é a pasta de teste, eu poderia vir aqui e fazer o seguinte, CD, que é o
+[00:02:08] e aí eu posso navegar até essa pastinha. E aí, se eu fizer esse comando aqui,
+[00:02:12] PWD, ele vai me dizer onde ele está, onde ele está. Em users Debora, Foloni
+[00:02:15] onde ele está. Em users Debora, Foloni Documents Test. Então ele basicamente tá
+[00:02:23] basicamente o que eu fiz aqui foi eu, através do meu terminal eu naveguei até
+[00:02:25] através do meu terminal eu naveguei até a pasta teste, que seria a mesma coisa
+[00:02:34] terminal, nada mais é do que uma outra maneira de você interagir com o seu
+[00:02:39] Para isso, eu vou tentar fazer uma analogia com alguma coisa que vocês já
+[00:02:41] analogia com alguma coisa que vocês já conhecem, que é um chatbot de um chatbot
+[00:02:49] enviar um prompt para ele e ele vai te responder alguma coisa. Então, se eu
+[00:02:52] responder alguma coisa. Então, se eu hipoteticamente pedir para ele, por
+[00:02:57] computador, ele não vai conseguir fazer isso, mas ele vai me dizer: "Olha, você
+[00:03:00] tem que fazer isso, isso isso para você criar uma pasta", né? Ou seja, ele vai
+[00:03:09] porque ele consegue fazer coisas para você e ele consegue fazer essas coisas
+[00:03:11] você e ele consegue fazer essas coisas rodando comandos o seu terminal, como
+[00:03:15] esse comando que eu mostrei aqui para vocês. E essas coisas que ele vai fazer
+[00:03:20] pode ser tanto localmente, né, no seu próprio computador, como ele pode
+[00:03:28] Como, por exemplo, interagir com o seu GitHub, interagir com, sei lá, o seu
+[00:03:33] Google Drive, etc. Então o Cloud Code, ele é um agente que não só te responde
+[00:03:35] ele é um agente que não só te responde coisas, como ele também faz as coisas
+[00:03:43] prompts. E o prompt, gente, nada mais é do que um comando que você vai enviar
+[00:03:45] do que um comando que você vai enviar para IAT responder alguma coisa, tá?
+[00:03:51] dito, porque a gente tá falando de coisas básicas. Número quatro, tools. O
+[00:03:55] que que são as tools, gente? São ferramentas que o Cloud Code vai usar
+[00:04:04] enviar um prompt pro cloud code, ele vai pensar qual é a tuvulgo ferramenta que
+[00:04:07] pensar qual é a tuvulgo ferramenta que ele precisa chamar para fazer aquilo que
+[00:04:14] exemplo, ele vai ter ferramentas de ler arquivos. É um tipo de ferramenta que
+[00:04:17] ele tem. Ele tem outras ferramentas para conseguir editar e criar arquivos. Ele
+[00:04:21] conseguir editar e criar arquivos. Ele tem uma ferramenta de bash que permite
+[00:04:29] ajudar a encontrar arquivos no seu computador, que a gente chama de Glob ou
+[00:04:31] computador, que a gente chama de Glob ou de Grap. Então, a ferramenta Glob vai
+[00:04:39] que ele encontre trechos do arquivo que contenham aquele termo que você buscou.
+[00:04:42] contenham aquele termo que você buscou. E ele também tem ferramentas de web
+[00:04:48] vai conseguir buscar termos como se fosse ali no Google e o WebFT para cada
+[00:04:51] fosse ali no Google e o WebFT para cada resultado de busca ele vai conseguir
+[00:04:55] puxar ali o conteúdo daquela página que ele encontrou. Então esses são exemplos
+[00:05:03] importante pra gente, o conceito de tools. E aí gente, só pra gente amarrar
+[00:05:06] tools. E aí gente, só pra gente amarrar esses quatro conceitos que a gente viu
+[00:05:10] até agora, então vamos imaginar o seguinte, tá? você enviou o prompt. Crie
+[00:05:19] Então, quando eu enviar esse prompt, o que que vai acontecer? O cloud code, que
+[00:05:21] que que vai acontecer? O cloud code, que vocês já sabem agora que é um agente,
+[00:05:28] sabem o que é uma tool. Agora essa tool vai ser a tool de Bash. E ele vai rodar
+[00:05:30] vai ser a tool de Bash. E ele vai rodar esses comandos no nosso terminal. Então
+[00:05:35] ele vai rodar o comando ls para ver se essa pasta teste. Se não existir, ele
+[00:05:43] criar a pasta teste. E aí ele vai rodar esse outro comando aqui, que é o comando
+[00:05:45] esse outro comando aqui, que é o comando touch para criar o teste.ts, que foi o
+[00:05:50] arquivo que eu pedi para ele. E então é exatamente assim que o cloud code vai
+[00:05:58] nosso terminal. Então é basicamente assim que essas coisas funcionam juntas
+[00:06:00] assim que essas coisas funcionam juntas e na prática. Cinco, Context Window,
+[00:06:05] também chamada de janela de contexto. Isso, pessoal, seria o equivalente à
+[00:06:13] basicamente vai medir o a quantidade de coisas que ele consegue se lembrar que
+[00:06:19] maior a janela de contexto, maior é o volume de informação que esse modelo vai
+[00:06:21] volume de informação que esse modelo vai conseguir guardar na memória de curto
+[00:06:26] prazo dele. E aí, quanto maior a janela de contexto, melhor é a performance do
+[00:06:34] isso é muito importante, principalmente quando a gente está falando de código.
+[00:06:36] quando a gente está falando de código. Seis, tokens. Tokens, pessoal, é a
+[00:06:44] IA. Então, a própria janela de contexto que a gente estava falando agora também
+[00:06:46] que a gente estava falando agora também é medida em número de tokens. E só para
+[00:06:51] vocês terem uma referência, um token geralmente são quatro caracteres. Então,
+[00:06:57] tokens, o que a gente tá dizendo é que aquele modelo consegue se lembrar de
+[00:07:03] Os tokens também são usados para você saber o quanto você vai pagar para usar
+[00:07:05] saber o quanto você vai pagar para usar aquele modelo. Então, geralmente ele vai
+[00:07:10] te falar o quanto custa para cada 1 milhão de tokens. É 20, 5, 2. É
+[00:07:18] modelos são medidos também. Sete, models. Os models são basicamente os
+[00:07:23] modelos de a que você tem acesso através do cloud code. O cloud code naturalmente
+[00:07:25] do cloud code. O cloud code naturalmente ele só vai deixar que você use os
+[00:07:31] rodar este comando aqui, você vai conseguir ver quais são os modelos, tá?
+[00:07:39] gente tem o Sonet 4.6, a gente tem o Sonet com 1 milhão de tokens de janela
+[00:07:42] Sonet com 1 milhão de tokens de janela de contexto e a gente tem o Haiku. Então
+[00:07:45] são esses os quatro modelos que nós temos disponíveis aqui pra gente usar no
+[00:07:50] nosso no nosso cloud code. E aí, pessoal, cada um desses modelos eles são
+[00:07:57] inteligência, um nível de velocidade e um nível de custo. Então, a gente vai
+[00:08:02] pensar mais antes de fazer. Então, ele vai gastar mais tempo refletindo do que
+[00:08:09] para ele, como por exemplo o opus, tá? Que é um modelo que a gente sabe que ele
+[00:08:11] Que é um modelo que a gente sabe que ele pensa mais antes de fazer. E tem outros
+[00:08:18] menos e que fazem mais, como por exemplo o Sonet, né? né? Então ele vai gastar um
+[00:08:20] o Sonet, né? né? Então ele vai gastar um pouco menos de tempo pensando, vai fazer
+[00:08:26] perca um pouco na performance da tarefa porque ele não pensou tanto assim para
+[00:08:30] fazer aquilo ali. Então são modelos diferentes. Cada modelo ele serve para
+[00:08:36] Oito, permissions, que basicamente são permissões. Eu tô falando tudo em
+[00:08:42] usarem o cloud code, o termo é permissions e não permissões, tá? Mas eu
+[00:08:48] permissões nada mais são do que limites que você coloca no seu cloud code para
+[00:08:50] que você coloca no seu cloud code para evitar que ele faça coisa sem a sua
+[00:08:57] conseguir regular essas permissões, você basicamente vai vir aqui no seu terminal
+[00:09:01] e você pressionando a tecla shift tab, você consegue alterar. Tá vendo que
+[00:09:09] que eu pedi aqui para ele, ele não vai me pedir permissão, ele simplesmente vai
+[00:09:10] me pedir permissão, ele simplesmente vai sair fazendo. E aí eu poderia vir aqui
+[00:09:17] permissão para fazer qualquer coisa e aí eu vou autorizando ou não, tá? Então,
+[00:09:24] Encerramos os conceitos básicos. Agora a gente vai pros conceitos intermediários.
+[00:09:27] gente vai pros conceitos intermediários. Primeiro conceito intermediário é o
+[00:09:33] pessoal, que vocês usam para limpar a janela de contexto e começar uma sessão
+[00:09:35] janela de contexto e começar uma sessão do zero. Então basta vocês virem aqui no
+[00:09:41] que ele vai basicamente zerar a janela de contexto pra gente conseguir começar
+[00:09:49] performance desse modelo que a gente tá usando. Então, geralmente a melhor
+[00:09:54] fazer alguma coisa. Ele terminou de fazer, dá clear antes de você pedir para
+[00:09:57] fazer, dá clear antes de você pedir para que ele faça outra coisa, para que você
+[00:10:03] informações inúteis para as próximas coisas que você vai pedir para ele, tá?
+[00:10:05] coisas que você vai pedir para ele, tá? Então esse é mais um conceito que vocês
+[00:10:11] esse comando, pessoal? Basicamente você vai vir aqui no seu terminal e você vai
+[00:10:17] Sempre que você rodar esse comando, o que ele vai fazer é ele vai resumir todo
+[00:10:21] o seu histórico de conversa ali com o cloud Code, vai iniciar uma nova sessão,
+[00:10:26] que eu já vou contar para vocês o que que é, e ele vai passar para essa sessão
+[00:10:33] que você teve uma conversa muito grande ali com o cloud Code. e vai resumir isso
+[00:10:36] ali com o cloud Code. e vai resumir isso em poucos tokens. E aí ele vai pegar
+[00:10:43] conversa nova de forma resumida. Ou seja, você vai conseguir ter o contexto
+[00:10:45] seja, você vai conseguir ter o contexto que você precisa, só que da maneira mais
+[00:10:53] o seu contexto tá estourando ali, que você tá usando muito do contexto, roda o
+[00:10:59] compactar a conversa e vai começar uma sessão nova com esse contexto resumido,
+[00:11:03] que é bem útil para você fazer a gestão do contexto do seu modelo. Clude MD, que
+[00:11:06] do contexto do seu modelo. Clude MD, que que é esse arquivo, gente? Basicamente
+[00:11:13] agente Cloud vai ler automaticamente toda vez que você começar uma conversa
+[00:11:18] nesse arquivo, tá? você vai dizer para ele, por exemplo, como que o seu projeto
+[00:11:20] ele, por exemplo, como que o seu projeto tá organizado, eh quais são as stacks,
+[00:11:27] ele faça, o que que você não quer que ele faça. Então, sempre que você começar
+[00:11:30] ele faça. Então, sempre que você começar uma nova sessão, ele vai automaticamente
+[00:11:38] preferências toda vez. É muito importante que esse code seja o mais
+[00:11:42] suscinto possível, porque como ele é carregado no início da conversa, você
+[00:11:48] contexto à toa. Então, sempre tenta resumir ele ao máximo e evitar que você
+[00:11:51] resumir ele ao máximo e evitar que você coloque coisas desnecessárias aqui
+[00:11:56] seu Cloud MD, tudo que você precisa fazer é vir aqui no seu terminal com o
+[00:12:03] init. Com isso, ele vai analisar todo o seu projeto e vai automaticamente criar
+[00:12:06] seu projeto e vai automaticamente criar um Cloud MD a partir da análise que ele
+[00:12:11] alterações que você quiser. Esse aqui é um exemplo de um Cloud MD. Então, depois
+[00:12:15] que você roda o comando init, ele vai criar esse arquivo aqui, Clode MD, para
+[00:12:23] effort, gente, também conhecido como esforço, basicamente ele vai dizer para
+[00:12:25] esforço, basicamente ele vai dizer para o seu cloud code qual é o orçamento,
+[00:12:31] entre aspas, que ele tem em tokens para investir em pensar antes de fazer.
+[00:12:37] Geralmente ele já vem setado como alto. Então ele mesmo decide o qual é o
+[00:12:41] esforço que ele tem que fazer, mas você pode manualmente controlar esse esforço
+[00:12:48] Você vai abrir aqui o seu terminal e aí você vai fazer isso aqui, ó, efforts e
+[00:12:50] você vai fazer isso aqui, ó, efforts e aí você vai dizer se é low, medium,
+[00:12:56] high, max ou alto. E aí assim você vai dizer para o Cloud o quanto tokens ele
+[00:13:02] Então, sempre que você quiser fazer uma tarefa um pouco mais complexa, você pode
+[00:13:09] max, por exemplo. E sempre que você tá fazendo uma tarefa mais simplinha, que
+[00:13:14] para ele usar o low ou medium. E se você não quiser ficar fazendo isso toda hora
+[00:13:18] e setando o quanto de esforço você quer que ele use, você pode usar o alto e ele
+[00:13:21] mesmo vai decidir o esforço que ele vai fazer. Desculpe interromper o seu vídeo,
+[00:13:26] esses termos que eu tô te explicando e publiquei lá no Epic. E se você quiser
+[00:13:30] ter acesso a esse documento, é só você buscar o link do app aqui na descrição
+[00:13:37] baixar esse PDF. Eu tenho certeza que você não vai se arrepender. Ultra Think.
+[00:13:43] Think, você tá dizendo para o cloud Code que para aquele prompt você quer que ele
+[00:13:45] que para aquele prompt você quer que ele use o esforço máximo de pensamento.
+[00:13:51] funcionalidade, basicamente você vai vir aqui no seu terminal e você vai no meio
+[00:13:57] do seu prompt aqui digitar o termo ultra think. Você vai ver que ele vai ficar
+[00:14:01] até coloridinho aqui. E aí, basicamente, o que você tá dizendo aqui é use o
+[00:14:09] prompt aqui, tá? Então esse é o ultra tank. E agora chegamos no avançado, tá?
+[00:14:12] tank. E agora chegamos no avançado, tá? Então slash commands, pessoal. Slash.
+[00:14:19] lembrem-se que slash é barra, tá bom? Então isso é slash commands. Novamente
+[00:14:23] eu estou usando os termos em inglês porque o cloud code não vai pegar leve e
+[00:14:29] saber o que que é. Então o slashs permite que você crie vários templates
+[00:14:31] permite que você crie vários templates de prompts e você consegue usar esse
+[00:14:39] setar. Então, ao invés de você ter que escrever aquele mesmo promp de todas as
+[00:14:41] escrever aquele mesmo promp de todas as vezes, você só roda barra e o comando
+[00:14:47] ali que você pralvou e ele vai já puxar aquele comando automaticamente. Então,
+[00:14:53] prática, eu tenho essa pastinha aqui, né, com vários comandos, como vocês
+[00:14:57] podem ver. E um desses comandos é esse style MD aqui que vocês estão vendo. E
+[00:15:02] basicamente eu uso esse comando toda vez que eu quero mudar o estilo, né, do meu
+[00:15:08] etc., eu uso esse comando aqui. Então, se eu quiser usar esse comando style
+[00:15:11] se eu quiser usar esse comando style aqui e eu, olha o tamanho desse prompt,
+[00:15:18] escrevendo toda vez, né, todo esse prompt que vocês estão vendo, o que que
+[00:15:23] eu faço? Atalho então barra style. Basicamente ele tá repetindo todo esse
+[00:15:25] Basicamente ele tá repetindo todo esse prompt. E aí uma coisa muito importante
+[00:15:30] que o command vai ter é que ele tem um argumento. Então o argumento é a
+[00:15:39] vai setar o estilo da minha aplicação, o que eu tenho que fazer aqui é dizer qual
+[00:15:41] que eu tenho que fazer aqui é dizer qual é estilo que eu quero que ele sete, né?
+[00:15:49] fonte assim, a cor assado, então eu vou colar todos os argumentos aqui, vou dar
+[00:15:51] colar todos os argumentos aqui, vou dar enter e ele vai aplicar esse estilo na
+[00:15:57] instruções que estão salvas nesse prompt, tá? Então, esse é o command." Só
+[00:16:00] prompt, tá? Então, esse é o command." Só para vocês se lembrarem, o comando nada
+[00:16:07] repetindo aquele prompt, que você pode inserir variáveis que se chamam de
+[00:16:13] customizar aquele prompt que é fixo com algumas variáveis de acordo com a sua
+[00:16:19] literalmente fiz um vídeo inteiro sobre esse tema, inclusive é o vídeo mais
+[00:16:24] Então, fica a dica aí para quem ainda não assistiu esse vídeo. Mas resumindo
+[00:16:27] aqui para vocês, as skills nada mais são do que playbooks, que eu chamo, né? São
+[00:16:30] do que playbooks, que eu chamo, né? São conjuntos de instruções que vão ficar
+[00:16:38] diferente do Cloud MD, essas skills só são carregadas sob demanda. O Cloud MD
+[00:16:40] são carregadas sob demanda. O Cloud MD ele é carregado sempre. Você começou uma
+[00:16:49] mostrar aqui para vocês as skills na prática. Eu tenho uma pastinha aqui com
+[00:16:51] prática. Eu tenho uma pastinha aqui com várias skills, né, como vocês podem ver.
+[00:16:59] Essas skills elas não são carregadas junto com o meu cloud MD que eu mostrei
+[00:17:01] junto com o meu cloud MD que eu mostrei aqui para vocês. Elas vão ser carregadas
+[00:17:05] sob demanda. Então, por exemplo, essa skill de frontend design, ela só vai ser
+[00:17:12] design de front end. Se eu estiver, por exemplo, mexendo no meu banco de dados,
+[00:17:17] essa skill é completamente irrelevante. Então, essa é a beleza de você usar
+[00:17:22] janela de contexto. Porque se eu tivesse que colocar todas as instruções disso
+[00:17:27] aqui, por exemplo, olha isso aqui. Se eu tivesse que colocar essas instruções
+[00:17:31] dentro do meu cloud medir, aí eu pegar essa essa outra instrução aqui e colocar
+[00:17:39] clor de medir. Então eu ia lotar a minha janela de contexto sem nem ter começado
+[00:17:41] janela de contexto sem nem ter começado a falar com o meu cloud code. Então a
+[00:17:47] carregadas progressivamente, somente no momento que vocês precisam usar essas
+[00:17:52] skills e assim elas conseguem te ajudar a preservar a janela de contexto do seu
+[00:17:58] modelo. 16. Hooks. Hooks pessoal nada mais são do que automações que rodam
+[00:18:04] Então, se você já usou o Zapier ou o N8N, por exemplo, toda vez que acontece
+[00:18:07] N8N, por exemplo, toda vez que acontece X, eu quero que você faça Y, tá? Então,
+[00:18:14] permite que você faça. Então, você pode criar inúmeras dessas automações e o
+[00:18:18] Cloud Code automaticamente vai fazer aquilo acontecer sem que você tenha que
+[00:18:20] aquilo acontecer sem que você tenha que ficar lembrando daquilo toda hora. Para
+[00:18:27] precisa fazer é vir aqui no seu cloud e rodar o comando hook. Então você vai
+[00:18:33] todas as opções de hooks que existem no clot code para você usar. Então a gente
+[00:18:35] clot code para você usar. Então a gente tem e hooks que rodam antes dele usar
+[00:18:40] uma ferramenta, depois dele usar uma ferramenta, depois que deu erro ao usar
+[00:18:47] notificação é enviada, quando você envia um prompt, quando você começa uma sessão
+[00:18:53] resposta. Então só tô mostrando para vocês aqui quantas opções de hooks nós
+[00:18:56] vocês aqui quantas opções de hooks nós temos aqui pra gente usar. Então, se
+[00:19:02] barrahook e dá enter, que você vai ver esse menu que eu tô mostrando aqui para
+[00:19:08] vocês. 17 são os MCPs. MCPs, gente, é basicamente uma forma padronizada, né,
+[00:19:11] basicamente uma forma padronizada, né, um padrão universal que foi criado para
+[00:19:18] ferramentas externas. Então, eu expliquei para vocês algumas ferramentas
+[00:19:22] computador. Criar arquivo, modificar arquivo, eh ler arquivo, são ferramentas
+[00:19:25] arquivo, eh ler arquivo, são ferramentas internas. E com os MCPs a gente consegue
+[00:19:34] um exemplo prático aqui para vocês de um MCP que eu uso muito, eu uso muito o MCP
+[00:19:38] MCP que eu uso muito, eu uso muito o MCP do Figma, tá? Então, se você colocar
+[00:19:41] esse comando aqui, ó, barra mcp e dar enter, você vai ver todos os MCPs que
+[00:19:49] computador. Então aqui a gente tem o Figma, que é um MCP que eu uso bastante.
+[00:19:51] Figma, que é um MCP que eu uso bastante. A gente tem o paper, que inclusive é bem
+[00:19:55] similar ao Figma, mas tem algumas outras funcionalidades que eu gosto. A gente
+[00:20:01] Calendar. Então, se eu autenticar isso aqui, eu vou poder, por exemplo, pedir
+[00:20:09] ele vai fazer isso para mim. Então, instalando esses MCPs, você permite que
+[00:20:11] instalando esses MCPs, você permite que o seu cloud Code interaja com outras
+[00:20:17] eu mostrei aqui de exemplo para vocês, tá bom? Então, isso é MCP 18. Subagents.
+[00:20:22] tá bom? Então, isso é MCP 18. Subagents. Subagents, pessoal, vou tentar explicar
+[00:20:25] da melhor forma possível para vocês. Imaginem que o seu CLOU, né, ele é o
+[00:20:32] agentes, filhos, que o agente pai vai chamar quando ele precisar fazer coisas
+[00:20:37] específicas. A vantagem de você usar agentes filhos ou subagents é que você
+[00:20:40] agentes filhos ou subagents é que você consegue isolar a janela de contexto.
+[00:20:48] tema e aí depois criar um módulo a partir daquela pesquisa que você fez. Se
+[00:20:50] partir daquela pesquisa que você fez. Se você fizesse a pesquisa e o módulo na
+[00:20:58] provavelmente lotaria a sua janela de contexto e isso degradaria a performance
+[00:21:00] contexto e isso degradaria a performance do seu modelo. Então, o que que você
+[00:21:06] agente que só faz pesquisa e um agente que só faz módulo. Então, quando você
+[00:21:12] tal coisa", ele vai chamar o agente de pesquisa. O agente de pesquisa vai fazer
+[00:21:18] isolado. Ele vai retornar o resultado dessa pesquisa para o agente pai. Aí o
+[00:21:23] agente pai vai enviar o resultado dessa pesquisa para o outro agente filho, que
+[00:21:25] pesquisa para o outro agente filho, que só faz módulos e o agente de módulos vai
+[00:21:33] módulos como você precisaria. Então, é basicamente assim que funciona. Então,
+[00:21:35] basicamente assim que funciona. Então, esses agentes acabam sendo muito úteis
+[00:21:44] específicos, você faz o pai delegar essa tarefa para esse agente e o agente vai
+[00:21:46] tarefa para esse agente e o agente vai retornar o resultado para o pai toda vez
+[00:21:53] atividade com o pai sabendo exatamente quando é o momento de chamar esse agente
+[00:21:55] quando é o momento de chamar esse agente ou aquele agente ou aquele outro agente.
+[00:22:01] Então, esse é o conceito de subagent. Agentem. Isso aqui ele é muito parecido
+[00:22:09] entre si. Quando a gente tá falando de subagents, o agente ele só conversa com
+[00:22:11] subagents, o agente ele só conversa com o pai. Então o agente de pesquisa, ele
+[00:22:18] para o pai. O agente de módulo vai retornar o resultado dos módulos para o
+[00:22:20] retornar o resultado dos módulos para o pai. Então eles não conversam entre si o
+[00:22:27] gente fala de agents, a gente permite que esses subagentes conversem entre si.
+[00:22:34] automaticamente já passar o resultado da pesquisa para o agente de módulo, sem
+[00:22:39] resultado para o agente Pai, que é o agente principal do seu cloud code.
+[00:22:40] agente principal do seu cloud code. Então você consegue dessa forma criar
+[00:22:47] inclusive várias vários níveis de hierarquia e fazer com que as coisas
+[00:22:50] hierarquia e fazer com que as coisas rodem em paralelo e não só de forma
+[00:22:58] agente de pesquisa retorne o resultado da pesquisa para que esse agente comece
+[00:23:03] a trabalhar. Então, nessa estrutura de agent teams, você consegue fazer com que
+[00:23:05] agent teams, você consegue fazer com que os agentes rodem em paralelo e consegue
+[00:23:12] si. Então essa é a diferença entre subagents e agents, tá? E agora vamos
+[00:23:17] para o último conceito, que é o conceito número 20, que é o work trees. Workes é
+[00:23:20] número 20, que é o work trees. Workes é um recurso que permite que o cloud code
+[00:23:26] projeto ao mesmo tempo. Então isso é muito útil porque você consegue rodar
+[00:23:32] isolada para que uma coisa não quebre a outra. Então esse é o conceito de workes
+[00:23:35] outra. Então esse é o conceito de workes e isso permite que você consiga rodar
+[00:23:44] essa é uma funcionalidade avançada que eu não recomendo que você use se você
+[00:23:45] eu não recomendo que você use se você não tiver o mínimo de conhecimento nos
+[00:23:50] conceitos básicos de Git, etc. Só que isso é um assunto para outro vídeo. Esse
+[00:23:56] expliquei 20 principais conceitos que você precisa conhecer se você quer
+[00:24:04] lançar o Learn, que é o meu produto de educação. Lá eu tenho uma trilha onde eu
+[00:24:07] educação. Lá eu tenho uma trilha onde eu mostro na prática exatamente como que eu
+[00:24:13] se aplicam na prática, criando um projeto do início ao fim. Então, se você
+[00:24:19] do vídeo o link do app e cria sua conta que você não vai se arrepender. Esse é o
+[00:24:21] que você não vai se arrepender. Esse é o fim de mais um vídeo no meu canal. Se
+[00:24:29] comentários também o que você achou do vídeo. E se você ainda não se inscreveu
+[00:24:30] vídeo. E se você ainda não se inscreveu no meu canal, para de perder tempo e se
+[00:24:36] sabendo dos meus próximos vídeos, tá bom? Então, muito obrigada pela atenção
