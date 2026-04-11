@@ -62,5 +62,8 @@ transcript.json
 # Graphify skill artifacts
 .graphify_*
 
+# MCP local dev repos (not tracked as submodules)
+tools/mcp/
+
 # Netlify CLI runtime (state, cache — not config)
 .netlify/
