@@ -13,26 +13,29 @@
  *   node scripts/carousel-watcher.js
  */
 
-'use strict';
+"use strict";
 
-const chokidar  = require('chokidar');
-const fs        = require('fs');
-const path      = require('path');
-const { spawnSync } = require('child_process');
+const chokidar = require("chokidar");
+const fs = require("fs");
+const path = require("path");
+const { spawnSync } = require("child_process");
 
 // ─── Paths ──────────────────────────────────────────────────────────────────
 
-const DOWNLOADS_DIR  = path.join(process.env.USERPROFILE || process.env.HOME, 'Downloads');
-const VAULT_DIR      = path.resolve(__dirname, '..');
-const PINS_DIR       = path.join(VAULT_DIR, 'SÍRIOS', '📱 Instagram', '@arthsystems_', '📌 pins');
-const KEYWORDS_FILE  = path.join(__dirname, 'carousel-keywords.json');
-const EXPORTER       = path.join(__dirname, 'export-carousel.py');
+const DOWNLOADS_DIR = path.join(
+  process.env.USERPROFILE || process.env.HOME,
+  "Downloads",
+);
+const VAULT_DIR = path.resolve(__dirname, "..");
+const SIRIOS_DIR = path.join(VAULT_DIR, "SÍRIOS");
+const KEYWORDS_FILE = path.join(__dirname, "carousel-keywords.json");
+const EXPORTER = path.join(__dirname, "export-carousel.py");
 
 // ─── Keyword map (hot-reloaded from JSON) ────────────────────────────────────
 
 function loadKeywordMap() {
   try {
-    return JSON.parse(fs.readFileSync(KEYWORDS_FILE, 'utf-8'));
+    return JSON.parse(fs.readFileSync(KEYWORDS_FILE, "utf-8"));
   } catch {
     console.error(`Could not read ${KEYWORDS_FILE} — using empty map`);
     return {};
@@ -43,7 +46,7 @@ function loadKeywordMap() {
 
 function isCarouselFile(filePath) {
   const name = path.basename(filePath).toLowerCase();
-  return name.includes('carousel') && name.endsWith('.html');
+  return name.includes("carousel") && name.endsWith(".html");
 }
 
 function detectKeyword(html) {
@@ -64,7 +67,7 @@ function processCarouselFile(filePath) {
 
   let html;
   try {
-    html = fs.readFileSync(filePath, 'utf-8');
+    html = fs.readFileSync(filePath, "utf-8");
   } catch (err) {
     console.error(`  Could not read file: ${err.message}`);
     return;
@@ -74,13 +77,15 @@ function processCarouselFile(filePath) {
 
   if (!match) {
     console.log(`  WARNING: No DM keyword found in ${filename}`);
-    console.log(`  Add the keyword to scripts/carousel-keywords.json and retry.`);
+    console.log(
+      `  Add the keyword to scripts/carousel-keywords.json and retry.`,
+    );
     console.log(`  File left in: ${filePath}`);
     return;
   }
 
-  const destDir  = path.join(PINS_DIR, match.folder);
-  const destFile = path.join(destDir, 'carousel_arthsystems.html');
+  const destDir = path.join(SIRIOS_DIR, match.folder);
+  const destFile = path.join(destDir, "carousel_arthsystems.html");
 
   // Create destination folder
   fs.mkdirSync(destDir, { recursive: true });
@@ -89,7 +94,11 @@ function processCarouselFile(filePath) {
   fs.copyFileSync(filePath, destFile);
 
   // Remove from Downloads only after successful copy
-  try { fs.unlinkSync(filePath); } catch { /* ignore if already moved */ }
+  try {
+    fs.unlinkSync(filePath);
+  } catch {
+    /* ignore if already moved */
+  }
 
   console.log(`  Keyword:  ${match.keyword}`);
   console.log(`  Folder:   ${match.folder}/`);
@@ -97,9 +106,9 @@ function processCarouselFile(filePath) {
 
   // Run Playwright exporter
   const result = spawnSync(
-    'python',
-    ['-X', 'utf8', EXPORTER, '--html', destFile, '--out', destDir],
-    { encoding: 'utf-8', stdio: 'inherit' }
+    "python",
+    ["-X", "utf8", EXPORTER, "--html", destFile, "--out", destDir],
+    { encoding: "utf-8", stdio: "inherit" },
   );
 
   if (result.status === 0) {
@@ -107,32 +116,34 @@ function processCarouselFile(filePath) {
     console.log(`  Instagram worker can now publish this carousel.\n`);
   } else {
     console.log(`\n  PNG export failed. Run manually:`);
-    console.log(`  python -X utf8 scripts/export-carousel.py --html "${destFile}" --out "${destDir}"\n`);
+    console.log(
+      `  python -X utf8 scripts/export-carousel.py --html "${destFile}" --out "${destDir}"\n`,
+    );
   }
 }
 
 // ─── Watcher ─────────────────────────────────────────────────────────────────
 
 const watcher = chokidar.watch(DOWNLOADS_DIR, {
-  persistent:      true,
-  ignoreInitial:   true,
+  persistent: true,
+  ignoreInitial: true,
   // Wait for file writes to stabilize before firing (critical for large HTML with base64)
   awaitWriteFinish: {
     stabilityThreshold: 2000,
-    pollInterval:       500,
+    pollInterval: 500,
   },
   ignored: /(node_modules|\.git)/,
 });
 
 watcher
-  .on('add',   filePath => processCarouselFile(filePath))
-  .on('error', err      => console.error(`Watcher error: ${err}`));
+  .on("add", (filePath) => processCarouselFile(filePath))
+  .on("error", (err) => console.error(`Watcher error: ${err}`));
 
 // Print keyword map on startup
 const keywordMap = loadKeywordMap();
 const keywordList = Object.entries(keywordMap)
   .map(([k, v]) => `${k} → ${v}`)
-  .join('\n     ');
+  .join("\n     ");
 
 console.log(`Carousel Watcher — @arthsystems_`);
 console.log(`  Watching: ${DOWNLOADS_DIR}`);

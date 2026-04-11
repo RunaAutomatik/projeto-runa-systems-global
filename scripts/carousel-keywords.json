@@ -1,8 +1,8 @@
 {
-  "ARQUITETO": "pin-01-assets",
-  "RUNA": "pin-02-assets",
-  "SISTEMA": "pin-03-assets",
-  "SQUAD": "pin-04-assets",
-  "AVATAR": "pin-04-assets",
-  "AGENTE": "pin-05-assets"
+  "ARQUITETO": "🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-01-assets",
+  "RUNA":      "🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-02-assets",
+  "SISTEMA":   "🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-03-assets",
+  "AVATAR":    "🎯 PRODUTOS/CREATOR$/criativos/pin-04-creator-assets",
+  "SQUAD":     "🎯 PRODUTOS/SQUAD$/criativos/pin-04-squad-assets",
+  "AGENTE":    "🎯 PRODUTOS/AGENT$/criativos/pin-05-assets"
 }
