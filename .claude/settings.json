@@ -1,8 +1,6 @@
 {
   "language": "portuguese",
-  "env": {
-    "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "150000"
-  },
+  "autoCompactWindow": 150000,
   "permissions": {
     "allow": [
       "Bash",

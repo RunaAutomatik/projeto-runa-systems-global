@@ -61,7 +61,7 @@ async function main() {
 
   // Load hook-runtime (lazy — only when we actually need it)
   const { resolveCodeIntel, formatAsXml } = require(
-    path.join(__dirname, '..', '..', '.aios-core', 'core', 'code-intel', 'hook-runtime.js'),
+    path.join(__dirname, '..', '..', '.aiox-core', 'core', 'code-intel', 'hook-runtime.js'),
   );
 
   const intel = await resolveCodeIntel(filePath, cwd);
