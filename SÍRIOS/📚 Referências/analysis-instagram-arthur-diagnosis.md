@@ -2,6 +2,8 @@
 date: 2026-03-18
 tags: [instagram, arthur, diagnostico, narrativa, posicionamento]
 project: runa-systems-global
+status: historical
+note: "Metrics in this file are from 2026-03-18 (21 followers, 5 posts). Current state in [[instagram-strategy-master]] §1. Narrative diagnosis (recovery → architect shift) remains valid as historical reference."
 related: [analysis-instagram-dougdemarco, analysis-instagram-sarahseller, analysis-instagram-caroldutra]
 ---
 

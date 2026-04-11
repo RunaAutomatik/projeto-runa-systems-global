@@ -1,0 +1,26 @@
+{
+	"nodes":[
+		{"id":"header","type":"text","text":"# Temporada Q2 2026\n### Produtos em Foco","x":-175,"y":-620,"width":350,"height":90,"color":"6"},
+		{"id":"regra","type":"text","text":"**Regra da temporada:** Sem LPs para ofertas novas.\nTudo via Google Docs. Testar conversão vs LP.","x":-175,"y":-500,"width":350,"height":70,"color":"2"},
+		{"id":"claude-code","type":"text","text":"## Claude Code Intro\n**FREE — aperitivo**\n\nMódulo gratuito do RUNA SYSTEMS\nEntregue via Google Doc\nKeyword: CLAUDE (criar)\n\n→ Porta de entrada para comunidade","x":-850,"y":-420,"width":280,"height":180,"color":"5"},
+		{"id":"squad","type":"text","text":"## $QUAD\n**R$2.997** · Launch: R$1.497–2.098\n\nSquad de agentes para\nempreendedor solo\n\nOferta: Google Docs (sem LP)\nKeyword: SQUAD","x":-850,"y":-80,"width":280,"height":180,"color":"3"},
+		{"id":"runa-hub","type":"text","text":"# RUNA SYSTEMS\n**High Ticket**\nrunaecoai.com\n\n3 variantes de acesso ↓","x":-200,"y":-180,"width":250,"height":120,"color":"6"},
+		{"id":"runa-community","type":"text","text":"## Comunidade\n**R$15.000/ano**\n\nEcossistema completo\n+ comunidade\n+ 8 módulos técnicos","x":200,"y":-420,"width":260,"height":150,"color":"4"},
+		{"id":"runa-mentoria","type":"text","text":"## Mentoria\n**R$30.000**\n\nComunidade\n+ 8 calls (2x/mês por 90d)\n+ WhatsApp direto","x":200,"y":-220,"width":260,"height":150,"color":"4"},
+		{"id":"runa-intervencao","type":"text","text":"## Intervenção\n**R$50.000**\n\nComunidade\n+ 21 dias de imersão\nArthur implementa","x":200,"y":-20,"width":260,"height":150,"color":"1"},
+		{"id":"ab-test","type":"text","text":"## A/B Test RUNA SYSTEMS\nVariante A: runaecoai.com (LP)\nVariante B: Google Doc (copy alternativa)\n→ medir qual converte mais","x":200,"y":200,"width":260,"height":110,"color":"2"},
+		{"id":"upsell-chain","type":"text","text":"**Cadeia de upsell:**\nComunidade → Mentoria → Intervenção","x":530,"y":-130,"width":240,"height":70,"color":"6"},
+		{"id":"fora-temporada","type":"text","text":"### Fora da temporada\n(manter flows, não priorizar)\n\nCREATOR$ · keyword AVATAR\nAGENT$ · keyword AGENTE","x":-850,"y":200,"width":280,"height":130,"color":"0"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"claude-code","fromSide":"right","toNode":"runa-hub","toSide":"left","label":"aperitivo → entrada","color":"5"},
+		{"id":"e2","fromNode":"squad","fromSide":"right","toNode":"runa-hub","toSide":"left","label":"upsell natural","color":"3"},
+		{"id":"e3","fromNode":"runa-hub","fromSide":"right","toNode":"runa-community","toSide":"left"},
+		{"id":"e4","fromNode":"runa-hub","fromSide":"right","toNode":"runa-mentoria","toSide":"left"},
+		{"id":"e5","fromNode":"runa-hub","fromSide":"right","toNode":"runa-intervencao","toSide":"left"},
+		{"id":"e6","fromNode":"runa-community","fromSide":"bottom","toNode":"runa-mentoria","toSide":"top","label":"upsell"},
+		{"id":"e7","fromNode":"runa-mentoria","fromSide":"bottom","toNode":"runa-intervencao","toSide":"top","label":"upsell"},
+		{"id":"e8","fromNode":"runa-community","fromSide":"right","toNode":"upsell-chain","toSide":"left"},
+		{"id":"e9","fromNode":"runa-hub","fromSide":"bottom","toNode":"ab-test","toSide":"top","label":"testar","color":"2"}
+	]
+}

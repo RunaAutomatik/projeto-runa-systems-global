@@ -4,6 +4,8 @@ tags: [storyboard, arthur, persona, lens, reel, internal]
 project: runa-systems-global
 status: ready-to-use
 type: storyboard
+scope: visual-production-only
+note: "Audience/ICP definition in this file applies to visual production context only (camera, wardrobe, aesthetic). For copy, offer, and conversion decisions — see [[instagram-strategy-master]] §13."
 ---
 
 # Visual Storyboard — Arthur / @arthsystems_

@@ -25,6 +25,7 @@ project: runa-systems-global
 | [[Skills Plugins]] | Commits, code review, hooks, SDK, segurança | @devops, @qa |
 | [[Skills Claude Code]] | Configuração, Stitch, Paperclip, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
 | [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
+| [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso, /ship | @dev, @qa, ARES, HERMES |
 
 ---
 
@@ -105,6 +106,21 @@ project: runa-systems-global
 ### Quero processar PDF ou transcrição para base de conhecimento
 → [[Skills Claude Code]] → `/knowledge-extraction`
 
+### Quero validar uma ideia de produto antes de codar
+→ [[Skills gstack]] → `/office-hours`
+
+### Quero fazer code review com dois modelos em paralelo
+→ [[Skills gstack]] → `/review`
+
+### Quero QA com browser real (Chromium)
+→ [[Skills gstack]] → `/qa` + `/browse`
+
+### Quero pipeline de planning automático sem interrupções
+→ [[Skills gstack]] → `/autoplan`
+
+### Quero security audit (OWASP + STRIDE)
+→ [[Skills gstack]] → `/cso`
+
 ### Quero criar um design system para projeto (Stitch)
 → [[stitch-skills]] → pipeline: `/taste-design` → `/stitch-design` → `/stitch-loop`
 
@@ -136,5 +152,6 @@ project: runa-systems-global
 | Plugins | 13 plugins | ✅ ATIVO |
 | Claude Code | 18 skills nativas | ✅ ATIVO |
 | Stitch (trio) | taste-design + stitch-design + stitch-loop | ✅ INSTALADO (⚠️ MCP pendente) |
+| gstack | 23 skills + browser daemon | ✅ INSTALADO |
 
-**Total de capacidades: 150+ modelos IA + 90+ comandos de workflow**
+**Total de capacidades: 150+ modelos IA + 113+ comandos de workflow**

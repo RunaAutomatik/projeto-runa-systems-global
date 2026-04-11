@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"id":"header","type":"text","text":"# Funil de Vendas — Temporada Q2 2026\nDo criativo à entrega da oferta","x":-850,"y":-350,"width":400,"height":80,"color":"6"},
+		{"id":"criativo","type":"text","text":"## 1. Criativo\n\n**Formatos:**\n- Carrossel (ARCHITECT / MANIFESTO)\n- Reel (sistema rodando, demo)\n- Story (bastidores)\n\n**Conta:** @arthsystems_\n\n**Objetivo:** fazer a pessoa comentar","x":-1400,"y":-160,"width":260,"height":250,"color":"3"},
+		{"id":"cta","type":"text","text":"## 2. CTA no Criativo\n\nFrase final do post:\n\"Comente **[KEYWORD]**\npara receber [entregável]\"\n\n**Keywords ativas:**\n- SQUAD → $QUAD\n- RUNA / SISTEMA → RUNA SYS\n- CLAUDE → Claude Code Intro","x":-1050,"y":-160,"width":260,"height":250,"color":"2"},
+		{"id":"zernio","type":"text","text":"## 3. Zernio\n\nDetecta comentário\ncom a keyword\n\nAutomação dispara\ninstantaneamente\n\n✅ 5 flows ativos","x":-700,"y":-160,"width":230,"height":250,"color":"5"},
+		{"id":"dm","type":"text","text":"## 4. DM Automático\n\nMensagem **curta**:\n1-2 linhas contextuais\n+ link para Google Doc\n\nEx:\n*\"Aqui está seu mapeador\nde squad gratuito:\n[link]\"*\n\n⚠️ Atualizar DMs atuais","x":-380,"y":-160,"width":250,"height":250,"color":"2"},
+		{"id":"googledoc","type":"text","text":"## 5. Google Doc\n\n**Estrutura:**\n- Aperitivo / prompt completo\n- Passo a passo\n- (opcional) imagem/print\n\n**Seção final:**\nO que você recebeu aqui\né só o começo. Para o\nmétodo completo → CTA","x":-40,"y":-160,"width":250,"height":250,"color":"3"},
+		{"id":"oferta-runa","type":"text","text":"## 6A. Oferta RUNA SYSTEMS\n\nDestino: **runaecoai.com**\n(Comunidade / Mentoria\n/ Intervenção)\n\n+ Variante A/B:\nGoogle Doc com copy\nalternativa para teste","x":320,"y":-320,"width":260,"height":200,"color":"6"},
+		{"id":"oferta-squad","type":"text","text":"## 6B. Oferta $QUAD\n\nDestino: **Google Doc**\n(sem landing page)\n\nCopy completa\n+ preço + bônus\n+ link checkout","x":320,"y":-40,"width":260,"height":180,"color":"4"},
+		{"id":"oferta-claude","type":"text","text":"## 6C. Claude Code Intro\n\nDestino: **runaecoai.com**\n(entra pela comunidade,\nvê todos os módulos)\n\nCTA: \"Acesse o módulo\ncompleto + ecossistema\"","x":320,"y":220,"width":260,"height":180,"color":"5"},
+		{"id":"checkout","type":"text","text":"## 7. Checkout\n\nHotmart ou Kirvano\n(a definir)\n\n$QUAD → criar link\nRUNA → já tem na LP\n\n❌ Pendente: criar\nlinks de checkout","x":700,"y":-160,"width":230,"height":220,"color":"1"},
+		{"id":"entrega","type":"text","text":"## 8. Entrega\n\n**$QUAD:** Skool\n**RUNA SYSTEMS:** Skool\n(comunidade + módulos)\n**Claude Code:** módulo\ndentro da comunidade","x":1050,"y":-160,"width":230,"height":180,"color":"4"},
+		{"id":"ab-nota","type":"text","text":"**A/B Test RUNA SYSTEMS:**\nLP (runaecoai.com) vs Google Doc\n→ mesma oferta, copies diferentes\n→ medir conversão e decidir padrão","x":320,"y":-560,"width":260,"height":100,"color":"2"},
+		{"id":"pendencias","type":"text","text":"**Pendências críticas:**\n☐ Criar Google Docs (5 docs)\n☐ Atualizar DMs Zernio → links\n☐ Criar keyword CLAUDE no Zernio\n☐ Criar links de checkout\n☐ Publicar Pin-02 e Pin-03","x":-1400,"y":200,"width":300,"height":140,"color":"1"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"criativo","fromSide":"right","toNode":"cta","toSide":"left"},
+		{"id":"e2","fromNode":"cta","fromSide":"right","toNode":"zernio","toSide":"left","label":"comentário na keyword"},
+		{"id":"e3","fromNode":"zernio","fromSide":"right","toNode":"dm","toSide":"left","label":"trigger automático"},
+		{"id":"e4","fromNode":"dm","fromSide":"right","toNode":"googledoc","toSide":"left","label":"clica no link"},
+		{"id":"e5","fromNode":"googledoc","fromSide":"right","toNode":"oferta-runa","toSide":"left","label":"CTA RUNA","color":"6"},
+		{"id":"e6","fromNode":"googledoc","fromSide":"right","toNode":"oferta-squad","toSide":"left","label":"CTA $QUAD","color":"3"},
+		{"id":"e7","fromNode":"googledoc","fromSide":"right","toNode":"oferta-claude","toSide":"left","label":"CTA Claude Code","color":"5"},
+		{"id":"e8","fromNode":"oferta-runa","fromSide":"right","toNode":"checkout","toSide":"left"},
+		{"id":"e9","fromNode":"oferta-squad","fromSide":"right","toNode":"checkout","toSide":"left"},
+		{"id":"e10","fromNode":"oferta-claude","fromSide":"right","toNode":"checkout","toSide":"left"},
+		{"id":"e11","fromNode":"checkout","fromSide":"right","toNode":"entrega","toSide":"left","label":"compra confirmada"},
+		{"id":"e12","fromNode":"oferta-runa","fromSide":"top","toNode":"ab-nota","toSide":"bottom","label":"A/B","color":"2"}
+	]
+}

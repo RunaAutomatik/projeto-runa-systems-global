@@ -41,9 +41,9 @@ type: content-hub
 Pai. Marido.
 Você é o gargalo do próprio negócio.
 Não atendo quem ainda precisa se provar.
-↳ Runa Systems · AIOX
-[link]
+↳ Runa Systems · [link]
 ```
+> ⚠️ Note: "AIOX" removed from bio (2026-04-08). Internal framework name — no meaning to external audience. Arthur must update actual Instagram profile manually.
 
 ---
 
