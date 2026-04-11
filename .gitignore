@@ -58,3 +58,9 @@ transcript.json
 
 # AIOX Runtime (ephemeral)
 .aiox/handoffs/
+
+# Graphify skill artifacts
+.graphify_*
+
+# Netlify CLI runtime (state, cache — not config)
+.netlify/
