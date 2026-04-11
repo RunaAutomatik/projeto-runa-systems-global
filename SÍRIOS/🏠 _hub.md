@@ -15,11 +15,11 @@ type: map-of-content
 
 | Produto | Tier | Status | Pasta |
 |---------|------|--------|-------|
-| [[RUNA-SYSTEMS/prd]] | High R$15k–50k | Active | [[🎯 PRODUTOS/RUNA-SYSTEMS/]] |
-| [[$QUAD/prd]] | Mid R$2.997 | Active | [[🎯 PRODUTOS/SQUAD$/]] |
-| [[CREATOR$/prd]] | Mid R$997 | Em desenvolvimento | [[🎯 PRODUTOS/CREATOR$/]] |
-| [[AGENT$/aperitivo/aperitivo-agent-dollar]] | Mid R$1.997 | Concept | [[🎯 PRODUTOS/AGENT$/]] |
-| [[MIND$/prd]] | Mid R$997 | Em desenvolvimento | [[🎯 PRODUTOS/MIND$/]] |
+| [[RUNA-SYSTEMS/_hub]] | High R$15k–50k | Active | [[🎯 PRODUTOS/RUNA-SYSTEMS/]] |
+| [[squad-dollar-prd]] | Mid R$2.997 | Active | [[🎯 PRODUTOS/SQUAD$/]] |
+| [[creator-dollar-prd]] | Mid R$997 | Em desenvolvimento | [[🎯 PRODUTOS/CREATOR$/]] |
+| [[aperitivo-agent-dollar]] | Mid R$1.997 | Concept | [[🎯 PRODUTOS/AGENT$/]] |
+| [[mind-dollar-prd]] | Mid R$997 | Em desenvolvimento | [[🎯 PRODUTOS/MIND$/]] |
 | [[POSICIONAMENTO$]] | Mid R$997 | Concept | [[🎯 PRODUTOS/POSICIONAMENTO$/]] |
 | [[SITE$/oferta/site-movimento-offer-copy]] | Mid R$197–297 | Concept | [[🎯 PRODUTOS/SITE$/]] |
 | [[ORCAMENTO$/paperclip-minicurso]] | Low R$97–197 | Concept | [[🎯 PRODUTOS/ORCAMENTO$/]] |

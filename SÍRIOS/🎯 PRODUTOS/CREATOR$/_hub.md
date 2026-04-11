@@ -9,7 +9,7 @@ type: product-hub
 > Demo case: Alpha® (avatar visual)
 
 ## PRD
-- [[prd]] — Product Requirements Document
+- [[creator-dollar-prd]] — Product Requirements Document
 
 ## Oferta
 - [[oferta/creator-dollar-offer]] — Oferta principal

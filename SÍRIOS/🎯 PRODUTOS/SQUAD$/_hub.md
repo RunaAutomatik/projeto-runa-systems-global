@@ -8,7 +8,7 @@ type: product-hub
 > Mid ticket | R$2.997 (launch: R$1.497–2.098)
 
 ## PRD
-- [[prd]] — Product Requirements Document completo
+- [[squad-dollar-prd]] — Product Requirements Document completo
 
 ## Oferta
 - [[oferta/squad-dollar-offer-freela]] — Oferta: Freelancer/Empreendedor solo
