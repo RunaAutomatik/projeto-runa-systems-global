@@ -13,7 +13,11 @@ carousel content creation task for @arthsystems_).
 - Include: Tema, Estilo, Palavra-chave DM, Oferta implícita, caption, 7 slides
 
 ### STEP 2 — Update the Pin .md file
-- Locate the corresponding pin file: `SÍRIOS/📱 Instagram/@arthsystems_/📌 pins/pin-0X-*.md`
+- Locate the corresponding pin file in the product criativos folder:
+  - Pin 01–03 (RUNA-SYSTEMS): `SÍRIOS/🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-0X-*.md`
+  - Pin 04 AVATAR (CREATOR$): `SÍRIOS/🎯 PRODUTOS/CREATOR$/criativos/pin-04-creator-teaser.md`
+  - Pin 04 SQUAD (SQUAD$): `SÍRIOS/🎯 PRODUTOS/SQUAD$/criativos/pin-04-squad.md`
+  - Pin 05 AGENTE (AGENT$): `SÍRIOS/🎯 PRODUTOS/AGENT$/criativos/pin-05-nemoclaw.md`
 - Update frontmatter:
   - `type: carousel — 7 slides`
   - `estilo: [ARCHITECT | MANIFESTO | TERMINAL]`
@@ -26,11 +30,12 @@ carousel content creation task for @arthsystems_).
 - Mark the pin entry as `brief-ready` in the Carrosseis section
 
 ### STEP 4 — Update carousel-keywords.json
-- If the pin is new (not yet in the keyword map), add the DM keyword:
+- If the pin is new (not yet in the keyword map), add the DM keyword with full vault-relative path:
   ```json
-  "KEYWORD": "pin-0X-assets"
+  "KEYWORD": "🎯 PRODUTOS/{PRODUCT}/criativos/pin-0X-assets"
   ```
   File: `scripts/carousel-keywords.json`
+- The watcher resolves paths from `SÍRIOS/` — the JSON value must be the path relative to `SÍRIOS/`
 
 ### STEP 5 — Instruct the user
 After completing all steps, always display this exact instruction block:
@@ -41,7 +46,7 @@ PRÓXIMOS PASSOS:
 1. Cole o brief acima no Claude Chat (agente carousel)
 2. Faça o download do HTML gerado
 3. O watcher detecta automaticamente:
-   - Move o HTML para pin-0X-assets/
+   - Move o HTML para a pasta criativos do produto
    - Exporta slide_1.png ... slide_7.png (1080×1080)
    - Assets prontos para o instagram-worker publicar
 
@@ -57,19 +62,23 @@ feat(carousel): pin-0X brief — [tema] [estilo]
 ## After Assets Return (when user confirms slides are ready)
 
 When the user says slides were generated and downloaded:
-1. Verify files exist in `pin-0X-assets/` (slide_1.png through slide_7.png)
+1. Verify files exist in the product's `criativos/pin-0X-assets/` (slide_1.png through slide_7.png)
 2. Update pin .md status: `brief-ready` → `ready-to-publish`
 3. Update hub entry: mark as `✅ ready-to-publish`
 4. Commit the status update
 
 ## Keyword Map Reference
 
-Current keyword → folder assignments:
-| Keyword    | Folder         | Pin |
-|------------|----------------|-----|
-| ARQUITETO  | pin-01-assets  | 01  |
-| RUNA       | pin-02-assets  | 02  |
-| SISTEMA    | pin-03-assets  | 03  |
+Current keyword → folder assignments (paths relative to `SÍRIOS/`):
+
+| Keyword   | Product     | Path                                                          | Pin |
+|-----------|-------------|---------------------------------------------------------------|-----|
+| ARQUITETO | RUNA-SYSTEMS | `🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-01-assets`           | 01  |
+| RUNA      | RUNA-SYSTEMS | `🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-02-assets`           | 02  |
+| SISTEMA   | RUNA-SYSTEMS | `🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-03-assets`           | 03  |
+| AVATAR    | CREATOR$    | `🎯 PRODUTOS/CREATOR$/criativos/pin-04-creator-assets`       | 04  |
+| SQUAD     | SQUAD$      | `🎯 PRODUTOS/SQUAD$/criativos/pin-04-squad-assets`           | 04  |
+| AGENTE    | AGENT$      | `🎯 PRODUTOS/AGENT$/criativos/pin-05-assets`                 | 05  |
 
 When adding new pins, always update `scripts/carousel-keywords.json` in STEP 4.
 
@@ -80,3 +89,4 @@ When adding new pins, always update `scripts/carousel-keywords.json` in STEP 4.
   `python -X utf8 scripts/export-carousel.py --html PATH --out DIR`
 - Slide screenshots are taken at 1080×1080px (Instagram square format)
 - The caption lives in the pin .md file — instagram-worker reads it from there
+- Pin .md files are now colocated with their assets inside the product's `criativos/` folder
