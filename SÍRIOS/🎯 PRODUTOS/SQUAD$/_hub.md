@@ -2,6 +2,7 @@
 date: 2026-04-11
 tags: [squad-dollar, hub, mid-ticket]
 type: product-hub
+aliases: [squad-dollar, squad, $QUAD]
 ---
 # $QUAD — Hub
 
@@ -23,3 +24,8 @@ type: product-hub
 
 ## Outros
 - [[squad-dollar-complete]] — Spec completa
+
+## Chain
+- **Feeds into:** [[../../RUNA-SYSTEMS/_hub|RUNA SYSTEMS]]
+- **Hub:** [[🏠 _hub|SÍRIOS Hub]]
+- **Catalog:** [[../../🧠 SISTEMA/product-catalog|Product Catalog]]

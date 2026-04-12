@@ -2,6 +2,7 @@
 date: 2026-04-11
 tags: [creator-dollar, hub, mid-ticket]
 type: product-hub
+aliases: [creator-dollar, creator, CREATOR$]
 ---
 # CREATOR$ — Hub
 
@@ -22,3 +23,8 @@ type: product-hub
 
 ## Assets
 - [[deliverable-alpha-system-prompt]] — System prompt Alpha®
+
+## Chain
+- **Feeds into:** [[../../RUNA-SYSTEMS/_hub|RUNA SYSTEMS]]
+- **Hub:** [[🏠 _hub|SÍRIOS Hub]]
+- **Catalog:** [[../../🧠 SISTEMA/product-catalog|Product Catalog]]

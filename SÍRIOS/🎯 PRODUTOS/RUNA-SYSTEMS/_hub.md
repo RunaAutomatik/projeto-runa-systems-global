@@ -2,6 +2,7 @@
 date: 2026-04-11
 tags: [runa-systems, hub, high-ticket]
 type: product-hub
+aliases: [runa-systems-prd, RUNA SYSTEMS, runa systems]
 ---
 # RUNA SYSTEMS — Hub
 
@@ -18,3 +19,7 @@ type: product-hub
 ## Referência
 - [[../../🧠 SISTEMA/product-catalog]] — Catálogo
 - [[../../🧠 SISTEMA/temporadas/q2-2026/temporada-q2-2026]] — Temporada Q2
+
+## Chain
+- **Hub:** [[🏠 _hub|SÍRIOS Hub]]
+- **Catalog:** [[../../🧠 SISTEMA/product-catalog|Product Catalog]]

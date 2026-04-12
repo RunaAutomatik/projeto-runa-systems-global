@@ -222,12 +222,13 @@ Alpha® then becomes:
 - **Aperitivo DM (keyword ALPHA):** [[aperitivo-creator-dollar]] — single prompt, R$97
 - **Método completo (referência):** [[deliverable-alpha-system-prompt]] — doc de apoio base
 
-### Course Support Docs (Skool — a criar por módulo)
-- **Mod 1 template:** [[creator-dollar-storyboard-template]] *(a criar)*
-- **Mod 2 prompt guide:** [[creator-dollar-master-prompt-guide]] *(a criar)*
-- **Mod 3 video hack:** [[creator-dollar-sora-hack-guide]] *(a criar)*
-- **Mod 4 storybook assembly:** [[creator-dollar-storybook-assembly]] *(a criar)*
-- **Bonus prompt pack:** [[creator-dollar-prompt-pack]] *(a criar)*
+### Course Support Docs (Skool)
+- **Mod 1 template:** [[02-storyboard-template]]
+- **Mod 2 prompt guide:** [[03-master-prompt-guide]]
+- **Mod 3 video hack:** [[05-hack-sora]]
+- **Mod 4 storybook assembly:** [[07-storybook-final]]
+- **Bonus prompt pack:** [[08-prompt-pack]]
+- **Index completo:** [[programa/skool/_index|Skool _index]]
 
 ### Personas & Storyboards
 - **Avatar demo:** [[alpha-storyboard]] — Alpha® visual storyboard (built live in Module 1)

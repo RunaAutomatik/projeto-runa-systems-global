@@ -3,6 +3,7 @@ date: 2026-04-11
 tags: [hub, moc, runa-systems, vault-index]
 project: runa-systems-global
 type: map-of-content
+aliases: [hub, home, index, vault-index, SÍRIOS]
 ---
 
 # SÍRIOS — Master Hub

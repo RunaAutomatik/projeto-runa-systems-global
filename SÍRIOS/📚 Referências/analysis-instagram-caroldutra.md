@@ -1,3 +1,9 @@
+---
+date: 2026-03-18
+tags: [referência, instagram, análise, competitor, carol-dutra]
+project: runa-systems-global
+type: competitor-analysis
+---
 # ANÁLISE COMPLETA — @acaroldutraa (Carol Dutra)
 > Documento gerado em 18/03/2026 | Extração e análise do perfil do Instagram
 

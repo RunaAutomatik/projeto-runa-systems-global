@@ -1,3 +1,9 @@
+---
+date: 2026-03-18
+tags: [referência, instagram, análise, competitor, sarah-seller]
+project: runa-systems-global
+type: competitor-analysis
+---
 # 🔍 EXTRAÇÃO COMPLETA DE IDENTIDADE DIGITAL
 ## @sarahseller.br — Análise Estratégica de Perfil Instagram
 ### Data da análise: 18/03/2026

@@ -1,5 +1,14 @@
-(321) IA É COISA DE POBRE? - YouTube
-https://www.youtube.com/watch?v=UwqU_moJ0-4
+---
+date: 2026-03-24
+tags: [referência, youtube, transcrição, ia]
+project: runa-systems-global
+type: reference-transcription
+---
+# IA É COISA DE POBRE? — Transcrição YouTube
+
+Fonte: https://www.youtube.com/watch?v=UwqU_moJ0-4
+
+
 
 Transcript:
 (00:00) Saturday night, right? That hunger pang kicks in, like that craving for a big burger, you know? So, you're out on the street, you decide, like, I'm going to eat a hamburger, right? Goodbye. For a diet with cravings, and no arguing, right? Then you have two options. Eating at that franchise fast-food restaurant that's on every block, right? Or you might find yourself at a new burger joint that just opened up on your way.

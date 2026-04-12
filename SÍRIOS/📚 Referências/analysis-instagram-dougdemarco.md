@@ -1,3 +1,9 @@
+---
+date: 2026-03-18
+tags: [referência, instagram, análise, competitor, doug-demarco]
+project: runa-systems-global
+type: competitor-analysis
+---
 # 🔍 EXTRAÇÃO COMPLETA DE IDENTIDADE DIGITAL
 ## @dougdemarco_ — Análise Estratégica de Perfil Instagram
 ### Data da análise: 18/03/2026
