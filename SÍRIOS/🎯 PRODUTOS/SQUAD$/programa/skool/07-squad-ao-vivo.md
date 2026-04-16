@@ -11,7 +11,7 @@ modulo: "7.2 e 7.3 — Adaptando o Framework + Manutenção do Squad"
 
 > Módulo 7 · Aulas 7.2 e 7.3
 
-No Módulo 7, você viu o squad de Alpha® funcionando de ponta a ponta. Agora é hora de adaptar o framework para o seu modelo de negócio e entender como manter o squad funcionando bem no longo prazo.
+No Módulo 7, você viu um squad completo funcionando de ponta a ponta. Agora é hora de adaptar o framework para o seu modelo de negócio e entender como manter o squad funcionando bem no longo prazo.
 
 ---
 
@@ -108,9 +108,9 @@ X = mudança de escopo (novo produto, novo ICP, reestruturação completa)
 Y = ajuste fino (correção de tom, adição de exemplo, correção de erro)
 
 Exemplo:
-FREYJA-v1.0 → primeira configuração
-FREYJA-v1.1 → adicionado novo formato (email)
-FREYJA-v2.0 → reposicionamento completo do negócio → refez o DNA de voz
+Conteúdo-v1.0 → primeira configuração
+Conteúdo-v1.1 → adicionado novo formato (email)
+Conteúdo-v2.0 → reposicionamento completo do negócio → refez o DNA de voz
 ```
 
 Guarde o histórico dos system prompts em um Google Doc ou Notion. Quando algo degrada, você consegue comparar a versão atual com a que funcionava.

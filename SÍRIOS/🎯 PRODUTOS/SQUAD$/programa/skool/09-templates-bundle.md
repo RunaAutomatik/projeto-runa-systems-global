@@ -393,19 +393,19 @@ Define a missão, os valores e as regras de convivência do squad.
 
 ---
 
-## O squad de referência — Alpha®
+## O squad de referência — Carla (Consultoria Financeira)
 
-Para visualizar como esses templates ficam preenchidos na prática, consulte o squad de Alpha® que foi construído durante o curso:
+Para visualizar como esses templates ficam preenchidos na prática, consulte o squad de Carla que foi construído durante o curso:
 
 | Agente | Nome | Função |
 |--------|------|--------|
-| Orquestrador | ORION | Coordenação central + roteamento |
-| Oferta | ARES | Ofertas, precificação, proposta de valor |
-| Conteúdo | FREYJA | Copy, posts, scripts, captions |
-| Automação | HERMES | DMs, onboarding, follow-up |
-| Inteligência | ALEX | Pesquisa, concorrentes, gaps |
+| Orquestrador | Nexus | Coordenação central + roteamento |
+| Agente de Oferta | Hermes | Serviços, precificação, narrativa de venda |
+| Agente de Conteúdo | Athena | Conteúdo financeiro, posts, scripts, emails |
+| Agente de Automação | Mercury | DMs, onboarding de clientes, follow-up |
+| Agente de Inteligência | Atlas | Pesquisa de mercado, concorrentes, gaps |
 
-Os system prompts completos de cada agente de Alpha® foram usados como exemplos ao longo dos Módulos 2 a 6.
+Os system prompts completos de cada agente foram usados como exemplos ao longo dos Módulos 2 a 6.
 
 ---
 

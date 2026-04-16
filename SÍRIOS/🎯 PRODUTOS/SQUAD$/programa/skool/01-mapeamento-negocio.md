@@ -172,17 +172,17 @@ Guarde este documento. Ele é o input para os Módulos 2 a 6.
 
 ---
 
-## Referência — Squad da Alpha®
+## Referência — Squad da Carla (Consultoria Financeira para MEIs)
 
-Para comparar com o seu, este foi o squad desenhado para Alpha® (negócio de mentoria):
+Para comparar com o seu, este é o squad desenhado para Carla — consultora financeira para MEIs e pequenas empresas:
 
 | Agente | Função | Prioridade |
 |--------|--------|-----------|
-| ORION | Orquestrador — coordena o squad, gerencia projetos | Crítico |
-| ARES | Oferta — estrutura produtos, preços, narrativas de venda | Crítico |
-| FREYJA | Conteúdo — escreve na voz dela para todos os formatos | Crítico |
-| HERMES | Automação — cuida de DMs Instagram, onboarding, follow-up | Importante |
-| ALEX | Inteligência — pesquisa concorrentes, extrai oportunidades | Opcional |
+| Nexus (Orquestrador) | Coordena o squad, roteia solicitações para o especialista certo | Crítico |
+| Hermes (Agente de Oferta) | Estrutura serviços, precificação e narrativa de venda | Crítico |
+| Athena (Agente de Conteúdo) | Escreve conteúdo financeiro na voz de Carla para todos os formatos | Crítico |
+| Mercury (Agente de Automação) | Cuida de DMs, onboarding de novos clientes e follow-up | Importante |
+| Atlas (Agente de Inteligência) | Pesquisa concorrentes, extrai oportunidades no nicho financeiro | Opcional |
 
 ---
 

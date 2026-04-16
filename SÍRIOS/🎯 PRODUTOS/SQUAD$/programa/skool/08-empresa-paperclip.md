@@ -212,7 +212,7 @@ budget:
 
 ## Bônus — Template YAML completo para importação rápida
 
-O Bonus 8A inclui um arquivo YAML completo com a estrutura do squad de Alpha® pronto para importar. Você só precisa substituir os system prompts pelos seus — o organograma, os heartbeats e o orçamento já vêm configurados.
+O Bonus 8A inclui um arquivo YAML completo com a estrutura do squad de referência pronto para importar. Você só precisa substituir os system prompts pelos seus — o organograma, os heartbeats e o orçamento já vêm configurados.
 
 → Ver: [[09-templates-bundle]]
 

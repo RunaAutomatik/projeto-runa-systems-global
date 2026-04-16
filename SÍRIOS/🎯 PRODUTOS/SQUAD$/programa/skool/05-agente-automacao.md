@@ -1,6 +1,6 @@
 ---
 date: 2026-04-04
-tags: [squad-dollar, skool, automacao, hermes, instagram, manychat, modulo-5]
+tags: [squad-dollar, skool, automacao, instagram, manychat, modulo-5]
 project: runa-systems-global
 type: course-support
 produto: [[squad-dollar-prd]]
@@ -21,7 +21,7 @@ Importante entender a separação antes de construir:
 
 | Camada | Ferramenta | Função |
 |--------|-----------|--------|
-| **Lógica de negócio** (o que dizer, quando, para quem) | Claude (agente HERMES) | Escreve as mensagens, define os critérios de gatilho, estrutura os fluxos |
+| **Lógica de negócio** (o que dizer, quando, para quem) | Claude (seu Agente de Automação) | Escreve as mensagens, define os critérios de gatilho, estrutura os fluxos |
 | **Execução automática** (disparar as mensagens de fato) | ManyChat, N8N | Detecta o comentário, envia o DM, executa a sequência no horário certo |
 
 O agente no Claude pensa e escreve. O ManyChat/N8N executa. São camadas diferentes.

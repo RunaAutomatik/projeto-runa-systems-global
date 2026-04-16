@@ -1,6 +1,6 @@
 ---
 date: 2026-04-04
-tags: [squad-dollar, skool, conteudo, freyja, voz, modulo-4]
+tags: [squad-dollar, skool, conteudo, voz, modulo-4]
 project: runa-systems-global
 type: course-support
 produto: [[squad-dollar-prd]]

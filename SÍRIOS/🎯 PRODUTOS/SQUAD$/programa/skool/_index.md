@@ -19,6 +19,17 @@ Cada documento abaixo corresponde a uma aula. Após gravar, faça upload do víd
 
 ---
 
+## PRÉ-FASE — Setup Técnico (guias complementares)
+
+> Não são aulas obrigatórias — disponibilize como material de apoio na área de recursos do Skool.
+
+| Material | Documento | Status |
+|----------|-----------|--------|
+| Conectando ao GitHub (controle de versão dos agentes) | [[guia-github-conexao]] | ✅ pronto |
+| Memória persistente com claude-mem | [[guia-claude-mem-memoria]] | ✅ pronto |
+
+---
+
 ## Módulo 0 — Comece Aqui
 
 | Aula | Documento | Status |

@@ -1,6 +1,6 @@
 ---
 date: 2026-04-04
-tags: [squad-dollar, skool, inteligencia, alex, concorrentes, modulo-6]
+tags: [squad-dollar, skool, inteligencia, concorrentes, modulo-6]
 project: runa-systems-global
 type: course-support
 produto: [[squad-dollar-prd]]

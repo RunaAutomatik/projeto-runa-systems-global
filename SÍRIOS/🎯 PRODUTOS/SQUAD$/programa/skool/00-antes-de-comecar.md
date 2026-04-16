@@ -70,6 +70,13 @@ Não tem problema começar. O Módulo 1 vai gerar o mapeamento de negócio que s
 | **Google Docs** | Editar templates e compartilhar com equipe |
 | **ChatGPT Plus** | Alternativa ao Claude para alguns agentes |
 
+### Guias de setup complementares
+
+Se você não tem familiaridade com Git e controle de versão, ou quer configurar memória persistente para os seus agentes, os guias abaixo cobrem esses tópicos antes de entrar no Módulo 1:
+
+- **[[guia-github-conexao]]** — Como conectar seu projeto ao GitHub para salvar versões dos system prompts (recomendado para todos)
+- **[[guia-claude-mem-memoria]]** — Como configurar memória persistente nos seus agentes com o sistema de memória do Claude Code
+
 > **Nota sobre ferramentas:** A lógica de squad não muda com a ferramenta. Se você não tem acesso a alguma das ferramentas pagas, a maioria tem equivalentes gratuitos. O que importa é o raciocínio — as ferramentas são detalhes de implementação que vão mudar com o tempo.
 
 ---
@@ -82,8 +89,8 @@ Não tem problema começar. O Módulo 1 vai gerar o mapeamento de negócio que s
 3. **Aplique no seu negócio** — o documento tem worksheets para você preencher com seus dados
 4. **Não avance sem ter o entregável do módulo** — cada módulo tem um output concreto que é input para o próximo
 
-### O caso de estudo: Alpha® e o Squad Runa Systems
-Em todos os vídeos, você vai ver Arthur construindo o squad da **Alpha®** — o avatar criado no CREATOR$. O squad dela funciona para um negócio de mentoria.
+### O caso de estudo: Carla, consultora financeira para MEIs
+Em todos os vídeos, você vai ver Arthur construindo o squad de uma consultora financeira — um negócio real de consultoria para MEIs e pequenas empresas.
 
 Você vai ver exatamente os prompts usados, os erros que aconteceram, e como foram corrigidos. Esse é o material bruto — sem edição que esconde a dificuldade real.
 
