@@ -34,13 +34,13 @@ FREYJA and ARES are always in sync. ARES defines what to sell. FREYJA decides ho
 
 ### Agent Roster
 
-| Agent | Activation | Core Mission | Key Relationship |
-|-------|-----------|-------------|-----------------|
-| **ORION** | `@aiox-master` | Orchestration + memory + Obsidian (exclusive) | Coordinates all |
-| **ARES** ⚔️ | `@ares` | Offer design + product teia + pricing | → feeds FREYJA what to sell |
-| **FREYJA** 🌙 | `@freyja` | Narrative + copy + all content + sales letters disguised as posts | ← receives from ARES |
-| **HERMES** 🪽 | `@hermes` | Client success + onboarding + retention + upsell sequences | feeds on ARES offers |
-| **HELIOS** ☀️ | `@seo` | SEO strategy + technical + content + GEO + AI search | amplifies FREYJA's reach |
+| Agent         | Activation     | Core Mission                                                      | Key Relationship            |
+| ------------- | -------------- | ----------------------------------------------------------------- | --------------------------- |
+| **ORION**     | `@aiox-master` | Orchestration + memory + Obsidian (exclusive)                     | Coordinates all             |
+| **ARES** ⚔️   | `@ares`        | Offer design + product teia + pricing                             | → feeds FREYJA what to sell |
+| **FREYJA** 🌙 | `@freyja`      | Narrative + copy + all content + sales letters disguised as posts | ← receives from ARES        |
+| **HERMES** 🪽 | `@hermes`      | Client success + onboarding + retention + upsell sequences        | feeds on ARES offers        |
+| **HELIOS** ☀️ | `@seo`         | SEO strategy + technical + content + GEO + AI search              | amplifies FREYJA's reach    |
 
 ### ARES ↔ FREYJA Protocol
 

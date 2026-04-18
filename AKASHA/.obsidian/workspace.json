@@ -11,14 +11,10 @@
             "id": "56837363f66b93f7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📖 Base de Estudo/📚 Claude Code Source/06-memory-system.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "06-memory-system"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
             }
           }
         ]
@@ -44,7 +40,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de arquivos"
             }
           },
           {
@@ -171,21 +167,30 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
     }
   },
   "active": "56837363f66b93f7",
   "lastOpenFiles": [
+    "raw/2026-03-24-transcription-youtube-ia-coisa-de-pobre.md",
+    "raw/2026-03-25-framework-conversion-cta.md",
+    "raw/2026-03-24-extraction-whatsapp-references.md",
+    "raw/2026-03-24-creator-tracking-list.md",
+    "raw/2026-03-18-hub-instagram-market-references.md",
+    "raw/2026-03-18-analysis-arthur-instagram-diagnosis.md",
+    "raw/2026-03-18-analysis-caroldutra.md",
+    "raw/2026-03-18-analysis-sarahseller.md",
+    "raw/2026-03-18-analysis-dougdemarco.md",
+    "📖 Base de Estudo/📚 Claude Code Source/06-memory-system.md",
     "📖 Base de Estudo/📚 Claude Code Source/07-agent-system.md",
     "📖 Base de Estudo/📚 Claude Code Source/08-hooks-and-permissions.md",
     "📖 Base de Estudo/📚 Claude Code Source/09-slash-commands-complete.md",
-    "📖 Base de Estudo/📚 Claude Code Source/06-memory-system.md",
     "📚 Alex Hormozi/YouTube Videos/How To Win Sales Without Being Skilled (ALEX HORMOZI).md",
     "📚 Alex Hormozi/YouTube Videos/How to Scale Your Business Fast.md",
     "📚 Alex Hormozi/YouTube Videos/How To Retire Early (and be in the top 1_).md",
@@ -199,15 +204,6 @@
     "📚 Alex Hormozi/YouTube Videos/How To Level Up In Business - Understanding Tradeoffs.md",
     "📚 Alex Hormozi/YouTube Videos/How to Grow an Audience if You Have 0 Followers.md",
     "📚 Alex Hormozi/YouTube Videos/How To Create Luck - The Simple Strategy Billionaires Use.md",
-    "📚 Alex Hormozi/YouTube Videos/How to CLOSE THE SALE when the prospect says, I left my wallet at home.md",
-    "📚 Alex Hormozi/YouTube Videos/How To Close Prospects By Saying No First (ALEX HORMOZI).md",
-    "📚 Alex Hormozi/YouTube Videos/How To Close Everyone Downselling Like A Pro (ALEX HORMOZI).md",
-    "📚 Alex Hormozi/YouTube Videos/How the ULTRA WEALTHY get loans to buy cool stuff...md",
-    "📚 Alex Hormozi/YouTube Videos/How the rich avoid paying taxes...MY strategy - Part 1.md",
-    "📚 Alex Hormozi/YouTube Videos/How the rich avoid paying taxes - the Augusta Rule LOOPHOLE.md",
-    "📚 Alex Hormozi/YouTube Videos/How the best entrepreneurs REDEFINE reality..md",
-    "📚 Alex Hormozi/YouTube Videos/How society fools the poor with work life balance.md",
-    "📚 Alex Hormozi/YouTube Videos/How my job changed from  10kday to  100,000day.md",
     "📖 Base de Estudo/📚 Claude Code Source",
     "📚 Everton Pieri",
     "📚 Leandro Ladeira VTSD",

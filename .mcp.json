@@ -6,7 +6,7 @@
       "args": ["-y", "n8n-mcp"],
       "env": {
         "N8N_BASE_URL": "https://primary-production-bae40.up.railway.app",
-        "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjZkY2UyZC0yMzg5LTQ2ZmEtOGM1Ni1mZDQwMTc4MGRiMmQiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiYjQ0YWJjNzItNTZlMC00ZDk0LTg5OWItY2FkYTVhYjc0Mjc5IiwiaWF0IjoxNzczOTM4Njc0LCJleHAiOjE3NzY0ODQ4MDB9.41bTyX3uYEEA0DhZXyP-zLyRntJ1hJg8pbmHFMPxFdE"
+        "N8N_API_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NjZkY2UyZC0yMzg5LTQ2ZmEtOGM1Ni1mZDQwMTc4MGRiMmQiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiYmVlMmUwZGQtMDJhZi00ODE4LTk1ZWItZmI0OWZlZjM3MDMyIiwiaWF0IjoxNzc2NTI3MjY5fQ.__kau3Dvq9CAZc9QMSM84xyOKPq-YsqHvW2A1g2vk34"
       }
     },
     "notebooklm-mcp": {
