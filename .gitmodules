@@ -1,0 +1,3 @@
+[submodule "apps/lp-runa"]
+	path = apps/lp-runa
+	url = https://github.com/RunaAutomatik/LPRuna.git
