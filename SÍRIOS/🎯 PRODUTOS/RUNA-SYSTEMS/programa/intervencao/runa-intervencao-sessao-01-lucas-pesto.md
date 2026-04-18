@@ -7,7 +7,7 @@ cliente: Gabriel — Pesto (agência criativa)
 status: ready-for-session
 ---
 
-# Runa Intervenção — Sessão 01 Personalizada: Gabriel / Pesto
+# Runa Intervenção — Sessão 01 Personalizada: Lucas / Pesto
 
 > **Base:** [[runa-intervencao-sessao-01-mapeamento]] — estrutura da aula
 > **Cliente:** Gabriel, dono de agência criativa (Pesto)
