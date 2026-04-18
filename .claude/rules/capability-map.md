@@ -17,7 +17,7 @@ Never guess or reinvent — if the capability exists, use it.
 | ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours** | — |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
-| ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
+| ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
 | @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Figma, Supabase, Neon |
 | @qa | code-review, testing-strategy, pr-review-toolkit, **gstack/review**, **gstack/cso**, **gstack/qa** | — |
 | @devops | devops-automation, commit-commands, hookify, **stop-notification**, **post-tool-format** | Netlify |
@@ -135,6 +135,21 @@ Full doc: `SÍRIOS/🛠️ Skills/Skills gstack.md`
 
 **IMPORTANTE:** `/ship` do gstack inclui git push — protocolo AIOX exige que push seja feito via @devops.
 Usar `/review` do gstack, mas delegar push para `@devops *push`.
+
+## LLM Wiki Skills (Karpathy pattern — ACTIVE ✓)
+
+Installed 2026-04-18. `llm-wiki-setup` + `wiki-self-heal` in `~/ai-second-brain-skills/`.
+Full usage rules: `.claude/rules/llm-wiki-usage.md`
+
+| Skill | Comando | Agent Owner | Quando usar |
+|-------|---------|-------------|-------------|
+| llm-wiki-setup | `/llm-wiki-setup` | ORION | Bootstrap novo knowledge vault (Karpathy 3-layer) |
+| wiki-self-heal | `/wiki-self-heal` | ORION | Health-check + gap-fill em wiki existente |
+
+**Vault ativo:** `AKASHA/` — layout nested, hot cache ativado.
+**SÍRIOS:** não usar — tem estrutura Obsidian própria.
+
+---
 
 ## Gaps
 
