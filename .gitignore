@@ -67,3 +67,10 @@ tools/mcp/
 
 # Netlify CLI runtime (state, cache — not config)
 .netlify/
+
+# OCR training data (large binary, not project-related)
+*.traineddata
+
+# Obsidian themes (installed locally)
+SÍRIOS/.obsidian/themes/
+AKASHA/.obsidian/themes/
