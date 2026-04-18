@@ -26,6 +26,7 @@ project: runa-systems-global
 | [[Skills Claude Code]] | Configuração, Stitch, Paperclip, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
 | [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
 | [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso, /ship | @dev, @qa, ARES, HERMES |
+| [[Skills graphify]] | Knowledge graph de qualquer input: código, vault, docs, texto — HTML interativo + relatório + export Obsidian | ORION, ALEX, @architect |
 
 ---
 
@@ -106,6 +107,15 @@ project: runa-systems-global
 ### Quero processar PDF ou transcrição para base de conhecimento
 → [[Skills Claude Code]] → `/knowledge-extraction`
 
+### Quero visualizar relações entre documentos/código como grafo
+→ [[Skills graphify]] → `/graphify <pasta ou arquivo>`
+
+### Quero descobrir clusters temáticos no vault ou codebase
+→ [[Skills graphify]] → `/graphify` + output HTML interativo
+
+### Quero encontrar o caminho entre dois conceitos/módulos
+→ [[Skills graphify]] → `/graphify path <A> <B>`
+
 ### Quero validar uma ideia de produto antes de codar
 → [[Skills gstack]] → `/office-hours`
 
@@ -153,5 +163,6 @@ project: runa-systems-global
 | Claude Code | 18 skills nativas | ✅ ATIVO |
 | Stitch (trio) | taste-design + stitch-design + stitch-loop | ✅ INSTALADO (⚠️ MCP pendente) |
 | gstack | 23 skills + browser daemon | ✅ INSTALADO |
+| graphify | knowledge graph pipeline — 9 etapas + 6 modos | ✅ INSTALADO |
 
-**Total de capacidades: 150+ modelos IA + 113+ comandos de workflow**
+**Total de capacidades: 150+ modelos IA + 120+ comandos de workflow**
