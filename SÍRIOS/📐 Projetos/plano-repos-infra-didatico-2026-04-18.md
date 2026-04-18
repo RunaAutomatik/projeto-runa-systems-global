@@ -499,19 +499,23 @@ Ou adicionamos ao Git (se é trabalho ativo), ou adicionamos ao .gitignore (se �
 # RESUMO VISUAL — O QUE FAZER E QUANDO
 
 ```
-AGORA (esta sessão):
-────────────────────
-  🔧 Karpathy principles → merge no CLAUDE.md (10 min)
-  ✅ gsd-context-monitor → filtro aplicado (fix ativo)
+FEITO (sessão 2026-04-18):
+──────────────────────────
+  ✅ Karpathy principles → merged no CLAUDE.md
+  ✅ gsd-context-monitor → filtro aplicado
+  ✅ ralph-loop → removido dos plugins
+  ✅ lp-runa → já estava correto como submódulo git
   
+REQUER SUA AÇÃO (você faz):
+────────────────────────────
+  🔴 Renovar token Zernio → claude.ai Settings → Integrations → Zernio → Reconnect
+  🟡 Renovar token n8n → Railway → Settings → API Keys → Create → me passa a chave
+  🟡 Deletar precompact-session-digest.cjs manualmente (arquivo órfão)
+
 ESTA SEMANA:
 ────────────
-  📚 ai-second-brain-skills → instalar no AKASHA
+  📚 ai-second-brain-skills → instalar no AKASHA (30 min)
   📖 Estudar claude-code-best-practice → material para o PRD
-  🔴 Renovar token Zernio
-  🟡 Renovar token n8n (você gera a chave, eu atualizo)
-  🟡 Resolver arquivo órfão precompact-session-digest
-  🟡 Resolver lp-runa no git
 
 APÓS O PRD RUNA SYSTEMS:
 ─────────────────────────
@@ -542,14 +546,28 @@ Hook agora só dispara em escrita/edição de arquivos e comandos bash — reduz
 **Q4 — Modo das respostas:** ✅ MANTER OS DOIS
 Explanatory + Learning juntos funcionando bem. Continua como está.
 
+**Q5 — Plugin ralph-loop:** ✅ REMOVIDO
+Sem caso de uso no contexto Runa Systems (conteúdo, agents, produtos). Removido de `settings.json`.
+
+**Ferramenta 1 — Karpathy principles:** ✅ INSTALADO
+Merged em `.claude/CLAUDE.md` como seção `<!-- KARPATHY-GUIDELINES-START/END -->`. Ativo desde sessão 2026-04-18.
+
+**lp-runa no git:** ✅ JÁ ESTAVA CORRETO
+Verificado: `apps/lp-runa` já estava configurado como submódulo git com modo `160000` e `.gitmodules` apontando para `https://github.com/RunaAutomatik/LPRuna.git`. Nenhuma ação necessária.
+
 ## ⏳ Pendente
 
 **Q1 — Agents 24/7 (hermes-agent):**
 Defer confirmado. Volta ao radar quando houver servidor dedicado no Railway.
 
-**Q5 — Plugin ralph-loop:**
-Você não sabe o que faz. Explicação em uma linha:
+**Token Zernio expirado:** ⚠️ REQUER AÇÃO MANUAL
+Zernio é integração nativa do claude.ai — não está no `.mcp.json`.
+Renovar em: claude.ai → Settings → Integrations → Zernio → Reconnect.
 
-> O ralph-loop é um plugin para desenvolvimento de software que cria um loop automático — ele continua rodando o mesmo prompt até que um critério de sucesso que você definiu apareça na resposta (ex.: "todos os testes passaram"). Útil para desenvolvimento com TDD (escrever teste → código → teste → código em ciclo). **Para o contexto Runa Systems (conteúdo, agents, produtos) não tem uso claro.** Pode remover sem perda nenhuma.
+**Token n8n expirado (16/04):** ⚠️ REQUER AÇÃO MANUAL
+JWT expirou. Para renovar: acessar `https://primary-production-bae40.up.railway.app` → Settings → API Keys → Create → passar a chave → eu atualizo `.mcp.json`.
 
-Decisão: remover ou manter?
+**precompact-session-digest.cjs:** ⚠️ ARQUIVO ÓRFÃO — DELETAR MANUALMENTE
+Localização: `c:/runa-systems-global/.claude/hooks/precompact-session-digest.cjs`
+O runner que ele dependia (`.aiox-core/hooks/unified/runners/precompact-runner.js`) não existe.
+Arquivo inativo e quebrado. Deletar via Explorer ou terminal.
