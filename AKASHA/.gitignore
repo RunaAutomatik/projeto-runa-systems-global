@@ -1,0 +1,4 @@
+# LLM Wiki — gitignore
+.DS_Store
+Thumbs.db
+*.tmp
