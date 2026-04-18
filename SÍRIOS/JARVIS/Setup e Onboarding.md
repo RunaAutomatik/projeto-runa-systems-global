@@ -15,7 +15,7 @@ Abra uma janela inicial de powershell e digite `wsl` para entrar no mundo Linux 
 ```bash
 sudo apt-get update && sudo apt-get install zstd -y
 ```
-*(Caso ele peça senha secreta do superusuário no prompt, para este laboratório é: `Runa1620,`)*
+*(Caso ele peça senha secreta do superusuário, use a senha configurada durante o setup do WSL.)*
 
 **Passo 2.2:** Execute o instalador global do Ollama específico para ambientes Linux:
 ```bash

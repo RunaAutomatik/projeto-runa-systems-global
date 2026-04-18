@@ -124,7 +124,7 @@ SÍRIOS/                         ← primary knowledge vault
 │   ├── analysis-instagram-sarahseller.md ✅
 │   ├── analysis-instagram-caroldutra.md ✅
 │   └── analysis-instagram-arthur-diagnosis.md ✅
-├── 📋 Agentes/                 ← agent cards
+├── 🤖 AGENTES/                 ← agent cards
 │   ├── orion.md ✅
 │   ├── ares.md ✅
 │   ├── hermes.md ✅
@@ -135,12 +135,16 @@ SÍRIOS/                         ← primary knowledge vault
     ├── README.md
     └── memoria-sistema.md ✅ (this file)
 
-bases/ (AKASHA)                 ← agent knowledge vault
-├── 📚 Alex Hormozi/
-├── 📚 Vendas Alto Ticket/
-├── 🔗 Index/
-└── 🧠 Agent Knowledge Maps/
-    └── freyja-content-strategy.md ✅
+AKASHA/                         ← agent knowledge vault (C:/runa-systems-global/AKASHA/)
+├── raw/
+├── wiki/
+│   ├── index.md
+│   ├── hot.md
+│   ├── entities/
+│   ├── concepts/
+│   ├── sources/
+│   └── analyses/
+└── CLAUDE.md
 ```
 
 ---

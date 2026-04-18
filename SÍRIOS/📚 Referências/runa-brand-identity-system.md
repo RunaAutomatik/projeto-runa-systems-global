@@ -148,9 +148,6 @@ Current convention: explanatory name + $ symbol.
 | ORÇAMENTO$ | Low ticket | Proposal/budget methodology |
 | POSICIONAMENTO$ | Low ticket | Instagram positioning |
 | AGENTE$ | Low ticket | Building neural agents |
-| ALPHA® | Mid ticket | Full business structure in 2-4h |
-| MAYA® | Mid ticket | AI avatar with cinematic realism |
-| ICARUS® | Mid ticket | Neural agent from client expertise |
 | RUNA SYSTEMS | High ticket | Full AI-first solo business ecosystem |
 | RUNA MENTORIA | High ticket | + guided implementation |
 | RUNA INTERVENÇÃO | High ticket | + direct implementation by Arthur |

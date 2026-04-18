@@ -2,7 +2,7 @@
 date: 2026-03-17
 project: runa-systems-global
 tags: [business, strategy, vision, foundation]
-status: embryonic — to be refined
+status: superseded — see [[product-catalog]]
 ---
 
 # Runa Systems Global — Business Context
