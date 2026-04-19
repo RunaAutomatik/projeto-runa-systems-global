@@ -3,7 +3,7 @@ title: Canal de Direção vs Educação
 tags: [concept, instagram, strategy, doug-demarco, content-strategy]
 sources:
   - raw/2026-03-18-analysis-dougdemarco.md
-related: [[doug-demarco]], [[carta-vendas-invisivel]], [[dor-mecanismo-oferta]], [[arthur-runa]]
+related: [[doug-demarco]], [[carta-vendas-invisivel]], [[dor-mecanismo-oferta]], [[arthur-runa]], [[tensao-cognitiva]], [[conteudo-premium-vs-industrial]]
 last_updated: 2026-04-18
 ---
 
@@ -44,5 +44,7 @@ Never teach the system in a post. Show the result of the system. Let the gap bet
 ## Related Framework
 
 Every direction channel post follows → [[dor-mecanismo-oferta]]
+The mechanism keeping them reading → [[tensao-cognitiva]]
+The premium content positioning that validates it → [[conteudo-premium-vs-industrial]]
 The mechanism pointing to = → [[soberania-operacional]]
 The conversion path = → [[conversion-comment-to-checkout]]

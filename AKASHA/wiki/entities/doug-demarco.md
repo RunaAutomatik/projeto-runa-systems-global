@@ -47,6 +47,30 @@ Stories Ads → profile → bio doc → DM → close (high-ticket)
 
 **Critical insight:** The bio doc (LP) converts, not content. Content drives traffic. A ready profile + R$100/day traffic = sales machine without constant content.
 
+## @raya.sys Case Study — Proof of System
+
+The clearest proof that Doug's system works at micro-scale (small account, significant revenue):
+
+| Metric | Value |
+|--------|-------|
+| Account size | ~5,000 followers |
+| First 45 days | R$135,000 revenue |
+| December (zero posts) | R$27,000 (9 × R$3,000 closes) |
+| Paid traffic | R$100–150/day (Stories Ads) |
+| Operation | Solo |
+
+**What this proves:**
+
+1. **Followers ≠ revenue.** 5k followers → R$135k/month when the funnel architecture is right. Scale is irrelevant if the bio doc converts.
+2. **Content is optional once the system is running.** December: zero new content, R$100/day traffic, 9 closes. The bio doc IS the content that converts.
+3. **The [[nucleo-fluxo-ecosystem]] math works.** At R$3k/close (Fluxo), 9 closes = R$27k. At R$15k/close (Núcleo), 9 closes = R$135k. The ceiling is the offer price, not the follower count.
+4. **Traffic + funnel beats organic + no funnel.** Most accounts with 50k+ followers and no bio doc convert less than @raya.sys at 5k.
+
+**Agency survival formula** (Doug's principle extracted from this case):
+> "Agência morre de sobrecarga. A solução não é mais clientes — é oferta de alto valor com menos clientes e sistema que roda sem o dono."
+
+Applied to @arthsystems_: RUNA SYSTEMS at R$15k–50k/year per client requires 3–4 clients to match what a 30-client agency produces. The system replaces headcount.
+
 ## Key Principles Extracted (2026-03-24)
 
 | Principle | Quote / Application |

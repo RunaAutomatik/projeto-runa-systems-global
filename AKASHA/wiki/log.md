@@ -13,6 +13,25 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-04-19] lint | wiki-self-heal full mode — 7 gaps addressed, 2 skipped
+
+Applied all addressable gaps from audit-2026-04-19. Updated 6 pages, created 1 new page.
+
+**Pages updated:**
+- [[mecanica-interna]] — added `[[tensao-cognitiva]]` + `[[dor-mecanismo-oferta]]` cross-refs + "Connection to Cognitive Tension" section
+- [[canal-direcao-vs-educacao]] — added `[[tensao-cognitiva]]` + `[[conteudo-premium-vs-industrial]]` cross-refs + Related Framework extension
+- [[conteudo-premium-vs-industrial]] — added `[[canal-direcao-vs-educacao]]` cross-ref (bidirectional close)
+- [[conversion-comment-to-checkout]] — added `[[soberania-operacional]]` cross-ref + updated CTA table wikilink
+- [[doug-demarco]] — expanded @raya.sys mention into full case study section (metrics table + 4 proof points + agency survival formula)
+- [[index.md]] — added [[arthsystems-repositioning-roadmap]] entry to Analyses section
+
+**Page created:**
+- [[arthsystems-repositioning-roadmap]] — 90-day execution roadmap synthesizing all wiki concepts; 4 phases (infra → foundation posts → growth → funnel); 7 guardrails for FREYJA; 90-day success metrics; filed as analysis (emergent cross-concept synthesis not in any individual source)
+
+**Skipped (false positives):** 2 phantom links in index.md template comments — no action required.
+
+Heal branch: wiki-heal/2026-04-19
+
 ## [2026-04-19] lint | first self-heal audit — audit-only mode (first run)
 
 Scanned 21 wiki pages. Found 9 gaps (HIGH: 1, MEDIUM: 3, LOW: 4).

@@ -3,7 +3,7 @@ title: Conversão Comment-to-Checkout
 tags: [concept, funnel, conversion, automation, freyja, hermes]
 sources:
   - raw/2026-03-25-framework-conversion-cta.md
-related: [[flp-funil-low-profile]], [[dor-mecanismo-oferta]], [[nucleo-fluxo-ecosystem]], [[marketing-silencioso]], [[arthur-runa]]
+related: [[flp-funil-low-profile]], [[dor-mecanismo-oferta]], [[nucleo-fluxo-ecosystem]], [[marketing-silencioso]], [[arthur-runa]], [[soberania-operacional]]
 last_updated: 2026-04-18
 ---
 
@@ -49,7 +49,7 @@ It shows WHAT. The $ product shows HOW. That gap IS the sale.
 
 | Keyword | Post | Entregável | Type | $ Product | Final Upsell |
 |---------|------|-----------|------|-----------|-------------|
-| `ARQUITETO` | Pin 01 | Mapa de Soberania Operacional | Free/R$19,90 | Runa Systems Method | — |
+| `ARQUITETO` | Pin 01 | Mapa de [[soberania-operacional\|Soberania Operacional]] | Free/R$19,90 | Runa Systems Method | — |
 | `RUNA` | Pin 02 | Template de Squad Setup | R$19,90–29,90 | $QUAD | Runa Systems Method |
 | `SISTEMA` | Pin 03 | Diagnóstico de Gargalo | R$19,90 | POSICIONAMENTO$ | Runa Systems Method |
 

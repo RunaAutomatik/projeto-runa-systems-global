@@ -3,7 +3,7 @@ title: Mecânica Interna
 tags: [concept, psychology, sales, sarah-seller, high-ticket]
 sources:
   - raw/2026-03-18-analysis-sarahseller.md
-related: [[sarah-seller]], [[repulsao-como-posicionamento]]
+related: [[sarah-seller]], [[repulsao-como-posicionamento]], [[tensao-cognitiva]], [[dor-mecanismo-oferta]]
 last_updated: 2026-04-18
 ---
 
@@ -49,6 +49,12 @@ Sarah uses neuroscience vocabulary (not pop psychology) as a positioning tool. T
 | Revenue targets | Internal pattern diagnosis |
 | Hustle frameworks | Neurological rewiring |
 | Mindset (generic) | Neuroscience (specific mechanism) |
+
+## Connection to Cognitive Tension
+
+Internal mechanics determine whether [[tensao-cognitiva]] resolves into action or anxiety. When a prospect has scarcity programming or imposter syndrome, the open loop created by cognitive tension content closes as paralysis ("I can't afford it / I'm not ready") rather than purchase. High-ticket content must address the internal mechanics to make the tension convert. This is why Sarah's AKASHA program sells at high-ticket while most "mindset" content has low perceived value — she works the mechanism, not the symptom.
+
+In [[dor-mecanismo-oferta]] terms: the DOR must name the internal pattern, not the external result.
 
 ## Application to @arthsystems_ / Runa Systems
 

@@ -3,7 +3,7 @@ title: Conteúdo Premium vs Industrial
 tags: [concept, ai-content, positioning, content-strategy, market-trend]
 sources:
   - raw/2026-03-24-transcription-youtube-ia-coisa-de-pobre.md
-related: [[arthur-runa]], [[repulsao-como-posicionamento]], [[marketing-silencioso]]
+related: [[arthur-runa]], [[repulsao-como-posicionamento]], [[marketing-silencioso]], [[canal-direcao-vs-educacao]]
 last_updated: 2026-04-18
 ---
 
