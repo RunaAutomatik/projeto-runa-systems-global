@@ -13,6 +13,14 @@ Utility: `grep "^## \[" wiki/log.md | tail -5` returns the last 5 operations.
 
 ---
 
+## [2026-04-19] lint | first self-heal audit — audit-only mode (first run)
+
+Scanned 21 wiki pages. Found 9 gaps (HIGH: 1, MEDIUM: 3, LOW: 4).
+No orphans, no contradictions, no stubs, no phantom links (2 scanner false-positives in template comments).
+Top gap: [[arthsystems-repositioning-roadmap]] missing — synthesis of all wiki data into execution plan.
+5 missing cross-references fixable without research (next run).
+Audit report: wiki/audits/audit-2026-04-19.md
+
 ## [2026-04-19] ingest | 9 sources — Instagram market analysis + Doug principles + conversion framework + AI content bifurcation
 
 Read all 9 sources from `raw/` (2026-03-18 to 2026-03-25). Created 21 wiki pages.

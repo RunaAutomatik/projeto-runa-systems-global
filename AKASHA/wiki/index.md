@@ -40,5 +40,4 @@ Each entry: `- [[page-name]] — one-line summary`
 
 ## Audits
 
-<!-- Health-check reports produced by the wiki-self-heal skill.
-     Example: - [[audit-2026-04-18]] — first self-heal pass -->
+- [[audit-2026-04-19]] — first self-heal pass; 9 gaps (HIGH: 1, MEDIUM: 3, LOW: 4); no orphans, no contradictions; top gap: arthsystems-repositioning-roadmap missing
