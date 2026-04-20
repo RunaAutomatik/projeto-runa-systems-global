@@ -165,7 +165,10 @@ Ao final das aulas 2.1 a 2.4, você deve ter:
 
 - [ ] System prompt completo do seu orquestrador (todos os 5 blocos preenchidos)
 - [ ] Orquestrador testado com os 5 cenários do checklist acima
-- [ ] Salvo como Claude Project com o nome do orquestrador
+- [ ] Arquivo `agents/orquestrador.md` criado no seu projeto AIOX Lite com o system prompt final
+- [ ] Testado com `@orquestrador` no Claude Code — o agente responde e roteia corretamente
+
+> **Checkpoint:** Digite `@orquestrador` no Claude Code e peça: *"Preciso lançar um produto essa semana."* O orquestrador deve identificar quais agentes do squad serão envolvidos e coordenar sem que você precise especificar. Se isso acontecer, o Módulo 2 está concluído.
 
 ---
 

@@ -6,7 +6,10 @@ aliases: [runa-systems-prd, RUNA SYSTEMS, runa systems]
 ---
 # RUNA SYSTEMS — Hub
 
-> High ticket | R$15.000/ano · R$30.000 mentoria · R$50.000 intervenção
+> High ticket | R$15.000/ano (RUNA SYSTEMS) · R$10.000 launch (MENTORIA 60d) · R$7.000 launch (INTERVENÇÃO 21d)
+
+## PRD
+- [[../../📐 Projetos/runa-mentoria-prd]] — PRD completo da família de produtos
 
 ## Oferta
 - [[oferta/]] — Variantes de oferta

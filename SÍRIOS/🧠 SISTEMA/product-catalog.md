@@ -28,21 +28,21 @@ Every product in this catalog was (or will be) built for real first.
 
 ## Canonical Pricing Table (v2 — 2026-04-08)
 
-| Product | Standard Price | Launch Price (30–50% off) | Tier |
-|---------|---------------|--------------------------|------|
-| ORÇAMENTO$ | R$97–197 | — (no launch discount) | Low |
-| Lives de construção | R$97 each | — | Low |
-| Kit Avatar Alpha | R$97 | — (aperitivo, fixed) | Low |
-| CREATOR$ | **R$997** | R$497–698 | Mid |
-| MIND$ | **R$997** | R$497–698 | Mid |
-| POSICIONAMENTO$ | **R$997** | R$497–698 | Mid |
-| PRODUTIZADO$ | TBD | TBD | Mid |
-| SITE$ | R$197–297 | — | Mid |
-| AGENT$ | **R$1.997** | R$997–1.398 | Mid |
-| $QUAD | **R$2.997** | R$1.497–2.098 | Mid-High |
-| RUNA SYSTEMS | R$15.000/ano | — | High |
-| RUNA MENTORIA | R$30.000 | — | High |
-| RUNA INTERVENÇÃO | R$50.000 | — | High |
+| Product             | Standard Price | Launch Price (30–50% off) | Tier     |
+| ------------------- | -------------- | ------------------------- | -------- |
+| ORÇAMENTO$          | R$97–197       | — (no launch discount)    | Low      |
+| Lives de construção | R$97 each      | —                         | Low      |
+| Kit Avatar Alpha    | R$97           | — (aperitivo, fixed)      | Low      |
+| CREATOR$            | **R$997**      | R$497–698                 | Mid      |
+| MIND$               | **R$997**      | R$497–698                 | Mid      |
+| POSICIONAMENTO$     | **R$997**      | R$497–698                 | Mid      |
+| PRODUTIZADO$        | TBD            | TBD                       | Mid      |
+| SITE$               | R$197–297      | —                         | Mid      |
+| AGENT$              | **R$1.997**    | R$997–1.398               | Mid      |
+| $QUAD               | **R$2.997**    | R$1.497–2.098             | Mid-High |
+| RUNA SYSTEMS        | R$5.000/ano    | —                         | High     |
+| RUNA MENTORIA       | R$10.000       | —                         | High     |
+| RUNA INTERVENÇÃO    | R$7.000        | —                         | High     |
 
 > **Launch discount rule:** 30–50% off standard price, applied at product launch only. Low ticket and High ticket have no launch discounts.
 
@@ -79,7 +79,7 @@ Kit Avatar  R$97 (aperitivo)        POSICIONAMENTO$ R$997               RUNA INT
 **Use case being built:** Arthur's own budget for a website client — documented → becomes this product.
 **Format:** Mini-course + template + tool (the LP format itself IS the product demo)
 **Price:** R$97–197 · No launch discount
-**Upsell to:** $QUAD, POSICIONAMENTO$
+**Upsell to:** SQUAD$ , POSICIONAMENTO$
 **Agent responsible:** FREYJA (copy + LP) + @dev (video-to-website skill) + ARES (offer structure)
 **Raw material file:** [[product-course-raw-material]]
 
@@ -99,7 +99,7 @@ Kit Avatar  R$97 (aperitivo)        POSICIONAMENTO$ R$997               RUNA INT
 **Price:** R$997 · Launch: R$497–698 (30–50% off)
 **Aperitivo:** Kit Avatar Alpha — R$97 (4-step method doc + LENS + REEL agents)
 **Deliverables:** 30+ images + 3–5 videos + complete storyboard + 20+ prompt pack
-**Upsell to:** MIND$ ("now give it a brain") → POSICIONAMENTO$ → $QUAD → RUNA SYSTEMS
+**Upsell to:** MIND$ ("now give it a brain") → POSICIONAMENTO$ → SQUAD$ → RUNA SYSTEMS
 **Agent responsible:** FREYJA (copy) + ARES (offer) + MAYA (demo assets)
 
 ---
@@ -114,7 +114,7 @@ Kit Avatar  R$97 (aperitivo)        POSICIONAMENTO$ R$997               RUNA INT
 **Format:** Skool classroom — build-in-public videos + text support + extraction protocol PDF
 **Demo case:** Alpha® self-extraction + ARES Hormozi knowledge base
 **Price:** R$997 · Launch: R$497–698 (30–50% off)
-**Upsell to:** POSICIONAMENTO$ → $QUAD → RUNA SYSTEMS
+**Upsell to:** POSICIONAMENTO$ → SQUAD$ → RUNA SYSTEMS
 **Agent responsible:** ORION documents + ARES structures offer + FREYJA sells
 
 ---
@@ -168,7 +168,7 @@ Kit Avatar  R$97 (aperitivo)        POSICIONAMENTO$ R$997               RUNA INT
 
 ---
 
-### $QUAD *(in development)*
+### SQUAD$ *(in development)*
 **Status:** PRD complete → production phase
 **PRD:** [[squad-dollar-prd]]
 **What it is:** How to build a hyperpersonalized AI agent squad for a solo entrepreneur/mentor/consultant — and run a real business on it. Squad handles operations; expert orchestrates and charges premium.
@@ -184,15 +184,15 @@ Kit Avatar  R$97 (aperitivo)        POSICIONAMENTO$ R$997               RUNA INT
 
 ## HIGH TICKET PROGRAMS
 
-### RUNA SYSTEMS — R$15.000/ano
+### RUNA SYSTEMS — R$5.000/ano
 Full AI-First solo business ecosystem. 8 neural agents + framework + community.
 No 1:1. Client executes alone.
 
-### RUNA MENTORIA — R$30.000
+### RUNA MENTORIA — R$10.000
 Everything in RUNA SYSTEMS + 8 calls (2x/month for 90 days) + WhatsApp direct.
 Arthur guides. Client executes.
 
-### RUNA INTERVENÇÃO — R$50.000
+### RUNA INTERVENÇÃO — R$7.000
 Everything in RUNA SYSTEMS + 21 days full immersion.
 Arthur implements. Client learns by watching and doing.
 
@@ -202,9 +202,9 @@ Arthur implements. Client learns by watching and doing.
 
 1. **Instagram positioning** (organic → all products) → FREYJA leads
 2. **ORÇAMENTO$** (first case study documented) → next product to build
-3. **$QUAD** (this project IS the product) → document as we go
+3. **SQUAD$** (this project IS the product) → document as we go
 4. **POSICIONAMENTO$** (Instagram results become this product)
-5. **CREATOR$** + **AGENT$** (parallel development)
+5. **CREATOR$** + **AGENT $** (parallel development)
 6. **RUNA SYSTEMS launch** (union of all above)
 
 ---
@@ -220,30 +220,6 @@ AGENT$           → $QUAD → RUNA SYSTEMS
 $QUAD            → RUNA MENTORIA / RUNA INTERVENÇÃO
 Any product      → RUNA MENTORIA / INTERVENÇÃO (when client wants hands-on)
 ```
-
----
-
-## ⚰️ DEPRECATED — Archived (not for use)
-
-> The following products are fully deprecated as of 2026-Q1.
-> They were GPT-based assistants, not true agents — superseded by the current AIOX stack.
-> Do NOT reference these in posts, captions, offer docs, or upsell scripts.
-> **Alpha®** remains valid only as a demo case/persona for CREATOR$, not as a product.
-
-### ALPHA® *(deprecated)*
-~~**What it was:** Complete business structuring in 2-4h. Product → copy → launch framework.~~
-~~**Price:** R$2,947/year~~
-**Replaced by:** $QUAD (business structuring) + RUNA SYSTEMS
-
-### MAYA® *(deprecated)*
-~~**What it was:** AI avatar with cinematic realism + consistent visual identity~~
-~~**Price:** R$2,947/year~~
-**Replaced by:** CREATOR$ (visual avatar)
-
-### ICARUS® *(deprecated)*
-~~**What it was:** Neural agent built from client's own expertise~~
-~~**Price:** R$2,947/year~~
-**Replaced by:** AGENT$ (neural agent from expertise)
 
 ---
 

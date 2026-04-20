@@ -27,6 +27,7 @@ Cada documento abaixo corresponde a uma aula. Após gravar, faça upload do víd
 |----------|-----------|--------|
 | Conectando ao GitHub (controle de versão dos agentes) | [[guia-github-conexao]] | ✅ pronto |
 | Memória persistente com claude-mem | [[guia-claude-mem-memoria]] | ✅ pronto |
+| Instalação do Obsidian CLI (memória persistente para agentes) | [[guia-obsidian-cli-instalacao]] | ✅ pronto |
 
 ---
 
@@ -107,6 +108,7 @@ Cada documento abaixo corresponde a uma aula. Após gravar, faça upload do víd
 | Material | Documento | Status |
 |----------|-----------|--------|
 | Templates Bundle — todos os templates em um só lugar | [[09-templates-bundle]] | ✅ pronto |
+| Bônus Avançado — Seu Squad no Claude Code (AIOX Lite) | [[10-squad-aiox]] | ✅ pronto |
 
 ---
 
@@ -115,6 +117,7 @@ Cada documento abaixo corresponde a uma aula. Após gravar, faça upload do víd
 - **Aulas 0.1, 0.2, 2.1, 2.3, 3.2, 4.2, 5.2, 6.1, 7.1, 8.0:** Sem doc de apoio — apenas vídeo (build in public screen recording, conteúdo conceitual ou demonstração ao vivo)
 - **Templates individuais** (Squad Framework PDF, Matriz de Delegação, Agent Brief Template): disponibilize também como Google Docs para o aluno editar diretamente
 - **Configurações do Paperclip** (YAML, AGENTS.md): disponibilize no repositório do aluno ou como download em [[09-templates-bundle]]
+- **AIOX Lite Kit** (CLAUDE.md + pasta `agents/`): disponibilize como download em [[09-templates-bundle]] → seção AIOX Lite Kit. Pré-req: †CODE concluído.
 
 ---
 

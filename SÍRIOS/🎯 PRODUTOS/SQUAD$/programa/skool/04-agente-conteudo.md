@@ -186,7 +186,10 @@ Configure o agente para dominar os formatos que você mais usa. Use a tabela aba
 - [ ] DNA de Voz preenchido (worksheet desta aula)
 - [ ] System prompt do agente de conteúdo configurado com pelo menos 3 formatos
 - [ ] Agente testado com os 4 cenários do checklist
-- [ ] Salvo como Claude Project
+- [ ] Arquivo `agents/agente-conteudo.md` criado no seu projeto AIOX Lite com o system prompt final
+- [ ] Testado com `@conteudo` no Claude Code — o agente escreve no seu estilo sem precisar de instruções adicionais
+
+> **Checkpoint:** Digite `@conteudo` no Claude Code e peça: *"Escreve um post Instagram sobre [tema do seu nicho]."* Leia o output e se pergunte: *"Eu publicaria isso sem reescrever?"* Se a resposta for sim (ou quase), o Módulo 4 está concluído. Se não, identifique o que está errado no DNA de voz e refine.
 
 ---
 

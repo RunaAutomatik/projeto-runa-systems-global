@@ -2,7 +2,7 @@
 date: 2026-03-21
 tags: [product, squad, prd, ai-first-business, low-ticket, framework]
 project: runa-systems-global
-status: draft — ready for execution
+status: complete — all modules live in Skool
 type: product-prd
 ---
 
@@ -180,11 +180,12 @@ Each agent is built from the knowledge bases created in MIND$. The orchestrator 
 
 ### BONUS
 - **Squad Framework Document (PDF):** The complete framework — architecture diagram, delegation matrix template, agent brief template, orchestrator design checklist
-- **Alpha®'s Full Squad Config:** The actual system prompts and configuration used to build Alpha®'s squad — annotated and ready to adapt
+- **Carla's Full Squad Config:** The actual system prompts and configuration used to build Carla's squad (consultora financeira) — annotated and ready to adapt *(Note: early PRD referenced Alpha®; live course uses Carla as reference case)*
 - **Bonus 8A — Template Squad Config Export:** Complete YAML for immediate Paperclip import (fill system prompts → live in 30 min)
 - **Bonus 8B — The $QUAD Company Blueprint:** PDF with org chart template, goal hierarchy, budget calculator, AGENTS.md template
 - **Bonus 8C — Command Center V2 (Optional Tech Path):** For students who want to build a custom interface instead of Paperclip
 - **Micro-product map:** How the byproduct processes (Instagram mapping, extraction workflow) can be packaged as separate low-ticket products
+- **AIOX Lite Kit (Bônus Avançado — †CODE required):** 7-file kit to run the squad natively in Claude Code. `CLAUDE.md` as squad router + `agents/` folder (one `.md` per agent). Student migrates system prompts built in Modules 2-6 into this structure. Full guide: [[10-squad-aiox]]
 
 ---
 
@@ -275,6 +276,7 @@ CREATOR$ images + storyboard must be complete before recording $QUAD, since Alph
 - [[squad-dollar-skool/07-squad-ao-vivo]] — Adaptação por modelo + manutenção
 - [[squad-dollar-skool/08-empresa-paperclip]] — Paperclip setup completo
 - [[squad-dollar-skool/09-templates-bundle]] — Bundle com todos os templates do curso
+- [[squad-dollar-skool/10-squad-aiox]] — Bônus avançado: squad no Claude Code (AIOX Lite Kit)
 
 ### Related Modules
 - [[squad-dollar-paperclip-module]] — PRD detalhado do Módulo 8 (Paperclip)

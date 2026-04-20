@@ -1,9 +1,10 @@
 ---
 date: 2026-04-15
-tags: [runa-systems, obsidian, cli, instalacao, windows, claude-code, curso]
+tags: [runa-systems, squad-dollar, obsidian, cli, instalacao, windows, claude-code, curso]
 project: runa-systems-global
 type: course-material
 produto: [[runa-systems-prd]]
+curso: [[squad-dollar-prd]]
 ---
 
 # Obsidian CLI — Instalação e Conexão com Claude Code

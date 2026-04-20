@@ -157,7 +157,10 @@ Objeções comuns: "Vou resolver sozinho com planilha", "Não tenho dinheiro ago
 - [ ] Base de conhecimento preenchida (worksheets desta aula)
 - [ ] System prompt do agente de oferta configurado
 - [ ] Agente testado com os 3 cenários do checklist
-- [ ] Salvo como Claude Project com o nome do agente
+- [ ] Arquivo `agents/agente-oferta.md` criado no seu projeto AIOX Lite com o system prompt final
+- [ ] Testado com `@oferta` no Claude Code — o agente gera estrutura de oferta sem precisar de contexto adicional
+
+> **Checkpoint:** Digite `@oferta` no Claude Code e peça: *"Preciso criar um produto de entrada de R$300 para o meu ICP."* O agente deve gerar uma estrutura completa (promessa, entregáveis, ancoragem, bônus) sem pedir informações que já estão no system prompt. Se isso acontecer, o Módulo 3 está concluído.
 
 ---
 
