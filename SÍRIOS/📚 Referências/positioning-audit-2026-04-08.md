@@ -234,7 +234,7 @@ These are the authoritative definitions. Every document must align to these:
 | **Tone** | Direto, quase brutal. Sem floreios. Confiante. Não precisa agradar. | instagram-strategy-master §13 |
 | **Product naming** | $ substitui S (AGENT$, SITE$, MIND$, CREATOR$, $QUAD) | memory/project_product_naming.md |
 | **Deprecated brands** | ALPHA®, MAYA®, ICARUS® — fully superseded, do not reference | product-catalog.md + strategy-master |
-| **High ticket anchor** | RUNA SYSTEMS R$15k/ano · MENTORIA R$30k · INTERVENÇÃO R$50k | product-catalog.md + memory |
+| **High ticket anchor** | RUNA SYSTEMS R$5k/ano (launch) · MENTORIA R$10k (launch → R$15k) · INTERVENÇÃO R$7k (launch → R$10k) | runa-mentoria-prd.md (April 2026 revision) |
 | **Narrative anchor** | Arquiteto de negócios pós-humanos. Não recovery story. Não victim. Builder. | freyja.md + analysis-diagnosis.md |
 | **Content framework** | Every post = invisible sales letter. Direction channel. Creates questions, not answers. | _hub.md + strategy-master §2 |
 | **POSICIONAMENTO$ scope** | Organic content pipeline, scripts, formats, posting pipeline. NOT visual identity. | product-catalog.md (Entry 2) |
@@ -259,9 +259,9 @@ These are the authoritative definitions. Every document must align to these:
 
 4. **[ORION] Add historical note to arthur-storyboard.md and analysis-instagram-arthur-diagnosis.md** ✅ — Executado 2026-04-08. Frontmatter `status: historical` + notas de escopo adicionados.
 
-5. **[Arthur] Update public bio** ⏳ — AIOX removido do `_hub.md`. Arthur deve atualizar o bio no Instagram manualmente.
+5. **[Arthur] Update public bio** ✅ — AIOX removido do `_hub.md` e do Instagram. Bio atual confirmada: "Você é o gargalo do próprio negócio. / Não atendo quem ainda precisa se provar. / ↳ Runa Systems" — alinhada com posicionamento canônico. (2026-04-20)
 
-6. **[ORION] Update runa-systems-business-context.md** ⏳ — Pendente. Ação: adicionar `status: embryonic — superseded` + link para [[instagram-strategy-master]]. Preservar como registro histórico.
+6. **[ORION] Update runa-systems-business-context.md** ✅ — Status atualizado para `embryonic — superseded — see [[instagram-strategy-master]] and [[runa-mentoria-prd]]`. (2026-04-19)
 
 ---
 
@@ -286,4 +286,4 @@ These are the authoritative definitions. Every document must align to these:
 
 ---
 
-*Audit executed: 2026-04-08 | Updated: 2026-04-08 | Agent: ORION | Method: cross-document review (7 files) | Status: 5/7 actions complete · 2 pending (bio + business-context)*
+*Audit executed: 2026-04-08 | Updated: 2026-04-19 | Agent: ORION | Method: cross-document review (7 files) | Status: 7/7 actions complete ✅*

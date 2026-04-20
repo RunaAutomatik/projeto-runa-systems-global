@@ -2,7 +2,7 @@
 date: 2026-03-17
 project: runa-systems-global
 tags: [business, strategy, vision, foundation]
-status: superseded — see [[product-catalog]]
+status: embryonic — superseded — see [[instagram-strategy-master]] and [[runa-mentoria-prd]]
 ---
 
 # Runa Systems Global — Business Context

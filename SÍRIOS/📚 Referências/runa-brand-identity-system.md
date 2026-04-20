@@ -1,5 +1,6 @@
 ---
 date: 2026-03-21
+last_reviewed: 2026-04-19
 tags: [brand, identity, naming, visual, strategy, arthur, agents]
 project: runa-systems-global
 status: canonical — source of truth
@@ -115,8 +116,9 @@ That question is the marketing. The answer is the product (MIND$, $QUAD, RUNA SY
 | FREYJA | Norse goddess of love, war, magic, and wisdom | Content, narrative, copy, voice |
 | ARES | Greek god of war — strategic, precise | Offers, positioning, commercial structure |
 | HERMES | Greek messenger god | Automation, flows, communication |
-| HELIOS | Greek sun god | [To be defined] |
-| ALPHA® | Latin — the first, the beginning | The avatar mentor persona |
+| HELIOS | Greek sun god | SEO, search visibility, content discoverability |
+| MAYA | Norse — honor, excellence | AV production — image, video, voice assets |
+| ALEX | Greek — defender | Research, analysis, competitive intelligence |
 
 ### Naming Rules for New Agents
 - Nordic gods/entities: Odin, Thor, Tyr, Loki, Baldur, Skadi, Ran, Njord...
@@ -142,15 +144,16 @@ Current convention: explanatory name + $ symbol.
 
 | Product | Tier | What it is |
 |---------|------|-----------|
-| CREATOR$ | Low ticket | Creating AI visual avatars |
-| MIND$ | Low ticket | Extracting intellectual property |
-| $QUAD | Low ticket (flagship) | Building agent squads |
 | ORÇAMENTO$ | Low ticket | Proposal/budget methodology |
-| POSICIONAMENTO$ | Low ticket | Instagram positioning |
-| AGENTE$ | Low ticket | Building neural agents |
-| RUNA SYSTEMS | High ticket | Full AI-first solo business ecosystem |
-| RUNA MENTORIA | High ticket | + guided implementation |
-| RUNA INTERVENÇÃO | High ticket | + direct implementation by Arthur |
+| CREATOR$ | Mid ticket | Creating AI visual avatars |
+| MIND$ | Mid ticket | Structured knowledge base — second brain |
+| $QUAD | Mid ticket (flagship) | Building agent squads |
+| POSICIONAMENTO$ | Mid ticket | Instagram positioning and content pipeline |
+| AGENT$ | Mid ticket | Building and monetizing neural agents |
+| SITE$ | Mid ticket | AI-first website and landing page system |
+| RUNA SYSTEMS | High ticket | Full AI-first solo business ecosystem (self-paced) |
+| RUNA MENTORIA | High ticket | + 60-day guided implementation (2 calls/week) |
+| RUNA INTERVENÇÃO | High ticket | + 21-day immersive implementation by Arthur |
 
 ---
 
@@ -178,11 +181,6 @@ RUNA SYSTEMS sells the complete ecosystem to those who want Arthur to build it f
 - Nordic/cosmic texture in at least one element
 - NO warm influencer lighting
 - NO lifestyle/aspirational clichés
-
-### For Alpha®'s content:
-- Burgundy, forest green, gold on neutral/warm backgrounds
-- Swiss/alpine elegance — wood, stone, natural light
-- Completely different palette from Arthur — they live in different worlds
 
 ### For agent content (if ever visualized):
 - Each agent's visual should reflect their mythological origin
