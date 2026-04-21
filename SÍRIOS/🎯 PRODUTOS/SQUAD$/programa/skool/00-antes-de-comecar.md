@@ -26,17 +26,21 @@ Ao final deste programa, você terá um squad de 3 a 5 agentes de IA configurado
 
 O orquestrador vai coordenar todos os agentes. Você vai orquestrar o orquestrador.
 
+Todo o squad vive em um projeto local chamado **AIOX Lite Kit** — uma pasta com sete arquivos que você baixa antes de começar e vai preenchendo ao longo dos módulos.
+
 ---
 
 ## Pré-requisitos
 
 ### Obrigatório antes de começar
 - [ ] **Ter clareza do seu produto ou serviço principal** — você não precisa ter tudo estruturado, mas precisa saber o que você vende e para quem
-- [ ] **Conta no Claude.ai** (Plano Pro recomendado — acesso a projetos e context window maior)
-- [ ] **CREATOR$** completo OU um storyboard de avatar em mãos — o squad vai usar esse material para configurar o agente de conteúdo
+- [ ] **Claude Code instalado** — é o ambiente onde os agentes são ativados e testados (instrução nos guias da PRÉ-FASE abaixo)
+- [ ] **AIOX Lite Kit baixado e configurado** — a estrutura de pasta onde os agentes vivem (link no [[09-templates-bundle]])
+- [ ] **PRÉ-FASE concluída** — os três guias de setup abaixo são obrigatórios
 
 ### Recomendado mas não obrigatório
-- [ ] **MIND$** completo — a extração de IP do MIND$ é o input ideal para os agentes de oferta e conteúdo
+- [ ] **CREATOR$ completo** OU um storyboard de avatar em mãos — o squad vai usar esse material para configurar o agente de conteúdo
+- [ ] **MIND$ completo** — a extração de IP do MIND$ é o input ideal para os agentes de oferta e conteúdo
 - [ ] **Conta no Skool, Hotmart ou Kiwify** — se você já vende digitalmente
 - [ ] **Conta no ManyChat** — necessário apenas para o Módulo 5 (automação Instagram)
 
@@ -45,14 +49,38 @@ Não tem problema começar. O Módulo 1 vai gerar o mapeamento de negócio que s
 
 ---
 
+## O ambiente de trabalho: AIOX Lite Kit
+
+Todo o $QUAD é construído dentro de uma estrutura de arquivos local chamada AIOX Lite Kit. Você baixa uma vez e vai preenchendo ao longo dos módulos.
+
+```
+meu-squad/
+├── CLAUDE.md               ← tabela de roteamento do squad
+└── agents/
+    ├── orquestrador.md     ← criado no Módulo 2
+    ├── agente-oferta.md    ← criado no Módulo 3
+    ├── agente-conteudo.md  ← criado no Módulo 4
+    ├── agente-automacao.md ← criado no Módulo 5
+    └── agente-inteligencia.md ← criado no Módulo 6
+```
+
+O arquivo `CLAUDE.md` contém a tabela de roteamento do squad. Quando você digita `@orquestrador` no Claude Code, ele lê o `CLAUDE.md`, encontra o caminho do arquivo correspondente, carrega a persona e se apresenta. Você não precisa colar o system prompt toda vez — ele já está salvo no arquivo.
+
+**Isso é o que faz o squad funcionar como squad:** os agentes se reconhecem pelo roteamento, e o Claude sabe como ativar cada um pelo `@nome`.
+
+O kit está disponível para download em [[09-templates-bundle]].
+
+---
+
 ## Ferramentas que vamos usar
 
-### Ferramentas principais (usadas em todos os módulos)
+### Ferramenta principal (usada em todos os módulos)
 
 | Ferramenta | Onde acessar | Custo | Para quê |
 |------------|--------------|-------|---------|
-| **Claude.ai** | claude.ai | US$20/mês (Pro) | Construir e testar todos os agentes |
-| **Claude Projects** | claude.ai/projects | Incluído no Pro | Salvar context dos agentes |
+| **Claude Code** | claude.ai/code ou extensão VS Code | Incluído no plano Pro | Ativar e testar todos os agentes do squad |
+
+> **Claude.ai** (versão web) continua útil para conversas rápidas, mas o ambiente de trabalho principal do $QUAD é o **Claude Code** — onde os agentes são ativados via `@nome` e o squad funciona de verdade.
 
 ### Ferramentas dos módulos específicos
 
@@ -62,22 +90,28 @@ Não tem problema começar. O Módulo 1 vai gerar o mapeamento de negócio que s
 | **N8N** | Mod 5 | Grátis (self-host) / ~R$80/mês | Sequências avançadas de automação |
 | **Paperclip** | Mod 8 | Grátis (open-source) | Governança e org chart do squad |
 
-### Ferramentas opcionais
+---
 
-| Ferramenta | Para quê |
-|------------|---------|
-| **Notion** | Centralizar o squad e documentação |
-| **Google Docs** | Editar templates e compartilhar com equipe |
-| **ChatGPT Plus** | Alternativa ao Claude para alguns agentes |
+## PRÉ-FASE — Setup obrigatório (antes do Módulo 1)
 
-### Guias de setup complementares
+Os três guias abaixo devem ser concluídos antes de avançar para o Módulo 1. Eles configuram a infraestrutura que sustenta o squad desde a primeira linha que você escreve:
 
-Se você não tem familiaridade com Git e controle de versão, ou quer configurar memória persistente para os seus agentes, os guias abaixo cobrem esses tópicos antes de entrar no Módulo 1:
+### 1. [[guia-github-conexao]] — Controle de versão dos agentes
+Conecta o seu projeto AIOX Lite Kit ao GitHub. Toda versão do system prompt de cada agente fica salva no histórico. Quando você refinar um agente e ele piorar, você sabe exatamente para onde voltar.
 
-- **[[guia-github-conexao]]** — Como conectar seu projeto ao GitHub para salvar versões dos system prompts (recomendado para todos)
-- **[[guia-claude-mem-memoria]]** — Como configurar memória persistente nos seus agentes com o sistema de memória do Claude Code
+**Tempo estimado:** ~20 min | **Obrigatório para todos**
 
-> **Nota sobre ferramentas:** A lógica de squad não muda com a ferramenta. Se você não tem acesso a alguma das ferramentas pagas, a maioria tem equivalentes gratuitos. O que importa é o raciocínio — as ferramentas são detalhes de implementação que vão mudar com o tempo.
+### 2. [[guia-claude-mem-memoria]] — Memória persistente
+Configura o sistema de memória do Claude Code. O seu squad vai lembrar decisões, preferências e contexto de uma sessão para a outra — sem você precisar reexplicar quem você é toda vez que abrir o Claude Code.
+
+**Tempo estimado:** ~15 min | **Obrigatório para todos**
+
+### 3. [[guia-obsidian-cli-instalacao]] — Vault de armazenamento
+Instala o Obsidian CLI e conecta o vault local onde os outputs do squad são armazenados. Toda análise de concorrente, toda oferta estruturada, todo conteúdo gerado pelos agentes pode ser salvo direto no vault — sem copiar e colar entre ferramentas.
+
+**Tempo estimado:** ~20 min | **Obrigatório para todos**
+
+> **Por que os três antes do Módulo 1?** Tudo que você vai construir a partir daí se apoia neles. O GitHub salva as versões dos agentes. A memória garante continuidade entre sessões. O Obsidian armazena os outputs. Configurar no meio do caminho é mais trabalhoso do que configurar antes de começar.
 
 ---
 
@@ -87,7 +121,7 @@ Se você não tem familiaridade com Git e controle de versão, ou quer configura
 1. **Assista o vídeo** — é um screen recording ao vivo, com erros e iterações incluídos
 2. **Leia o documento de apoio** (esse que você está lendo agora)
 3. **Aplique no seu negócio** — o documento tem worksheets para você preencher com seus dados
-4. **Não avance sem ter o entregável do módulo** — cada módulo tem um output concreto que é input para o próximo
+4. **Não avance sem ter o entregável do módulo** — cada módulo termina com um `@agentname` testado e funcionando no Claude Code
 
 ### O caso de estudo: Carla, consultora financeira para MEIs
 Em todos os vídeos, você vai ver Arthur construindo o squad de uma consultora financeira — um negócio real de consultoria para MEIs e pequenas empresas.

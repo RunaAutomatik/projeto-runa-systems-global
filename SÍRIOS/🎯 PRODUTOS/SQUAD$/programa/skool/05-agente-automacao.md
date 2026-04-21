@@ -171,6 +171,10 @@ Checklist de setup para replicar depois de assistir o vídeo:
 - [ ] System prompt do agente de automação configurado
 - [ ] ManyChat configurado para o Fluxo 1 (keyword → DM)
 - [ ] Teste completo realizado
+- [ ] Arquivo `agents/agente-automacao.md` criado no seu projeto AIOX Lite com o system prompt final
+- [ ] Testado com `@automacao` no Claude Code — o agente produz mensagens de DM e sequências no seu tom
+
+> **Checkpoint:** Digite `@automacao` no Claude Code e peça: *"Escreve a mensagem de DM para quem comentou [keyword] no meu post."* O agente deve gerar uma mensagem no seu tom, personalizada para o contexto do seu negócio, sem precisar de explicações adicionais. Se isso acontecer, o Módulo 5 está concluído.
 
 ---
 

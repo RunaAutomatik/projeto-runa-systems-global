@@ -165,7 +165,10 @@ Cada análise termina com: "Próximo passo recomendado: [ação específica para
 - [ ] 2-3 concorrentes mapeados com o worksheet desta aula
 - [ ] Análise de ao menos 1 concorrente feita com o prompt padrão
 - [ ] System prompt do agente de inteligência configurado
-- [ ] Salvo como Claude Project
+- [ ] Arquivo `agents/agente-inteligencia.md` criado no seu projeto AIOX Lite com o system prompt final
+- [ ] Testado com `@inteligencia` no Claude Code — o agente entrega análise estruturada com ação recomendada
+
+> **Checkpoint:** Digite `@inteligencia` no Claude Code e peça: *"Analisa esse perfil de concorrente"* (cole os dados de 10 posts). O agente deve entregar narrativa central, padrões de formato, gaps e uma ação específica recomendada. Se isso acontecer, o Módulo 6 está concluído.
 
 ---
 

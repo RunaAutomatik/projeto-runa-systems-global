@@ -19,9 +19,9 @@ Cada documento abaixo corresponde a uma aula. Após gravar, faça upload do víd
 
 ---
 
-## PRÉ-FASE — Setup Técnico (guias complementares)
+## PRÉ-FASE — Setup Técnico (obrigatório antes do Módulo 0)
 
-> Não são aulas obrigatórias — disponibilize como material de apoio na área de recursos do Skool.
+> Conclua os três guias abaixo antes de avançar para o Módulo 0. São a base da infraestrutura do squad — controle de versão dos agentes, memória persistente entre sessões, e vault de armazenamento de outputs.
 
 | Material | Documento | Status |
 |----------|-----------|--------|
@@ -108,7 +108,7 @@ Cada documento abaixo corresponde a uma aula. Após gravar, faça upload do víd
 | Material | Documento | Status |
 |----------|-----------|--------|
 | Templates Bundle — todos os templates em um só lugar | [[09-templates-bundle]] | ✅ pronto |
-| Bônus Avançado — Seu Squad no Claude Code (AIOX Lite) | [[10-squad-aiox]] | ✅ pronto |
+| Configurações avançadas — AIOX Lite Kit (multi-squad, roteamento avançado, memória) | [[10-squad-aiox]] | ✅ pronto |
 
 ---
 
@@ -117,7 +117,7 @@ Cada documento abaixo corresponde a uma aula. Após gravar, faça upload do víd
 - **Aulas 0.1, 0.2, 2.1, 2.3, 3.2, 4.2, 5.2, 6.1, 7.1, 8.0:** Sem doc de apoio — apenas vídeo (build in public screen recording, conteúdo conceitual ou demonstração ao vivo)
 - **Templates individuais** (Squad Framework PDF, Matriz de Delegação, Agent Brief Template): disponibilize também como Google Docs para o aluno editar diretamente
 - **Configurações do Paperclip** (YAML, AGENTS.md): disponibilize no repositório do aluno ou como download em [[09-templates-bundle]]
-- **AIOX Lite Kit** (CLAUDE.md + pasta `agents/`): disponibilize como download em [[09-templates-bundle]] → seção AIOX Lite Kit. Pré-req: †CODE concluído.
+- **AIOX Lite Kit** (CLAUDE.md + pasta `agents/`): disponibilize como download em [[09-templates-bundle]] → seção AIOX Lite Kit. É o ambiente principal de trabalho — o aluno baixa antes do Módulo 0 e vai preenchendo ao longo dos módulos 2 a 6.
 
 ---
 

@@ -32,6 +32,7 @@ FASE 6 — Integração      S18–S20      → Título: CONSELHEIRO
 > (*) Fase 5: pool de 12 sessões distribuídas em 3 tracks.
 > O cliente seleciona 9 com base no diagnóstico S01.
 > A ordem S09–S17 é personalizada — definida ao final de S01.
+> A última das 9 sessões selecionadas encerra com título ESPECIALISTA → **S18 Integração I**.
 
 ---
 
@@ -782,6 +783,8 @@ Gerar propostas comerciais de qualidade automaticamente. Precificar com base em 
 
 ## 🏆 TÍTULO DESBLOQUEADO: ESPECIALISTA
 *"Domina o nicho de operação neural escolhido. O sistema é seu."*
+
+> **PRÓXIMA SESSÃO:** S18 — Integração I · Orquestração Total
 
 ---
 ---

@@ -1,8 +1,11 @@
 ---
 date: 2026-04-09
-tags: [runa-intervencao, mentoria, sessao-01, mapeamento, processos, squad]
+tags: [runa-intervencao, mentoria, sessao-01, mapeamento, processos, squad, rpg-card]
 project: runa-systems-global
 type: lesson-structure
+fase: 1 — Fundação
+titulo-rpg: Explorador
+proximo: sessao-02-tcode-ambiente
 ---
 
 # Runa Intervenção — Session 01: Business Process Mapping
@@ -164,8 +167,16 @@ By end of Session 01, the client should have:
 - Most repetitive handoffs between areas
 - Where errors/rework happen most frequently
 
+**A névoa levanta — revelação da trilha personalizada:**
+
+Com base no diagnóstico desta sessão, a trilha personalizada S09–S17 é revelada. Antes da S01, essas sessões aparecem como `[???]` no mapa. Agora o mapa abre.
+
+Mostre ao cliente quais 9 das 12 sessões de especialização se aplicam ao negócio dele — na sequência certa. Esse momento transforma "um programa" em "O SEU programa."
+
+> "Esse é o mapa que vai guiar a sua jornada daqui pra frente. As sessões que você vai fazer não são as mesmas de todo mundo — elas são definidas pelo que a gente acabou de mapear."
+
 **Closing message:**
-> "A gente identificou onde montar o primeiro squad. Na próxima sessão, a gente vai construir ele do zero — definir os agentes, os escopos, as personas, o handoff entre eles. Esse squad do primeiro setor vai ser o template para todos os outros. Você não vai precisar refazer isso do zero para cada área — vai replicar o sistema."
+> "A gente identificou onde está o maior potencial. Antes de montar o squad, você precisa das ferramentas certas. Na próxima sessão você vai instalar e configurar o ambiente onde tudo vai rodar: o Claude Code — o terminal neural que conecta você aos seus agentes. Quando o ambiente estiver pronto, a gente constrói o squad em cima dele."
 
 ---
 
@@ -208,8 +219,26 @@ By end of Session 01, the client should have:
 
 ---
 
+---
+
+## RPG CARD — S01
+
+### 🏆 TÍTULO DESBLOQUEADO: EXPLORADOR
+*"Mapeou o terreno. Agora sabe onde pisará."*
+
+| Campo | Conteúdo |
+|-------|---------|
+| **DESAFIO (gate)** | Worksheets 1A + 1B + 2 preenchidas. Mínimo 10 tarefas categorizadas, 3 processos mapeados em L2, setor prioritário identificado e justificado. |
+| **ARTEFATOS** | Worksheet 1A (Hierarquia L0–L3) · Worksheet 1B (3 perguntas estratégicas) · Worksheet 2 (Matriz de Delegação) · Plano de Ataque · Mapa da Névoa (trilha S09–S17 revelada) |
+| **HABILIDADE** | Classificar qualquer tarefa nas 4 categorias de execução: Agente Completo / Híbrido / Worker / Humano |
+| **PRÓXIMA SESSÃO** | S02 — †CODE I · Ambiente — instalação e configuração do Claude Code |
+
+---
+
 ## Connections
 
-- **Product:** [[runa-command-center-prd]] — RUNA SYSTEMS Intervenção module
-- **Next session:** Session 02 — Squad Architecture (building the first squad from the map)
-- **Brief template:** MAPEANDO O NEGÓCIO.pdf → send to client before Session 01
+- **Programa:** [[trilha-runa-21-sessoes]] — roadmap completo das 21 sessões
+- **Product:** [[runa-mentoria-prd]] — PRD completo RUNA SYSTEMS
+- **Next session:** S02 — †CODE I — Ambiente (instalação e configuração do Claude Code)
+- **Brief template:** MAPEANDO O NEGÓCIO.pdf → enviar ao cliente antes da S01
+- **Artefatos:** [[worksheet-1a-hierarquia-l0-l3|Worksheet 1A — Hierarquia L0–L3]] · [[worksheet-1b-tarefas-vs-microtarefas|Worksheet 1B — Tarefas vs Microtarefas]] · [[worksheet-2-matriz-delegacao|Worksheet 2 — Matriz de Delegação]]

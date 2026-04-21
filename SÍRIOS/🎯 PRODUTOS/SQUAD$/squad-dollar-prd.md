@@ -69,13 +69,21 @@ Each agent is built from the knowledge bases created in MIND$. The orchestrator 
 ## Module Structure
 
 ### MODULE 0 — COMECE AQUI
-**Objective:** Understand what a squad is, why it works, and what we're building
+**Objective:** Understand what a squad is, download and configure the working environment, complete mandatory PRÉ-FASE setup
 
 | Lesson | Format | Content |
 |--------|--------|---------|
 | 0.1 — Welcome | Video (3min) + Text | What $QUAD produces; what you need to have ready (CREATOR$ + MIND$ outputs) |
 | 0.2 — What is a squad | Video (8min) + Text | Agent architecture logic; orchestrator + specialists model; how it differs from single-agent |
-| 0.3 — The business case | Video (6min) + Text | Alpha®'s business: what she needs the squad to do; how to map your own |
+| 0.3 — Tools and setup | Video (6min) + Text + [[00-antes-de-comecar]] | Claude Code installation; AIOX Lite Kit download and folder structure; PRÉ-FASE mandatory guides (GitHub, claude-mem, Obsidian CLI) |
+
+**PRÉ-FASE (mandatory before Module 1):**
+- [[guia-github-conexao]] — version control for agent files
+- [[guia-claude-mem-memoria]] — persistent memory between sessions
+- [[guia-obsidian-cli-instalacao]] — vault storage for agent outputs
+
+**AIOX Lite Kit (primary working environment from Module 0):**
+`CLAUDE.md` (squad router) + `agents/` folder (one `.md` per agent). Students build directly into this structure from Module 2 — no migration step. Agents activated via `@name` in Claude Code.
 
 ---
 
@@ -185,7 +193,7 @@ Each agent is built from the knowledge bases created in MIND$. The orchestrator 
 - **Bonus 8B — The $QUAD Company Blueprint:** PDF with org chart template, goal hierarchy, budget calculator, AGENTS.md template
 - **Bonus 8C — Command Center V2 (Optional Tech Path):** For students who want to build a custom interface instead of Paperclip
 - **Micro-product map:** How the byproduct processes (Instagram mapping, extraction workflow) can be packaged as separate low-ticket products
-- **AIOX Lite Kit (Bônus Avançado — †CODE required):** 7-file kit to run the squad natively in Claude Code. `CLAUDE.md` as squad router + `agents/` folder (one `.md` per agent). Student migrates system prompts built in Modules 2-6 into this structure. Full guide: [[10-squad-aiox]]
+- **AIOX Lite Kit (primary working environment):** 7-file kit downloaded at Module 0. `CLAUDE.md` as squad router + `agents/` folder (one `.md` per agent). Students build directly into this structure from Module 2 — each agent saved to `agents/[name].md` as it's built. No migration step. Full advanced config: [[10-squad-aiox]]
 
 ---
 
@@ -276,7 +284,7 @@ CREATOR$ images + storyboard must be complete before recording $QUAD, since Alph
 - [[squad-dollar-skool/07-squad-ao-vivo]] — Adaptação por modelo + manutenção
 - [[squad-dollar-skool/08-empresa-paperclip]] — Paperclip setup completo
 - [[squad-dollar-skool/09-templates-bundle]] — Bundle com todos os templates do curso
-- [[squad-dollar-skool/10-squad-aiox]] — Bônus avançado: squad no Claude Code (AIOX Lite Kit)
+- [[squad-dollar-skool/10-squad-aiox]] — Configurações avançadas do AIOX Lite Kit (multi-squad, roteamento, memória)
 
 ### Related Modules
 - [[squad-dollar-paperclip-module]] — PRD detalhado do Módulo 8 (Paperclip)
