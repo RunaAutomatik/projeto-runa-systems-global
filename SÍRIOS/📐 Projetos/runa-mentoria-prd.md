@@ -217,11 +217,9 @@ The client builds the operational backbone of their AI business. This is the bas
 | 8 — Paperclip Company | [[08-empresa-paperclip]] | ✅ Ready |
 | Bonus — Templates Bundle | [[09-templates-bundle]] | ✅ Ready |
 
-**AIOX Lite Kit** (`programa/aiox-lite-kit/`):
-- `CLAUDE.md` — squad router template
-- `agents/orquestrador.md` — orchestrator persona template
-- `agents/agente-oferta.md`, `agente-conteudo.md`, `agente-automacao.md`, `agente-inteligencia.md` — specialist templates
-- Skool doc: [[10-squad-aiox]] — migration guide from claude.ai Projects → Claude Code
+**AIOX Lite Kit** (Templates J–N em [[09-templates-bundle]]):
+- CLAUDE.md router + 5 agentes em YAML canônico com `[colchetes]` — prontos para copiar
+- Skool doc: [[10-squad-aiox]] — deploy do squad no Claude Code
 
 **Second Brain (MIND$ content integrated into SQUAD$):**
 The Obsidian vault setup, two-vault architecture (SÍRIOS + AKASHA), GitHub connection, templates, and WikiLink methodology live inside SQUAD$ as prerequisites — not in a separate module. MIND$ (standalone product) covers this content for non-SQUAD$ clients.

@@ -1,14 +1,14 @@
 ---
-date: 2026-04-04
-tags: [skills, claude-code, configuracao, produtividade, design, paperclip, memoria]
+date: 2026-04-24
+tags: [skills, claude-code, configuracao, produtividade, design, memoria]
 project: runa-systems-global
 ---
 
 # Skills Claude Code — Capacidades Nativas e Produtividade
 
 > Skills instaladas via repositório Claude Code que precisam ser ativadas manualmente.
-> Inclui: configuração do ambiente, extração de conteúdo, design Stitch, Paperclip, memória e utilitários.
-> Complementa os outros Skills docs — não repete skills já mapeadas em Dev, AIOX, GSD ou Plugins.
+> Inclui: configuração do ambiente, extração de conteúdo, design Stitch, memória e utilitários.
+> Complementa os outros Skills docs — não repete skills já mapeadas em Dev, AIOX ou Plugins.
 
 ---
 
@@ -239,40 +239,6 @@ project: runa-systems-global
 
 ---
 
-## PAPERCLIP — GOVERNANÇA DE SQUADS
-
-> Skills para gerenciar squads governados pelo Paperclip.
-> Contexto completo: `SÍRIOS/📦 Entregáveis/squad-dollar-skool/08-empresa-paperclip.md`
-
----
-
-### paperclip — Interagir com o Control Plane do Paperclip
-
-#### Ativação
-- **Comando:** `/paperclip`
-- **Para que serve:** Interface com a API do Paperclip para gerenciar tarefas, coordenar agentes, consultar status do squad, acessar heartbeats e outputs.
-- **Caso de uso RUNA:** Consultar status do squad de cliente RUNA SYSTEMS, verificar output de heartbeat semanal, criar tarefa para o orquestrador via API
-
----
-
-### paperclip-create-agent — Criar Novos Agentes no Paperclip
-
-#### Ativação
-- **Comando:** `/paperclip-create-agent`
-- **Para que serve:** Criar novos agentes no Paperclip com awareness de governança — inspeciona agentes existentes antes de propor o novo, garante consistência com o organograma.
-- **Caso de uso RUNA:** Adicionar um novo agente especializado ao squad de cliente no Paperclip sem quebrar hierarquia existente
-
----
-
-### paperclip-create-plugin — Criar Plugins para Paperclip
-
-#### Ativação
-- **Comando:** `/paperclip-create-plugin`
-- **Para que serve:** Scaffoldar novos plugins Paperclip com o alpha SDK/runtime atual.
-- **Caso de uso RUNA:** Criar plugin customizado para integrar o Paperclip ao fluxo de Instagram do @arthsystems_
-
----
-
 ## SDK DE AGENTES
 
 ---
@@ -317,13 +283,11 @@ project: runa-systems-global
 | Gerar vídeo demo de produto | `/remotion` |
 | Usar componentes shadcn/ui | `/shadcn-ui` |
 | Organizar projetos pelo método PARA | `/para-memory-files` |
-| Gerenciar squad via Paperclip API | `/paperclip` |
-| Adicionar agente ao Paperclip | `/paperclip-create-agent` |
 | Inicializar app Claude Agent SDK | `/agent-sdk-dev:new-sdk-app` |
 | Implementar feature com análise de codebase | `/feature-dev:feature-dev` |
 
 ---
 
-*Última atualização: 2026-04-04*
-*Ver também: [[Skills Dev]] | [[Skills AIOX]] | [[Skills GSD]] | [[Skills Plugins]]*
+*Última atualização: 2026-04-24*
+*Ver também: [[Skills Dev]] | [[Skills AIOX]] | [[Skills Plugins]]*
 *Skills Index: [[Skills Index]]*

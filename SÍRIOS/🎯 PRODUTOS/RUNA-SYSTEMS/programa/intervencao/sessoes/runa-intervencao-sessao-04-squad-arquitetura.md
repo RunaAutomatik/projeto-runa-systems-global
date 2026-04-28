@@ -425,5 +425,5 @@ components:
 - **Product:** [[runa-mentoria-prd]] — PRD completo RUNA SYSTEMS
 - **Previous session:** S03 — [[runa-intervencao-sessao-03-tcode-fluxo|†CODE II — Fluxo]]
 - **Next session:** S05 — SQUAD$ II — Agentes (ativação e handoffs)
-- **Hub:** [[_hub|RUNA SYSTEMS Hub]]
+- **Hub:** [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub|RUNA SYSTEMS Hub]]
 - **Artefatos:** [[template-agente-yaml-orquestrador|Template YAML Orquestrador]] · [[template-agente-yaml-especialista|Template YAML Especialista]] · [[template-agente-yaml-suporte|Template YAML Suporte]] · [[template-claude-md-squad|Template CLAUDE.md Squad]] · [[checklist-squad-design|Checklist Squad Design]]

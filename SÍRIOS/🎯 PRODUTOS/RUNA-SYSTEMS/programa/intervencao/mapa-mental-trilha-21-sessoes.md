@@ -3,7 +3,7 @@ date: 2026-04-21
 tags: [runa-systems, runa-intervencao, mapa-mental, trilha, 21-sessoes, moc, programa]
 project: runa-systems-global
 type: mind-map
-produto: [[runa-mentoria-prd]]
+produto: [[runa-systems-hub]]
 aliases: [mapa-trilha, trilha-visual]
 ---
 

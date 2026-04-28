@@ -259,4 +259,4 @@ foram testadas em pelo menos 3 casos com fechamento positivo. Nenhuma resposta
 ---
 
 *Sessão de origem: [[runa-intervencao-sessao-07-mind-base-conhecimento|S07 — MIND$ I · Base de Conhecimento]]*
-*Relacionado: [[framework-extracao-conhecimento|Framework de Extração]] · [[estrutura-vault-conhecimento|Estrutura do Vault]]*
+*Relacionado: [[🎯 PRODUTOS/RUNA-SYSTEMS/programa/intervencao/artefatos/framework-extracao-conhecimento|Framework de Extração]] · [[estrutura-vault-conhecimento|Estrutura do Vault]]*

@@ -289,7 +289,7 @@ O conteúdo do vault é único para cada cliente. O facilitador não pode prepar
 
 | Artefato | Quando usar | Arquivo |
 |----------|------------|---------|
-| Framework de Extração | Block 2 — guia das 5 perguntas | [[framework-extracao-conhecimento]] |
+| Framework de Extração | Block 2 — guia das 5 perguntas | [[🎯 PRODUTOS/RUNA-SYSTEMS/MIND$/programa/framework-extracao-conhecimento]] |
 | Template de Ingestão | Block 4 — estrutura de wiki page | [[template-ingestao-wiki]] |
 | Estrutura do Vault | Block 3 — scaffold completo | [[estrutura-vault-conhecimento]] |
 

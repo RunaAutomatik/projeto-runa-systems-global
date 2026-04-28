@@ -113,4 +113,4 @@ Status: Alpha (March 2026)
 - [[product-catalog]]
 - [[squad-dollar-prd]]
 - [[runa-systems-prd]]
-- [[_hub]]
+- [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub]]

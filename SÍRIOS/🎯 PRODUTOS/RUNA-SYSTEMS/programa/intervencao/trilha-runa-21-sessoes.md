@@ -972,7 +972,7 @@ Ensinar o que aprendeu. Expandir o ecossistema para novos domínios. Tornar-se r
 - **PRD:** [[runa-mentoria-prd]]
 - **Sessão S01 (template):** [[runa-intervencao-sessao-01-mapeamento]]
 - **Sessão S01 (exemplo real):** [[runa-intervencao-sessao-01-lucas-pesto]]
-- **Framework MIND$:** [[framework-extracao-conhecimento]]
+- **Framework MIND$:** [[🎯 PRODUTOS/RUNA-SYSTEMS/programa/intervencao/artefatos/framework-extracao-conhecimento]]
 - **Hub:** [[../_hub|RUNA SYSTEMS Hub]]
 
 ---

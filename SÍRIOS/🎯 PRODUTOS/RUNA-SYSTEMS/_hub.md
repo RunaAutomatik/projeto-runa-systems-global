@@ -1,15 +1,16 @@
 ---
-date: 2026-04-11
-tags: [runa-systems, hub, high-ticket]
+date: 2026-04-27
+tags: [runa-systems, hub, high-ticket, intervencao, mentoria]
 type: product-hub
-aliases: [runa-systems-prd, RUNA SYSTEMS, runa systems]
+aliases: [runa-systems-hub, RUNA SYSTEMS, runa systems]
 ---
 # RUNA SYSTEMS — Hub
 
-> High ticket | R$15.000/ano (RUNA SYSTEMS) · R$10.000 launch (MENTORIA 60d) · R$7.000 launch (INTERVENÇÃO 21d)
+> **RUNA INTERVENÇÃO** R$7.000 → R$10.000 · 21 dias · Arthur implementa, cliente observa e aprende
+> **RUNA MENTORIA** R$10.000 → R$15.000 · 60 dias · 2 calls/semana · cliente implementa com suporte
 
-## PRD
-- [[../../📐 Projetos/runa-mentoria-prd]] — PRD completo da família de produtos
+## Hub Canônico
+- [[../../📐 Projetos/runa-systems-hub]] — MOC central de toda a família de produtos
 
 ## Oferta
 - [[oferta/]] — Variantes de oferta

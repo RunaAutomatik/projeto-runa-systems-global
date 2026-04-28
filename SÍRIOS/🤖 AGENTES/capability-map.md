@@ -158,11 +158,11 @@ project: runa-systems-global
 | Code review (self)                | `code-review` plugin                            | `/code-review`                             |
 
 ### @devops (Gage — EXCLUSIVE)
-| Task | Tool/Skill | How |
-|------|-----------|-----|
-| Git push / PR | `commit-commands` | `/commit-commands:commit-push-pr` |
-| Deploy | `claude.ai Netlify` | `mcp__claude_ai_Netlify__netlify-deploy-services-updater` |
-| Manage hooks | `hookify` plugin | `/hookify` |
+| Task          | Tool/Skill          | How                                                       |
+| ------------- | ------------------- | --------------------------------------------------------- |
+| Git push / PR | `commit-commands`   | `/commit-commands:commit-push-pr`                         |
+| Deploy        | `claude.ai Netlify` | `mcp__claude_ai_Netlify__netlify-deploy-services-updater` |
+| Manage hooks  | `hookify` plugin    | `/hookify`                                                |
 
 ### @architect (Aria)
 | Task | Tool/Skill | How |

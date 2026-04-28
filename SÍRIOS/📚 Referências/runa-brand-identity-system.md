@@ -142,18 +142,18 @@ Current convention: explanatory name + $ symbol.
 
 ### Current Product Names
 
-| Product | Tier | What it is |
-|---------|------|-----------|
-| ORÇAMENTO$ | Low ticket | Proposal/budget methodology |
-| CREATOR$ | Mid ticket | Creating AI visual avatars |
-| MIND$ | Mid ticket | Structured knowledge base — second brain |
-| $QUAD | Mid ticket (flagship) | Building agent squads |
-| POSICIONAMENTO$ | Mid ticket | Instagram positioning and content pipeline |
-| AGENT$ | Mid ticket | Building and monetizing neural agents |
-| SITE$ | Mid ticket | AI-first website and landing page system |
-| RUNA SYSTEMS | High ticket | Full AI-first solo business ecosystem (self-paced) |
-| RUNA MENTORIA | High ticket | + 60-day guided implementation (2 calls/week) |
-| RUNA INTERVENÇÃO | High ticket | + 21-day immersive implementation by Arthur |
+| Product          | Tier                  | What it is                                         |
+| ---------------- | --------------------- | -------------------------------------------------- |
+| ORÇAMENTO$       | Low ticket            | Proposal/budget methodology                        |
+| CREATOR$         | Mid ticket            | Creating AI visual avatars                         |
+| MIND$            | Mid ticket            | Structured knowledge base — second brain           |
+| $QUAD            | Mid ticket (flagship) | Building agent squads                              |
+| POSICIONAMENTO$  | Mid ticket            | Instagram positioning and content pipeline         |
+| AGENT$           | Mid ticket            | Building and monetizing neural agents              |
+| SITE$            | Mid ticket            | AI-first website and landing page system           |
+| RUNA SYSTEMS     | High ticket           | Full AI-first solo business ecosystem (self-paced) |
+| RUNA MENTORIA    | High ticket           | + 60-day guided implementation (2 calls/week)      |
+| RUNA INTERVENÇÃO | High ticket           | + 21-day immersive implementation by Arthur        |
 
 ---
 

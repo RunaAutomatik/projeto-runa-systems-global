@@ -3,7 +3,7 @@ date: 2026-04-10
 tags: [runa-systems, skool, claude-code, index, modulo-claude-code]
 project: runa-systems-global
 type: course-index
-produto: [[runa-systems-prd]]
+produto: [[runa-systems-hub]]
 ---
 
 # Módulo Claude Code — Índice de Materiais de Apoio (Skool)
@@ -45,4 +45,4 @@ produto: [[runa-systems-prd]]
 
 ## PRD do produto
 
-→ [[runa-systems-prd]]
+→ [[runa-systems-hub]]

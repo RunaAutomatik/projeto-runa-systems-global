@@ -279,4 +279,4 @@ O vault está funcional quando:
 ---
 
 *Sessão de origem: [[runa-intervencao-sessao-07-mind-base-conhecimento|S07 — MIND$ I · Base de Conhecimento]]*
-*Relacionado: [[framework-extracao-conhecimento|Framework de Extração]] · [[template-ingestao-wiki|Template de Ingestão]]*
+*Relacionado: [[🎯 PRODUTOS/RUNA-SYSTEMS/programa/intervencao/artefatos/framework-extracao-conhecimento|Framework de Extração]] · [[template-ingestao-wiki|Template de Ingestão]]*

@@ -22,7 +22,7 @@ aliases: [hub, home, index, vault-index, SÍRIOS]
 | [[aperitivo-agent-dollar]] | Mid R$1.997 | Concept | [[🎯 PRODUTOS/AGENT$/]] |
 | [[mind-dollar-prd]] | Mid R$997 | Em desenvolvimento | [[🎯 PRODUTOS/MIND$/]] |
 | [[POSICIONAMENTO$]] | Mid R$997 | Concept | [[🎯 PRODUTOS/POSICIONAMENTO$/]] |
-| [[SITE$/oferta/site-movimento-offer-copy]] | Mid R$197–297 | Concept | [[🎯 PRODUTOS/SITE$/]] |
+| [[site-movimento-offer-copy]] | Mid R$197–297 | Concept | [[🎯 PRODUTOS/SITE$/]] |
 | [[ORCAMENTO$/paperclip-minicurso]] | Low R$97–197 | Concept | [[🎯 PRODUTOS/ORCAMENTO$/]] |
 
 ---

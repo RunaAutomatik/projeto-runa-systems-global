@@ -282,7 +282,7 @@ These are the authoritative definitions. Every document must align to these:
 - [[product-catalog]] — ✅ Updated v2 (2026-04-08)
 - [[runa-systems-business-context]] — ⏳ Needs embryonic/superseded note
 - [[freyja]] — ✅ Status updated (2026-04-08)
-- [[_hub]] — ✅ AIOX removed from bio
+- [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub]] — ✅ AIOX removed from bio
 
 ---
 

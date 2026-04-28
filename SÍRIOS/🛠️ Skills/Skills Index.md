@@ -1,5 +1,5 @@
 ---
-date: 2026-03-29
+date: 2026-04-24
 tags: [skills, index, hub, capacidades]
 project: runa-systems-global
 ---
@@ -16,16 +16,14 @@ project: runa-systems-global
 | Documento | Capacidades | Agente Principal |
 |-----------|-------------|-----------------|
 | [[Skills inference-sh]] | Imagem, vídeo, voz, avatar, música, transcrição, LLMs, Twitter | FREYJA, HERMES, ARES |
-| [[Skills Ads]] | Tráfego pago: Google, Meta, TikTok, LinkedIn, Microsoft | ARES |
 | [[Skills SEO]] | SEO técnico, conteúdo, schema, sitemap, AI search | HELIOS |
 | [[Skills Obsidian]] | Vault, notas, bases de dados, canvas, extração web | ORION |
 | [[Skills Dev]] | UI/UX, frontend, arquitetura, código, deploy | @dev, @architect, @devops |
 | [[Skills AIOX]] | Sistema de 10 agentes + master, SDC workflow | Todos os agentes |
-| [[Skills GSD]] | Planejamento, execução, verificação de projetos | @dev, @architect |
 | [[Skills Plugins]] | Commits, code review, hooks, SDK, segurança | @devops, @qa |
-| [[Skills Claude Code]] | Configuração, Stitch, Paperclip, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
+| [[Skills Claude Code]] | Configuração, Stitch, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
 | [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
-| [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso, /ship | @dev, @qa, ARES, HERMES |
+| [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso | @dev, @qa, ARES, HERMES |
 | [[Skills graphify]] | Knowledge graph de qualquer input: código, vault, docs, texto — HTML interativo + relatório + export Obsidian | ORION, ALEX, @architect |
 
 ---
@@ -56,12 +54,6 @@ project: runa-systems-global
 ### Quero automatizar o Twitter/X
 → [[Skills inference-sh]] → seção TWITTER / X
 
-### Quero auditar campanhas de ads
-→ [[Skills Ads]] → seção de cada plataforma
-
-### Quero criar uma campanha de ads
-→ [[Skills Ads]] → seções /ads dna, /ads create, /ads generate
-
 ### Quero melhorar o SEO do site
 → [[Skills SEO]] → /seo audit ou /seo technical
 
@@ -82,9 +74,6 @@ project: runa-systems-global
 
 ### Quero transformar um vídeo em site animado
 → [[Skills Dev]] → video-to-website
-
-### Quero planejar e executar uma feature de código
-→ [[Skills GSD]] → /gsd:plan-phase + /gsd:execute-phase
 
 ### Quero revisar código antes de publicar
 → [[Skills Plugins]] → /pr-review-toolkit:review-pr
@@ -140,9 +129,6 @@ project: runa-systems-global
 ### Quero construir um site inteiro com Stitch autonomamente
 → [[stitch-skills]] → `/stitch-loop`
 
-### Quero governar o squad de agentes via Paperclip
-→ [[Skills Claude Code]] → seção PAPERCLIP
-
 ### Quero inicializar uma aplicação Agent SDK
 → [[Skills Claude Code]] → `/agent-sdk-dev:new-sdk-app`
 
@@ -153,16 +139,17 @@ project: runa-systems-global
 | Categoria | Skills | Status |
 |-----------|--------|--------|
 | inference-sh | 80 modelos | ✅ ATIVO |
-| Ads | 18 sub-skills | ✅ ATIVO |
 | SEO | 13 sub-skills | ✅ ATIVO |
 | Obsidian | 5 skills | ✅ ATIVO |
 | Dev (projeto) | 9 skills | ✅ ATIVO |
 | AIOX Agentes | 10 + master | ✅ ATIVO |
-| GSD | 20 comandos | ✅ ATIVO |
 | Plugins | 13 plugins | ✅ ATIVO |
-| Claude Code | 18 skills nativas | ✅ ATIVO |
+| Claude Code | 15 skills nativas | ✅ ATIVO |
 | Stitch (trio) | taste-design + stitch-design + stitch-loop | ✅ INSTALADO (⚠️ MCP pendente) |
 | gstack | 23 skills + browser daemon | ✅ INSTALADO |
 | graphify | knowledge graph pipeline — 9 etapas + 6 modos | ✅ INSTALADO |
+| Ads | 18 sub-skills | ❌ REMOVIDO (2026-04-24) |
+| GSD | 32 comandos | ❌ REMOVIDO (2026-04-24) |
+| Paperclip | 3 skills | ❌ REMOVIDO (2026-04-24) |
 
-**Total de capacidades: 150+ modelos IA + 120+ comandos de workflow**
+**Total de capacidades ativas: 150+ modelos IA + 80+ comandos de workflow**
