@@ -1,6 +1,4 @@
 {
-  "language": "portuguese",
-  "autoCompactWindow": 150000,
   "permissions": {
     "allow": [
       "Bash",
@@ -11,7 +9,9 @@
       "Grep",
       "Glob",
       "NotebookEdit",
-      "WebSearch"
+      "WebSearch",
+      "Edit(~/.claude/skills/create-skill/**)",
+      "Edit(~/.claude/skills/create-carousel/**)"
     ],
     "deny": [
       "Bash(rm -rf .aiox-core/**)",
@@ -62,6 +62,11 @@
       "Edit(.claude/hooks/synapse-engine.cjs)",
       "Bash(rd /s /q .aiox-core/**)",
       "Bash(rd /s /q .claude/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\user\\.claude\\skills\\create-post"
     ]
-  }
+  },
+  "language": "portuguese",
+  "autoCompactWindow": 150000
 }

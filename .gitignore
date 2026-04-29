@@ -74,3 +74,12 @@ tools/mcp/
 # Obsidian themes (installed locally)
 SÍRIOS/.obsidian/themes/
 AKASHA/.obsidian/themes/
+
+# Obsidian workspace state (local UI state — not committed)
+SÍRIOS/.obsidian/workspace.json
+SÍRIOS/.obsidian/graph.json
+AKASHA/.obsidian/workspace.json
+AKASHA/.obsidian/graph.json
+
+# Graphify output (generated artifacts — not source)
+graphify-out/
