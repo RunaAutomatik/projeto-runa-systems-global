@@ -10,7 +10,7 @@ status: v1-active
 
 > Single source of truth for all Instagram operations.
 > Owner: FREYJA (narrative + production) · HERMES (automation) · Arthur (approval + recording)
-> Connected: [[runa-systems-business-context]] · [[📱 Instagram/@arthsystems_/_hub]] · [[product-catalog]]
+> Connected: [[runa-systems-business-context]] · [[_hub]] · [[product-catalog]]
 
 ---
 
@@ -440,7 +440,7 @@ These must be consistent across ALL documents, posts, and agent outputs:
 
 ## Connected Notes
 
-- [[📱 Instagram/@arthsystems_/_hub]] — Content hub and CTA keyword map
+- [[_hub]] — Content hub and CTA keyword map
 - [[runa-systems-business-context]] — Business context and product teia
 - [[product-catalog]] — Full product catalog with pricing
 - [[freyja]] — FREYJA agent card

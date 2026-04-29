@@ -45,4 +45,4 @@ que os agentes do SQUAD$ consultam via AKASHA.
 - **Sequência:** [[../RUNA-SYSTEMS/_hub|RUNA SYSTEMS]] (alicerce completo)
 - **Etapa anterior:** Sincronia (processo mapeado no NotebookLM)
 - **Próxima etapa:** [[../SQUAD$/_hub|SQUAD$]] (etapa 4)
-- **Hub canônico:** [[../../../../📐 Projetos/runa-systems-hub]]
+- **Hub canônico:** [[runa-systems-hub]]

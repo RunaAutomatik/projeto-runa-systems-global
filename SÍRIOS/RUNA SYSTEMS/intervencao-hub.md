@@ -10,7 +10,7 @@ aliases: [runa-systems-hub, RUNA SYSTEMS, runa systems]
 > **RUNA MENTORIA** R$10.000 → R$15.000 · 60 dias · 2 calls/semana · cliente implementa com suporte
 
 ## Hub Canônico
-- [[../../📐 Projetos/runa-systems-hub]] — MOC central de toda a família de produtos
+- [[runa-systems-hub]] — MOC central de toda a família de produtos
 
 ## Oferta
 - [[oferta/]] — Variantes de oferta
@@ -37,9 +37,9 @@ aliases: [runa-systems-hub, RUNA SYSTEMS, runa systems]
 - [[runa-intervencao-sessao-01-lucas-pesto]] — S01 Lucas Pesto
 
 ## Referência
-- [[../../🧠 SISTEMA/product-catalog]] — Catálogo
-- [[../../🧠 SISTEMA/temporadas/q2-2026/temporada-q2-2026]] — Temporada Q2
+- [[product-catalog]] — Catálogo
+- [[temporada-q2-2026]] — Temporada Q2
 
 ## Chain
 - **Hub:** [[🏠 _hub|SÍRIOS Hub]]
-- **Catalog:** [[../../🧠 SISTEMA/product-catalog|Product Catalog]]
+- **Catalog:** [[product-catalog|Product Catalog]]

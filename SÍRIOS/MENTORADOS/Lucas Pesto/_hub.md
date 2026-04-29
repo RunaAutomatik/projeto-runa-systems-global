@@ -69,6 +69,6 @@ inicio: 2026-04
 
 ## Conexões
 
-- **Programa base:** [[🎯 PRODUTOS/RUNA-SYSTEMS/_hub]]
+- **Programa base:** [[intervencao-hub]]
 - **Track aplicável:** Track A — Creator (Sistema de Conteúdo)
 - **Sessão 01 (escopo):** [[📋 escopos-de-aula/runa-intervencao-sessao-01-lucas-pesto]]

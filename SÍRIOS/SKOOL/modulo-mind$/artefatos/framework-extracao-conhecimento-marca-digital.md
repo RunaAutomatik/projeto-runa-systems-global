@@ -859,7 +859,7 @@ Desenvolva o pilar editorial "[NOME]" para [MARCA]:
 - Brand guidelines de referência do nicho — análise de como marcas líderes documentam identidade
 - "Building a StoryBrand" (Donald Miller) — arquitetura narrativa aplicável a conteúdo de feed
 - Documentação oficial do Meta Business Suite — benchmarks atualizados de métricas
-- [[🎯 PRODUTOS/RUNA-SYSTEMS/MIND$/programa/framework-extracao-conhecimento]] — framework base do qual este documento deriva
+- [[framework-extracao-conhecimento]] — framework base do qual este documento deriva
 
 ### Atualizações e Versioning
 
@@ -913,4 +913,4 @@ Antes de considerar o KB de marca completo, verifique:
 
 ---
 
-_Framework derivado do Framework Universal de Extração e Estruturação de Conhecimento_ _Adaptado para o domínio de Identidade de Marca Digital e Produção de Conteúdo para Instagram/Redes Sociais_ _Referência: [[🎯 PRODUTOS/RUNA-SYSTEMS/MIND$/programa/framework-extracao-conhecimento]] | Projeto: [[runa-systems-global]] | Módulo: [[mind-dollar-prd]]_
+_Framework derivado do Framework Universal de Extração e Estruturação de Conhecimento_ _Adaptado para o domínio de Identidade de Marca Digital e Produção de Conteúdo para Instagram/Redes Sociais_ _Referência: [[framework-extracao-conhecimento]] | Projeto: [[runa-systems-global]] | Módulo: [[mind-dollar-prd]]_

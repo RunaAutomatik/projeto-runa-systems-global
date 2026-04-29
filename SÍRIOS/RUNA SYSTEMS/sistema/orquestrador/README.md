@@ -15,18 +15,26 @@ This is the cognitive center of `runa-systems-global`. ORION (aiox-master) reads
 **→ [[memoria-sistema]]** — Full system state, agent map, current work, vault structure.
 **→ [[🏠 _hub|SÍRIOS Master Hub]]** — Central vault index (all products, systems, operations).
 
-## Vault Structure (SÍRIOS) — updated 2026-04-12
+## Vault Structure (SÍRIOS) — TRINDADE — updated 2026-04-29
 
 | Folder | Purpose |
 |--------|---------|
-| [[🎯 PRODUTOS/RUNA-SYSTEMS/_hub\|🎯 PRODUTOS/]] | Product hubs — each product owns its own folder |
-| [[🤖 AGENTES/orion\|🤖 AGENTES/]] | Agent cards: FREYJA, ARES, HERMES, HELIOS, ORION |
-| [[🧠 SISTEMA/product-catalog\|🧠 SISTEMA/]] | System docs: product catalog, season plans, architecture |
-| [[📱 Instagram/@arthsystems_/_hub\|📱 Instagram/]] | Instagram strategy, posts, carousels, campaigns |
-| [[📚 Referências/runa-systems-business-context\|📚 Referências/]] | Business context, analyses, brand, tools inventory |
-| [[🛠️ Skills/Skills Index\|🛠️ Skills/]] | Installed skills documentation |
-| [[⚙️ AUTOMACOES/hook-scraper-weekly/INDEX\|⚙️ AUTOMACOES/]] | Automations and workflows |
-| [[📅 Diário/\|📅 Diário/]] | Session diary — cognitive memory |
+| [[_INDEX\|RUNA SYSTEMS/]] | Arthur's operational ecosystem — modules, skills, sistema, diário |
+| [[_INDEX\|SKOOL/]] | Student-facing educational content |
+| [[_INDEX\|MENTORADOS/]] | Client hyper-personalization tracks |
+| [[freyja\|_deprecated/agentes-pre-aiox/]] | Pre-AIOX agent definitions (archived — rebuild via AIOX) |
+
+### RUNA SYSTEMS Internal
+
+| Folder | Purpose |
+|--------|---------|
+| [[runa-systems-hub\|RUNA SYSTEMS/]] | Hub canônico — programa e módulos |
+| [[product-catalog\|sistema/]] | Product catalog, season plans, architecture |
+| [[_hub\|MODULO CREATOR/@arthsystems_/]] | Instagram strategy, posts, carousels, campaigns |
+| [[runa-systems-business-context\|RUNA SYSTEMS/]] | Business context, brand, tools inventory |
+| [[Skills Index\|Skills/]] | Installed skills documentation |
+| [[INDEX\|MODULO FLOW/hook-scraper-weekly/]] | Automations and workflows |
+| [[2026-04-29\|Diário/]] | Session diary — cognitive memory |
 
 ## Product Hub Navigation
 
@@ -61,7 +69,7 @@ npm run dia:fechar   # end of session — creates diary entry
 
 ```dataview
 LIST
-FROM "📅 Diário"
+FROM "RUNA SYSTEMS/Diário"
 SORT file.name DESC
 LIMIT 5
 ```

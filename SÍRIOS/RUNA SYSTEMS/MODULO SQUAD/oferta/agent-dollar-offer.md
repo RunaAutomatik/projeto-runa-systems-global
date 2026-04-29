@@ -17,6 +17,6 @@ produto: [[../_hub|AGENT$ Hub]]
 - ICP: empreendedores, consultores, criadores que querem vender agentes
 
 ## Chain
-- **Hub:** [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub|AGENT$ Hub]]
+- **Hub:** [[agent-hub|AGENT$ Hub]]
 - **Hub central:** [[🏠 _hub|SÍRIOS Hub]]
 - **Catalog:** [[product-catalog|Product Catalog]]

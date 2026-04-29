@@ -24,7 +24,7 @@ Cliente completa o alicerce (Claude Code → Sincronia → MIND$ → SQUAD$) e o
 
 ## Programa (Skool)
 
-- [[🎯 PRODUTOS/RUNA-SYSTEMS/CREATOR$/programa/skool/_index]] — Índice materiais Skool
+- [[_index]] — Índice materiais Skool
 
 ## Entregáveis do Módulo
 
@@ -40,5 +40,5 @@ Versões GPT antigas arquivadas em: `_deprecated/gpt-agents-v1/`
 ## Chain
 
 - **Requer:** [[../RUNA-SYSTEMS/_hub|RUNA SYSTEMS]] (alicerce completo)
-- **Hub canônico:** [[../../../../📐 Projetos/runa-systems-hub]]
+- **Hub canônico:** [[runa-systems-hub]]
 - **Trilha:** Track A do programa de intervenção (Sessões A1–A4)

@@ -64,4 +64,4 @@ Módulo no Skool: **†CODE**
 - **Sequência:** [[../_hub|RUNA SYSTEMS]] (alicerce completo)
 - **Etapa anterior:** Mapeamento Neural — S01 (`programa/intervencao/artefatos/`)
 - **Próxima etapa:** [[../SQUAD$/_hub|SQUAD$]] (etapa 3)
-- **Hub canônico:** [[../../../../📐 Projetos/runa-systems-hub]]
+- **Hub canônico:** [[runa-systems-hub]]

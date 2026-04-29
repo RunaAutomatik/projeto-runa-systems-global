@@ -101,7 +101,7 @@ type: index
 | [[template-worker]] | S06 | Template |
 | [[checklist-deploy-squad]] | S06 | Checklist |
 | [[estrutura-vault-conhecimento]] | S07 | Estrutura |
-| [[🎯 PRODUTOS/RUNA-SYSTEMS/programa/intervencao/artefatos/framework-extracao-conhecimento]] | S07 | Framework |
+| [[framework-extracao-conhecimento]] | S07 | Framework |
 | [[template-ingestao-wiki]] | S07 | Template |
 | [[template-memory-agente]] | S08 | Template |
 | [[protocolo-atualizacao-semanal-kb]] | S08 | Protocolo |
@@ -173,6 +173,6 @@ sessoes/
 
 ---
 
-*Hub do produto: [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub|RUNA SYSTEMS Hub]]*
+*Hub do produto: [[agent-hub|RUNA SYSTEMS Hub]]*
 *Programa completo: [[trilha-runa-21-sessoes]]*
 *Artefatos: [[artefatos/]]*

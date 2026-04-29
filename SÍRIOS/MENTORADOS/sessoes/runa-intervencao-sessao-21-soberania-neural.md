@@ -362,4 +362,4 @@ O operador que sai de S21 com um Manifesto escrito e uma demo aprovada vai lembr
 - **Mapa da trilha:** [[mapa-mental-trilha-21-sessoes]]
 - **Trilha detalhada:** [[trilha-runa-21-sessoes]]
 - **PRD:** [[runa-mentoria-prd]]
-- **Hub:** [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub|RUNA SYSTEMS Hub]]
+- **Hub:** [[agent-hub|RUNA SYSTEMS Hub]]

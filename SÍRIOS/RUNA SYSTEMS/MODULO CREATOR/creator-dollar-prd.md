@@ -228,7 +228,7 @@ Alpha® then becomes:
 - **Mod 3 video hack:** [[05-hack-sora]]
 - **Mod 4 storybook assembly:** [[07-storybook-final]]
 - **Bonus prompt pack:** [[08-prompt-pack]]
-- **Index completo:** [[🎯 PRODUTOS/RUNA-SYSTEMS/CREATOR$/programa/skool/_index|Skool _index]]
+- **Index completo:** [[_index|Skool _index]]
 
 ### Personas & Storyboards
 - **Avatar demo:** [[alpha-storyboard]] — Alpha® visual storyboard (built live in Module 1)

@@ -75,7 +75,7 @@ NOTE: ALPHA®, MAYA®, ICARUS® are **deprecated** GPT assistants — fully supe
 ## 4. Current Work State (update each session)
 
 ### Arthur's Instagram (@arthsystems_)
-- **Hub:** [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub]] — source of truth for all content
+- **Hub:** [[agent-hub]] — source of truth for all content
 - **Content system:** FREYJA briefs → carousel watcher → instagram-worker publish
 - **Carousel keywords:** ARQUITETO (pin-01) · RUNA (pin-02) · SISTEMA (pin-03) · AVATAR (pin-04) · SQUAD (pin-04 alt)
 - **Pin status:** Pin-01 ✅ published · Pin-02 ⏳ ready-to-publish · Pin-03 ⏳ ready-to-publish · Pin-04 📋 brief-ready

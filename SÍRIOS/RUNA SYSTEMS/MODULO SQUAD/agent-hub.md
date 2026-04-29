@@ -26,5 +26,5 @@ Cliente completa o alicerce (Claude Code → Sincronia → MIND$ → SQUAD$) e o
 ## Chain
 
 - **Requer:** [[../RUNA-SYSTEMS/_hub|RUNA SYSTEMS]] (alicerce completo)
-- **Hub canônico:** [[../../../../📐 Projetos/runa-systems-hub]]
+- **Hub canônico:** [[runa-systems-hub]]
 - **Produto derivado:** Agentes específicos como low tickets (R$47–297 cada)

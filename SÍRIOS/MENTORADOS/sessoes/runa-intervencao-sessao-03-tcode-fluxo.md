@@ -378,5 +378,5 @@ Edit o arquivo CLAUDE.md: na seção de regras, adicione [ajuste específico].
 - **Product:** [[runa-mentoria-prd]] — PRD completo RUNA SYSTEMS
 - **Previous session:** S02 — [[runa-intervencao-sessao-02-tcode-ambiente|†CODE I — Ambiente]]
 - **Next session:** S04 — SQUAD$ I — Arquitetura
-- **Hub:** [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub|RUNA SYSTEMS Hub]]
+- **Hub:** [[agent-hub|RUNA SYSTEMS Hub]]
 - **Artefatos:** [[template-claude-md-base|Template CLAUDE.md Base]] · [[template-agente-simples|Template de Agente Simples]]

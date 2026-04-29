@@ -346,5 +346,5 @@ Quais arquivos .md existem nesta pasta?
 - **Product:** [[runa-mentoria-prd]] — PRD completo RUNA SYSTEMS
 - **Previous session:** S01 — [[runa-intervencao-sessao-01-mapeamento|Mapeamento Neural]]
 - **Next session:** S03 — †CODE II — Fluxo (CLAUDE.md e primeiro agente)
-- **Hub:** [[🎯 PRODUTOS/RUNA-SYSTEMS/AGENT$/_hub|RUNA SYSTEMS Hub]]
+- **Hub:** [[agent-hub|RUNA SYSTEMS Hub]]
 - **Artefatos:** [[cheat-sheet-ferramentas-core|Cheat Sheet Ferramentas Core]] · [[guia-permission-modes|Guia de Permission Modes]]

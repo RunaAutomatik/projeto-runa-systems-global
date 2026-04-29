@@ -49,4 +49,4 @@ aliases: [squad-dollar, squad, $QUAD]
 ## Chain
 
 - **Sequência:** [[../RUNA-SYSTEMS/_hub|RUNA SYSTEMS]] (alicerce completo)
-- **Hub canônico:** [[../../../../📐 Projetos/runa-systems-hub]]
+- **Hub canônico:** [[runa-systems-hub]]

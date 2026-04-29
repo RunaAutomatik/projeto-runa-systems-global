@@ -32,5 +32,5 @@ O posicionamento do próprio Arthur (FREYJA + @arthsystems_) serve como case de 
 ## Chain
 
 - **Requer:** [[../RUNA-SYSTEMS/_hub|RUNA SYSTEMS]] (alicerce completo)
-- **Hub canônico:** [[../../../../📐 Projetos/runa-systems-hub]]
+- **Hub canônico:** [[runa-systems-hub]]
 - **Trilha:** Track C do programa de intervenção
