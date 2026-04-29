@@ -565,6 +565,187 @@ asyncio.run(export_slides())
 
 ---
 
+## LAYOUT VARIANTS — Image-Rich Slides
+
+Four layout patterns for slides that need to incorporate real images (screenshots, repo prints, dashboard captures). Use alongside the 3 visual styles. The skill selects the appropriate variant per slide based on content context.
+
+### `text-only` (default)
+Standard text overlay on dark background gradient. No image assets required.
+Used for: manifesto slides, philosophical arguments, hook/CTA slides.
+
+```html
+<!-- text-only: no special HTML needed — just the slide inner content as normal -->
+```
+
+---
+
+### `screenshot-highlight`
+Featured screenshot with dark overlay frame and caption below. Creates "evidence" aesthetic — the tool/system is visually present without dominating.
+
+```css
+.slide-screenshot-wrap {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(14,158,142,0.3);
+  margin-bottom: 16px;
+}
+.slide-screenshot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  opacity: 0.75;
+  filter: brightness(0.85) saturate(0.9);
+}
+.slide-screenshot-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #0E9E8E;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+.slide-screenshot-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #7A8A9A;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+```
+
+```html
+<!-- screenshot-highlight: insert inside .slide-inner -->
+<div class="slide-screenshot-wrap">
+  <img class="slide-screenshot-img" src="data:image/png;base64,__BASE64__" alt="">
+</div>
+<div class="slide-screenshot-label">›_ __TOOL_OR_REPO_NAME__</div>
+<div class="slide-screenshot-caption">__CAPTION_TEXT__</div>
+```
+
+**Usage note:** Always embed images as base64 inside the HTML — never external URLs. Convert via:
+```python
+import base64
+b64 = base64.b64encode(Path("screenshot.png").read_bytes()).decode()
+```
+
+---
+
+### `image-grid`
+2–3 images tiled horizontally per slide for visual comparison or "toolkit" reveals.
+
+```css
+.slide-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 6px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.slide-image-grid-item {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(14,158,142,0.2);
+  aspect-ratio: 4/3;
+}
+.slide-image-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  filter: brightness(0.9) saturate(0.85);
+}
+.slide-image-grid-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: #7A8A9A;
+  text-align: center;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+```
+
+```html
+<!-- image-grid: 2 or 3 items -->
+<div class="slide-image-grid">
+  <div class="slide-image-grid-item">
+    <img src="data:image/png;base64,__BASE64_1__" alt="">
+  </div>
+  <div class="slide-image-grid-item">
+    <img src="data:image/png;base64,__BASE64_2__" alt="">
+  </div>
+  <!-- optional 3rd -->
+</div>
+```
+
+---
+
+### `split-image-text`
+Image occupies left half, text column on right. Used for "before/after" or tool-plus-explanation slides.
+
+```css
+.slide-split {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+.slide-split-image {
+  flex: 0 0 48%;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(14,158,142,0.25);
+  aspect-ratio: 3/4;
+}
+.slide-split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  filter: brightness(0.85) saturate(0.9);
+}
+.slide-split-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+```
+
+```html
+<!-- split-image-text -->
+<div class="slide-split">
+  <div class="slide-split-image">
+    <img src="data:image/png;base64,__BASE64__" alt="">
+  </div>
+  <div class="slide-split-text">
+    <div class="slide-screenshot-label">›_ __LABEL__</div>
+    <!-- normal text content here -->
+  </div>
+</div>
+```
+
+---
+
+### Layout Variant Selection Logic
+
+| Content context | Variant |
+|----------------|---------|
+| Text argument, no visual proof needed | `text-only` |
+| One key tool/repo/dashboard to show | `screenshot-highlight` |
+| 2–3 tools, plugins, repos side by side | `image-grid` |
+| Tool on left, explanation on right | `split-image-text` |
+
+The skill assigns variants per-slide when generating the HTML. Slides 1 (hero) and 7 (CTA) are always `text-only`.
+
+---
+
 ## PRINCÍPIOS DE DESIGN @arthsystems_
 
 1. **O fundo É a mensagem** — foto do setup com overlay diz "este homem opera no escuro". Nenhuma palavra precisa dizer isso.

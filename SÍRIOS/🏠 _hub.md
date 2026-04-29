@@ -27,6 +27,14 @@ aliases: [hub, home, index, vault-index, SÍRIOS]
 
 ---
 
+## 👥 Mentorados
+
+| Mentorado | Empresa | Programa | Início | Hub |
+|-----------|---------|----------|--------|-----|
+| Gabriel (Lucas Pesto) | Pesto (agência criativa) | RUNA INTERVENÇÃO | 2026-04 | [[👥 Mentorados/Lucas Pesto/_hub]] |
+
+---
+
 ## 🧪 RAS — Runa Service
 
 Braço de serviços (Done-for-You) — venda de entrega, não de conhecimento.
