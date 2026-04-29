@@ -3,7 +3,6 @@ date: 2026-03-24
 tags: [architecture, n8n, workflow, hermes, instagram, youtube, supabase, apify]
 project: runa-systems-global
 hub: [[INDEX]]
-architecture-index: [[_index]]
 ---
 
 # Architecture — Hook Scraper Weekly

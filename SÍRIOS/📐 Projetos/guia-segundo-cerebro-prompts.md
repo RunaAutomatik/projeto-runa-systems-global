@@ -3,7 +3,7 @@ date: 2026-04-15
 tags: [runa-systems, obsidian, segundo-cerebro, templates, claude-code, curso]
 project: runa-systems-global
 type: course-material
-produto: [[runa-systems-prd]]
+produto: [[runa-systems-hub]]
 ---
 
 # Segundo Cérebro com Obsidian — Princípios e Templates para Claude Code

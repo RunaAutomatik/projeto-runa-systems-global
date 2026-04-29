@@ -3,7 +3,8 @@ date: 2026-04-18
 tags: [plano, infraestrutura, repos, didatico, runa-systems]
 project: runa-systems-global
 type: plan
-status: pending-review
+status: completed
+completed_date: 2026-04-18
 ---
 
 # Plano de Expansão e Limpeza do Ecossistema

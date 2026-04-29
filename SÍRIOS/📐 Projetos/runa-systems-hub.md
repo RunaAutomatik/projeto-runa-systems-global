@@ -97,6 +97,7 @@ Mapeamento Neural → Claude Code → SQUAD$ → MIND$
 - Sincronia methodology: [NotebookLM](https://notebooklm.google.com/notebook/607cf50c-6fe6-410d-b2e5-f7d4b4f70638)
 - SQUAD$ curriculum: [[squad-skool-index]]
 - SQUAD$ AIOX Lite Kit: [[10-squad-aiox]]
+- Alicerce canônico (sequência obrigatória): [[alicerce-canonico]]
 
 ### TOOLBOX (Claude Code — conteúdo a documentar)
 
