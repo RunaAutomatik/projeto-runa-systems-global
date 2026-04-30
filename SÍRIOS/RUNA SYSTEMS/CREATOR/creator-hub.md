@@ -24,7 +24,7 @@ Cliente completa o alicerce (Claude Code → Sincronia → MIND$ → SQUAD$) e o
 
 ## Programa (Skool)
 
-- [[_index]] — Índice materiais Skool
+- [[RUNA SYSTEMS/CREATOR/_index]] — Índice materiais Skool
 
 ## Entregáveis do Módulo
 

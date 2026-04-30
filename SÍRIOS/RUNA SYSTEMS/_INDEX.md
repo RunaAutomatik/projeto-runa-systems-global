@@ -29,12 +29,12 @@ SÍRIOS/
 
 | Módulo | Escopo | Status |
 |--------|--------|--------|
-| [[MODULO SQUAD/_index\|MODULO SQUAD]] | Squad de 8 agentes, AIOX, tasks, skill-books, prompt-books, workers, hooks | 🔄 estruturado |
-| [[MODULO MINDS/_index\|MODULO MINDS]] | Knowledge base, vault Obsidian, clones de especialistas, referências | 🔄 estruturado |
-| [[MODULO CREATOR/_index\|MODULO CREATOR]] | Branding Arthur, voz, carousels, posts, reels, avatar | 🔄 estruturado |
-| [[MODULO SITES/_index\|MODULO SITES]] | Sites, repos, plugins, design-systems | 🔄 estruturado |
-| [[MODULO FLOW/_index\|MODULO FLOW]] | DM automation, scraping, monitoramento, leads, integrações n8n/Zernio | 🔄 estruturado |
-| [[MODULO APPS/_index\|MODULO APPS]] | Aplicações, dashboards, soluções visuais | 🔄 estruturado |
+| [[RUNA SYSTEMS/SQUAD/_index\|MODULO SQUAD]] | Squad de 8 agentes, AIOX, tasks, skill-books, prompt-books, workers, hooks | 🔄 estruturado |
+| [[RUNA SYSTEMS/MINDS/_index\|MODULO MINDS]] | Knowledge base, vault Obsidian, clones de especialistas, referências | 🔄 estruturado |
+| [[RUNA SYSTEMS/CREATOR/_index\|MODULO CREATOR]] | Branding Arthur, voz, carousels, posts, reels, avatar | 🔄 estruturado |
+| [[RUNA SYSTEMS/SITES/_index\|MODULO SITES]] | Sites, repos, plugins, design-systems | 🔄 estruturado |
+| [[RUNA SYSTEMS/FLOW/_index\|MODULO FLOW]] | DM automation, scraping, monitoramento, leads, integrações n8n/Zernio | 🔄 estruturado |
+| [[RUNA SYSTEMS/APPS/_index\|MODULO APPS]] | Aplicações, dashboards, soluções visuais | 🔄 estruturado |
 
 ---
 

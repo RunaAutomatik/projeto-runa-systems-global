@@ -19,9 +19,9 @@ This is the cognitive center of `runa-systems-global`. ORION (aiox-master) reads
 
 | Folder | Purpose |
 |--------|---------|
-| [[_INDEX\|RUNA SYSTEMS/]] | Arthur's operational ecosystem — modules, skills, sistema, diário |
-| [[_INDEX\|SKOOL/]] | Student-facing educational content |
-| [[_INDEX\|MENTORADOS/]] | Client hyper-personalization tracks |
+| [[RUNA SYSTEMS/_INDEX\|RUNA SYSTEMS/]] | Arthur's operational ecosystem — modules, skills, sistema, diário |
+| [[RUNA SYSTEMS/_INDEX\|SKOOL/]] | Student-facing educational content |
+| [[RUNA SYSTEMS/_INDEX\|MENTORADOS/]] | Client hyper-personalization tracks |
 | [[freyja\|_deprecated/agentes-pre-aiox/]] | Pre-AIOX agent definitions (archived — rebuild via AIOX) |
 
 ### RUNA SYSTEMS Internal
@@ -30,7 +30,7 @@ This is the cognitive center of `runa-systems-global`. ORION (aiox-master) reads
 |--------|---------|
 | [[runa-systems-hub\|RUNA SYSTEMS/]] | Hub canônico — programa e módulos |
 | [[product-catalog\|sistema/]] | Product catalog, season plans, architecture |
-| [[_hub\|MODULO CREATOR/@arthsystems_/]] | Instagram strategy, posts, carousels, campaigns |
+| [[MENTORADOS/Lucas Pesto/_hub\|MODULO CREATOR/@arthsystems_/]] | Instagram strategy, posts, carousels, campaigns |
 | [[runa-systems-business-context\|RUNA SYSTEMS/]] | Business context, brand, tools inventory |
 | [[Skills Index\|Skills/]] | Installed skills documentation |
 | [[INDEX\|MODULO FLOW/hook-scraper-weekly/]] | Automations and workflows |

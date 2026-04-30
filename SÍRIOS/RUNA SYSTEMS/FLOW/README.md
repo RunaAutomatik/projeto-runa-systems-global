@@ -15,7 +15,7 @@ project: runa-systems-global
 
 | Workflow | Status | Agent | Description |
 |----------|--------|-------|-------------|
-| [[hook-scraper-weekly/INDEX\|Hook Scraper Weekly]] | Planning | HERMES | Weekly Instagram + YouTube hook intelligence scraper |
+| [[INDEX\|Hook Scraper Weekly]] | Planning | HERMES | Weekly Instagram + YouTube hook intelligence scraper |
 
 ---
 

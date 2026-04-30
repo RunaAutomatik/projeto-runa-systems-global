@@ -60,8 +60,8 @@ type: reference
 
 ## Integração Técnica
 
-- **Workflow:** [[hook-scraper-weekly/INDEX]]
-- **Arquitetura:** [[hook-scraper-weekly/ARCHITECTURE]]
+- **Workflow:** [[INDEX]]
+- **Arquitetura:** [[ARCHITECTURE]]
 - **n8n:** HERMES implementa via `mcp__n8n-mcp__*`
 - **Supabase:** Tabela `hooks` — `handle`, `platform`, `hook_text`, `engagement_score`, `classified_at`
 - **Pendente:** Apify API key + YouTube Data API v3 key para ativar o scraping

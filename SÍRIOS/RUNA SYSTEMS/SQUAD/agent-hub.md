@@ -21,7 +21,7 @@ Cliente completa o alicerce (Claude Code → Sincronia → MIND$ → SQUAD$) e o
 ## Entregáveis do Módulo
 
 - **NEMO** — Agente neural especializado (nicho: chef, PT, copywriter, advogado, etc.) — via AIOX
-- [[oferta/agent-dollar-offer]] — Documento de oferta *(histórico — rever para formato atual)*
+- [[agent-dollar-offer]] — Documento de oferta *(histórico — rever para formato atual)*
 
 ## Chain
 

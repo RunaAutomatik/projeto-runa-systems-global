@@ -36,7 +36,7 @@ aliases: [hub, home, index, vault-index, SÍRIOS]
 - [[site-hub]] | [[orcamento-hub]]
 
 ### @arthsystems_
-- [[_hub]] — Hub operacional de conteúdo
+- [[MENTORADOS/Lucas Pesto/_hub]] — Hub operacional de conteúdo
 - [[instagram-strategy-master]] — Estratégia mestre
 
 ### Sistema
@@ -60,7 +60,7 @@ aliases: [hub, home, index, vault-index, SÍRIOS]
 
 | Mentorado | Empresa | Programa | Início | Hub |
 |-----------|---------|----------|--------|-----|
-| Gabriel (Lucas Pesto) | Pesto (agência criativa) | RUNA INTERVENÇÃO | 2026-04 | [[_hub]] |
+| Gabriel (Lucas Pesto) | Pesto (agência criativa) | RUNA INTERVENÇÃO | 2026-04 | [[MENTORADOS/Lucas Pesto/_hub]] |
 
 ---
 
