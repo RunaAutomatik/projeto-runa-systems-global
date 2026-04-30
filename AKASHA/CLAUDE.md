@@ -185,3 +185,71 @@ grep -rl "\[\[concept-name\]\]" wiki/
 # Recent sources (date-prefixed filenames)
 ls raw/ | sort -r | head
 ```
+
+---
+
+## Ingest Cache (SHA256 deduplication)
+
+Every source file in `raw/` is tracked by content hash in `.ingest-cache.json`.
+Before ingesting any file, check the cache to avoid re-processing.
+
+Cache file: `.ingest-cache.json` (gitignored, auto-created on first use)
+
+### Cache format
+```json
+{
+  "<sha256-of-content>": {
+    "file": "2026-04-30-source-title.md",
+    "url": "https://original-url-if-web-clip",
+    "date": "2026-04-30"
+  }
+}
+```
+
+### Cache workflow (add to Ingest workflow — step 0)
+
+**Step 0 — Cache check.** Before reading any source:
+1. Compute SHA256 of the file content
+2. Check `.ingest-cache.json` for that hash
+3. If found → skip ingest, report `"Already ingested: {file}"` to the human
+4. If not found → proceed with ingest normally
+5. After ingest is complete → add the hash entry to `.ingest-cache.json`
+
+```bash
+# Compute SHA256 of a file (bash)
+sha256sum raw/YYYY-MM-DD-source.md
+
+# Check if hash exists in cache
+python -c "import json,hashlib; h=hashlib.sha256(open('raw/FILE','rb').read()).hexdigest(); c=json.load(open('.ingest-cache.json')); print('CACHED' if h in c else 'NEW')"
+```
+
+**Cache is append-only.** Never remove entries — removing a hash means a file could be re-ingested.
+To force re-ingest a source (e.g., it was updated), delete its hash entry manually and re-run ingest.
+
+---
+
+## Cross-Reference Quality — 4-Signal Relevance
+
+When creating `[[wikilinks]]` between pages, prioritize connections using these 4 signals in order:
+
+| Signal | Weight | How to apply |
+|--------|--------|-------------|
+| **Direct link** | ×3.0 | Page A explicitly names or cites Page B |
+| **Source overlap** | ×4.0 | Both pages trace back to the same raw source(s) |
+| **Co-mention** | ×1.5 | Both pages mention a third common entity/concept |
+| **Type affinity** | ×1.0 | Same category (entity↔entity, concept↔concept) is weak signal only |
+
+### Application rules
+
+1. **Always link** when direct link OR source overlap signal is present (score ≥ 3.0)
+2. **Consider linking** when co-mention applies (score 1.5) — only if the connection adds insight
+3. **Do not link** on type affinity alone (score 1.0) — too noisy, creates meaningless connections
+4. **Bidirectional** — if A links to B, B must link back to A
+
+### Practical example (AKASHA context)
+- `hormozi-offer-equation` ↔ `reca-framework`: both sourced from same Hormozi transcript → **Source overlap ×4.0** → always link
+- `alex-hormozi` ↔ `russell-brunson`: both are entities, both mention "offer" → **Co-mention ×1.5** → link with context
+- `hormozi-offer-equation` ↔ `ladeira-vtsd`: same category (concepts) → **Type affinity ×1.0 only** → do NOT link unless another signal also present
+
+### During lint / self-heal
+Flag as "missing cross-reference" any pair of pages where combined signal score ≥ 3.0 but no wikilink exists.
