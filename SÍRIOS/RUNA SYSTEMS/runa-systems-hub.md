@@ -74,6 +74,30 @@ Entregue: squad completo com orquestrador + agentes especialistas, processos map
 
 ---
 
+## Maturidade do Cliente — Four Cs
+
+Todo cliente chega em um andar diferente do seu ecossistema de IA. O diagnóstico define onde começar e qual o próximo salto.
+
+```
+Cadence   (Andar 4) ←── Automações autônomas, workers, KPIs ativos
+Capabilities (Andar 3) ←── Squad operacional, agentes com contexto
+Connections  (Andar 2) ←── Claude Code + MCPs + integrações ativas
+Context      (Andar 1) ←── Claude.ai chat, documentação básica de negócio
+```
+
+**Regra:** Cada andar depende do anterior. Instalar Capabilities sem Connections é montar estrutura sem fundação.
+
+| Andar | Four Cs | O que o cliente TEM | Módulo RUNA correspondente | Upsell natural |
+|-------|---------|--------------------|-----------------------------|---------------|
+| 1 | **Context** | Usa Claude.ai para pensar/criar. Negócio documentado parcialmente. | S00 Three Ms + S01 Mapeamento + S02–S03 Claude Code | RUNA SYSTEMS (entrada) |
+| 2 | **Connections** | Claude Code ativo. MCPs e skills configurados. Integrações básicas. | S04–S06 SQUAD$ (squad de 8 agentes) | Intervenção (aceleração) |
+| 3 | **Capabilities** | Squad operacional. Agentes com contexto do negócio e memória. | S07–S08 MIND$ + trilhas de especialização | RUNA MENTORIA (manutenção) |
+| 4 | **Cadence** | Workers autônomos. KPIs ativos. Sistema gira com supervisão mínima. | S09–S21 Especialização + Kill Switch protocol | Renovação anual + Lives mensais |
+
+**Diagnóstico pré-venda:** `/runa-os-audit` — skill ARES que produz score 0–100 (25 por andar) + relatório com top-3 gaps e produto recomendado.
+
+---
+
 ## Arquitetura do Currículo
 
 ### Alicerce — Obrigatório e Sequencial
@@ -82,12 +106,13 @@ Todo cliente passa por esta sequência antes de qualquer módulo de habilidade.
 **Não há atalho. A ordem importa.**
 
 ```
-Mapeamento Neural → Claude Code → SQUAD$ → MIND$
+Three Ms (S00) → Mapeamento Neural → Claude Code → SQUAD$ → MIND$
 ```
 
 | Etapa | Sessões | O que entrega | Pré-requisito |
 |-------|---------|--------------|--------------|
-| **1. Mapeamento Neural** | S01 | Processos mapeados e trilha personalizada definida. | — |
+| **0. Three Ms — Fundamentos** | S00 (pré) | Mindset, Method, Machine. Diagnóstico EAD inicial. | — |
+| **1. Mapeamento Neural** | S01 | Processos mapeados e trilha personalizada definida. | Three Ms concluído |
 | **2. Claude Code** | S02–S03 | Ambiente técnico completo: Anti-gravity + Terminal + App + TOOLBOX | Mapeamento concluído |
 | **3. SQUAD$** | S04–S06 | Squad de agentes via AIOX: Orquestrador + especialistas + AIOX Lite Kit. | Claude Code instalado |
 | **4. MIND$** | S07–S08 | Segundo cérebro estruturado: vault Obsidian (SÍRIOS + AKASHA), GitHub, templates, WikiLink. | SQUAD$ operacional |
@@ -214,6 +239,10 @@ Agentes do Arthur reconstruídos via framework AIOX (não são entregáveis ao c
 - [[claude-code-01-instalacao]]
 - [[claude-code-02-principios-basicos]]
 - [[claude-code-03-skills-plugins-mcps-clis]]
+
+### Currículo Módulo 00 — Fundamentos (Three Ms)
+- [[modulo-00-fundamentos/_index]] — índice completo
+- [[artefatos/00-mindset-method-machine]] — worksheet Three Ms
 
 ### Metodologia Sincronia
 - [NotebookLM — Sincronia](https://notebooklm.google.com/notebook/607cf50c-6fe6-410d-b2e5-f7d4b4f70638)
