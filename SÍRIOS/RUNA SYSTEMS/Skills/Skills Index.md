@@ -25,6 +25,7 @@ project: runa-systems-global
 | [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
 | [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso | @dev, @qa, ARES, HERMES |
 | [[Skills graphify]] | Knowledge graph de qualquer input: código, vault, docs, texto — HTML interativo + relatório + export Obsidian | ORION, ALEX, @architect |
+| [[Skills RUNA OS]] | Diagnóstico Four Cs de prospect (/runa-os-audit) + Onboarding dia 1 (/runa-intake) — qualificação e setup de squad | ARES, ORION |
 
 ---
 
@@ -120,6 +121,21 @@ project: runa-systems-global
 ### Quero security audit (OWASP + STRIDE)
 → [[Skills gstack]] → `/cso`
 
+### Quero diagnosticar o nível AI de um prospect
+→ [[Skills RUNA OS]] → `/runa-os-audit`
+
+### Quero saber qual produto RUNA recomendar para um prospect
+→ [[Skills RUNA OS]] → `/runa-os-audit` → tabela Score → Produto
+
+### Quero fazer onboarding de um novo cliente RUNA SYSTEMS
+→ [[Skills RUNA OS]] → `/runa-intake`
+
+### Quero capturar o voice DNA e contexto de negócio de um cliente
+→ [[Skills RUNA OS]] → `/runa-intake` → `references/voice.md` + `context/`
+
+### Quero identificar o primeiro candidato EAD de um cliente
+→ [[Skills RUNA OS]] → `/runa-intake` → Q7 → `context/pain-ead.md`
+
 ### Quero criar um design system para projeto (Stitch)
 → [[stitch-skills]] → pipeline: `/taste-design` → `/stitch-design` → `/stitch-loop`
 
@@ -148,6 +164,7 @@ project: runa-systems-global
 | Stitch (trio) | taste-design + stitch-design + stitch-loop | ✅ INSTALADO (⚠️ MCP pendente) |
 | gstack | 23 skills + browser daemon | ✅ INSTALADO |
 | graphify | knowledge graph pipeline — 9 etapas + 6 modos | ✅ INSTALADO |
+| RUNA OS | /runa-os-audit (diagnóstico Four Cs) + /runa-intake (onboarding dia 1) | ✅ INSTALADO |
 | Ads | 18 sub-skills | ❌ REMOVIDO (2026-04-24) |
 | GSD | 32 comandos | ❌ REMOVIDO (2026-04-24) |
 | Paperclip | 3 skills | ❌ REMOVIDO (2026-04-24) |
