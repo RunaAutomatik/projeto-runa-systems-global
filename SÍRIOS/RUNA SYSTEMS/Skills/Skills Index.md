@@ -23,9 +23,14 @@ project: runa-systems-global
 | [[Skills Plugins]] | Commits, code review, hooks, SDK, segurança | @devops, @qa |
 | [[Skills Claude Code]] | Configuração, Stitch, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
 | [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
+| [[impeccable-skills]] | 23 comandos de refinamento + 27 anti-patterns + CLI pre-commit — auditor de qualidade visual de UI | @ux-design-expert (Uma), @devops (Gage) |
 | [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso | @dev, @qa, ARES, HERMES |
 | [[Skills graphify]] | Knowledge graph de qualquer input: código, vault, docs, texto — HTML interativo + relatório + export Obsidian | ORION, ALEX, @architect |
 | [[Skills RUNA OS]] | Diagnóstico Four Cs de prospect (/runa-os-audit) + Onboarding dia 1 (/runa-intake) — qualificação e setup de squad | ARES, ORION |
+| [[Skills Higgsfield MCP]] | 14 tools de geração cinematográfica direta: generate_video, generate_image, job tracking, media library, marketing studio | MAYA (primário) |
+| [[Skills Higgsfield CLI]] | higgsfield-generate (30+ modelos imagem+vídeo+Marketing Studio), higgsfield-soul-id (Soul Character), higgsfield-product-photoshoot (10 modos produto, gpt_image_2) | MAYA |
+| [[Skills LLM Wiki]] | llm-wiki-setup + wiki-self-heal + Chrome Web Clipper + AKASHA Clip Server — knowledge base Karpathy pattern sobre qualquer input | ORION |
+| [[notebooklm-mcp-install-guide]] | Instalação e configuração do NotebookLM MCP no Claude Code — sessões, fontes, perguntas, audio overview | ORION, ALEX, FREYJA |
 
 ---
 
@@ -35,7 +40,8 @@ project: runa-systems-global
 → [[Skills inference-sh]] → seção GERAÇÃO DE IMAGEM
 
 ### Quero criar um vídeo
-→ [[Skills inference-sh]] → seção GERAÇÃO DE VÍDEO
+→ [[Skills Higgsfield MCP]] → `generate_video` (Tier 0 — primário)
+→ [[Skills inference-sh]] → seção GERAÇÃO DE VÍDEO (Tier 1 fallback)
 
 ### Quero criar narração ou voz
 → [[Skills inference-sh]] → seção VOZ / TTS
@@ -145,8 +151,32 @@ project: runa-systems-global
 ### Quero construir um site inteiro com Stitch autonomamente
 → [[stitch-skills]] → `/stitch-loop`
 
+### Quero auditar qualidade visual de UI gerada por IA
+→ [[impeccable-skills]] → `/impeccable audit`
+
+### Quero refinar tipografia, cores, layout ou animação de uma tela
+→ [[impeccable-skills]] → `/impeccable typeset` / `/impeccable colorize` / `/impeccable layout` / `/impeccable animate`
+
+### Quero configurar pre-commit hook de qualidade de design
+→ [[impeccable-skills]] → `npx impeccable detect src/ --json` via @devops
+
 ### Quero inicializar uma aplicação Agent SDK
 → [[Skills Claude Code]] → `/agent-sdk-dev:new-sdk-app`
+
+### Quero construir uma base de conhecimento persistente sobre um tema
+→ [[Skills LLM Wiki]] → `/llm-wiki-setup` (bootstrap) → `/wiki-self-heal` (manutenção)
+
+### Quero ingerir artigos, PDFs ou páginas web no vault de conhecimento
+→ [[Skills LLM Wiki]] → Chrome Web Clipper + AKASHA Clip Server → `AKASHA/raw/`
+
+### Quero fazer health-check e gap-fill de uma wiki existente
+→ [[Skills LLM Wiki]] → `/wiki-self-heal`
+
+### Quero fazer perguntas a um notebook do NotebookLM via Claude
+→ [[notebooklm-mcp-install-guide]] → `mcp__notebooklm-mcp__ask_question`
+
+### Quero gerar um Audio Overview (podcast) de fontes via NotebookLM
+→ [[notebooklm-mcp-install-guide]] → `generate_audio` → poll `get_audio_status` → `download_audio`
 
 ---
 
@@ -162,11 +192,30 @@ project: runa-systems-global
 | Plugins | 13 plugins | ✅ ATIVO |
 | Claude Code | 15 skills nativas | ✅ ATIVO |
 | Stitch (trio) | taste-design + stitch-design + stitch-loop | ✅ INSTALADO (⚠️ MCP pendente) |
+| Impeccable | 23 comandos + 27 anti-patterns + CLI pre-commit | ✅ ATIVO |
 | gstack | 23 skills + browser daemon | ✅ INSTALADO |
 | graphify | knowledge graph pipeline — 9 etapas + 6 modos | ✅ INSTALADO |
 | RUNA OS | /runa-os-audit (diagnóstico Four Cs) + /runa-intake (onboarding dia 1) | ✅ INSTALADO |
+| Higgsfield MCP | 14 tools: generate_video/image, job tracking, media library, marketing studio | ✅ CONECTADO |
+| Higgsfield CLI Skills | higgsfield-generate + higgsfield-soul-id + higgsfield-product-photoshoot (v0.3.0) | ✅ INSTALADO |
+| LLM Wiki (Karpathy) | llm-wiki-setup + wiki-self-heal + Chrome Clipper + AKASHA Clip Server | ✅ ATIVO (vault AKASHA/) |
+| NotebookLM MCP | sessões, fontes, perguntas, audio overview — ~50 queries/dia (free) | ✅ ATIVO (notebooklm-mcp-cli) |
 | Ads | 18 sub-skills | ❌ REMOVIDO (2026-04-24) |
 | GSD | 32 comandos | ❌ REMOVIDO (2026-04-24) |
 | Paperclip | 3 skills | ❌ REMOVIDO (2026-04-24) |
 
 **Total de capacidades ativas: 150+ modelos IA + 80+ comandos de workflow**
+
+---
+
+## Referências Cruzadas
+
+| Documento | O que contém | Relação |
+|-----------|-------------|---------|
+| [[agent-reference]] | Perfil completo de todos os 13+ agentes: personas, comandos, skills, MCPs, handoffs | Matrix agente → skills (fonte de verdade por agente) |
+| [[capability-map]] | Tool/skill/MCP assignment por agente + prioridade de seleção | Versão técnica deste index, com app IDs e exemplos de CLI |
+
+> **Navegação recomendada:**
+> - "Quero fazer X" → este documento (por tarefa)
+> - "Quero entender o agente Y" → [[agent-reference]] (por persona)
+> - "Quero o app ID exato do modelo Z" → [[capability-map]] (por ferramenta)

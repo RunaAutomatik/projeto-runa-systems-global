@@ -148,6 +148,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `product-radar.md` | Continuous product opportunity capture — everything built feeds RUNA SYSTEMS |
 | `capability-map.md` | Tool/skill/MCP assignment per agent and product — check before executing any task |
 | `stitch-usage.md` | Google Stitch design generation — when/how/who uses stitch-design, stitch-loop, taste-design |
+| `impeccable-usage.md` | Impeccable design quality — 23 commands, 27 anti-pattern detection, Stitch DESIGN.md compatible, pre-commit CLI (@devops), @ux-design-expert primary |
 | `carousel-workflow.md` | Mandatory 6-step protocol for all carousel creation (FREYJA brief → pin.md → hub → keywords → instructions → commit) |
 | `inference-sh-usage.md` | inference.sh skills (MAYA image/video/audio, FREYJA content, ARES intel) — app IDs, patterns, anti-patterns |
 | `language-policy.md` | English for all internal docs/inter-agent communication; Portuguese only for direct user interaction |

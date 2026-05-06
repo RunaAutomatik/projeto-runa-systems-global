@@ -18,11 +18,11 @@ Never guess or reinvent — if the capability exists, use it.
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
 | ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal**, **runa-intake** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
-| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Figma, Supabase |
+| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Figma, Supabase |
 | @qa | code-review, testing-strategy, pr-review-toolkit, **gstack/review**, **gstack/cso**, **gstack/qa** | — |
 | @devops | devops-automation, commit-commands, hookify, **stop-notification**, **post-tool-format** | Netlify |
 | @architect | architecture-design, agent-workflows | — |
-| @ux-design-expert | **stitch-design**, **taste-design**, ui-ux-pro-max, frontend-design | StitchMCP (⚠️ requires setup) |
+| @ux-design-expert | **stitch-design**, **taste-design**, **impeccable**, ui-ux-pro-max, frontend-design | StitchMCP (⚠️ requires setup) |
 | @data-engineer | (code tools) | Supabase |
 
 ## Tool Selection Priority (always follow this order)
@@ -166,6 +166,24 @@ infsh app run <app-id> --input '{"prompt":"..."}'
 
 **Products:** SITE$ (primary), $QUAD, CREATOR$, RUNA SYSTEMS (teaching clients).
 
+## Impeccable — Design Quality Skill (ACTIVE ✓)
+
+**Owner:** `@ux-design-expert` (Uma) primary | `@devops` for CLI/pre-commit
+**Rule file:** `.claude/rules/impeccable-usage.md`
+**Install:** `~/.agents/skills/impeccable/` (symlink: `~/.claude/skills/impeccable`)
+**DESIGN.md:** Stitch-format compatible — reads taste-design output directly
+
+| Use Case | Command/Tool | Agent |
+|----------|-------------|-------|
+| Detect anti-patterns in source | `npx impeccable detect src/ --json` | @devops (pre-commit) |
+| Full design audit after Stitch | `/impeccable audit` | @ux-design-expert |
+| Targeted refinement | `/impeccable polish`, `/typeset`, `/colorize`, `/layout` | @ux-design-expert |
+| Browser-based iteration | `/impeccable live` | @dev |
+| Pin decisions to DESIGN.md | `/impeccable pin` | @ux-design-expert |
+
+**Pipeline slot:** `taste-design → stitch-design → impeccable audit → @dev integrates`
+Apache 2.0 — bundleable for RUNA SYSTEMS client delivery.
+
 ## Claude Code Hooks
 
 Project hooks registered in `.claude/settings.local.json`:
@@ -261,4 +279,4 @@ Kill Switch triggers when ANY of: inactivity 30d, no KPI, no owner, cost > benef
 | StitchMCP not configured | ⚠️ Pending — user must set up at labs.google.com/stitch |
 | Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
 
-Last updated: 2026-05-01
+Last updated: 2026-05-06

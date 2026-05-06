@@ -74,8 +74,11 @@ User asks for UI work
 ```
 1. Uma runs /taste-design → creates .stitch/DESIGN.md
 2. Uma runs /stitch-design → generates screens with StitchMCP
-3. Output: .stitch/designs/{page}.html + screenshot
-4. @dev integrates HTML/CSS into React/Tailwind components
+3. Uma runs /impeccable audit → detect anti-patterns before delivery  ← quality gate
+   → [issues] → /impeccable polish / typeset / colorize / layout → re-audit
+   → [clean]  → proceed
+4. Output: .stitch/designs/{page}.html (quality-verified)
+5. @dev integrates HTML/CSS into React/Tailwind components
 ```
 
 ## Workflow — Autonomous Multi-Page Build (stitch-loop)
