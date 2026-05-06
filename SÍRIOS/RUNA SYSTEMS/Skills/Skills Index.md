@@ -23,8 +23,8 @@ project: runa-systems-global
 | [[Skills Plugins]] | Commits, code review, hooks, SDK, segurança | @devops, @qa |
 | [[Skills Claude Code]] | Configuração, Stitch, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
 | [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
-| [[impeccable-skills]] | 23 comandos de refinamento + 27 anti-patterns + CLI pre-commit — auditor de qualidade visual de UI | @ux-design-expert (Uma), @devops (Gage) |
-| [[muapi-studio-skills]] | Lip Sync Studio (9 modelos), Extended Video (Veo 3.1/Sora 2/Wan 2.6), GPT-4o edit, MJ v7, Marketing VIP 1080p — capacidades exclusivas sem equivalente no stack | MAYA (primário) |
+| [[Skills Impeccable]] | 23 comandos de refinamento + 27 anti-patterns + CLI pre-commit — auditor de qualidade visual de UI | @ux-design-expert (Uma), @devops (Gage) |
+| [[Skills Muapi Studio]] | Lip Sync Studio (9 modelos), Extended Video (Veo 3.1/Sora 2/Wan 2.6), GPT-4o edit, MJ v7, Marketing VIP 1080p — capacidades exclusivas sem equivalente no stack | MAYA (primário) |
 | [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso | @dev, @qa, ARES, HERMES |
 | [[Skills graphify]] | Knowledge graph de qualquer input: código, vault, docs, texto — HTML interativo + relatório + export Obsidian | ORION, ALEX, @architect |
 | [[Skills RUNA OS]] | Diagnóstico Four Cs de prospect (/runa-os-audit) + Onboarding dia 1 (/runa-intake) — qualificação e setup de squad | ARES, ORION |
@@ -32,6 +32,7 @@ project: runa-systems-global
 | [[Skills Higgsfield CLI]] | higgsfield-generate (30+ modelos imagem+vídeo+Marketing Studio), higgsfield-soul-id (Soul Character), higgsfield-product-photoshoot (10 modos produto, gpt_image_2) | MAYA |
 | [[Skills LLM Wiki]] | llm-wiki-setup + wiki-self-heal + Chrome Web Clipper + AKASHA Clip Server — knowledge base Karpathy pattern sobre qualquer input | ORION |
 | [[notebooklm-mcp-install-guide]] | Instalação e configuração do NotebookLM MCP no Claude Code — sessões, fontes, perguntas, audio overview | ORION, ALEX, FREYJA |
+| [[longcat-video-skills]] | Video continuation (único no stack), Long Video (minutos, único no stack), T2V/I2V local, Avatar multi-audio — inferência local 13.6B params, zero custo de API | MAYA (primário) |
 
 ---
 
@@ -153,25 +154,37 @@ project: runa-systems-global
 → [[stitch-skills]] → `/stitch-loop`
 
 ### Quero fazer lip sync (animar rosto com áudio)
-→ [[muapi-studio-skills]] → `infinitetalk-image-to-video` ou `wan2.2-speech-to-video` (PT-BR)
+→ [[Skills Muapi Studio]] → `infinitetalk-image-to-video` ou `wan2.2-speech-to-video` (PT-BR)
 
 ### Quero editar uma imagem com instrução de texto (GPT-4o edit, MJ v7)
-→ [[muapi-studio-skills]] → `gpt4o-edit` ou `midjourney-v7-omni-reference`
+→ [[Skills Muapi Studio]] → `gpt4o-edit` ou `midjourney-v7-omni-reference`
 
 ### Quero gerar vídeo com Veo 3.1, Sora 2 ou Wan 2.6
-→ [[muapi-studio-skills]] → extended video
+→ [[Skills Muapi Studio]] → extended video
 
 ### Quero criar um vídeo de produto 1080p com avatar e referências
-→ [[muapi-studio-skills]] → `sd-2-vip-omni-reference-1080p`
+→ [[Skills Muapi Studio]] → `sd-2-vip-omni-reference-1080p`
+
+### Quero continuar ou estender um vídeo existente
+→ [[longcat-video-skills]] → Workflow 3 (Video Continuation) — único no stack
+
+### Quero gerar um vídeo longo (mais de 15 segundos, minutos)
+→ [[longcat-video-skills]] → Workflow 4 (Long Video) — único no stack
+
+### Quero usar inferência de vídeo local sem custo de API
+→ [[longcat-video-skills]] → modelo 13.6B rodando localmente (requer GPU CUDA 12.4)
+
+### Quero gerar avatar com múltiplos speakers simultâneos
+→ [[longcat-video-skills]] → Workflow 6 (Avatar Multi-Audio) — muapi suporta apenas single-stream
 
 ### Quero auditar qualidade visual de UI gerada por IA
-→ [[impeccable-skills]] → `/impeccable audit`
+→ [[Skills Impeccable]] → `/impeccable audit`
 
 ### Quero refinar tipografia, cores, layout ou animação de uma tela
-→ [[impeccable-skills]] → `/impeccable typeset` / `/impeccable colorize` / `/impeccable layout` / `/impeccable animate`
+→ [[Skills Impeccable]] → `/impeccable typeset` / `/impeccable colorize` / `/impeccable layout` / `/impeccable animate`
 
 ### Quero configurar pre-commit hook de qualidade de design
-→ [[impeccable-skills]] → `npx impeccable detect src/ --json` via @devops
+→ [[Skills Impeccable]] → `npx impeccable detect src/ --json` via @devops
 
 ### Quero inicializar uma aplicação Agent SDK
 → [[Skills Claude Code]] → `/agent-sdk-dev:new-sdk-app`
@@ -214,6 +227,7 @@ project: runa-systems-global
 | Higgsfield CLI Skills | higgsfield-generate + higgsfield-soul-id + higgsfield-product-photoshoot (v0.3.0) | ✅ INSTALADO |
 | LLM Wiki (Karpathy) | llm-wiki-setup + wiki-self-heal + Chrome Clipper + AKASHA Clip Server | ✅ ATIVO (vault AKASHA/) |
 | NotebookLM MCP | sessões, fontes, perguntas, audio overview — ~50 queries/dia (free) | ✅ ATIVO (notebooklm-mcp-cli) |
+| LongCat-Video | Video continuation + Long video (únicos no stack), T2V/I2V local, Avatar multi-audio — 13.6B params MIT | ✅ DOCUMENTADO (⚠️ instalação pendente GPU) |
 | Ads | 18 sub-skills | ❌ REMOVIDO (2026-04-24) |
 | GSD | 32 comandos | ❌ REMOVIDO (2026-04-24) |
 | Paperclip | 3 skills | ❌ REMOVIDO (2026-04-24) |

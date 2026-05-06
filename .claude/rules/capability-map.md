@@ -12,7 +12,7 @@ Never guess or reinvent — if the capability exists, use it.
 | Agent | Primary Skills | Primary MCPs |
 |-------|---------------|-------------|
 | FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing** | Supabase |
-| MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip** | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
+| MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip**, **longcat-video-continuation**, **longcat-video-long**, **longcat-video-avatar** | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
 | HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content** | n8n-mcp, Gmail, Google Calendar |
 | ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours**, **runa-os-audit** | — |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
@@ -184,6 +184,23 @@ infsh app run <app-id> --input '{"prompt":"..."}'
 **Pipeline slot:** `taste-design → stitch-design → impeccable audit → @dev integrates`
 Apache 2.0 — bundleable for RUNA SYSTEMS client delivery.
 
+## LongCat-Video — Local Inference Model (DOCUMENTED ✓ — GPU setup pending)
+
+**Owner:** MAYA | **Rule file:** `.claude/rules/longcat-video-usage.md`
+**Install:** GPU required — CUDA 12.4 + conda + PyTorch 2.6.0 + FlashAttention-2 + HuggingFace weights
+**Unique position:** Tier 0 exclusively for video continuation and long video — NO stack equivalent exists
+
+| Use Case | Command | Tier | Notes |
+|----------|---------|------|-------|
+| Video continuation (extend clip) | `torchrun run_demo_video_continuation.py` | **Tier 0 — UNIQUE** | Only option in entire stack |
+| Long video (minutes) | `torchrun run_demo_long_video.py` | **Tier 0 — UNIQUE** | All other tools max ~15s |
+| Avatar multi-audio | `torchrun run_demo_avatar_multi_audio_to_video.py` | Tier 1 (local) | muapi has single-stream only |
+| Text-to-Video (fallback) | `torchrun run_demo_text_to_video.py` | Tier 4 | Use Higgsfield first |
+| Image-to-Video (fallback) | `torchrun run_demo_image_to_video.py` | Tier 3 | Use Higgsfield first |
+
+**GPU requirement:** ~24GB VRAM (single GPU, 720p) | 2×16GB+ (dual GPU, context parallelism)
+**Status:** Documentation complete — installation pending GPU availability (13.6B params, local only)
+
 ## Claude Code Hooks
 
 Project hooks registered in `.claude/settings.local.json`:
@@ -279,4 +296,4 @@ Kill Switch triggers when ANY of: inactivity 30d, no KPI, no owner, cost > benef
 | StitchMCP not configured | ⚠️ Pending — user must set up at labs.google.com/stitch |
 | Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
 
-Last updated: 2026-05-06
+Last updated: 2026-05-06 (LongCat-Video added)

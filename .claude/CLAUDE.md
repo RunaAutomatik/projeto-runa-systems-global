@@ -161,6 +161,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `llm-wiki-usage.md` | Karpathy LLM wiki pattern — llm-wiki-setup + wiki-self-heal skills, AKASHA vault, ingest/query/lint workflows |
 | `higgsfield-mcp-usage.md` | Higgsfield access — CLI + Skills (Tier 0/1 generation), MCP (soul/media mgmt), GPT Image 2 + refs workflow, dual-method Arthur config (MAYA primary) |
 | `muapi-direct-usage.md` | muapi.ai direct API — Lip Sync Studio (9 models), Extended Video (Veo 3.1/Sora 2/Wan 2.6), GPT-4o image edit, Marketing Studio VIP 1080p (MAYA primary) |
+| `longcat-video-usage.md` | LongCat-Video local inference — video continuation (Tier 0 unique), long video (Tier 0 unique), avatar multi-audio, 13.6B params GPU-local, MAYA primary |
 | `ead-gate.md` | EAD Gate — mandatory Phase 0 before spec pipeline (Eliminate→Automate→Delegate triage, @pm applies, @po validates) |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
