@@ -24,6 +24,7 @@ project: runa-systems-global
 | [[Skills Claude Code]] | Configuração, Stitch, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
 | [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
 | [[impeccable-skills]] | 23 comandos de refinamento + 27 anti-patterns + CLI pre-commit — auditor de qualidade visual de UI | @ux-design-expert (Uma), @devops (Gage) |
+| [[muapi-studio-skills]] | Lip Sync Studio (9 modelos), Extended Video (Veo 3.1/Sora 2/Wan 2.6), GPT-4o edit, MJ v7, Marketing VIP 1080p — capacidades exclusivas sem equivalente no stack | MAYA (primário) |
 | [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso | @dev, @qa, ARES, HERMES |
 | [[Skills graphify]] | Knowledge graph de qualquer input: código, vault, docs, texto — HTML interativo + relatório + export Obsidian | ORION, ALEX, @architect |
 | [[Skills RUNA OS]] | Diagnóstico Four Cs de prospect (/runa-os-audit) + Onboarding dia 1 (/runa-intake) — qualificação e setup de squad | ARES, ORION |
@@ -151,6 +152,18 @@ project: runa-systems-global
 ### Quero construir um site inteiro com Stitch autonomamente
 → [[stitch-skills]] → `/stitch-loop`
 
+### Quero fazer lip sync (animar rosto com áudio)
+→ [[muapi-studio-skills]] → `infinitetalk-image-to-video` ou `wan2.2-speech-to-video` (PT-BR)
+
+### Quero editar uma imagem com instrução de texto (GPT-4o edit, MJ v7)
+→ [[muapi-studio-skills]] → `gpt4o-edit` ou `midjourney-v7-omni-reference`
+
+### Quero gerar vídeo com Veo 3.1, Sora 2 ou Wan 2.6
+→ [[muapi-studio-skills]] → extended video
+
+### Quero criar um vídeo de produto 1080p com avatar e referências
+→ [[muapi-studio-skills]] → `sd-2-vip-omni-reference-1080p`
+
 ### Quero auditar qualidade visual de UI gerada por IA
 → [[impeccable-skills]] → `/impeccable audit`
 
@@ -193,6 +206,7 @@ project: runa-systems-global
 | Claude Code | 15 skills nativas | ✅ ATIVO |
 | Stitch (trio) | taste-design + stitch-design + stitch-loop | ✅ INSTALADO (⚠️ MCP pendente) |
 | Impeccable | 23 comandos + 27 anti-patterns + CLI pre-commit | ✅ ATIVO |
+| muapi-studio | Lip Sync (9 modelos), Extended Video, GPT-4o edit, Marketing VIP 1080p | ✅ ATIVO |
 | gstack | 23 skills + browser daemon | ✅ INSTALADO |
 | graphify | knowledge graph pipeline — 9 etapas + 6 modos | ✅ INSTALADO |
 | RUNA OS | /runa-os-audit (diagnóstico Four Cs) + /runa-intake (onboarding dia 1) | ✅ INSTALADO |
