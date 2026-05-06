@@ -158,7 +158,8 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `tool-response-filtering.md` | Dynamic token reduction — filter MCP/WebFetch responses using tool-registry.yaml config |
 | `pulse-token-efficiency.md` | PULSE protocol — code compaction, lazy loading, context budget, memory file 200-line limit |
 | `llm-wiki-usage.md` | Karpathy LLM wiki pattern — llm-wiki-setup + wiki-self-heal skills, AKASHA vault, ingest/query/lint workflows |
-| `higgsfield-mcp-usage.md` | Higgsfield MCP direct access — generate_video/image, async job polling, media upload (MAYA primary) |
+| `higgsfield-mcp-usage.md` | Higgsfield access — CLI + Skills (Tier 0/1 generation), MCP (soul/media mgmt), GPT Image 2 + refs workflow, dual-method Arthur config (MAYA primary) |
+| `muapi-direct-usage.md` | muapi.ai direct API — Lip Sync Studio (9 models), Extended Video (Veo 3.1/Sora 2/Wan 2.6), GPT-4o image edit, Marketing Studio VIP 1080p (MAYA primary) |
 | `ead-gate.md` | EAD Gate — mandatory Phase 0 before spec pipeline (Eliminate→Automate→Delegate triage, @pm applies, @po validates) |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.

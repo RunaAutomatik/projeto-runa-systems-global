@@ -12,7 +12,7 @@ Never guess or reinvent — if the capability exists, use it.
 | Agent | Primary Skills | Primary MCPs |
 |-------|---------------|-------------|
 | FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing** | Supabase |
-| MAYA | **gpt-image-2** (KIE.AI), **nano-banana-2**, **seedance-2** (Higgsfield/KIE.AI), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API | Higgsfield MCP (generate_video, generate_image) |
+| MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip** | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
 | HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content** | n8n-mcp, Gmail, Google Calendar |
 | ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours**, **runa-os-audit** | — |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
@@ -30,6 +30,7 @@ Never guess or reinvent — if the capability exists, use it.
 1. **Native Claude Code tools** (Read, Write, Edit, Bash, Grep, Glob) — fastest, local
 2. **Project skills** (`.claude/skills/`) — workflow-specific
 3. **Global skills** (`~/.claude/skills/`) — ads, seo, obsidian, ui-ux
+   - **2.5: muapi-studio skill** — for lip sync, extended video, GPT-4o edit, MJ v7 (no infsh equivalent)
 4. **MCPs** — only for external services (n8n, Supabase, Figma, etc.)
 5. **Plugins** — for structured workflows (code-review, commit-commands, etc.)
 
@@ -129,6 +130,23 @@ infsh app run <app-id> --input '{"prompt":"..."}'
 | `balance` / `transactions` | Account management |
 
 **⚠️ ASYNC:** `generate_video` is non-blocking. Always poll `job_status` before `job_display`.
+
+---
+
+## muapi-direct Skills (api.muapi.ai direct — ACTIVE ✓)
+
+**Owner:** MAYA | **Rule file:** `.claude/rules/muapi-direct-usage.md`
+**Script:** `~/.claude/skills/muapi-studio/scripts/muapi-client.py`
+**Auth:** `~/.infsh-token` (`x-api-key` header — same key as infsh)
+
+| Workflow | Key Models | When to Use |
+|----------|-----------|-------------|
+| **Lip Sync** | `infinitetalk-image-to-video`, `ltx-2.3-lipsync`, `wan2.2-speech-to-video` | Face animation with audio — **no equivalent exists in stack** |
+| **Extended Video** | `veo3.1-text-to-video`, `openai-sora-2-text-to-video`, `wan2.6-text-to-video`, `kling-v3.0-pro-text-to-video` | Models absent from Higgsfield CLI |
+| **Image Edit** | `gpt4o-edit`, `midjourney-v7-omni-reference`, `flux-kontext-max-i2i` | High-fidelity text-guided image editing |
+| **Marketing VIP** | `sd-2-vip-omni-reference-1080p`, `seedance-2-vip-omni-reference` | VIP product ads 1080p with avatar + references |
+
+**Tier position:** Tier 2 in general hierarchy. **Tier 0** exclusively for: Lip Sync (no alternative), GPT-4o edit, MJ v7.
 
 ---
 
