@@ -32,7 +32,6 @@ project: runa-systems-global
 | [[Skills Higgsfield CLI]] | higgsfield-generate (30+ modelos imagem+vídeo+Marketing Studio), higgsfield-soul-id (Soul Character), higgsfield-product-photoshoot (10 modos produto, gpt_image_2) | MAYA |
 | [[Skills LLM Wiki]] | llm-wiki-setup + wiki-self-heal + Chrome Web Clipper + AKASHA Clip Server — knowledge base Karpathy pattern sobre qualquer input | ORION |
 | [[notebooklm-mcp-install-guide]] | Instalação e configuração do NotebookLM MCP no Claude Code — sessões, fontes, perguntas, audio overview | ORION, ALEX, FREYJA |
-| [[longcat-video-skills]] | Video continuation (único no stack), Long Video (minutos, único no stack), T2V/I2V local, Avatar multi-audio — inferência local 13.6B params, zero custo de API | MAYA (primário) |
 
 ---
 
@@ -165,18 +164,6 @@ project: runa-systems-global
 ### Quero criar um vídeo de produto 1080p com avatar e referências
 → [[Skills Muapi Studio]] → `sd-2-vip-omni-reference-1080p`
 
-### Quero continuar ou estender um vídeo existente
-→ [[longcat-video-skills]] → Workflow 3 (Video Continuation) — único no stack
-
-### Quero gerar um vídeo longo (mais de 15 segundos, minutos)
-→ [[longcat-video-skills]] → Workflow 4 (Long Video) — único no stack
-
-### Quero usar inferência de vídeo local sem custo de API
-→ [[longcat-video-skills]] → modelo 13.6B rodando localmente (requer GPU CUDA 12.4)
-
-### Quero gerar avatar com múltiplos speakers simultâneos
-→ [[longcat-video-skills]] → Workflow 6 (Avatar Multi-Audio) — muapi suporta apenas single-stream
-
 ### Quero auditar qualidade visual de UI gerada por IA
 → [[Skills Impeccable]] → `/impeccable audit`
 
@@ -227,7 +214,6 @@ project: runa-systems-global
 | Higgsfield CLI Skills | higgsfield-generate + higgsfield-soul-id + higgsfield-product-photoshoot (v0.3.0) | ✅ INSTALADO |
 | LLM Wiki (Karpathy) | llm-wiki-setup + wiki-self-heal + Chrome Clipper + AKASHA Clip Server | ✅ ATIVO (vault AKASHA/) |
 | NotebookLM MCP | sessões, fontes, perguntas, audio overview — ~50 queries/dia (free) | ✅ ATIVO (notebooklm-mcp-cli) |
-| LongCat-Video | Video continuation + Long video (únicos no stack), T2V/I2V local, Avatar multi-audio — 13.6B params MIT | ✅ DOCUMENTADO (⚠️ instalação pendente GPU) |
 | Ads | 18 sub-skills | ❌ REMOVIDO (2026-04-24) |
 | GSD | 32 comandos | ❌ REMOVIDO (2026-04-24) |
 | Paperclip | 3 skills | ❌ REMOVIDO (2026-04-24) |
