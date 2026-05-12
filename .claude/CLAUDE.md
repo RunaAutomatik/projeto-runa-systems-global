@@ -162,6 +162,8 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `higgsfield-mcp-usage.md` | Higgsfield access — CLI + Skills (Tier 0/1 generation), MCP (soul/media mgmt), GPT Image 2 + refs workflow, dual-method Arthur config (MAYA primary) |
 | `muapi-direct-usage.md` | muapi.ai direct API — Lip Sync Studio (9 models), Extended Video (Veo 3.1/Sora 2/Wan 2.6), GPT-4o image edit, Marketing Studio VIP 1080p (MAYA primary) |
 | `ead-gate.md` | EAD Gate — mandatory Phase 0 before spec pipeline (Eliminate→Automate→Delegate triage, @pm applies, @po validates) |
+| `obsidian-document-governance.md` | Anti-duplication protocol — check-before-create, document taxonomy (Skills/Templates/MENTORADOS), naming conventions |
+| `video-use-usage.md` | video-use skill — raw footage editing (filler removal, color grade, subtitles via FFmpeg + ElevenLabs Scribe); MAYA primary; when/not to use vs Higgsfield/muapi/Remotion |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->
