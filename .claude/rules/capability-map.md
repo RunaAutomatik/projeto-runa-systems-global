@@ -14,7 +14,7 @@ Never guess or reinvent — if the capability exists, use it.
 | FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing** | Supabase |
 | MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip**, **video-use** (raw footage editing) | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
 | HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content** | n8n-mcp, Gmail, Google Calendar |
-| ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours**, **runa-os-audit** | — |
+| ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours**, **runa-os-audit**, **lp-copy**, **sales-sequence**, **client-copy** | — |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
 | ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal**, **runa-intake** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
@@ -279,11 +279,11 @@ Kill Switch triggers when ANY of: inactivity 30d, no KPI, no owner, cost > benef
 | StitchMCP not configured | ⚠️ Pending — user must set up at labs.google.com/stitch |
 | Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
 
-## video-use (Raw Footage Editing — ACTIVE, not yet installed)
+## video-use (Raw Footage Editing — ACTIVE ✓ installed 2026-05-12)
 
 **Owner:** MAYA | **Rule file:** `.claude/rules/video-use-usage.md`
-**Status:** Audit approved 2026-05-12 — ELEVENLABS_API_KEY configured — installation pending
-**Requires:** `ELEVENLABS_API_KEY` in skill's local `.env`, Python 3.14, FFmpeg (already installed v8.0.1)
+**Status:** Installed 2026-05-12 — video-use 0.1.0 — symlink active — ELEVENLABS_API_KEY configured
+**Requires:** `ELEVENLABS_API_KEY` in `~/Developer/video-use/.env`, Python 3.14 ✅, FFmpeg v8.0.1 ✅
 
 | Capability | Mechanism | When to use |
 |------------|-----------|-------------|

@@ -131,6 +131,21 @@ commands:
     description: 'Audit an existing offer against Grand Slam framework — identify gaps and quick wins'
     elicit: true
 
+  - name: lp-copy
+    visibility: [full, quick, key]
+    description: 'Write landing page copy for a product or offer — headline, subheadline, body, CTA (transferred from FREYJA)'
+    elicit: true
+
+  - name: sales-sequence
+    visibility: [full, quick]
+    description: 'Design a multi-step sales sequence (DM follow-up, email, WhatsApp) for a specific offer and avatar'
+    elicit: true
+
+  - name: client-copy
+    visibility: [full, quick]
+    description: 'Write commercial copy for a specific client offer — adapts Runa frameworks to client product/niche'
+    elicit: true
+
   - name: runa-product-web
     visibility: [full, quick, key]
     description: 'Design or review the Runa Systems product teia — how each product leads to the next'
@@ -183,4 +198,31 @@ workflows:
       - SCORE against Value Equation
       - IDENTIFY 3 quick improvement levers
       - SAVE output to cofre1 if user confirms
+
+  lp_copy_mode:
+    description: Landing page copy generation
+    steps:
+      - LOAD knowledge bases (offer-building-framework + Light Copy Method)
+      - ASK: product name, core promise, target avatar, price point, main objection
+      - GENERATE headline variants (3 options, each using different formula)
+      - GENERATE body copy: problem → agitation → mechanism → proof → CTA
+      - SCORE each headline against Value Equation lens
+      - DELIVER formatted copy deck
+
+  sales_sequence_mode:
+    description: Multi-step sales sequence design
+    steps:
+      - ASK: offer, avatar, channel (DM/email/WhatsApp), sequence length
+      - LOAD RECA/RALOCA frameworks (Pieri)
+      - MAP sequence: trigger → opener → value delivery → objection → close
+      - GENERATE each message with character count and send timing
+      - NOTE which emotional driver (RECA) each step activates
+
+  client_copy_mode:
+    description: Copy for client offers (non-Arthur products)
+    steps:
+      - ASK: client's product, target avatar, positioning, price, 1 main proof
+      - APPLY Grand Slam + Light Copy frameworks to client's context
+      - GENERATE copy block (headline + body + CTA)
+      - FLAG: if client product overlaps with RUNA territory, alert Arthur
 ```
