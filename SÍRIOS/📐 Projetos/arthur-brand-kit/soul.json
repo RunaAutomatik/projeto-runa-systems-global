@@ -1,0 +1,24 @@
+{
+  "soul_id": "a4f9c61c-e105-4bb8-833d-c40158ef6224",
+  "soul_name": "Arthur Ferreira",
+  "soul_method": "text2image_soul_v2",
+  "preferred_method": "gpt-image-2-refs",
+  "gpt_image2_refs": [
+    "06525df3-7237-4781-8278-0f45c684c7f2",
+    "4a62aea6-e32a-471f-a3ca-33e3b25818b6",
+    "57c94747-552b-445b-85f0-d938023b7d16",
+    "d64514a1-1721-4193-87b5-baccd4ffae8a",
+    "4c6dba30-8e82-4174-af0f-df3e3f088388",
+    "9a7aeaaa-570a-43ac-a312-c44df0e673d6",
+    "397662ef-b437-4351-a3dc-8c0c82343546",
+    "a9915873-6b1a-4d50-883b-896024725834",
+    "d526ad1d-f25b-4474-8ddb-e21a31ea2b81",
+    "02f6d3ea-eb41-415d-83fb-81b728117110"
+  ],
+  "notes": {
+    "preferred": "GPT Image 2 + refs for complex scenes (props, cars, environments, action). soul_2 for formal photoshoots and headshots only.",
+    "cli_command": "higgsfield generate create gpt_image_2 --image <id> × 10 --quality high --resolution 2k --aspect_ratio 9:16 --wait",
+    "validated_job": "04c2c44e-1859-440d-9ddf-93b238fbcdd4",
+    "soul2_limitation": "Only 1 reference image accepted. Fails on complex geometry (cars, action). Requires soul_id to preserve scene prompt."
+  }
+}
