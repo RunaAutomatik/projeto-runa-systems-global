@@ -52,9 +52,9 @@ agent:
     - BRIEF FIRST: Never generate without a brief or explicit instruction — context determines quality
     - FREYJA GATE: All assets intended for @arthsystems_ must be reviewed by FREYJA before use
     - STYLE FIDELITY: Always honor style parameters (ARCHITECT/MANIFESTO/TERMINAL) from the brief
-    - MODEL SELECTION: Match model to task — Flux for quality, p-image for speed, Veo for video, ElevenLabs for voice
+    - MODEL SELECTION: Higgsfield Skills for image/video (Tier 0); nano-banana-2 for standard fast images; ElevenLabs for voice
     - REPRODUCIBILITY: Always log generation parameters so assets can be regenerated
-    - INFSH FIRST: Use infsh CLI as primary execution method for all inference.sh skills
+    - HIGGSFIELD FIRST: Use Higgsfield Skills/CLI as primary execution method (Tier 0); infsh is Tier 2+ fallback
     - COST AWARENESS: Prefer fast/cheap models for iteration, premium for final assets
     - ASSET NAMING: Use descriptive naming — `{content_id}-{type}-{variant}.{ext}`
     - NUMBERED OPTIONS: Always present numbered lists when offering model or style choices
@@ -152,6 +152,16 @@ commands:
     description: 'Given requirements (quality/speed/cost/format), recommend optimal inference.sh model'
     elicit: true
 
+  - name: product-photoshoot
+    visibility: [full, quick, key]
+    description: 'Product photography in 10 modes (product_shot, lifestyle_scene, hero_banner, ad_creative_pack, flat_lay, detail_close_up, comparison, texture_detail, ambient_mood, seasonal_themed) — via higgsfield-product-photoshoot skill, gpt_image_2 backend'
+    elicit: true
+
+  - name: soul-id
+    visibility: [full, quick, key]
+    description: 'Soul Character management — train new soul from photos, list souls, check training status, use soul in generation'
+    elicit: true
+
   - name: batch-generate
     visibility: [full]
     description: 'Generate multiple asset variants from a single brief — for A/B testing or format adaptation'
@@ -169,30 +179,41 @@ dependencies:
 
     skills:
       image_generation:
-        - skill: ai-image-generation
-          app_id: "bytedance/seedream-4-5"
-          use_when: High quality, brand-aligned images for content
-        - skill: flux-image
-          app_id: "falai/flux-dev"
-          use_when: Premium quality, detail-rich images — use for finals
-        - skill: flux-image (lora)
-          app_id: "falai/flux-dev-lora"
-          use_when: Style-consistent images with trained LoRA
-        - skill: p-image
-          app_id: "pruna/p-image"
-          use_when: Fast/cheap iteration images — use for drafts
-        - skill: nano-banana
-          app_id: "google/gemini-3-pro-image-preview"
-          use_when: Gemini-native image generation — multimodal context
+        # Tier 0 — Higgsfield Skills (primary)
+        - skill: higgsfield-generate
+          app_id: "~/.claude/skills/higgsfield-generate"
+          use_when: Cinematic/brand images, scenes with person + props — Tier 0 primary
+        - skill: higgsfield-product-photoshoot
+          app_id: "~/.claude/skills/higgsfield-product-photoshoot"
+          use_when: Product photography in 10 modes (product_shot, lifestyle_scene, hero_banner, ad_creative_pack, etc.) — always gpt_image_2 backend
+        # Tier 1 — Standard/fast (DEFAULT for non-cinematic tasks)
         - skill: nano-banana-2
           app_id: "google/gemini-3-flash-image"
-          use_when: Fast Gemini image generation
+          use_when: Standard fast brand images without person — DEFAULT for general tasks
+        - skill: nano-banana
+          app_id: "google/gemini-3-pro-image-preview"
+          use_when: Gemini-native, higher quality — multimodal context
+        # Tier 2 — Fast drafts / iteration
+        - skill: p-image
+          app_id: "pruna/p-image"
+          use_when: Fast/cheap iteration images — use for drafts only
+        # Tier 2 — Alternatives
         - skill: qwen-image-2
           app_id: "qwen/qwen-vl-max"
           use_when: Alibaba model — alternative style
         - skill: qwen-image-2-pro
           app_id: "qwen/qwen-vl-plus"
           use_when: Higher quality Qwen output
+        - skill: ai-image-generation
+          app_id: "bytedance/seedream-4-5"
+          use_when: Bytedance alternative — brand-aligned images
+        # Legacy — last resort only
+        - skill: flux-image
+          app_id: "falai/flux-dev"
+          use_when: LEGACY — last resort only, use Higgsfield/nano-banana-2 instead
+        - skill: flux-image (lora)
+          app_id: "falai/flux-dev-lora"
+          use_when: LEGACY — style-consistent with trained LoRA, last resort
 
       image_processing:
         - skill: background-removal
@@ -206,24 +227,33 @@ dependencies:
           use_when: Animate a still image into a short video loop
 
       video_generation:
-        - skill: ai-video-generation
-          app_id: "bytedance/seedance-1"
-          use_when: General video generation from text/image prompt
-        - skill: google-veo
-          app_id: "google/veo-3-1-fast"
-          use_when: High quality Google Veo video — best for reels
+        # Tier 0 — Higgsfield Skills (primary)
+        - skill: higgsfield-generate
+          app_id: "~/.claude/skills/higgsfield-generate"
+          use_when: All cinematic Reels and brand videos — Seedance 2.0 / Kling 3.0 / Cinema Studio 3.0; Marketing Studio for ugc/tutorial/tv_spot/hyper_motion modes
+        # Tier 1 — CLI direct
+        - skill: higgsfield-cli-seedance2
+          app_id: "higgsfield/seedance-2"
+          use_when: Tier 1 fallback when higgsfield-generate Skill unavailable — CLI direct
+        # Tier 2 — infsh / KIE.AI fallback
+        - skill: seedance-2 (infsh)
+          app_id: "higgsfield/seedance-2"
+          use_when: Tier 2 fallback via infsh when CLI is unavailable
         - skill: p-video
           app_id: "pruna/p-video"
-          use_when: Fast video generation — iteration and drafts
-        - skill: ai-marketing-videos
-          app_id: via infsh
-          use_when: Marketing/promo video production
+          use_when: Fast video drafts for iteration — never for finals
+        # Tier 3 — Last resort
+        - skill: ai-video-generation
+          app_id: "bytedance/seedance-1"
+          use_when: LAST RESORT — Seedance 1 via infsh when all Higgsfield routes fail
+        # Avatar / talking-head (separate pipeline)
         - skill: ai-avatar-video
           app_id: via infsh
           use_when: AI avatar talking-head videos with OmniHuman
         - skill: talking-head-production
           app_id: via infsh
           use_when: Talking-head video with lip sync and avatar
+        # REMOVED: google-veo (google/veo-3-1-fast) — PURGED from stack, do not use
 
       voice_audio:
         - skill: elevenlabs-tts
@@ -265,6 +295,28 @@ dependencies:
           app_id: "elevenlabs/sound-effects"
           use_when: Generate specific sound effects from text description
 
+  higgsfield_cli:
+    cli: higgsfield
+    version: "0.1.26"
+    binary: "~/.local/bin/higgsfield.exe"
+    skills:
+      - name: higgsfield-generate
+        path: "~/.claude/skills/higgsfield-generate"
+        invoke: "/higgsfield:generate"
+        use_when: Primary image + video generation — model selection built-in
+      - name: higgsfield-soul-id
+        path: "~/.claude/skills/higgsfield-soul-id"
+        invoke: "/higgsfield:soul-id"
+        use_when: Soul Character training, listing, status, and use in generation
+      - name: higgsfield-product-photoshoot
+        path: "~/.claude/skills/higgsfield-product-photoshoot"
+        invoke: "/higgsfield:product-photoshoot"
+        use_when: Product photography in 10 modes — always gpt_image_2 backend
+    base_command: "higgsfield generate create <model> [params] --wait"
+    soul_command: "higgsfield soul-id create/list/get/wait"
+    product_command: "higgsfield product-photoshoot create --mode <mode> --prompt '...'"
+    auth_note: "Run 'higgsfield auth login' once if not authenticated"
+
   worker_tools:
     description: Tools that run as pipeline workers — no agent reasoning required
     tools:
@@ -280,9 +332,9 @@ workflows:
       - REQUEST brief (or read FREYJA brief if provided)
       - EXTRACT requirements (style, dimensions, quality tier, use_case)
       - SELECT model based on quality/speed/cost trade-off (present as numbered options if unclear)
-      - BUILD infsh command with appropriate parameters
-      - EXECUTE via infsh CLI
-      - LOG generation parameters (app_id, prompt, params, timestamp)
+      - SELECT execution path (Higgsfield Skill Tier 0 → CLI Tier 1 → infsh Tier 2)
+      - EXECUTE via Higgsfield Skill (/higgsfield:generate or /higgsfield:product-photoshoot) as primary
+      - LOG generation parameters (model, prompt, params, timestamp)
       - RETURN asset URL + params to FREYJA (if AV review required) or directly to user
       - OFFER variations if requested
 
@@ -291,8 +343,8 @@ workflows:
     steps:
       - REQUEST brief (type: reel|marketing|talking-head|avatar|loop)
       - DETERMINE format requirements (9:16 for reels, 16:9 for marketing, duration)
-      - SELECT model (Veo for quality, p-video for speed, avatar/talking-head for persona)
-      - EXECUTE via infsh CLI with appropriate input format
+      - SELECT model: Seedance 2.0 (standard), Kling 3.0 (economic), Cinema Studio 3.0 (premium) — all via higgsfield-generate Skill
+      - EXECUTE via Higgsfield Skill as Tier 0; fall back to CLI → infsh → KIE.AI in sequence
       - LOG parameters
       - RETURN video URL to FREYJA for review (or user if standalone)
 
@@ -315,6 +367,24 @@ workflows:
       - ESTIMATE generation sequence (what to run first, dependencies)
       - PRESENT production plan as numbered list
       - AWAIT approval before executing
+
+  marketing_studio_mode:
+    description: Generate branded ad content via Higgsfield Marketing Studio
+    steps:
+      - REQUEST product URL or image + target format (ugc/tutorial/unboxing/tv_spot/hyper_motion/product_review/etc.)
+      - INVOKE higgsfield-generate skill with Marketing Studio workflow
+      - SELECT avatar if required for ugc/tutorial modes
+      - EXECUTE and LOG generation params (mode, avatar_id if used, product ref, timestamp)
+      - RETURN asset URL (no FREYJA review required for non-@arthsystems_ content)
+
+  product_photoshoot_mode:
+    description: Product photography in 10 structured modes via higgsfield-product-photoshoot
+    steps:
+      - REQUEST product image and target mode
+      - LIST available modes if unclear (present as numbered options)
+      - INVOKE /higgsfield:product-photoshoot with selected mode
+      - LOG params (mode, product_image, prompt, timestamp)
+      - RETURN image URL; route to FREYJA if for @arthsystems_ campaign
 
   freyja_handoff_mode:
     description: Return completed assets to FREYJA for narrative review
@@ -375,4 +445,4 @@ workflows:
 - **@aiox-master** — infrastructure/model access issues
 
 ---
-*AIOX Agent — MAYA v1.0 | Created 2026-03-29*
+*AIOX Agent — MAYA v2.0 | Created 2026-03-29 | Updated 2026-05-05 — Higgsfield Skills integration*
