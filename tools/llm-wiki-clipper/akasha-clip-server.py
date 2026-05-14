@@ -66,11 +66,12 @@ class ClipHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         path = urlparse(self.path).path
         if path == "/status":
-            self.send_json(200, {"status": "ok", "vault": str(self.vault)})
+            self.send_json(200, {"ok": True, "vault": str(self.vault)})
         elif path == "/projects":
-            self.send_json(200, {"projects": [str(self.vault)]})
+            name = self.vault.name
+            self.send_json(200, {"ok": True, "projects": [{"path": str(self.vault), "name": name, "current": True}]})
         elif path == "/project":
-            self.send_json(200, {"path": str(self.vault)})
+            self.send_json(200, {"ok": True, "path": str(self.vault)})
         else:
             self.send_json(404, {"error": "not found"})
 
@@ -96,6 +97,7 @@ class ClipHandler(BaseHTTPRequestHandler):
         digest = sha256_of(content)
         if digest in cache:
             self.send_json(200, {
+                "ok": True,
                 "status": "duplicate",
                 "message": f"Already ingested: {cache[digest]['file']}",
                 "file": cache[digest]["file"]
@@ -139,6 +141,7 @@ type: web-clip
 
         print(f"  ✓ Saved: raw/{filepath.name}")
         self.send_json(200, {
+            "ok": True,
             "status": "ok",
             "file": filepath.name,
             "message": f"Clipped to AKASHA/raw/{filepath.name}"

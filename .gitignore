@@ -83,3 +83,7 @@ AKASHA/.obsidian/graph.json
 
 # Graphify output (generated artifacts — not source)
 graphify-out/
+
+# Temp and generated caches
+.tmp/
+AKASHA/.ingest-cache.json
