@@ -164,6 +164,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `ead-gate.md` | EAD Gate — mandatory Phase 0 before spec pipeline (Eliminate→Automate→Delegate triage, @pm applies, @po validates) |
 | `obsidian-document-governance.md` | Anti-duplication protocol — check-before-create, document taxonomy (Skills/Templates/MENTORADOS), naming conventions |
 | `video-use-usage.md` | video-use skill — raw footage editing (filler removal, color grade, subtitles via FFmpeg + ElevenLabs Scribe); MAYA primary; when/not to use vs Higgsfield/muapi/Remotion |
+| `conversion-post-protocol.md` | Mandatory 4-element rule — every Instagram post must have keyword + Zernio automation + entregável + checkout link before publishing. FREYJA + HERMES + @devops. Single product: RUNA R$ 7.000 |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->

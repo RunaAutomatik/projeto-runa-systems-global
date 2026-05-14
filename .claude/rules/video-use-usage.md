@@ -17,20 +17,20 @@ SÍRIOS doc: `SÍRIOS/RUNA SYSTEMS/Skills/Skills video-use + Remotion.md`
 ## Status
 
 ```
-⚠️  Not yet installed — audit approved 2026-05-12
-✅  ELEVENLABS_API_KEY configured in .env
+✅  Installed 2026-05-12 — ~/Developer/video-use (video-use 0.1.0)
+✅  Skill registered — ~/.claude/skills/video-use → symlink to repo
+✅  ELEVENLABS_API_KEY configured — ~/Developer/video-use/.env
 ✅  ffmpeg v8.0.1 full build (CUDA, NVENC, d3d12va)
-✅  Python 3.14 available
-⚠️  uv not installed — use pip install -e .
+✅  Python 3.14 available — pip install -e . completed
+ℹ️  uv not installed — pip used instead (fully functional)
+ℹ️  yt-dlp not installed — optional, only needed for URL sources
+ℹ️  Node.js 22+ required only for HyperFrames animation overlays
 ```
 
-**Installation (when ready):**
+**Verification:**
 ```bash
-git clone https://github.com/browser-use/video-use ~/Developer/video-use
-ln -sfn ~/Developer/video-use ~/.claude/skills/video-use
-cd ~/Developer/video-use
-pip install -e .
-# Copy ELEVENLABS_API_KEY from project .env to ~/Developer/video-use/.env
+python ~/Developer/video-use/helpers/timeline_view.py --help && echo "helpers OK"
+ffprobe -version | head -1
 ```
 
 ---
@@ -102,14 +102,18 @@ Arthur records raw footage
 
 ## Hard Production Rules
 
-1. **Subtitles always last** — before overlays causes silent failure
-2. **Word-boundary cuts only** — never split a word mid-pronunciation
-3. **30ms padding per cut** — absorbs Scribe timestamp drift
-4. **30ms audio fades per segment** — eliminates audible pops
-5. **Strategy confirmed before execution** — agent proposes, Arthur approves
-6. **Transcription cache** — never re-transcribes same source file
-7. **Output in /edit/** — never writes inside the project directory
-8. **ELEVENLABS_API_KEY required** — transcription fails silently without it
+1. **Subtitles always last** — adding subtitles before overlays causes silent filter chain failure
+2. **Per-segment extract → lossless concat** — never use a single-pass filtergraph with multiple cuts; extract each segment individually, then concat losslessly
+3. **Word-boundary cuts only** — never split a word mid-pronunciation
+4. **30ms padding per cut edge** — 30–200ms range; absorbs Scribe timestamp drift and prevents abrupt starts
+5. **30ms audio fades per segment** — eliminates audible pops at edit boundaries
+6. **Overlay PTS reset** — animation overlays must use `setpts=PTS-STARTPTS+T/TB`; skipping this causes overlays to render at wrong timestamps
+7. **Master SRT uses output-timeline offsets** — subtitle timestamps must reference the final output timeline, not the source file
+8. **Word-level verbatim ASR only** — always use Scribe in word-level mode; never SRT/phrase mode (loses timestamp precision needed for boundary cuts)
+9. **Transcription cache** — never re-transcribes same source file; cache keyed on source path
+10. **Parallel sub-agents for animations** — animation overlay backends (HyperFrames, Remotion, Manim) must run in parallel sub-agents, never sequentially
+11. **Strategy confirmed before execution** — agent proposes edit plan, Arthur approves before any cut is made
+12. **Output in /edit/** — all outputs written to `<videos_dir>/edit/`; never writes inside the project directory
 
 ---
 

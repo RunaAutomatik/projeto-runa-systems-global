@@ -11,7 +11,15 @@
       "NotebookEdit",
       "WebSearch",
       "Edit(~/.claude/skills/create-skill/**)",
-      "Edit(~/.claude/skills/create-carousel/**)"
+      "Edit(~/.claude/skills/create-carousel/**)",
+      "Edit(~/.claude/skills/create-reel/**)",
+      "Bash(mkdir -p \"C:/Users/user/.claude/skills/runa-os-audit\")",
+      "Bash(mkdir -p \"C:/Users/user/.claude/skills/runa-intake\")",
+      "Edit(~/.claude/skills/create-post/**)",
+      "Edit(~/.claude/skills/runa-os-audit/**)",
+      "mcp__claude_ai_MCP_Higgsfield__generate_image",
+      "mcp__claude_ai_MCP_Higgsfield__job_status",
+      "mcp__claude_ai_MCP_Higgsfield__job_display"
     ],
     "deny": [
       "Bash(rm -rf .aiox-core/**)",
