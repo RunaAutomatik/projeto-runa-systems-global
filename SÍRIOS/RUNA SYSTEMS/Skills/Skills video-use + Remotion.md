@@ -57,21 +57,21 @@ Arthur grava raw footage
 ### Status
 
 ```
-⚠️ Não instalado ainda — auditoria aprovada em 2026-05-12
-✅ ELEVENLABS_API_KEY configurada no .env
-✅ ffmpeg disponível — v8.0.1 full build (CUDA, NVENC, d3d12va)
-✅ Python 3.14 disponível
-⚠️ uv não instalado — usar pip install -e .
+✅ Instalado em 2026-05-12 — ~/Developer/video-use (video-use 0.1.0)
+✅ Skill registrada — ~/.claude/skills/video-use → symlink para o repo
+✅ ELEVENLABS_API_KEY configurada — ~/Developer/video-use/.env
+✅ ffmpeg v8.0.1 full build (CUDA, NVENC, d3d12va)
+✅ Python 3.14 disponível — pip install -e . concluído
+ℹ️  uv não instalado — pip usado (funcional)
+ℹ️  yt-dlp não instalado — opcional, só necessário para fontes por URL
+ℹ️  Node.js 22+ obrigatório apenas para overlays com HyperFrames
 Repo: https://github.com/browser-use/video-use
 ```
 
-**Instalação (quando pronto):**
+**Verificação:**
 ```bash
-git clone https://github.com/browser-use/video-use ~/Developer/video-use
-ln -sfn ~/Developer/video-use ~/.claude/skills/video-use
-cd ~/Developer/video-use
-pip install -e .
-# .env já tem ELEVENLABS_API_KEY — copiar para ~/Developer/video-use/.env
+python ~/Developer/video-use/helpers/timeline_view.py --help && echo "helpers OK"
+ffprobe -version | head -1
 ```
 
 ### Como usar (workflow padrão)
@@ -114,12 +114,17 @@ claude
 ### Regras de Produção (Hard Rules do video-use)
 
 1. **Subtítulos sempre por último** no filter chain — antes dos overlays causa falha silenciosa
-2. **Cortes word-boundary** — nunca corta no meio de uma palavra
-3. **30ms padding** em cada corte — absorve drift de timestamp do Scribe
-4. **Fades de áudio** (30ms) em cada segmento — elimina pops audíveis
-5. **Estratégia confirmada antes de executar** — agente propõe, você aprova
-6. **Cache de transcrição** — nunca re-transcreve a mesma fonte
-7. **Output em `/edit/`** — nunca escreve dentro do diretório do projeto
+2. **Extração por segmento → concat lossless** — nunca use filtergraph único com múltiplos cortes; extraia cada segmento individualmente, depois concatene sem perdas
+3. **Cortes word-boundary** — nunca corta no meio de uma palavra
+4. **30ms padding em cada borda de corte** — faixa de 30–200ms; absorve drift do Scribe e evita inícios abruptos
+5. **Fades de áudio** (30ms) em cada segmento — elimina pops audíveis nas emendas
+6. **Overlays precisam de reset de PTS** — usar `setpts=PTS-STARTPTS+T/TB`; sem isso o overlay renderiza no timestamp errado
+7. **Master SRT usa offsets do output final** — timestamps das legendas devem referenciar a timeline de saída, não o arquivo fonte
+8. **ASR word-level verbatim obrigatório** — sempre usar Scribe no modo word-level; nunca SRT/phrase mode (perde precisão de timestamp necessária para cortes boundary)
+9. **Cache de transcrição** — nunca re-transcreve a mesma fonte; cache indexado pelo path do arquivo
+10. **Sub-agentes de animação em paralelo** — backends de overlay (HyperFrames, Remotion, Manim) devem rodar em sub-agentes paralelos, nunca sequenciais
+11. **Estratégia confirmada antes de executar** — agente propõe plano de edição, você aprova antes de qualquer corte
+12. **Output em `/edit/`** — todos os outputs em `<videos_dir>/edit/`; nunca escreve dentro do diretório do projeto
 
 ### Custo
 
