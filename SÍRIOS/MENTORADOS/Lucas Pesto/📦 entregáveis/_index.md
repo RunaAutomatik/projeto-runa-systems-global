@@ -11,4 +11,4 @@ Documentos, prompts, templates e ferramentas entregues ao longo da RUNA INTERVEN
 
 | # | Item | Tipo | Sessão | Status | Link |
 |---|------|------|--------|--------|------|
-| — | — | — | — | — | — |
+| 01 | Fix NotebookLM MCP — autenticação expirada | Troubleshooting guide | pré-S10 | ✅ Pronto | [[notebooklm-fix-sessao]] |
