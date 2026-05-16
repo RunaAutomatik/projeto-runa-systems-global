@@ -18,11 +18,11 @@ Never guess or reinvent — if the capability exists, use it.
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
 | ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal**, **runa-intake** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
-| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Figma, Supabase |
+| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Figma, Supabase |
 | @qa | code-review, testing-strategy, pr-review-toolkit, **gstack/review**, **gstack/cso**, **gstack/qa** | — |
 | @devops | devops-automation, commit-commands, hookify, **stop-notification**, **post-tool-format** | Netlify |
 | @architect | architecture-design, agent-workflows | — |
-| @ux-design-expert | **stitch-design**, **taste-design**, **impeccable**, ui-ux-pro-max, frontend-design | StitchMCP (⚠️ requires setup) |
+| @ux-design-expert | **taste-design**, **impeccable**, ui-ux-pro-max, frontend-design | — |
 | @data-engineer | (code tools) | Supabase |
 
 ## Tool Selection Priority (always follow this order)
@@ -150,21 +150,18 @@ infsh app run <app-id> --input '{"prompt":"..."}'
 
 ---
 
-## Google Stitch Skills (UI Design Generation)
+## taste-design Skill (Design System Generation — ACTIVE ✓)
 
-**Owner:** `@ux-design-expert` (Uma) — primary | `@dev` (Dex) — stitch-loop only
-**Rule file:** `.claude/rules/stitch-usage.md`
-**Prerequisite:** StitchMCP must be configured in `~/.claude.json` (⚠️ pending setup)
+**Owner:** `@ux-design-expert` (Uma)
+**Skill path:** `~/.claude/skills/taste-design/`
+
+Generates opinionated `DESIGN.md` files that encode visual identity, color palette, typography, component behavior, and anti-patterns. Used as the single source of truth for `@dev` when implementing UI.
 
 | Skill | When to invoke | Output |
 |-------|---------------|--------|
-| `taste-design` | First step on any new project before generating screens | `.stitch/DESIGN.md` — anti-generic design system |
-| `stitch-design` | Generate or edit a specific page/screen | `.stitch/designs/{page}.html` + screenshot |
-| `stitch-loop` | Build full multi-page site autonomously | All pages via baton system |
+| `taste-design` | Before starting any UI implementation | `DESIGN.md` — complete design system |
 
-**Decision:** "Design it" → Stitch (Uma). "Code it" → ui-ux-pro-max + @dev.
-
-**Products:** SITE$ (primary), $QUAD, CREATOR$, RUNA SYSTEMS (teaching clients).
+**Pipeline:** `taste-design (DESIGN.md) → @dev implements Next.js/Tailwind → /impeccable audit → Ship`
 
 ## Impeccable — Design Quality Skill (ACTIVE ✓)
 
@@ -181,7 +178,7 @@ infsh app run <app-id> --input '{"prompt":"..."}'
 | Browser-based iteration | `/impeccable live` | @dev |
 | Pin decisions to DESIGN.md | `/impeccable pin` | @ux-design-expert |
 
-**Pipeline slot:** `taste-design → stitch-design → impeccable audit → @dev integrates`
+**Pipeline slot:** `taste-design (DESIGN.md) → @dev implements → impeccable audit → Ship`
 Apache 2.0 — bundleable for RUNA SYSTEMS client delivery.
 
 ## Claude Code Hooks
@@ -276,7 +273,6 @@ Kill Switch triggers when ANY of: inactivity 30d, no KPI, no owner, cost > benef
 
 | Gap | Status |
 |-----|--------|
-| StitchMCP not configured | ⚠️ Pending — user must set up at labs.google.com/stitch |
 | Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
 
 ## video-use (Raw Footage Editing — ACTIVE ✓ installed 2026-05-12)

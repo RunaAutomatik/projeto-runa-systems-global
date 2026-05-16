@@ -147,8 +147,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `workflow-execution.md` | 4 primary workflows (SDC, QA Loop, Spec Pipeline, Brownfield) |
 | `product-radar.md` | Continuous product opportunity capture — everything built feeds RUNA SYSTEMS |
 | `capability-map.md` | Tool/skill/MCP assignment per agent and product — check before executing any task |
-| `stitch-usage.md` | Google Stitch design generation — when/how/who uses stitch-design, stitch-loop, taste-design |
-| `impeccable-usage.md` | Impeccable design quality — 23 commands, 27 anti-pattern detection, Stitch DESIGN.md compatible, pre-commit CLI (@devops), @ux-design-expert primary |
+| `impeccable-usage.md` | Impeccable design quality — 23 commands, 27 anti-pattern detection, DESIGN.md compatible, pre-commit CLI (@devops), @ux-design-expert primary |
 | `carousel-workflow.md` | Mandatory 6-step protocol for all carousel creation (FREYJA brief → pin.md → hub → keywords → instructions → commit) |
 | `inference-sh-usage.md` | inference.sh skills (MAYA image/video/audio, FREYJA content, ARES intel) — app IDs, patterns, anti-patterns |
 | `language-policy.md` | English for all internal docs/inter-agent communication; Portuguese only for direct user interaction |
@@ -165,6 +164,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `obsidian-document-governance.md` | Anti-duplication protocol — check-before-create, document taxonomy (Skills/Templates/MENTORADOS), naming conventions |
 | `video-use-usage.md` | video-use skill — raw footage editing (filler removal, color grade, subtitles via FFmpeg + ElevenLabs Scribe); MAYA primary; when/not to use vs Higgsfield/muapi/Remotion |
 | `conversion-post-protocol.md` | Mandatory 4-element rule — every Instagram post must have keyword + Zernio automation + entregável + checkout link before publishing. FREYJA + HERMES + @devops. Single product: RUNA R$ 7.000 |
+| `runa-os-vault.md` | RUNA OS platform vault (`RUNA OS/`) — documentation governance, Karpathy LLM Wiki structure, graphify + wiki-self-heal schedule, what goes here vs SÍRIOS |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->

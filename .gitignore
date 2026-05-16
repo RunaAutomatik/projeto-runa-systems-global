@@ -87,3 +87,4 @@ graphify-out/
 # Temp and generated caches
 .tmp/
 AKASHA/.ingest-cache.json
+.gstack/
