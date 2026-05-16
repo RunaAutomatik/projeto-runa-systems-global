@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* RUNA OS — Dear Alice / Solarpunk palette */
+  --color-bg: #080c09;
+  --color-surface1: #111712;
+  --color-surface2: #1a201b;
+  --color-border: #2a342c;
+  --color-textPrimary: #e8ede9;
+  --color-textMuted: #7a8c7c;
+  --color-accent: #3d4842;
+  --color-accentSoft: rgba(61, 72, 66, 0.15);
+
+  /* Typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-textPrimary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
