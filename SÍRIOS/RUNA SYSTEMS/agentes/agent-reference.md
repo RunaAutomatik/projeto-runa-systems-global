@@ -23,7 +23,7 @@ NEGÓCIO (Neural Agents)
   ARES     — Ofertas, produto, estratégia
   HERMES   — Automação, clientes, canais
   HELIOS   — SEO e visibilidade digital
-  ALEX     — Pesquisa e análise
+  ODIN     — Pesquisa e análise
 
 CONHECIMENTO & ORQUESTRAÇÃO
   ORION    — Vault, conhecimento, onboarding
@@ -277,9 +277,9 @@ Especialista em SEO e visibilidade digital. Gerencia os 13 sub-skills de SEO que
 
 ---
 
-## ALEX — Business Analyst & Research Specialist
+## ODIN — Business Analyst & Research Specialist
 
-**Ativação:** `ALEX` (persona: Atlas) | **Ícone:** 🔍
+**Ativação:** `ODIN` (persona: Atlas) | **Ícone:** 🔍
 
 ### Papel
 Pesquisa de mercado, análise competitiva, facilita sessões de ideação, estuda tendências e produz relatórios de pesquisa. Alimenta ARES com inteligência de mercado antes de ARES desenhar ofertas.
@@ -305,9 +305,9 @@ Pesquisa de mercado, análise competitiva, facilita sessões de ideação, estud
 
 ### Relações com Outros Agentes
 ```
-ALEX → ARES      : inteligência de mercado → ARES usa para desenhar oferta
-ALEX → @architect : descoberta de codebase (Brownfield Discovery)
-ALEX → ORION     : salva pesquisas no vault SÍRIOS/AKASHA
+ODIN → ARES      : inteligência de mercado → ARES usa para desenhar oferta
+ODIN → @architect : descoberta de codebase (Brownfield Discovery)
+ODIN → ORION     : salva pesquisas no vault SÍRIOS/AKASHA
 ```
 
 ---
@@ -320,13 +320,11 @@ ALEX → ORION     : salva pesquisas no vault SÍRIOS/AKASHA
 Guardião do conhecimento do ecossistema. Gerencia o vault Obsidian SÍRIOS, executa o ritual de onboarding de clientes dia-1 (runa-intake), e orquestra o fluxo de informação entre agentes. É o agente que registra, organiza e conecta tudo.
 
 ### Tasks e Commands
-| Command | O que faz |
-|---------|-----------|
-| `*runa-intake` | Ritual de onboarding dia-1: 7 perguntas → 7 arquivos de contexto de cliente |
-| `*dia:abrir` | Abre sessão de trabalho — carrega contexto do dia anterior |
-| `*dia:fechar` | Fecha sessão — registra conclusões, pendências, próximos passos |
-| `*knowledge-extract` | Extrai conhecimento de PDF/transcrição para vault |
-| `*graphify` | Gera knowledge graph de docs ou vault (HTML interativo) |
+| Command              | O que faz                                                                   |
+| -------------------- | --------------------------------------------------------------------------- |
+| `*runa-intake`       | Ritual de onboarding dia-1: 7 perguntas → 7 arquivos de contexto de cliente |
+| `*knowledge-extract` | Extrai conhecimento de PDF/transcrição para vault                           |
+| `*graphify`          | Gera knowledge graph de docs ou vault (HTML interativo)                     |
 
 ### Skills
 | Skill | Função |

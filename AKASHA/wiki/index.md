@@ -38,6 +38,7 @@ Each entry: `- [[page-name]] — one-line summary`
 
 - [[high-ticket-instagram-patterns]] — cross-creator synthesis: 6 universal patterns across Doug/Sarah/Carol; implications for @arthsystems_
 - [[arthsystems-repositioning-roadmap]] — 90-day execution roadmap for @arthsystems_: phase-by-phase plan (Phase 0 infra → Phase 1 foundation posts → Phase 2 growth → Phase 3 funnel) synthesizing all wiki concepts into FREYJA-ready instructions
+- [[ares-offer-architecture-synthesis]] — ARES reasoning system: 5 offer frameworks (Hormozi Value Equation + Grand Slam, Pieri RECA/RALOCA/RADOVECA + Specialist/DNB, Brunson Value Ladder + Secret Formula, Ladeira Marketing de Premissas), 8 RAG chunks, procedures for *consult and *audit-offer
 
 ## Audits
 

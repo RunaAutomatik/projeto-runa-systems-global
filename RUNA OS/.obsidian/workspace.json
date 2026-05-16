@@ -1,56 +1,37 @@
 {
   "main": {
-    "id": "fd37a67e637e4742",
+    "id": "3534176f72e13ce2",
     "type": "split",
     "children": [
       {
-        "id": "022c001df7b2616e",
+        "id": "f5f5b1e928ee7bd3",
         "type": "tabs",
         "children": [
           {
-            "id": "56837363f66b93f7",
+            "id": "4a28e0e7ff485466",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "📖 Base de Estudo/📚 Claude Code Source/03-skills-native.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "03-skills-native"
-            }
-          },
-          {
-            "id": "79a8dc77e8d9ccf0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "CLAUDE.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "CLAUDE"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "b554cd8551ff2b9d",
+    "id": "782dc2cd170c5c1a",
     "type": "split",
     "children": [
       {
-        "id": "f598870e2bd2f257",
+        "id": "8f1a9ff4c6337a65",
         "type": "tabs",
         "children": [
           {
-            "id": "0ea6c9f2f53a93e7",
+            "id": "2ff66b1c6533a4c7",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -63,7 +44,7 @@
             }
           },
           {
-            "id": "ee286dc18b9690a4",
+            "id": "c85dc5e71f4989ef",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -76,17 +57,17 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Procurar"
             }
           },
           {
-            "id": "0364fe5774c9f811",
+            "id": "e352231801a9b10d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "Marcadores"
             }
           }
         ]
@@ -96,15 +77,15 @@
     "width": 300
   },
   "right": {
-    "id": "20ab54abe890a8db",
+    "id": "6db51ffe40e6421c",
     "type": "split",
     "children": [
       {
-        "id": "a4989e7610ca98ef",
+        "id": "e62490278a5abd55",
         "type": "tabs",
         "children": [
           {
-            "id": "b6165f6365d0c0e4",
+            "id": "94c897a289451a90",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -118,11 +99,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Links inversos"
             }
           },
           {
-            "id": "cb91934b137c4323",
+            "id": "b5bd1894d045ff21",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -131,11 +112,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Links de saída"
             }
           },
           {
-            "id": "9ebbc07ef1b0b9b5",
+            "id": "c47af32c2e69648d",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -146,11 +127,11 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "Etiquetas"
             }
           },
           {
-            "id": "48d52c3973b7701a",
+            "id": "dc18419316bf8954",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -160,11 +141,11 @@
                 "searchQuery": ""
               },
               "icon": "lucide-archive",
-              "title": "All properties"
+              "title": "Todas as propriedades"
             }
           },
           {
-            "id": "558b30fe0f021479",
+            "id": "0be2395cf681b91c",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -174,7 +155,7 @@
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Sumário"
             }
           }
         ]
@@ -195,43 +176,16 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "79a8dc77e8d9ccf0",
+  "active": "4a28e0e7ff485466",
   "lastOpenFiles": [
-    "AGENTS.md",
-    "wiki/analyses/ares-offer-architecture-synthesis.md",
-    "📖 Base de Estudo/📚 Claude Code Source/03-skills-native.md",
-    "raw/2026-04-30-teste.md",
-    "raw/2026-04-30-teste-2.md",
-    "raw/2026-04-30-3-instagram.md",
-    "raw/2026-04-30-nashsullm-wiki-llm-wiki-is-a-cross-platform-desktop-applicat.md",
-    "📖 Base de Estudo/📚 Claude Code Source/02-tools-complete.md",
-    "📖 Base de Estudo/📚 Claude Code Source/01-architecture-overview.md",
-    "📖 Base de Estudo/📚 Claude Code Source/00-index.md",
-    "📖 Base de Estudo/📚 Claude Code Source/10-runa-action-plan.md",
-    "CLAUDE.md",
-    "wiki/log.md",
-    "wiki/index.md",
-    "wiki/hot.md",
-    "🔗 Index/knowledge-base-index.md",
-    "🧠 Agent Knowledge Maps/freyja-content-strategy.md",
-    "📚 Everton Pieri/sales-frameworks-reca-raloca.md",
-    "📚 Everton Pieri/Metodo-Anjos.md",
-    "📚 Everton Pieri/Profile.md",
-    "wiki/sources/instagram-market-analysis-2026-03.md",
-    "wiki/sources/ia-conteudo-premium-video.md",
-    "wiki/sources/doug-extraction-principles-2026-03.md",
-    "wiki/sources/creator-tracking-list.md",
-    "wiki/sources/conversion-framework-cta.md",
-    "wiki/analyses/arthsystems-repositioning-roadmap.md",
-    "wiki/audits",
-    "📖 Base de Estudo/📚 Claude Code Source",
-    "📚 Everton Pieri",
-    "📚 Leandro Ladeira VTSD",
-    "📚 Russell Brunson",
-    "📚 Alex Hormozi/YouTube Videos",
-    "📚 Alex Hormozi/Twitter",
-    "📚 Alex Hormozi/Shorts",
-    "📚 Alex Hormozi/Podcasts",
-    "📚 Alex Hormozi/Misc"
+    "wiki/analyses/epic-04-admin-stripe.md",
+    "wiki/analyses/epic-03-mentee-dashboard.md",
+    "wiki/analyses/epic-02-content-library.md",
+    "wiki/analyses/epic-01-foundation.md",
+    "📐 Projetos/plataforma-runa-prd.md",
+    "Bem-vindo.md",
+    "wiki/analyses",
+    "wiki",
+    "📐 Projetos"
   ]
 }

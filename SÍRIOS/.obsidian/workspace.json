@@ -11,13 +11,46 @@
             "id": "411b63751344963e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "type": "markdown",
+              "state": {
+                "file": "RUNA SYSTEMS/worker-deployment-protocol.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "worker-deployment-protocol"
+            }
+          },
+          {
+            "id": "af749919101d9018",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RUNA SYSTEMS/agentes/agent-reference.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "agent-reference"
+            }
+          },
+          {
+            "id": "ddfa23e7054b6a7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RUNA SYSTEMS/Skills/Skills RUNA OS.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Skills RUNA OS"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -49,7 +82,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#runa-intervencao",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -150,19 +183,33 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "RUNA SYSTEMS/Skills/Skills LLM Wiki.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário"
+              "title": "Sumário de Skills LLM Wiki"
+            }
+          },
+          {
+            "id": "36cb58b445a43508",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "RUNA SYSTEMS/Skills/Skills LLM Wiki.md"
+              },
+              "icon": "lucide-info",
+              "title": "Propriedades do arquivo Skills LLM Wiki"
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -178,56 +225,56 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "bb69bff0b7ff7df2",
+  "active": "ddfa23e7054b6a7f",
   "lastOpenFiles": [
-    "RUNA SYSTEMS/Diário/template-diario.md",
-    "RUNA SYSTEMS/MODULO CREATOR/templates/storyboard-template.md",
-    "RUNA SYSTEMS/Diário/2026-04-29.md",
-    "RUNA SYSTEMS/Diário/2026-04-03.md",
-    "RUNA SYSTEMS/Diário/2026-04-02.md",
-    "RUNA SYSTEMS/Diário/2026-03-31.md",
-    "RUNA SYSTEMS/Diário/2026-03-30.md",
-    "RUNA SYSTEMS/Diário/2026-03-29.md",
-    "RUNA SYSTEMS/Diário/2026-03-25.md",
-    "RUNA SYSTEMS/Diário/2026-03-19.md",
-    "RUNA SYSTEMS/Diário/2026-03-18.md",
-    "RUNA SYSTEMS/sistema/temporadas/q2-2026/temporada-q2-2026.md",
+    "RUNA SYSTEMS/worker-deployment-protocol.md",
+    "RUNA SYSTEMS/tooling-inventory.md",
+    "RUNA SYSTEMS/plano-repos-infra-didatico-2026-04-18.md",
+    "RUNA SYSTEMS/Skills/Skills LLM Wiki.md",
+    "RUNA SYSTEMS/Skills/Skills graphify.md",
+    "RUNA SYSTEMS/agentes/agent-reference.md",
+    "RUNA SYSTEMS/_INDEX.md",
+    "RUNA SYSTEMS/positioning-audit-2026-04-08.md",
+    "RUNA SYSTEMS/runa-brand-identity-system.md",
+    "RUNA SYSTEMS/runa-systems-business-context.md",
+    "RUNA SYSTEMS/runa-systems-hub.md",
+    "RUNA SYSTEMS/capability-map.md",
+    "🏠 _hub.md",
+    "intervencao-hub.md",
+    "📚 Referências/audit-startse-ai-journey-copy-2026-05-15.md",
+    "RUNA SYSTEMS/Skills/Skills Impeccable.md",
+    "RUNA SYSTEMS/Skills/Skills Dev.md",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/lockup-400x80.png",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/watermark-800.png",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/lockup.svg",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/glyph-dark-512.png",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/avatar.svg",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/avatar-512.png",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/avatar-200.png",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/glyph.svg",
+    "RUNA SYSTEMS/Skills/Skills SEO.md",
+    "RUNA SYSTEMS/Skills/Skills Index.md",
+    "RUNA SYSTEMS/Skills/Skills Plugins.md",
+    "RUNA SYSTEMS/Skills/stitch-skills.md",
+    "RUNA SYSTEMS/Skills/Skills video-use + Remotion.md",
+    "RUNA SYSTEMS/Skills/Skills Skill.md",
+    "RUNA SYSTEMS/Skills/Skills RUNA OS.md",
+    "RUNA SYSTEMS/Skills/Skills gstack.md",
+    "MENTORADOS/Lucas Pesto/📦 entregáveis/notebooklm-fix-sessao.md",
+    "RUNA SYSTEMS/Templates",
+    "MENTORADOS/Lucas Pesto/artefatos/tasks",
+    "MENTORADOS/Lucas Pesto/_hub.md.tmp.19988.1778099194426",
+    "MENTORADOS/Lucas Pesto/_hub.md.tmp.19988.1778099171362",
+    "📐 Projetos/arthur-brand-kit/soul.json",
+    "📐 Projetos/arthur-brand-kit",
+    "📐 Projetos",
+    "MENTORADOS/Lucas Pesto/artefatos/skills/higgsfield-generate",
+    "MENTORADOS/Lucas Pesto/artefatos/skills/ensaio-fotografico",
+    "MENTORADOS/Lucas Pesto/artefatos/skills",
     "RUNA SYSTEMS/sistema/temporadas/q2-2026/temporada-q2-2026-produtos.canvas",
     "RUNA SYSTEMS/sistema/temporadas/q2-2026/temporada-q2-2026-funil.canvas",
-    "RUNA SYSTEMS/sistema/teia-de-produtos.md",
-    "RUNA SYSTEMS/sistema/product-catalog.md",
-    "RUNA SYSTEMS/sistema/otimizacoes-claude-code.md",
-    "RUNA SYSTEMS/sistema/orquestrador/README.md",
-    "RUNA SYSTEMS/sistema/orquestrador/memoria-sistema.md",
-    "RUNA SYSTEMS/sistema/arquitetura/_index.md",
-    "RUNA SYSTEMS/sistema/arquitetura/squad-architecture.md",
-    "RUNA SYSTEMS/sistema/arquitetura/content-pipeline-architecture.md",
-    "RUNA SYSTEMS/sistema/arquitetura/content-automation-architecture.md",
-    "RUNA SYSTEMS/capability-map.md",
-    "_deprecated/agentes-pre-aiox/agents-deploy-links.md",
-    "_deprecated/agentes-pre-aiox/orion.md",
-    "_deprecated/agentes-pre-aiox/hermes.md",
-    "_deprecated/agentes-pre-aiox/helios.md",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/watermark-800.png",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/lockup.svg",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/lockup-400x80.png",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/glyph.svg",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/glyph-dark-512.png",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/glyph-512.png",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/avatar.svg",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/avatar-512.png",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/avatar-200.png",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/_export-source.html",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/posts/posts",
+    "RUNA SYSTEMS/CREATOR/@arthsystems_/brand-assets/glyph-512.png",
     "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/brand-assets/lockup-400x80.png",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/brand-assets/_export-source.html",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets/brand-assets",
-    "RUNA SYSTEMS/MODULO FLOW/hook-scraper-weekly/workflow.json",
-    "_deprecated/agentes-pre-aiox",
-    "RUNA SYSTEMS/MODULO CREATOR/templates",
-    "RUNA SYSTEMS/MODULO CREATOR/Campanhas",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/posts",
-    "RUNA SYSTEMS/MODULO CREATOR/@arthsystems_/brand-assets",
     "🧠 SISTEMA/temporadas/q2-2026/temporada-q2-2026-produtos.canvas",
     "🧠 SISTEMA/temporadas/q2-2026/temporada-q2-2026-funil.canvas",
     "📐 Projetos/temporada-q2-2026-produtos.canvas",

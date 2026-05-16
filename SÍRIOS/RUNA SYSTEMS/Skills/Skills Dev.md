@@ -94,7 +94,7 @@ project: runa-systems-global
 ### Ativação
 - **Comando:** A skill ativa automaticamente para @devops (Gage)
 - **Para que serve:** CI/CD, pipeline de deploy, gerenciamento de branches, configuração de infraestrutura, Netlify deploys
-- **Caso de uso RUNA:** Configurar deploy automático do Command Center via Netlify, gerenciar branches de feature para os workers do ecossistema
+- **Caso de uso RUNA:** Configurar deploy automático do Site via Netlify, gerenciar branches de feature para os workers do ecossistema
 
 ---
 
@@ -103,7 +103,7 @@ project: runa-systems-global
 ### Ativação
 - **Comando:** A skill ativa automaticamente para @pm (Morgan) no Spec Pipeline
 - **Para que serve:** Transformar requisitos informais em especificações executáveis com critérios de aceitação, requisitos funcionais e não-funcionais, constraints
-- **Caso de uso RUNA:** Escrever spec formal para o FFmpeg compositor (Story 1.1), para o sistema de publicação automática de carousels, para o Command Center V3
+- **Caso de uso RUNA:** Escrever spec formal para o FFmpeg compositor (Story 1.1), para o sistema de publicação automática de carousels
 
 ---
 
