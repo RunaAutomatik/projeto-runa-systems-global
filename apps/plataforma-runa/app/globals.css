@@ -1,24 +1,52 @@
 @import "tailwindcss";
 
-@theme inline {
-  /* RUNA OS — Dear Alice / Solarpunk palette */
-  --color-bg: #080c09;
-  --color-surface1: #111712;
-  --color-surface2: #1a201b;
-  --color-border: #2a342c;
-  --color-textPrimary: #e8ede9;
-  --color-textMuted: #7a8c7c;
-  --color-accent: #3d4842;
-  --color-accentSoft: rgba(61, 72, 66, 0.15);
+/* ── Forest theme (dark — dashboard mentee + admin) ─────────────────── */
+.theme-forest {
+  --bg: #080c09;
+  --surface-1: #111712;
+  --surface-2: #1a201b;
+  --border: #2a342c;
+  --text: #e8ede9;
+  --muted: #7a8c7c;
+  --accent: #3d4842;
+  --accent-soft: rgba(61, 72, 66, 0.15);
+  --accent-tech: transparent;
+}
 
-  /* Typography */
+/* ── Papel theme (light/cream — landing page pública) ───────────────── */
+.theme-papel {
+  --bg: #f8f5ef;
+  --surface-1: #ffffff;
+  --surface-2: #f0ede6;
+  --border: #d4cfc6;
+  --text: #1a2219;
+  --muted: #6b7280;
+  --accent: #e8a13a;
+  --accent-soft: rgba(232, 161, 58, 0.12);
+  --accent-tech: #4abfcc;
+}
+
+/* ── Tailwind v4 token mapping ──────────────────────────────────────── */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-tech: var(--accent-tech);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-outfit: var(--font-outfit-var);
 }
 
 body {
-  background: var(--color-bg);
-  color: var(--color-textPrimary);
+  background: var(--bg);
+  color: var(--text);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
