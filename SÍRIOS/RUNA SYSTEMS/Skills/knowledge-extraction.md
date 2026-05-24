@@ -57,7 +57,7 @@ Based on the "Framework Universal de Extração e Estruturação de Conhecimento
 ```
 Source content
   → ORION *extract-knowledge (mode selection)
-  → AKASHA vault (C:/runa-systems-global/AKASHA/)
+  → AKASHA vault (D:/Runa/runa-systems-global/AKASHA/)
   → [optional] ALEX ai-rag-pipeline
   → [optional] notebooklm-mcp
   → Agents consume via memory or RAG query

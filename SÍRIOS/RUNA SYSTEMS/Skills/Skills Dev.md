@@ -7,7 +7,7 @@ project: runa-systems-global
 # Skills Dev — Desenvolvimento, Design e Arquitetura
 
 > Skills do projeto AIOX para desenvolvimento, design de interface, vídeo e arquitetura
-> Localização: `c:/runa-systems-global/.claude/skills/`
+> Localização: `D:/Runa/runa-systems-global/.claude/skills/`
 
 ---
 

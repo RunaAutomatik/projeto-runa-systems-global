@@ -90,7 +90,7 @@ Gera grafo de todo o vault: produtos, agentes, projetos, stories — revela lacu
 
 ### 2. Arquitetura do codebase
 ```
-/graphify c:/runa-systems-global/apps/command-center/src/
+/graphify D:/Runa/runa-systems-global/apps/command-center/src/
 ```
 Mapa de dependências entre componentes React + workers. ALEX usa para onboarding em código não familiar. @architect usa para decisões de refactor.
 

@@ -7,7 +7,7 @@ project: runa-systems-global
 # Skills Obsidian — Gestão do Conhecimento
 
 > Agente exclusivo de escrita: ORION
-> Vault: `C:/runa-systems-global/SÍRIOS/` | API: `https://localhost:27124`
+> Vault: `D:/Runa/runa-systems-global/SÍRIOS/` | API: `https://localhost:27124`
 > Todos os documentos do projeto vivem aqui — Obsidian é a fonte de verdade
 
 ---

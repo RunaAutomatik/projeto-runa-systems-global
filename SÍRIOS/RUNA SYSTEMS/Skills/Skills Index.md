@@ -1,235 +1,205 @@
 ---
-date: 2026-04-24
-tags: [skills, index, hub, capacidades]
+date: 2026-05-24
+tags: [skills, index, hub, capabilities]
 project: runa-systems-global
+type: skill-doc
 ---
 
-# Skills Index — Mapa Completo de Capacidades
+# Skills Index — Capability Map
 
-> Tudo que o ecossistema Runa Systems Global é capaz de fazer.
-> Cada documento abaixo contém: comandos, para que serve, e caso de uso real.
-
----
-
-## Documentos de Skills
-
-| Documento | Capacidades | Agente Principal |
-|-----------|-------------|-----------------|
-| [[Skills inference-sh]] | Imagem, vídeo, voz, avatar, música, transcrição, LLMs, Twitter | FREYJA, HERMES, ARES |
-| [[Skills SEO]] | SEO técnico, conteúdo, schema, sitemap, AI search | HELIOS |
-| [[Skills Obsidian]] | Vault, notas, bases de dados, canvas, extração web | ORION |
-| [[Skills Dev]] | UI/UX, frontend, arquitetura, código, deploy | @dev, @architect, @devops |
-| [[Skills AIOX]] | Sistema de 10 agentes + master, SDC workflow | Todos os agentes |
-| [[Skills Plugins]] | Commits, code review, hooks, SDK, segurança | @devops, @qa |
-| [[Skills Claude Code]] | Configuração, Stitch, extração, memória PARA, Agent SDK | @dev, @ux-design-expert, ORION |
-| [[stitch-skills]] | taste-design + stitch-design + stitch-loop — pipeline completo de UI generation | @ux-design-expert (Uma), @dev (Dex) |
-| [[Skills Impeccable]] | 23 comandos de refinamento + 27 anti-patterns + CLI pre-commit — auditor de qualidade visual de UI | @ux-design-expert (Uma), @devops (Gage) |
-| [[Skills Muapi Studio]] | Lip Sync Studio (9 modelos), Extended Video (Veo 3.1/Sora 2/Wan 2.6), GPT-4o edit, MJ v7, Marketing VIP 1080p — capacidades exclusivas sem equivalente no stack | MAYA (primário) |
-| [[Skills gstack]] | 23 skills de engenharia virtual: /office-hours, /autoplan, /review, /qa, /browse, /cso | @dev, @qa, ARES, HERMES |
-| [[Skills graphify]] | Knowledge graph de qualquer input: código, vault, docs, texto — HTML interativo + relatório + export Obsidian | ORION, ALEX, @architect |
-| [[Skills RUNA OS]] | Diagnóstico Four Cs de prospect (/runa-os-audit) + Onboarding dia 1 (/runa-intake) — qualificação e setup de squad | ARES, ORION |
-| [[Skills Higgsfield MCP]] | 14 tools de geração cinematográfica direta: generate_video, generate_image, job tracking, media library, marketing studio | MAYA (primário) |
-| [[Skills Higgsfield CLI]] | higgsfield-generate (30+ modelos imagem+vídeo+Marketing Studio), higgsfield-soul-id (Soul Character), higgsfield-product-photoshoot (10 modos produto, gpt_image_2) | MAYA |
-| [[Skills LLM Wiki]] | llm-wiki-setup + wiki-self-heal + Chrome Web Clipper + AKASHA Clip Server — knowledge base Karpathy pattern sobre qualquer input | ORION |
-| [[notebooklm-mcp-install-guide]] | Instalação e configuração do NotebookLM MCP no Claude Code — sessões, fontes, perguntas, audio overview | ORION, ALEX, FREYJA |
+> Every capability this ecosystem can execute, organized by agent.
+> "Quero fazer X" → find the task below → open the linked document.
 
 ---
 
-## Por Tarefa — Lookup Rápido
+## Agent Files
 
-### Quero criar uma imagem
-→ [[Skills inference-sh]] → seção GERAÇÃO DE IMAGEM
+| Agent | Persona | Skills Document |
+|-------|---------|----------------|
+| **@aiox-master** | Orion | [[Skills Agentes AIOX]] |
+| **ARES** | — | [[Skills ARES Aquisição]] |
+| **FREYJA** | — | [[Skills FREYJA Conteúdo]] |
+| **MAYA** | — | [[Skills MAYA Produção AV]] |
+| **HERMES** | — | [[Skills HERMES Automação]] |
+| **HELIOS** | — | [[Skills HELIOS SEO]] |
+| **ORION** | — | [[Skills ORION Knowledge]] |
+| **@dev** | Dex | [[Skills Dev]] · [[Skills Dev Plataforma]] |
+| **@devops + @qa** | Gage · Quinn | [[Skills DevOps QA]] |
+| **@ux-design-expert** | Uma | [[Skills Design UI]] |
+| Cross-agent | — | [[Skills gstack]] · [[Skills graphify]] · [[Skills LLM Wiki]] · [[Skills Obsidian]] |
+| Reference docs | — | [[stitch-skills]] · [[knowledge-extraction]] |
 
-### Quero criar um vídeo
-→ [[Skills Higgsfield MCP]] → `generate_video` (Tier 0 — primário)
-→ [[Skills inference-sh]] → seção GERAÇÃO DE VÍDEO (Tier 1 fallback)
+---
 
-### Quero criar narração ou voz
-→ [[Skills inference-sh]] → seção VOZ / TTS
+## Por Tarefa — Quick Lookup
 
-### Quero criar um apresentador virtual (avatar que fala)
-→ [[Skills inference-sh]] → seção AVATAR / TALKING HEAD
+### Imagem
+→ [[Skills MAYA Produção AV]] — Higgsfield gpt_image_2, nano-banana-2, background-removal
+→ [[Skills MAYA Produção AV]] → seção Higgsfield CLI/MCP para cenas com Arthur + referências
 
-### Quero criar música para um vídeo
-→ [[Skills inference-sh]] → seção MÚSICA
+### Vídeo
+→ [[Skills MAYA Produção AV]] → Higgsfield MCP `generate_video` (Tier 0)
+→ [[Skills MAYA Produção AV]] → seedance-2, muapi extended video (fallbacks)
 
-### Quero transcrever um áudio ou vídeo
-→ [[Skills inference-sh]] → seção ÁUDIO / TRANSCRIÇÃO
+### Voz / TTS / Áudio
+→ [[Skills MAYA Produção AV]] → seção Audio: elevenlabs-tts, dialogue, music
 
-### Quero usar um LLM (Claude, Gemini, Kimi)
-→ [[Skills inference-sh]] → seção LLMs
+### Lip sync (animar rosto com áudio)
+→ [[Skills MAYA Produção AV]] → muapi: `infinitetalk-image-to-video` / `wan2.2-speech-to-video` (PT-BR)
 
-### Quero automatizar o Twitter/X
-→ [[Skills inference-sh]] → seção TWITTER / X
+### Edição de footage real (filler removal, color grade, subtitles)
+→ [[Skills MAYA Produção AV]] → video-use skill
 
-### Quero melhorar o SEO do site
-→ [[Skills SEO]] → /seo audit ou /seo technical
+### Editar imagem com instrução de texto (GPT-4o edit, MJ v7)
+→ [[Skills MAYA Produção AV]] → muapi: `gpt4o-edit` / `midjourney-v7-omni-reference`
 
-### Quero criar conteúdo SEO
-→ [[Skills SEO]] → /seo content, /seo page, /seo plan
+### Vídeo de produto 1080p com avatar e referências
+→ [[Skills MAYA Produção AV]] → muapi: `sd-2-vip-omni-reference-1080p`
 
-### Quero salvar algo no Obsidian
-→ [[Skills Obsidian]] → obsidian-cli
+### Identidade visual de marca completa (Agency Pipeline — 12 skills)
+→ [[Skills ARES Aquisição]] → `/creative-brief` — onboarding de cliente (Step 1)
+→ [[Skills MAYA Produção AV]] → `/paleta-cores` — paleta de cores com Higgsfield (Step 2)
+→ [[Skills MAYA Produção AV]] → `/logomarca` — logo gerado com gpt_image_2 + refs (Step 3a)
+→ [[Skills Design UI]] → `/tipografia` — font pairing + specimen HTML interativo (Step 3b)
+→ [[Skills MAYA Produção AV]] → `/mock-corporativo` — mockup papelaria e cartão (Step 4a)
+→ [[Skills MAYA Produção AV]] → `/mock-produto` — mockup embalagem/produto (Step 4b)
+→ [[Skills MAYA Produção AV]] → `/mock-ambiente` — mockup lifestyle/ambiente (Step 4c)
+→ [[Skills MAYA Produção AV]] → `/moodboard` — moodboard 4 imagens Higgsfield (Step 5)
+→ [[Skills Design UI]] → `/moodboard-to-motion` — prompt para claude.ai/design animar (Step 6)
+→ [[Skills MAYA Produção AV]] → `/lp-builder` — landing page com brand system (Step 7)
+→ [[Skills DevOps QA]] → `/arte-final` — preflight: DPI, CMYK, sangria, fontes (Step 8)
 
-### Quero criar um banco de dados visual
-→ [[Skills Obsidian]] → obsidian-bases
+### Converter skill de claude.ai → Claude Code
+→ [[Skills Agentes AIOX]] → `/skill-converter` — converte SKILL.md single-file → pasta com scripts/ + references/
 
-### Quero criar um mapa visual de conceitos
-→ [[Skills Obsidian]] → json-canvas
+### Design system completo (taste-design → stitch → impeccable)
+→ [[Skills Design UI]] → pipeline: `/taste-design` → `/stitch-design` → `/stitch-loop` → `/impeccable`
 
-### Quero criar uma interface ou landing page
-→ [[Skills Dev]] → ui-ux-pro-max, frontend-design
+### Auditoria de qualidade visual de UI gerada por IA
+→ [[Skills Design UI]] → `/impeccable audit`, `npx impeccable detect`
 
-### Quero transformar um vídeo em site animado
-→ [[Skills Dev]] → video-to-website
+### SEO técnico, conteúdo, schema, sitemap, AI search
+→ [[Skills HELIOS SEO]] — 13 sub-skills
 
-### Quero revisar código antes de publicar
-→ [[Skills Plugins]] → /pr-review-toolkit:review-pr
+### Conteúdo (posts, carousel, copy, hooks, ads-dna)
+→ [[Skills FREYJA Conteúdo]] — content-repurposing, linkedin-content, seo-content
 
-### Quero fazer commit e abrir PR
-→ [[Skills Plugins]] → /commit-push-pr
+### Automação Instagram / WhatsApp (DMs, triggers, sequências)
+→ [[Skills HERMES Automação]] — n8n-mcp, Zernio API, comment automations
 
-### Quero criar um hook para prevenir comportamento errado
-→ [[Skills Plugins]] → /hookify
+### Diagnosticar o nível AI de um prospect (Four Cs)
+→ [[Skills ARES Aquisição]] → `/runa-os-audit`
 
-### Quero ativar um agente especializado
-→ [[Skills AIOX]] → seção do agente desejado
+### Qual produto RUNA recomendar para um prospect
+→ [[Skills ARES Aquisição]] → tabela Score → Produto (0–25 / 26–50 / 51–75 / 76–100)
 
-### Quero configurar hook ou permissão no Claude Code
-→ [[Skills Claude Code]] → `/update-config`
+### Onboarding dia 1 — novo cliente RUNA SYSTEMS
+→ [[Skills ARES Aquisição]] → `/runa-intake`
 
-### Quero extrair conteúdo de página web
-→ [[Skills Claude Code]] → `/defuddle`
+### Capturar voice DNA e contexto de negócio de um cliente
+→ [[Skills ARES Aquisição]] → `/runa-intake` Q2 → `references/voice.md`
 
-### Quero processar PDF ou transcrição para base de conhecimento
-→ [[Skills Claude Code]] → `/knowledge-extraction`
+### Identificar primeiro candidato EAD de um cliente
+→ [[Skills ARES Aquisição]] → `/runa-intake` Q7 → `context/pain-ead.md`
 
-### Quero visualizar relações entre documentos/código como grafo
-→ [[Skills graphify]] → `/graphify <pasta ou arquivo>`
-
-### Quero descobrir clusters temáticos no vault ou codebase
-→ [[Skills graphify]] → `/graphify` + output HTML interativo
-
-### Quero encontrar o caminho entre dois conceitos/módulos
-→ [[Skills graphify]] → `/graphify path <A> <B>`
-
-### Quero validar uma ideia de produto antes de codar
-→ [[Skills gstack]] → `/office-hours`
-
-### Quero fazer code review com dois modelos em paralelo
-→ [[Skills gstack]] → `/review`
-
-### Quero QA com browser real (Chromium)
-→ [[Skills gstack]] → `/qa` + `/browse`
-
-### Quero pipeline de planning automático sem interrupções
-→ [[Skills gstack]] → `/autoplan`
-
-### Quero security audit (OWASP + STRIDE)
-→ [[Skills gstack]] → `/cso`
-
-### Quero diagnosticar o nível AI de um prospect
-→ [[Skills RUNA OS]] → `/runa-os-audit`
-
-### Quero saber qual produto RUNA recomendar para um prospect
-→ [[Skills RUNA OS]] → `/runa-os-audit` → tabela Score → Produto
-
-### Quero fazer onboarding de um novo cliente RUNA SYSTEMS
-→ [[Skills RUNA OS]] → `/runa-intake`
-
-### Quero capturar o voice DNA e contexto de negócio de um cliente
-→ [[Skills RUNA OS]] → `/runa-intake` → `references/voice.md` + `context/`
-
-### Quero identificar o primeiro candidato EAD de um cliente
-→ [[Skills RUNA OS]] → `/runa-intake` → Q7 → `context/pain-ead.md`
-
-### Quero criar um design system para projeto (Stitch)
-→ [[stitch-skills]] → pipeline: `/taste-design` → `/stitch-design` → `/stitch-loop`
-
-### Quero gerar um mockup de tela específica
-→ [[stitch-skills]] → `/stitch-design`
-
-### Quero construir um site inteiro com Stitch autonomamente
-→ [[stitch-skills]] → `/stitch-loop`
-
-### Quero fazer lip sync (animar rosto com áudio)
-→ [[Skills Muapi Studio]] → `infinitetalk-image-to-video` ou `wan2.2-speech-to-video` (PT-BR)
-
-### Quero editar uma imagem com instrução de texto (GPT-4o edit, MJ v7)
-→ [[Skills Muapi Studio]] → `gpt4o-edit` ou `midjourney-v7-omni-reference`
-
-### Quero gerar vídeo com Veo 3.1, Sora 2 ou Wan 2.6
-→ [[Skills Muapi Studio]] → extended video
-
-### Quero criar um vídeo de produto 1080p com avatar e referências
-→ [[Skills Muapi Studio]] → `sd-2-vip-omni-reference-1080p`
-
-### Quero auditar qualidade visual de UI gerada por IA
-→ [[Skills Impeccable]] → `/impeccable audit`
-
-### Quero refinar tipografia, cores, layout ou animação de uma tela
-→ [[Skills Impeccable]] → `/impeccable typeset` / `/impeccable colorize` / `/impeccable layout` / `/impeccable animate`
-
-### Quero configurar pre-commit hook de qualidade de design
-→ [[Skills Impeccable]] → `npx impeccable detect src/ --json` via @devops
-
-### Quero inicializar uma aplicação Agent SDK
-→ [[Skills Claude Code]] → `/agent-sdk-dev:new-sdk-app`
-
-### Quero construir uma base de conhecimento persistente sobre um tema
+### Knowledge base persistente (Karpathy wiki pattern)
 → [[Skills LLM Wiki]] → `/llm-wiki-setup` (bootstrap) → `/wiki-self-heal` (manutenção)
 
-### Quero ingerir artigos, PDFs ou páginas web no vault de conhecimento
+### Ingerir artigos, PDFs ou páginas no vault AKASHA
 → [[Skills LLM Wiki]] → Chrome Web Clipper + AKASHA Clip Server → `AKASHA/raw/`
 
-### Quero fazer health-check e gap-fill de uma wiki existente
-→ [[Skills LLM Wiki]] → `/wiki-self-heal`
+### NotebookLM — sessões, perguntas, Audio Overview (podcast)
+→ [[Skills ORION Knowledge]] → seção notebooklm-mcp
 
-### Quero fazer perguntas a um notebook do NotebookLM via Claude
-→ [[notebooklm-mcp-install-guide]] → `mcp__notebooklm-mcp__ask_question`
+### Obsidian — vault, notas, canvas, bases de dados
+→ [[Skills Obsidian]] — obsidian-cli, obsidian-bases, json-canvas
 
-### Quero gerar um Audio Overview (podcast) de fontes via NotebookLM
-→ [[notebooklm-mcp-install-guide]] → `generate_audio` → poll `get_audio_status` → `download_audio`
+### Extrair e estruturar conhecimento de qualquer fonte
+→ [[knowledge-extraction]] → `/knowledge-extraction`
+
+### Knowledge graph visual (código, vault, docs)
+→ [[Skills graphify]] → `/graphify <pasta>`
+
+### Encontrar clusters temáticos ou caminho entre conceitos
+→ [[Skills graphify]] → output HTML interativo + `/graphify path <A> <B>`
+
+### Commit convencional / commit-push-PR
+→ [[Skills DevOps QA]] → commit-commands: `/commit`, `/commit-push-pr`
+
+### Code review antes de PR (multi-dimension)
+→ [[Skills DevOps QA]] → `/pr-review-toolkit:review-pr`
+
+### Hook para prevenir comportamento indesejado
+→ [[Skills DevOps QA]] → `/hookify`
+
+### Ativar agente especializado (@dev, @qa, @pm, @po, @sm...)
+→ [[Skills Agentes AIOX]] → sintaxe `@agent-name` + SDC workflow
+
+### Validar ideia de produto antes de codar (YC method)
+→ [[Skills gstack]] → `/office-hours`
+
+### Code review com dois modelos em paralelo
+→ [[Skills gstack]] → `/review`
+
+### QA com browser real (Chromium + Playwright)
+→ [[Skills gstack]] → `/qa` + `/browse`
+→ [[Skills Browser Tools]] → playwright MCP, browse daemon
+
+### Security audit (OWASP Top 10 + STRIDE)
+→ [[Skills gstack]] → `/cso`
+
+### Pipeline de planning automático sem interrupções
+→ [[Skills gstack]] → `/autoplan`
+
+### Extrair conteúdo limpo de URL (sem JS)
+→ [[Skills Dev Plataforma]] → `/defuddle`
+
+### Inicializar aplicação Agent SDK (TypeScript ou Python)
+→ [[Skills Dev Plataforma]] → `/agent-sdk-dev:new-sdk-app`
+
+### Criar nova skill ou plugin com guided workflow
+→ [[Skills Dev Plataforma]] → `/plugin-dev:create-plugin` / `/plugin-dev:skill-development`
+
+### UI/frontend — componentes, landing page, deploy
+→ [[Skills Dev]] → ui-ux-pro-max, frontend-design, video-to-website
 
 ---
 
-## Status do Sistema
+## System Status
 
-| Categoria | Skills | Status |
-|-----------|--------|--------|
-| inference-sh | 80 modelos | ✅ ATIVO |
-| SEO | 13 sub-skills | ✅ ATIVO |
-| Obsidian | 5 skills | ✅ ATIVO |
-| Dev (projeto) | 9 skills | ✅ ATIVO |
-| AIOX Agentes | 10 + master | ✅ ATIVO |
-| Plugins | 13 plugins | ✅ ATIVO |
-| Claude Code | 15 skills nativas | ✅ ATIVO |
-| Stitch (trio) | taste-design + stitch-design + stitch-loop | ✅ INSTALADO (⚠️ MCP pendente) |
-| Impeccable | 23 comandos + 27 anti-patterns + CLI pre-commit | ✅ ATIVO |
-| muapi-studio | Lip Sync (9 modelos), Extended Video, GPT-4o edit, Marketing VIP 1080p | ✅ ATIVO |
-| gstack | 23 skills + browser daemon | ✅ INSTALADO |
-| graphify | knowledge graph pipeline — 9 etapas + 6 modos | ✅ INSTALADO |
-| RUNA OS | /runa-os-audit (diagnóstico Four Cs) + /runa-intake (onboarding dia 1) | ✅ INSTALADO |
-| Higgsfield MCP | 14 tools: generate_video/image, job tracking, media library, marketing studio | ✅ CONECTADO |
-| Higgsfield CLI Skills | higgsfield-generate + higgsfield-soul-id + higgsfield-product-photoshoot (v0.3.0) | ✅ INSTALADO |
-| LLM Wiki (Karpathy) | llm-wiki-setup + wiki-self-heal + Chrome Clipper + AKASHA Clip Server | ✅ ATIVO (vault AKASHA/) |
-| NotebookLM MCP | sessões, fontes, perguntas, audio overview — ~50 queries/dia (free) | ✅ ATIVO (notebooklm-mcp-cli) |
-| Ads | 18 sub-skills | ❌ REMOVIDO (2026-04-24) |
-| GSD | 32 comandos | ❌ REMOVIDO (2026-04-24) |
-| Paperclip | 3 skills | ❌ REMOVIDO (2026-04-24) |
-
-**Total de capacidades ativas: 150+ modelos IA + 80+ comandos de workflow**
+| File | What it covers | Status |
+|------|---------------|--------|
+| [[Skills MAYA Produção AV]] | Higgsfield MCP/CLI, muapi, infsh, video-use, ElevenLabs + Agency Pipeline (paleta-cores, logomarca, mock-*, moodboard, lp-builder) | ✅ Active |
+| [[Skills FREYJA Conteúdo]] | Content strategy, copy, carousel briefs, ads-dna | ✅ Active |
+| [[Skills HERMES Automação]] | n8n-mcp, Zernio API, Instagram/WhatsApp automations | ✅ Active |
+| [[Skills ARES Aquisição]] | /runa-os-audit (Four Cs) + /runa-intake (Day 1 onboarding) + /creative-brief (agency onboarding) | ✅ Active |
+| [[Skills HELIOS SEO]] | 13 SEO sub-skills | ✅ Active |
+| [[Skills ORION Knowledge]] | NotebookLM MCP, knowledge-extraction, Obsidian orchestration | ✅ Active |
+| [[Skills Design UI]] | taste-design, stitch-design, impeccable + tipografia + moodboard-to-motion | ✅ Active |
+| [[Skills Dev Plataforma]] | Claude Code native skills, plugin-dev, agent-sdk-dev | ✅ Active |
+| [[Skills Dev]] | ui-ux-pro-max, frontend, video-to-website, @dev stack | ✅ Active |
+| [[Skills DevOps QA]] | commit-commands, code-review, pr-review-toolkit, hookify + arte-final (preflight) | ✅ Active |
+| [[Skills Agentes AIOX]] | 11-agent roster, activation syntax, SDC, exclusive operations + skill-converter | ✅ Active |
+| [[Skills Browser Tools]] | Playwright MCP, browse daemon, web interaction | ✅ Active |
+| [[Skills gstack]] | 23 engineering skills: /office-hours, /autoplan, /review, /qa, /cso | ✅ Active |
+| [[Skills graphify]] | Knowledge graph — HTML interativo + Obsidian export | ✅ Active |
+| [[Skills LLM Wiki]] | llm-wiki-setup + wiki-self-heal — AKASHA vault (Karpathy pattern) | ✅ Active |
+| [[Skills Obsidian]] | Vault, bases, canvas, obsidian-cli | ✅ Active |
+| [[stitch-skills]] | Stitch baton system deep reference (StitchMCP ⚠️ pending) | ✅ Reference |
+| [[knowledge-extraction]] | /knowledge-extraction deep reference — AKASHA integration | ✅ Reference |
+| Ads (18 sub-skills) | — | ❌ Removed 2026-04-24 |
+| GSD (32 commands) | — | ❌ Removed 2026-04-24 |
 
 ---
 
-## Referências Cruzadas
+## Cross-References
 
-| Documento | O que contém | Relação |
-|-----------|-------------|---------|
-| [[agent-reference]] | Perfil completo de todos os 13+ agentes: personas, comandos, skills, MCPs, handoffs | Matrix agente → skills (fonte de verdade por agente) |
-| [[capability-map]] | Tool/skill/MCP assignment por agente + prioridade de seleção | Versão técnica deste index, com app IDs e exemplos de CLI |
+| Document | Contains | Relation |
+|----------|---------|---------|
+| [[capability-map]] | Tool/skill/MCP assignment by agent + app IDs + CLI patterns | Technical version of this index — authoritative for exact commands |
+| [[agent-reference]] | Full profile of all agents: personas, commands, skills, MCPs | Agent-first lookup (vs. task-first here) |
 
-> **Navegação recomendada:**
-> - "Quero fazer X" → este documento (por tarefa)
-> - "Quero entender o agente Y" → [[agent-reference]] (por persona)
-> - "Quero o app ID exato do modelo Z" → [[capability-map]] (por ferramenta)
+> **Navigation:**
+> - "Quero fazer X" → this document (task-first)
+> - "App ID / CLI exato?" → [[capability-map]] (tool-first)
+> - "Entender o agente Y" → [[agent-reference]] (persona-first)

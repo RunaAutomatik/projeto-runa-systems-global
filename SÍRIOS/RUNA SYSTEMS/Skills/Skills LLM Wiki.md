@@ -8,7 +8,7 @@ type: skill-doc
 # Skills LLM Wiki — Knowledge Base System
 
 > Sistema completo de base de conhecimento AI-mantida (padrão Karpathy).
-> Vault ativo: `AKASHA/` em `C:/runa-systems-global/AKASHA/`
+> Vault ativo: `AKASHA/` em `D:/Runa/runa-systems-global/AKASHA/`
 
 ---
 
@@ -38,7 +38,7 @@ Inicializa um vault Karpathy do zero: cria `raw/`, `wiki/`, `CLAUDE.md` (o mapa)
 /llm-wiki-setup
 ```
 O skill faz 3 perguntas em sequência:
-1. **Caminho do vault** — absoluto. Ex: `C:/runa-systems-global/AKASHA`
+1. **Caminho do vault** — absoluto. Ex: `D:/Runa/runa-systems-global/AKASHA`
 2. **Layout flat ou nested** — nested adiciona subpastas `entities/`, `concepts/`, `sources/`, `analyses/`
 3. **Hot cache?** — `wiki/hot.md`, buffer de 500 chars para contexto recente. Default: não
 
@@ -139,19 +139,19 @@ Arthur: "/wiki-self-heal — só auditoria primeiro"
 Extensão Chrome que captura o conteúdo de qualquer página web e envia para o `AKASHA/raw/` com um clique. Usa Readability.js para extrair o texto limpo e Turndown.js para converter para Markdown.
 
 ### Instalação (uma vez)
-**A extensão já está baixada em:** `C:/runa-systems-global/tools/llm-wiki-clipper/`
+**A extensão já está baixada em:** `D:/Runa/runa-systems-global/tools/llm-wiki-clipper/`
 
 Para instalar no Chrome:
 1. Abrir `chrome://extensions/`
 2. Ativar **Modo de desenvolvedor** (toggle no canto superior direito)
 3. Clicar **"Carregar sem compactação"**
-4. Selecionar a pasta: `C:/runa-systems-global/tools/llm-wiki-clipper/`
+4. Selecionar a pasta: `D:/Runa/runa-systems-global/tools/llm-wiki-clipper/`
 5. A extensão aparece na barra com ícone de livro
 
 ### Como usar
 **Antes de usar:** iniciar o servidor receptor:
 ```bash
-cd C:/runa-systems-global
+cd D:/Runa/runa-systems-global
 python tools/llm-wiki-clipper/akasha-clip-server.py
 ```
 O servidor roda na porta 19827 e salva clips em `AKASHA/raw/`.
@@ -214,7 +214,7 @@ Servidor HTTP local (Python, porta 19827) que faz a ponte entre a extensão Chro
 
 ### Como iniciar
 ```bash
-python C:/runa-systems-global/tools/llm-wiki-clipper/akasha-clip-server.py
+python D:/Runa/runa-systems-global/tools/llm-wiki-clipper/akasha-clip-server.py
 ```
 
 Com vault customizado:
