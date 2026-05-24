@@ -11,16 +11,16 @@ Never guess or reinvent — if the capability exists, use it.
 
 | Agent | Primary Skills | Primary MCPs |
 |-------|---------------|-------------|
-| FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing** | Supabase |
-| MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip**, **video-use** (raw footage editing) | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
+| FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing**, **gpt-image-2-prompt-gallery** (consult before image prompts) | Supabase |
+| MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip**, **video-use** (raw footage editing), **gpt-image-2-prompt-gallery** (consult before image prompts) | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
 | HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content** | n8n-mcp, Gmail, Google Calendar |
 | ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours**, **runa-os-audit**, **lp-copy**, **sales-sequence**, **client-copy** | — |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
 | ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal**, **runa-intake** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
-| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Figma, Supabase |
+| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Supabase |
 | @qa | code-review, testing-strategy, pr-review-toolkit, **gstack/review**, **gstack/cso**, **gstack/qa** | — |
-| @devops | devops-automation, commit-commands, hookify, **stop-notification**, **post-tool-format** | Netlify |
+| @devops | devops-automation, commit-commands, hookify, **security-guidance**, **stop-notification**, **post-tool-format** | Netlify |
 | @architect | architecture-design, agent-workflows | — |
 | @ux-design-expert | **taste-design**, **impeccable**, ui-ux-pro-max, frontend-design | — |
 | @data-engineer | (code tools) | Supabase |
@@ -31,13 +31,37 @@ Never guess or reinvent — if the capability exists, use it.
 2. **Project skills** (`.claude/skills/`) — workflow-specific
 3. **Global skills** (`~/.claude/skills/`) — ads, seo, obsidian, ui-ux
    - **2.5: muapi-studio skill** — for lip sync, extended video, GPT-4o edit, MJ v7 (no infsh equivalent)
-4. **MCPs** — only for external services (n8n, Supabase, Figma, etc.)
+4. **MCPs** — only for external services (n8n, Supabase, etc.)
 5. **Plugins** — for structured workflows (code-review, commit-commands, etc.)
 
 ## inference.sh Skills (via `infsh` CLI — ACTIVE ✓)
 
 Token: stored at `~/.infsh-token` | CLI: `infsh` (global, no args needed)
 Full usage rules: `.claude/rules/inference-sh-usage.md`
+
+### GPT Image 2 Prompt Gallery (Mandatory — consult before ALL image prompts)
+
+**Rule file:** `.claude/rules/gpt-image-2-skill-usage.md`
+**Repo:** `https://github.com/wuyoscar/gpt_image_2_skill`
+**Agents who MUST consult:** FREYJA, MAYA, ORION, Claude (no agent selected)
+**Agents NOT included:** ARES, HERMES, ALEX, @dev, @qa, @architect, @data-engineer
+
+| Reference | Path | When to load |
+|-----------|------|-------------|
+| Gallery index | `skills/gpt-image/references/gallery.md` | ALWAYS first — route to category |
+| Category file | `skills/gpt-image/references/gallery-<slug>.md` | ONE per request (max 3 for hybrid) |
+| Craft guide | `skills/gpt-image/references/craft.md` | Dense text, UI, diagrams, multi-panel, weak prompts |
+
+```bash
+# Fetch any reference file
+gh api repos/wuyoscar/gpt_image_2_skill/contents/skills/gpt-image/references/<file>.md \
+  --jq '.content' | base64 -d
+```
+
+**FREYJA rule:** Consults gallery directly when writing image prompt briefs — no redirect to MAYA.
+**MAYA rule:** Consults gallery directly when generating own prompts — no redirect to FREYJA.
+
+---
 
 ### MAYA — Image Generation
 | Category | Skill | App IDs / Provider |
