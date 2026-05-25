@@ -18,11 +18,11 @@ Never guess or reinvent — if the capability exists, use it.
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
 | ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal**, **runa-intake** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
-| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Supabase |
+| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse**, **vercel-react-best-practices**, **vercel-composition-patterns**, **vercel-react-native-skills** | Supabase, @21st-dev/magic |
 | @qa | code-review, testing-strategy, pr-review-toolkit, **gstack/review**, **gstack/cso**, **gstack/qa** | — |
-| @devops | devops-automation, commit-commands, hookify, **security-guidance**, **stop-notification**, **post-tool-format** | Netlify |
+| @devops | devops-automation, commit-commands, hookify, **security-guidance**, **stop-notification**, **post-tool-format**, **vercel-optimize**, **deploy-to-vercel**, **vercel-cli-with-tokens** | Netlify |
 | @architect | architecture-design, agent-workflows | — |
-| @ux-design-expert | **taste-design**, **impeccable**, ui-ux-pro-max, frontend-design | — |
+| @ux-design-expert | **taste-design**, **impeccable**, ui-ux-pro-max, frontend-design, **web-design-guidelines**, **vercel-react-view-transitions** | — |
 | @data-engineer | (code tools) | Supabase |
 
 ## Tool Selection Priority (always follow this order)
@@ -249,6 +249,28 @@ Full usage rules: `.claude/rules/llm-wiki-usage.md`
 **Vault ativo:** `AKASHA/` — layout nested, hot cache ativado.
 **SÍRIOS:** não usar — tem estrutura Obsidian própria.
 
+## vercel-labs/agent-skills (ACTIVE ✓ installed 2026-05-25)
+
+**Install:** `npx skills add vercel-labs/agent-skills`
+**Path:** `d:/Runa/runa-systems-global/.agents/skills/` + symlinks to `~/.claude/skills/`
+**Count:** 8 skills
+
+| Skill | Owner | When to Use |
+|-------|-------|-------------|
+| `web-design-guidelines` | @ux-design-expert | 100+ UX rules — apply before any UI review or impeccable audit |
+| `vercel-react-best-practices` | @dev | React component patterns, hooks, performance |
+| `vercel-composition-patterns` | @dev | Component composition, reuse patterns, compound components |
+| `vercel-react-native-skills` | @dev | Mobile component guidelines for React Native |
+| `vercel-react-view-transitions` | @ux-design-expert | Smooth page transitions, View Transitions API |
+| `vercel-optimize` | @devops | Vercel-specific performance optimizations (ISR, Edge, caching) |
+| `deploy-to-vercel` | @devops | Claim and configure Vercel deployments |
+| `vercel-cli-with-tokens` | @devops | Vercel CLI with token auth — CI/CD and scripted deploys |
+
+**Pipeline integration:**
+- `web-design-guidelines` → invoke BEFORE `/impeccable audit` for brand-aware context
+- `vercel-react-best-practices` + `vercel-composition-patterns` → @dev uses before scaffolding new React components
+- `vercel-optimize` + `deploy-to-vercel` → @devops uses for every Vercel deployment
+
 ## Workers — Bike Method Phase Status
 
 All workers follow the Bike Method deployment protocol. Protocol doc: `SÍRIOS/RUNA SYSTEMS/worker-deployment-protocol.md`
@@ -297,7 +319,7 @@ Kill Switch triggers when ANY of: inactivity 30d, no KPI, no owner, cost > benef
 
 | Gap | Status |
 |-----|--------|
-| Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
+| `anthropics/knowledge-work-plugins` | Investigated 2026-05-25 — 11 plugins confirmed (marketing, legal, finance, product, sales, data, enterprise-search, bio-research, cowork-mgmt). T3 onboarding pending next session. Install: `claude plugin marketplace add anthropics/knowledge-work-plugins` |
 
 ## video-use (Raw Footage Editing — ACTIVE ✓ installed 2026-05-12)
 
@@ -328,4 +350,4 @@ claude
 
 ---
 
-Last updated: 2026-05-12
+Last updated: 2026-05-25
