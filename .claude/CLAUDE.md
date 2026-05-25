@@ -8,6 +8,12 @@ You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Devel
 Synkra AIOX is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
 <!-- AIOX-MANAGED-END: core-framework -->
 
+## Project Location
+
+- Canonical project path: `D:\Runa\runa-systems-global`
+- Previous project path (do not use): `D:\Arthur (GERAL)\Backup - 05-2026\Projeto Claude Code - Disco Local C\runa-systems-global`
+- Shared Codex/Claude governance memory: `D:\Runa\memories\runa-aiox-parallel-agent-governance.md`
+
 <!-- AIOX-MANAGED-START: constitution -->
 ## Constitution
 
@@ -140,6 +146,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `agent-authority.md` | Agent delegation matrix and exclusive operations |
 | `agent-handoff.md` | Agent switch compaction protocol for context optimization |
 | `agent-memory-imports.md` | Agent memory lifecycle and CLAUDE.md ownership |
+| `parallel-agent-work.md` | Shared Codex/Claude/AIOX parallel-work governance, worktree hygiene, protected areas, and shared memory path |
 | `coderabbit-integration.md` | Automated code review integration rules |
 | `ids-principles.md` | Incremental Development System principles |
 | `mcp-usage.md` | MCP server usage rules and tool selection priority |
@@ -165,6 +172,9 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `video-use-usage.md` | video-use skill — raw footage editing (filler removal, color grade, subtitles via FFmpeg + ElevenLabs Scribe); MAYA primary; when/not to use vs Higgsfield/muapi/Remotion |
 | `conversion-post-protocol.md` | Mandatory 4-element rule — every Instagram post must have keyword + Zernio automation + entregável + checkout link before publishing. FREYJA + HERMES + @devops. Single product: RUNA R$ 7.000 |
 | `runa-os-vault.md` | RUNA OS platform vault (`RUNA OS/`) — documentation governance, Karpathy LLM Wiki structure, graphify + wiki-self-heal schedule, what goes here vs SÍRIOS |
+| `gpt-image-2-skill-usage.md` | Mandatory prompt gallery consultation (162 prompts, 30 categories) — FREYJA + MAYA + ORION + Claude MUST consult before ANY image generation prompt |
+| `remotion-usage.md` | Remotion — programmatic React video creation; @dev primary, MAYA secondary (video-use overlay); NOT for real footage editing |
+| `21st-dev-magic-usage.md` | Magic MCP — React component generation via natural language; @dev primary, @ux-design-expert secondary; requires DESIGN.md context |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->

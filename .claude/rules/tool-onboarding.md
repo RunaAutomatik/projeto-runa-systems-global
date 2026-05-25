@@ -138,7 +138,7 @@ Capabilities that are installed but NOT yet fully onboarded:
 | Tool | Tier | Status | Missing |
 |------|------|--------|---------|
 | `StitchMCP` | T3 | ⚠️ MCP not configured | Setup at labs.google.com/stitch |
-| `@21st-dev/magic` | T3 | ⚠️ API key missing | Get key at 21st.dev console |
+| `anthropics/knowledge-work-plugins` | T3 | ✅ Investigated 2026-05-25 — 11 plugins confirmed, install ready | T3 rule file + CLAUDE.md entry + capability-map section (next session) |
 
 > When an item is resolved, move it out of this table and ensure its rule file exists.
 
