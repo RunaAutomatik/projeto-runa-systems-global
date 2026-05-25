@@ -175,6 +175,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `gpt-image-2-skill-usage.md` | Mandatory prompt gallery consultation (162 prompts, 30 categories) — FREYJA + MAYA + ORION + Claude MUST consult before ANY image generation prompt |
 | `remotion-usage.md` | Remotion — programmatic React video creation; @dev primary, MAYA secondary (video-use overlay); NOT for real footage editing |
 | `21st-dev-magic-usage.md` | Magic MCP — React component generation via natural language; @dev primary, @ux-design-expert secondary; requires DESIGN.md context |
+| `knowledge-work-plugins-usage.md` | anthropics/knowledge-work-plugins — 11 professional plugins (marketing, sales, finance, product, data, legal, bio-research + more); ARES + ORION + @analyst primary |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->
