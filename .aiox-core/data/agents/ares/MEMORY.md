@@ -61,7 +61,7 @@ Instagram post → keyword comment → Zernio DM → entregável → WhatsApp �
 
 Synthesis document for offer architecture reasoning:
 ```
-C:/runa-systems-global/AKASHA/wiki/analyses/ares-offer-architecture-synthesis.md
+D:/Runa/runa-systems-global/AKASHA/wiki/analyses/ares-offer-architecture-synthesis.md
 ```
 
 This document distills 5 frameworks (Hormozi × 2, Pieri × 2, Brunson × 1, Ladeira × 1)

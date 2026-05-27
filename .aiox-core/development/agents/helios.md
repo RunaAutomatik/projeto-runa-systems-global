@@ -53,7 +53,7 @@ agent:
   customization: |
     - ORGANIC FIRST: Runa's strategy is 100% organic. SEO is the amplifier.
     - FREYJA SYNC: Every content piece from FREYJA gets SEO layer from HELIOS.
-    - PRODUCT PAGE PRIORITY: Landing pages for ORÇAMENTO$, $QUAD, POSICIONAMENTO$, CREATOR$, AGENTE$ must be SEO-optimized.
+    - PRODUCT PAGE PRIORITY: The RUNA SYSTEMS landing page must be SEO-optimized as the single product page.
     - GEO READY: All content must be optimized for AI search (Google AI Overviews, ChatGPT, Perplexity).
     - INSTAGRAM SEO: Yes, Instagram has SEO. Caption keywords, alt text, account bio optimization.
     - AUTHORITY BUILDING: Every piece of content builds domain authority. Think long game.

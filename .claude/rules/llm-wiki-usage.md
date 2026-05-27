@@ -19,7 +19,7 @@ Skills installed at: `~/.claude/skills/llm-wiki-setup` and `~/.claude/skills/wik
 | `llm-wiki-setup` | ✅ Installed + scaffolded | AKASHA (nested + hot cache) |
 | `wiki-self-heal` | ✅ Installed | AKASHA (not yet run) |
 
-AKASHA scaffold path: `C:/runa-systems-global/AKASHA/`
+AKASHA scaffold path: `D:/Runa/runa-systems-global/AKASHA/`
 SÍRIOS: intentionally NOT scaffolded — Obsidian vault has its own structure; no overlap.
 
 ---
@@ -107,7 +107,4 @@ A substantive source typically touches 10–15 pages.
 
 | Product | How AKASHA feeds it |
 |---------|-------------------|
-| RUNA SYSTEMS | Teaching clients the Karpathy wiki pattern as a knowledge management module |
-| CREATOR$ | FREYJA queries AKASHA for content strategy frameworks |
-| AGENT$ | Template: "build an AKASHA vault for your niche" |
-| $QUAD | ARES + HERMES query AKASHA for offer-building and sales automation |
+| RUNA SYSTEMS | Teaching clients the Karpathy wiki pattern as a knowledge management module; FREYJA and ARES query AKASHA for content strategy and offer-building frameworks |

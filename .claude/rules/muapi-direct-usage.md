@@ -177,7 +177,4 @@ python ~/.claude/skills/muapi-studio/scripts/muapi-client.py \
 
 | Product | muapi-direct Role |
 |---------|-----------------|
-| **CREATOR$** | Lip sync reels with Arthur's face + ElevenLabs voice |
-| **$QUAD** | Talking head demos for squad architecture explanations |
-| **RUNA SYSTEMS** | Teaching clients lip sync + GPT-4o edit pipeline as a module |
-| **AGENT$** | Animated AI agent persona videos |
+| **RUNA SYSTEMS** | Teaching clients the lip sync + GPT-4o edit pipeline; @arthsystems_ reels and talking head demos with ElevenLabs voice |

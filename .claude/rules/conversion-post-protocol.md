@@ -21,7 +21,7 @@ A post without all 4 elements = **incomplete post**. Do not publish.
 
 ## Product Context
 
-- Single product: **RUNA** — R$ 7.000 / 21 sessions / 7 weeks / 3×week
+- Single product: **RUNA SYSTEMS** — R$ 7.000 / 21 sessions / 7 weeks / 3×week
 - Primary automation: **Zernio API** (ManyChat is deprecated — do not use)
 - DM path: keyword trigger → entregável delivery → WhatsApp automated message → discovery call OR direct checkout
 

@@ -6,7 +6,7 @@ All $ products in the Runa Systems teia follow a 4-layer delivery architecture.
 This architecture ensures every product has a clear acquisition funnel, conversion documents,
 and course support materials — all traceable back to a single source-of-truth PRD.
 
-Reference implementation: CREATOR$ (complete) and $QUAD (in production).
+Reference implementation: RUNA SYSTEMS.
 
 ---
 
@@ -57,7 +57,7 @@ LAYER 4 — Skool Course Support Docs (delivery — the actual value)
 - **Sales script:** [[{product}-sales-script]]
 
 ### Aperitivo
-- **Aperitivo DM (keyword {KEYWORD}):** [[aperitivo-{product}]] — free/R$XX — sent via ManyChat
+- **Aperitivo DM (keyword {KEYWORD}):** [[aperitivo-{product}]] — free/R$XX — sent via Zernio
 
 ### Course Support Docs (Skool)
 - **Index:** [[{product}-skool-index]] — full list
@@ -79,11 +79,11 @@ LAYER 4 — Skool Course Support Docs (delivery — the actual value)
 
 **Path:** `SÍRIOS/📦 Entregáveis/aperitivo-{product-name}.md`
 **Format:** Obsidian Markdown
-**Role:** Free or low-cost deliverable sent automatically via ManyChat when someone comments
+**Role:** Free or low-cost deliverable sent automatically via Zernio when someone comments
 a keyword on an Instagram post or story. It gives a taste of the product's value.
 
 ### Requirements:
-- Triggered by a specific keyword (e.g., SQUAD, ALPHA, SISTEMA)
+- Triggered by a specific keyword (e.g., RUNA, SISTEMA, ARQUITETO)
 - Delivers ONE powerful, immediately usable tool/prompt/template
 - Brief intro explaining what the person has in their hands
 - Clear how-to (3-4 steps, no fluff)
@@ -103,7 +103,7 @@ oferta: [[{product-name}-offer-{main-icp}]]
 ```
 
 ### Physical delivery:
-- ManyChat sends the .md content as formatted DM (or a Google Drive link to the .docx version)
+- Zernio automation sends the .md content as formatted DM (or a Google Drive link to the .docx version)
 - Alternatively: the prompt/tool is pasted directly in the DM, no file attachment needed
 
 ---
@@ -177,7 +177,7 @@ modulo: "N.N — Lesson Title"
 ### What goes in lesson docs:
 - **Worksheets** — fill-in fields students complete with their own data
 - **Templates** — structured documents with blank sections
-- **Guides** — step-by-step instructions with examples from the product's case (Alpha® for CREATOR$, Runa Squad for $QUAD)
+- **Guides** — step-by-step instructions with examples from the product's live build case (RUNA SYSTEMS ecosystem)
 - **Checklists** — before/after validation lists
 - **Reference examples** — the exact outputs from the live build case
 
@@ -269,11 +269,7 @@ SÍRIOS/
 
 | Product | PRD | Aperitivo | Offer docs | Skool docs |
 |---------|-----|-----------|-----------|-----------|
-| CREATOR$ | ✅ | ✅ (keyword ALPHA) | 🔄 (creator-dollar-offer) | ✅ 9 docs |
-| $QUAD | ✅ | ✅ (keyword SQUAD) | ✅ freela + mentor | ✅ 9 docs |
-| MIND$ | PRD ✅ | ❌ | ❌ | ❌ |
-| POSICIONAMENTO$ | PRD ✅ | ❌ | ❌ | ❌ |
-| SITE$ | PRD ✅ | ❌ | ❌ | ❌ |
+| RUNA SYSTEMS | ✅ | ✅ (keywords: RUNA, SISTEMA, ARQUITETO) | 🔄 in production | 🔄 in production |
 
 ---
 
@@ -282,11 +278,10 @@ SÍRIOS/
 - **ARES** owns offer doc structure and pricing logic
 - **FREYJA** owns aperitivo copywriting and the narrative arc of offer docs
 - **ORION** creates and organizes all files in Obsidian
-- Aperitivo keyword → ManyChat trigger → managed by **HERMES**
+- Aperitivo keyword → Zernio trigger → managed by **HERMES**
 
 ---
 
 ## Reference
 
-- CREATOR$ implementation: `SÍRIOS/📦 Entregáveis/aperitivo-creator-dollar.md` + `creator-dollar-skool/`
-- $QUAD implementation: `SÍRIOS/📦 Entregáveis/aperitivo-squad-dollar.md` + `squad-dollar-skool/`
+- RUNA SYSTEMS implementation: `SÍRIOS/📐 Projetos/plataforma-runa-prd.md`

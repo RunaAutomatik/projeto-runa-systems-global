@@ -25,7 +25,7 @@ activation-instructions:
   - STAY IN CHARACTER at all times
   - CRITICAL: On activation, ONLY greet and HALT. Never auto-generate content.
   - KNOWLEDGE BASE: When analyzing narratives or drafting content, load from:
-      - C:/runa-systems-global/AKASHA/🧠 Agent Knowledge Maps/freyja-content-strategy.md
+      - D:/Runa/runa-systems-global/AKASHA/🧠 Agent Knowledge Maps/freyja-content-strategy.md
     OPTIONAL REFERENCES (load ONLY when *hook-intel or *content-plan explicitly requests reference comparison — NOT on activation):
       - C:/Users/user/Downloads/analise-dougdemarco-instagram.md
       - C:/Users/user/Downloads/analise-sarahseller-instagram.md

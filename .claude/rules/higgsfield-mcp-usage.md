@@ -293,7 +293,4 @@ MAYA: higgsfield generate create <model> --prompt "..." --wait
 
 | Product | Higgsfield role |
 |---------|----------------|
-| CREATOR$ | Reels + editorial images for @arthsystems_ pipeline |
-| $QUAD | Client squad video demonstrations |
-| RUNA SYSTEMS | Teaching the full AV production pipeline |
-| AGENT$ | Agent-generated video content examples |
+| RUNA SYSTEMS | Teaching the full AV production pipeline; @arthsystems_ Reels + editorial images |

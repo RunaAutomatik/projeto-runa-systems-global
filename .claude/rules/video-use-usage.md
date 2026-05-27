@@ -163,8 +163,4 @@ Vs. Descript ($24/month) or manual editing: negligible cost, fully integrated in
 
 | Product | video-use Role |
 |---------|---------------|
-| **CREATOR$** | Primary Reels pipeline — edit Arthur talking head footage |
-| **RUNA SYSTEMS** | Edit recorded class modules for Skool upload |
-| **$QUAD** | Edit recorded squad demonstrations |
-| **AGENT$** | Edit footage of agents being configured live |
-| **Lives de construção** | Highlight cuts from 2h raw livestream → 45min deliverable (R$97 product) |
+| **RUNA SYSTEMS** | Edit recorded class modules for Skool upload; primary Reels pipeline for Arthur talking head footage |

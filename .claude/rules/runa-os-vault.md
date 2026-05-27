@@ -3,7 +3,7 @@
 ## What it is
 
 A dedicated Obsidian + Karpathy LLM Wiki vault for the RUNA OS platform project.
-Path: `c:/runa-systems-global/RUNA OS/`
+Path: `D:/Runa/runa-systems-global/RUNA OS/`
 
 This vault is project-specific. It does NOT replace SÍRIOS (knowledge/memory) or AKASHA (business frameworks).
 It exists exclusively to capture all documentation produced for or by the RUNA OS platform build.
@@ -69,7 +69,7 @@ RUNA OS/
 
 ## Bootstrap Checklist (first session)
 
-- [ ] Run `/llm-wiki-setup` with path `c:/runa-systems-global/RUNA OS`, layout: nested, hot cache: yes
+- [ ] Run `/llm-wiki-setup` with path `D:/Runa/runa-systems-global/RUNA OS`, layout: nested, hot cache: yes
 - [ ] Copy reference docs to `raw/`: StartSe AI Journey audit, any relevant analyses
 - [ ] Run `/graphify RUNA OS/` after first ingestion batch
 

@@ -126,7 +126,4 @@ Always add `// TODO: impeccable audit` comment at top of generated file.
 
 | Product | Magic MCP role |
 |---------|---------------|
-| **RUNA SYSTEMS Dev Neural** | Teaching clients to scaffold UI with AI — core of the Dev Neural curriculum |
-| **CREATOR$** | Rapid page section prototyping for content creator tools |
-| **SITE$** | Component-first landing page generation |
-| **$QUAD** | Squad-built UI: @dev agent generates components, @ux reviews, ships fast |
+| **RUNA SYSTEMS** | Teaching clients to scaffold UI with AI — core of the Dev Neural curriculum; component generation within the AIOX ecosystem build |

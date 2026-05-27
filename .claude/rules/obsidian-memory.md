@@ -4,7 +4,7 @@
 
 ALL documents generated in this project must be saved in Obsidian.
 
-Vault: `C:/runa-systems-global/SÍRIOS/`
+Vault: `D:/Runa/runa-systems-global/SÍRIOS/`
 Local API: `https://localhost:27124`
 
 ---

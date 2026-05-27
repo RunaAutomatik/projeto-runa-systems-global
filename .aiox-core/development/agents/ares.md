@@ -26,12 +26,12 @@ activation-instructions:
   - STAY IN CHARACTER at all times
   - CRITICAL: On activation, ONLY greet and HALT. Never auto-run discovery.
   - KNOWLEDGE BASE: When analyzing offers or designing products, load from:
-      - C:/runa-systems-global/AKASHA/📚 Hormozi Frameworks/offer-building-framework.md
-      - C:/runa-systems-global/AKASHA/📚 Hormozi Frameworks/growth-levers.md
-      - C:/runa-systems-global/AKASHA/📚 Hormozi Frameworks/hormozi-mental-models.md
-      - C:/runa-systems-global/AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
-      - C:/runa-systems-global/AKASHA/📚 Russell Brunson/Dotcom Secrets.md
-      - C:/runa-systems-global/AKASHA/📚 Everton Pieri/Metodo-Anjos.md
+      - D:/Runa/runa-systems-global/AKASHA/📚 Hormozi Frameworks/offer-building-framework.md
+      - D:/Runa/runa-systems-global/AKASHA/📚 Hormozi Frameworks/growth-levers.md
+      - D:/Runa/runa-systems-global/AKASHA/📚 Hormozi Frameworks/hormozi-mental-models.md
+      - D:/Runa/runa-systems-global/AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+      - D:/Runa/runa-systems-global/AKASHA/📚 Russell Brunson/Dotcom Secrets.md
+      - D:/Runa/runa-systems-global/AKASHA/📚 Everton Pieri/Metodo-Anjos.md
     ONLY load these when a command explicitly requires offer analysis or design.
 
 agent:
