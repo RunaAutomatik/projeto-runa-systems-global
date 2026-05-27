@@ -101,7 +101,7 @@ Esta ferramenta é como ter um assistente que:
 > **O que é o AKASHA?**
 > É o nosso "banco de conhecimento interno". Uma pasta com arquivos de texto
 > que contém os frameworks e métodos dos mentores que você estuda.
-> Fica em `C:/runa-systems-global/AKASHA/`.
+> Fica em `D:/Runa/runa-systems-global/AKASHA/`.
 > É o "cérebro de referência" que os agents consultam quando precisam de estratégia.
 
 **Decisão: ✅ INSTALAR ESSA SEMANA**
@@ -569,6 +569,6 @@ Renovar em: claude.ai → Settings → Integrations → Zernio → Reconnect.
 JWT expirou. Para renovar: acessar `https://primary-production-bae40.up.railway.app` → Settings → API Keys → Create → passar a chave → eu atualizo `.mcp.json`.
 
 **precompact-session-digest.cjs:** ⚠️ ARQUIVO ÓRFÃO — DELETAR MANUALMENTE
-Localização: `c:/runa-systems-global/.claude/hooks/precompact-session-digest.cjs`
+Localização: `D:/Runa/runa-systems-global/.claude/hooks/precompact-session-digest.cjs`
 O runner que ele dependia (`.aiox-core/hooks/unified/runners/precompact-runner.js`) não existe.
 Arquivo inativo e quebrado. Deletar via Explorer ou terminal.

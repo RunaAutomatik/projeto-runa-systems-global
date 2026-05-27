@@ -267,7 +267,7 @@ obsidian read path="📅 Diário/2026-04-10.md"
 obsidian search query="Claude Code"
 ```
 
-**Vault:** `C:/runa-systems-global/SÍRIOS/`
+**Vault:** `D:/Runa/runa-systems-global/SÍRIOS/`
 
 ---
 

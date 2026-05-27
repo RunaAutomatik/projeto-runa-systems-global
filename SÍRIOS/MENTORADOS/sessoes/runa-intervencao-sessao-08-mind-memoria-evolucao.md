@@ -382,5 +382,5 @@ Solução: no protocolo semanal, mostrar que são 15 minutos — não uma hora. 
 
 - **Anterior:** [[runa-intervencao-sessao-07-mind-base-conhecimento|S07 — MIND$ I · Base de Conhecimento]]
 - **Próxima:** S09 — Especialização (track escolhido em S01)
-- **Referência vault:** AKASHA (`C:/runa-systems-global/AKASHA/`) — implementação de referência
+- **Referência vault:** AKASHA (`D:/Runa/runa-systems-global/AKASHA/`) — implementação de referência
 - **Artefatos:** [[]] — pasta com todos os entregáveis desta fase

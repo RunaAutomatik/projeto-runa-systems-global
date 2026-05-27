@@ -299,5 +299,5 @@ O conteúdo do vault é único para cada cliente. O facilitador não pode prepar
 
 - **Anterior:** [[runa-intervencao-sessao-06-squad-deploy|S06 — SQUAD$ III · Deploy]]
 - **Próxima:** [[runa-intervencao-sessao-08-mind-memoria-evolucao|S08 — MIND$ II · Memória e Evolução]]
-- **Referência vault:** AKASHA (`C:/runa-systems-global/AKASHA/`) — implementação de referência
+- **Referência vault:** AKASHA (`D:/Runa/runa-systems-global/AKASHA/`) — implementação de referência
 - **Artefatos:** [[]] — pasta com todos os entregáveis desta fase

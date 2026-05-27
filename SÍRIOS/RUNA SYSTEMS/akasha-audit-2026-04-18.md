@@ -76,8 +76,8 @@ Conhecimento de negócio reutilizável — pertence ao AKASHA, não ao SÍRIOS (
 - **Resolução:** Atualizar `runa-brand-identity-system.md` — remover ou marcar essa seção como deprecada
 
 ### 2. Path errado do AKASHA em `memoria-sistema.md`
-- **`🧠 SISTEMA/orquestrador/memoria-sistema.md`** — documenta AKASHA como `C:/runa-systems-global/bases/` e referencia `📋 Agentes/` (pasta inexistente)
-- **Conflita com:** Path real `C:/runa-systems-global/AKASHA/` e pasta real `🤖 AGENTES/`
+- **`🧠 SISTEMA/orquestrador/memoria-sistema.md`** — documenta AKASHA como `D:/Runa/runa-systems-global/bases/` e referencia `📋 Agentes/` (pasta inexistente)
+- **Conflita com:** Path real `D:/Runa/runa-systems-global/AKASHA/` e pasta real `🤖 AGENTES/`
 - **Resolução:** Atualizar `memoria-sistema.md` com path e nome de pasta corretos
 
 ### 3. `runa-systems-business-context.md` nunca atualizado

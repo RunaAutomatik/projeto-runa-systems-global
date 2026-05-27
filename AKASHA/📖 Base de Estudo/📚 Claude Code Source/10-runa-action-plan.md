@@ -91,7 +91,7 @@ Antes de começar Story X: /compact
       "matcher": "Edit|Write",
       "hooks": [{
         "type": "command",
-        "command": "cd C:/runa-systems-global && npx prettier --write $CLAUDE_FILE_PATH 2>/dev/null || true"
+        "command": "cd D:/Runa/runa-systems-global && npx prettier --write $CLAUDE_FILE_PATH 2>/dev/null || true"
       }]
     }]
   }

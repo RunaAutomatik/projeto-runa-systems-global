@@ -34,7 +34,7 @@ type: module-index
 
 ## LP RUNA (ativa)
 
-Localização: `c:/runa-systems-global/apps/lp-runa/`
+Localização: `D:/Runa/runa-systems-global/apps/lp-runa/`
 Deploy: Railway (em configuração)
 
 ---

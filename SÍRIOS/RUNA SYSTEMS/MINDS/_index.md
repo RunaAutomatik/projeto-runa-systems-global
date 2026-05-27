@@ -32,7 +32,7 @@ hot.md → buffer 500-char de conhecimento ativo recente
 log.md → log de operações append-only
 ```
 
-**Vault ativo:** `C:/runa-systems-global/AKASHA/`
+**Vault ativo:** `D:/Runa/runa-systems-global/AKASHA/`
 
 ---
 

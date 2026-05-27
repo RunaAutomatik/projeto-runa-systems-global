@@ -20,8 +20,8 @@ status: live — update each session
 | **Owner** | Arthur (@arthsystems_) |
 | **Orchestrator** | ORION (aiox-master) |
 | **Framework** | Synkra AIOX |
-| **Primary vault** | SÍRIOS (`C:/runa-systems-global/SÍRIOS/`) |
-| **Knowledge vault** | AKASHA (`C:/runa-systems-global/AKASHA/`) |
+| **Primary vault** | SÍRIOS (`D:/Runa/runa-systems-global/SÍRIOS/`) |
+| **Knowledge vault** | AKASHA (`D:/Runa/runa-systems-global/AKASHA/`) |
 
 ---
 
@@ -135,7 +135,7 @@ SÍRIOS/                         ← primary knowledge vault
     ├── README.md
     └── memoria-sistema.md ✅ (this file)
 
-AKASHA/                         ← agent knowledge vault (C:/runa-systems-global/AKASHA/)
+AKASHA/                         ← agent knowledge vault (D:/Runa/runa-systems-global/AKASHA/)
 ├── raw/
 ├── wiki/
 │   ├── index.md

@@ -19,7 +19,7 @@ type: skill-doc
 | **@aiox-master** | Orion | [[Skills Agentes AIOX]] |
 | **ARES** | — | [[Skills ARES Aquisição]] |
 | **FREYJA** | — | [[Skills FREYJA Conteúdo]] |
-| **MAYA** | — | [[Skills MAYA Produção AV]] |
+| **MAYA** | — | [[Skills MAYA Produção AV]] · [[Skills MAYA Framework GenHQ]] |
 | **HERMES** | — | [[Skills HERMES Automação]] |
 | **HELIOS** | — | [[Skills HELIOS SEO]] |
 | **ORION** | — | [[Skills ORION Knowledge]] |
@@ -55,6 +55,9 @@ type: skill-doc
 
 ### Vídeo de produto 1080p com avatar e referências
 → [[Skills MAYA Produção AV]] → muapi: `sd-2-vip-omni-reference-1080p`
+
+### Organizar campanha AV (pasta de projeto, UUID tracking, feedback loop)
+→ [[Skills MAYA Framework GenHQ]] → modelo de 11 arquivos, `reference-ids.md`, `seance-prompt-framework.md`, Google Sheets feedback loop via `gws`
 
 ### Identidade visual de marca completa (Agency Pipeline — 12 skills)
 → [[Skills ARES Aquisição]] → `/creative-brief` — onboarding de cliente (Step 1)
@@ -170,6 +173,7 @@ type: skill-doc
 | File | What it covers | Status |
 |------|---------------|--------|
 | [[Skills MAYA Produção AV]] | Higgsfield MCP/CLI, muapi, infsh, video-use, ElevenLabs + Agency Pipeline (paleta-cores, logomarca, mock-*, moodboard, lp-builder) | ✅ Active |
+| [[Skills MAYA Framework GenHQ]] | GenHQ production organization — pasta de 11 arquivos, UUID tracking, Character Sheet rule, feedback loop Google Sheets, batch rules | ✅ Active |
 | [[Skills FREYJA Conteúdo]] | Content strategy, copy, carousel briefs, ads-dna | ✅ Active |
 | [[Skills HERMES Automação]] | n8n-mcp, Zernio API, Instagram/WhatsApp automations | ✅ Active |
 | [[Skills ARES Aquisição]] | /runa-os-audit (Four Cs) + /runa-intake (Day 1 onboarding) + /creative-brief (agency onboarding) | ✅ Active |

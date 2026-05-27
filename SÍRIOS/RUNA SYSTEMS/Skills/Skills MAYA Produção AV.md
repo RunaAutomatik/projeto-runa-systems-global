@@ -332,6 +332,64 @@ These operations have NO CLI equivalent — use MCP directly:
 
 ---
 
+## Project Organization — GenHQ Framework
+
+**Full guide:** [[Skills MAYA Framework GenHQ]]
+
+**Reference Taxonomy (4 types):** Type A — Human (person UUIDs for identity consistency); Type B — Style (scene/environment aesthetic — **never** use as person reference); Type C — Art (artistic style and technique); Type D — Brand (logo, product, brand identity). Plus **Inverse Prompt** technique for negative constraint encoding. Full taxonomy: [[Skills MAYA Framework GenHQ]] § 3. Reference Taxonomy.
+
+Every active campaign for @arthsystems_ or a client gets a project folder with 11 files:
+
+```
+{projeto}/
+├── model-references/           ← Character Sheets only (NEVER editorial photos)
+├── environment-references/     ← scene/location images
+├── product-references/         ← product shots, 360° sheets
+├── outputs/                    ← all generated files
+├── reference-ids.md            ← MASTER UUID tracker
+├── model-descriptions.md       ← physical descriptors + costume notes
+├── prompt-log.md               ← every prompt that ran
+├── seance-failure-log.md       ← rejected generations (prevent repeats)
+├── seance-prompt-framework.md  ← style bible + what works/fails
+├── environment-descriptors.md  ← text descriptions of each environment
+└── handoff.md                  ← master: all UUIDs, active rules, job IDs
+```
+
+**For @arthsystems_:** use `SÍRIOS/RUNA SYSTEMS/arthur-content/{campanha}/`
+
+**Critical rules:**
+- `reference-ids.md` = single source of truth for ALL UUIDs (media IDs, soul IDs, job IDs)
+- Read `handoff.md` and `seance-prompt-framework.md` at session start — always
+- Read Google Sheets feedback before each batch — extract rejected (what to avoid) + approved (what worked)
+- Log every generation to `prompt-log.md` — append format
+- Log every rejection to `seance-failure-log.md` — with reason and what to try next
+- Batch max 10 → on failure: split 10→5+5 → on failure: individual runs
+
+**Character Sheet rule (CRITICAL):**
+
+| Type | Use as model reference? | Effect |
+|------|------------------------|--------|
+| Character Sheet (neutral bg, multi-angle, full body + detail) | ✅ YES | Seance extracts proportions independently |
+| Editorial photo (posed scene, atmospheric lighting) | ❌ NEVER | Seance copies the scene literally — ignores the person |
+
+Editorial photos go ONLY in `environment-references/` — never as model references.
+
+**Feedback loop (Google Sheets + gws CLI):**
+```bash
+# Read before each batch
+gws sheets spreadsheets values get \
+  --params '{"spreadsheetId":"{ID}","range":"Images!A:H"}'
+
+# Write after generation (status: Pending)
+gws sheets spreadsheets values append \
+  --params '{"spreadsheetId":"{ID}","range":"Images!A:H","valueInputOption":"RAW"}' \
+  --json '{"values":[["[prompt]","[uuids]","outputs/file.jpg","Pending","","gpt_image_2","[job-id]","2026-05-26"]]}'
+```
+
+Sheet columns: A=Prompt | B=UUIDs | C=Output path | D=Status | E=Notes | F=Model | G=Job ID | H=Date
+
+---
+
 ## @arthsystems_ Production Flow
 
 All content for Arthur's Instagram account requires FREYJA review:

@@ -50,7 +50,7 @@ Each product has its own folder with standardized subfolders:
 
 ## Knowledge Vault (AKASHA — bases/)
 
-Agent knowledge bases live in a separate vault: `C:/runa-systems-global/bases/`
+Agent knowledge bases live in a separate vault: `D:/Runa/runa-systems-global/bases/`
 
 | Base | Agent |
 |------|-------|

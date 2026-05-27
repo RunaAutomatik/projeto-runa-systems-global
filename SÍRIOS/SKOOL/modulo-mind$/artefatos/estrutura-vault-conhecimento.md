@@ -11,7 +11,7 @@ produto: [[runa-intervencao-sessao-07-mind-base-conhecimento]]
 
 > **O que é:** Guia completo para criar e configurar o vault de conhecimento personalizado do cliente — o repositório que transforma agentes genéricos em especialistas do negócio.
 > **Quando usar:** Block 3 de S07 — criação ao vivo com o cliente.
-> **Referência:** Implementação de referência em `C:/runa-systems-global/AKASHA/`
+> **Referência:** Implementação de referência em `D:/Runa/runa-systems-global/AKASHA/`
 
 ---
 

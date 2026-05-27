@@ -242,7 +242,7 @@ Quando ativo, usa um modelo de linguagem para:
       "matcher": "Edit",
       "hooks": [{
         "type": "command",
-        "command": "cd C:/runa-systems-global && npm run lint --silent 2>&1 | head -20"
+        "command": "cd D:/Runa/runa-systems-global && npm run lint --silent 2>&1 | head -20"
       }]
     }]
   }

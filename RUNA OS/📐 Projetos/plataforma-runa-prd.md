@@ -39,7 +39,7 @@ The platform replaces all three with a single surface engineered specifically fo
 
 ## Recommended Approach
 
-Build `apps/plataforma-runa/` as a new Next.js 15+ app inside the existing monorepo (`c:/runa-systems-global/`). Supabase is already configured at the project root — use the same instance. Deploy to Netlify (already in stack, Netlify MCP active).
+Build `apps/plataforma-runa/` as a new Next.js 15+ app inside the existing monorepo (`D:/Runa/runa-systems-global/`). Supabase is already configured at the project root — use the same instance. Deploy to Netlify (already in stack, Netlify MCP active).
 
 ### Decisions Confirmed
 
@@ -488,7 +488,7 @@ Arthur publishes video to YouTube
 
 ## RUNA OS Documentation Vault
 
-**Vault path:** `c:/runa-systems-global/RUNA OS/` — Obsidian vault, already initialized (`.obsidian/` present).
+**Vault path:** `D:/Runa/runa-systems-global/RUNA OS/` — Obsidian vault, already initialized (`.obsidian/` present).
 
 All documentation produced specifically for this project lives here. Existing docs in SÍRIOS remain where they are; reference files used as input for this project get a copy in `RUNA OS/raw/`.
 

@@ -347,8 +347,8 @@ Guardião do conhecimento do ecossistema. Gerencia o vault Obsidian SÍRIOS, exe
 ### Vaults Gerenciados
 | Vault | Path | Uso |
 |-------|------|-----|
-| SÍRIOS | `C:/runa-systems-global/SÍRIOS/` | Vault principal — docs, specs, memoria de projeto |
-| AKASHA | `C:/runa-systems-global/AKASHA/` | Knowledge base (Karpathy pattern) — frameworks, conceitos |
+| SÍRIOS | `D:/Runa/runa-systems-global/SÍRIOS/` | Vault principal — docs, specs, memoria de projeto |
+| AKASHA | `D:/Runa/runa-systems-global/AKASHA/` | Knowledge base (Karpathy pattern) — frameworks, conceitos |
 
 ### Relações com Outros Agentes
 ```
