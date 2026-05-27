@@ -20,23 +20,23 @@ export function DeliverableCard({ deliverable, sessionLabel }: Props) {
 
   const inner = (
     <div
-      className={`bg-surface1 border border-border rounded-lg p-4 flex items-start justify-between gap-4 transition-colors ${available ? "hover:border-accent" : "opacity-50 cursor-default"}`}
+      className={`bg-surface-1 border border-border rounded-lg p-4 flex items-start justify-between gap-4 transition-colors ${available ? "hover:border-accent" : "opacity-50 cursor-default"}`}
     >
       <div className="space-y-1 min-w-0">
         {sessionLabel && (
-          <p className="text-textMuted text-xs font-mono">{sessionLabel}</p>
+          <p className="text-muted text-xs font-mono">{sessionLabel}</p>
         )}
-        <p className="text-textPrimary text-sm font-medium truncate">
+        <p className="text-text text-sm font-medium truncate">
           {deliverable.title}
         </p>
         {deliverable.description && (
-          <p className="text-textMuted text-xs line-clamp-2">
+          <p className="text-muted text-xs line-clamp-2">
             {deliverable.description}
           </p>
         )}
-        {!available && <p className="text-textMuted text-xs">Em breve</p>}
+        {!available && <p className="text-muted text-xs">Em breve</p>}
       </div>
-      <span className="text-xs bg-accentSoft text-textMuted border border-border rounded px-2 py-0.5 whitespace-nowrap flex-shrink-0">
+      <span className="text-xs bg-accent-soft text-muted border border-border rounded px-2 py-0.5 whitespace-nowrap flex-shrink-0">
         {label}
       </span>
     </div>

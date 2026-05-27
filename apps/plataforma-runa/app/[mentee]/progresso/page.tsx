@@ -41,12 +41,12 @@ export default async function ProgressoPage({ params }: Props) {
   const completed = getCompletedMilestones(latest);
 
   return (
-    <div className="min-h-screen bg-bg text-textPrimary">
+    <div className="min-h-screen bg-bg text-text">
       <div className="max-w-2xl mx-auto px-6 py-12 space-y-10">
         <div className="space-y-1">
-          <h1 className="text-textPrimary text-2xl font-semibold">Progresso</h1>
+          <h1 className="text-text text-2xl font-semibold">Progresso</h1>
           {latest && (
-            <p className="text-textMuted text-sm">
+            <p className="text-muted text-sm">
               {latest.tools_count} ferramenta
               {latest.tools_count !== 1 ? "s" : ""} · {latest.automations_count}{" "}
               automação
@@ -73,7 +73,7 @@ export default async function ProgressoPage({ params }: Props) {
 
         {allSnapshots.length > 0 && (
           <div className="space-y-4">
-            <h2 className="text-textPrimary text-base font-medium">
+            <h2 className="text-text text-base font-medium">
               Histórico de snapshots
             </h2>
             <SnapshotTimeline snapshots={allSnapshots} />

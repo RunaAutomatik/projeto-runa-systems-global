@@ -43,10 +43,10 @@ export default async function SessoesPage({ params }: Props) {
   const completed = sessionMap.size;
 
   return (
-    <div className="min-h-screen bg-bg text-textPrimary">
+    <div className="min-h-screen bg-bg text-text">
       <div className="max-w-2xl mx-auto px-6 py-12 space-y-8">
         <div className="space-y-3">
-          <h1 className="text-textPrimary text-2xl font-semibold">Sessões</h1>
+          <h1 className="text-text text-2xl font-semibold">Sessões</h1>
           <SessionArcProgress completed={completed} total={TOTAL_SESSIONS} />
         </div>
 

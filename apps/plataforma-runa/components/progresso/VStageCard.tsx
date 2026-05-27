@@ -7,7 +7,7 @@ const STAGE_CONFIG: Record<
 > = {
   V1: {
     label: "V1 — Infra Manual",
-    badgeClass: "bg-surface2 text-textMuted border border-border",
+    badgeClass: "bg-surface-2 text-muted border border-border",
     cardClass: "border-border",
   },
   V2: {
@@ -35,7 +35,7 @@ export function VStageCard({ stage, completed, isCurrent }: Props) {
 
   return (
     <div
-      className={`bg-surface1 border rounded-xl p-5 space-y-4 ${config.cardClass} ${
+      className={`bg-surface-1 border rounded-xl p-5 space-y-4 ${config.cardClass} ${
         isCurrent ? "ring-1 ring-accent/20" : ""
       }`}
     >
@@ -52,7 +52,7 @@ export function VStageCard({ stage, completed, isCurrent }: Props) {
 
       <MilestoneChecklist milestones={milestones} completed={completed} />
 
-      <p className="text-xs text-textMuted font-mono">
+      <p className="text-xs text-muted font-mono">
         {doneCount}/{milestones.length} concluídos
       </p>
     </div>

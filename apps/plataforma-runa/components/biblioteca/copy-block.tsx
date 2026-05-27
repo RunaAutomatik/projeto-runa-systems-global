@@ -18,7 +18,7 @@ export function CopyBlock({ children }: { children: React.ReactNode }) {
       <pre ref={preRef}>{children}</pre>
       <button
         onClick={handleCopy}
-        className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 p-1 rounded text-textMuted hover:text-textPrimary hover:bg-surface2 transition-opacity"
+        className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 p-1 rounded text-muted hover:text-text hover:bg-surface-2 transition-opacity"
         aria-label="Copiar"
       >
         {copied ? <Check size={14} /> : <Copy size={14} />}

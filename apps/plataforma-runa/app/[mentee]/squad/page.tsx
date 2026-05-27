@@ -29,9 +29,9 @@ export default async function SquadPage({ params }: Props) {
     .maybeSingle();
 
   return (
-    <div className="min-h-screen bg-bg text-textPrimary">
+    <div className="min-h-screen bg-bg text-text">
       <div className="max-w-2xl mx-auto px-6 py-12 space-y-8">
-        <h1 className="text-textPrimary text-2xl font-semibold">Squad</h1>
+        <h1 className="text-text text-2xl font-semibold">Squad</h1>
         <SquadGrid agents={snapshot?.agents ?? {}} />
       </div>
     </div>

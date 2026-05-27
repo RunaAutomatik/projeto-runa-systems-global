@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { ProfileCard } from "@/components/mentee/profile-card";
@@ -23,20 +24,34 @@ export default async function MenteeHomePage({ params }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-bg text-textPrimary">
+    <div className="min-h-screen bg-bg text-text">
       <div className="max-w-4xl mx-auto px-6 py-12 space-y-12">
         <ProfileCard profile={profile} />
 
         <Section title="Sessões">
-          <Placeholder text="Suas sessões aparecerão aqui após a primeira semana." />
+          <EmptyState
+            icon="◎"
+            label="Nenhuma sessão ainda"
+            description="Suas sessões aparecem aqui após serem agendadas."
+            action={{ href: `/${mentee}/sessoes`, label: "Ver calendário" }}
+          />
         </Section>
 
         <Section title="Entregáveis">
-          <Placeholder text="Os entregáveis das sessões ficarão disponíveis aqui." />
+          <EmptyState
+            icon="◈"
+            label="Sem entregáveis"
+            description="PDFs, templates e recursos das sessões ficam aqui."
+          />
         </Section>
 
         <Section title="Seu Squad">
-          <Placeholder text="Os 8 Agentes Neurais do seu squad serão configurados aqui." />
+          <EmptyState
+            icon="◉"
+            label="Squad em configuração"
+            description="Os 8 Agentes Neurais serão configurados ao longo da mentoria."
+            action={{ href: `/${mentee}/squad`, label: "Ver squad" }}
+          />
         </Section>
       </div>
     </div>
@@ -52,7 +67,7 @@ function Section({
 }) {
   return (
     <section className="space-y-4">
-      <h2 className="text-textPrimary text-lg font-semibold border-b border-border pb-2">
+      <h2 className="text-text text-lg font-semibold border-b border-border pb-2">
         {title}
       </h2>
       {children}
@@ -60,10 +75,32 @@ function Section({
   );
 }
 
-function Placeholder({ text }: { text: string }) {
+function EmptyState({
+  icon,
+  label,
+  description,
+  action,
+}: {
+  icon: string;
+  label: string;
+  description: string;
+  action?: { href: string; label: string };
+}) {
   return (
-    <div className="bg-surface1 border border-border rounded-lg p-8 text-center">
-      <p className="text-textMuted text-sm">{text}</p>
+    <div className="bg-surface-1 border border-dashed border-border rounded-lg p-8 flex flex-col items-center gap-3 text-center">
+      <span className="text-2xl text-muted opacity-60 select-none">{icon}</span>
+      <div className="space-y-1">
+        <p className="text-text text-sm font-medium">{label}</p>
+        <p className="text-muted text-xs max-w-xs">{description}</p>
+      </div>
+      {action && (
+        <Link
+          href={action.href}
+          className="text-xs text-muted hover:text-text border border-border rounded px-3 py-1.5 transition-colors hover:border-accent mt-1"
+        >
+          {action.label}
+        </Link>
+      )}
     </div>
   );
 }

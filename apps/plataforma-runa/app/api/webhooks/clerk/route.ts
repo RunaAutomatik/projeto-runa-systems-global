@@ -18,6 +18,11 @@ export async function POST(req: Request) {
   const svix_id = req.headers.get("svix-id");
   const svix_timestamp = req.headers.get("svix-timestamp");
   const svix_signature = req.headers.get("svix-signature");
+
+  if (!svix_id || !svix_timestamp || !svix_signature) {
+    return new Response("Missing svix headers", { status: 400 });
+  }
+
   const body = await req.text();
 
   const wh = new Webhook(WEBHOOK_SECRET);
@@ -32,18 +37,21 @@ export async function POST(req: Request) {
     return new Response("Invalid signature", { status: 400 });
   }
 
-  if (evt.type === "user.created" || evt.type === "user.updated") {
-    const { id, email_addresses, first_name, last_name } = evt.data;
-    const email = email_addresses[0]?.email_address;
-    const full_name = [first_name, last_name].filter(Boolean).join(" ") || null;
+  const { id, email_addresses, first_name, last_name } = evt.data;
+  const email = email_addresses[0]?.email_address;
+  const full_name = [first_name, last_name].filter(Boolean).join(" ") || null;
+  const supabase = createAdminClient();
 
-    const supabase = createAdminClient();
+  if (evt.type === "user.created") {
     await supabase
       .from("profiles")
       .upsert(
         { id, email, full_name, tier: "free" },
-        { onConflict: "id", ignoreDuplicates: false },
+        { onConflict: "id", ignoreDuplicates: true },
       );
+  } else if (evt.type === "user.updated") {
+    // Only update profile fields — never overwrite tier set by Stripe webhook
+    await supabase.from("profiles").update({ email, full_name }).eq("id", id);
   }
 
   return new Response("OK", { status: 200 });

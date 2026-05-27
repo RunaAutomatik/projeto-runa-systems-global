@@ -15,7 +15,7 @@ export function SessionNav({ menteeSlug, current, total }: Props) {
       {hasPrev ? (
         <Link
           href={`/${menteeSlug}/sessoes/${current - 1}`}
-          className="text-textMuted hover:text-textPrimary transition-colors flex items-center gap-1"
+          className="text-muted hover:text-text transition-colors flex items-center gap-1"
         >
           ← Sessão {String(current - 1).padStart(2, "0")}
         </Link>
@@ -23,14 +23,14 @@ export function SessionNav({ menteeSlug, current, total }: Props) {
         <span />
       )}
 
-      <span className="text-textMuted font-mono text-xs">
+      <span className="text-muted font-mono text-xs">
         Sessão {String(current).padStart(2, "0")} de {total}
       </span>
 
       {hasNext ? (
         <Link
           href={`/${menteeSlug}/sessoes/${current + 1}`}
-          className="text-textMuted hover:text-textPrimary transition-colors flex items-center gap-1"
+          className="text-muted hover:text-text transition-colors flex items-center gap-1"
         >
           Sessão {String(current + 1).padStart(2, "0")} →
         </Link>

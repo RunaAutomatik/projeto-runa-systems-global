@@ -8,10 +8,10 @@ export function SessionArcProgress({ completed, total }: Props) {
 
   return (
     <div className="space-y-2">
-      <p className="text-textMuted text-sm">
+      <p className="text-muted text-sm">
         Sessão {completed} de {total} concluída{completed !== 1 ? "s" : ""}
       </p>
-      <div className="h-1.5 bg-surface2 rounded-full overflow-hidden">
+      <div className="h-1.5 bg-surface-2 rounded-full overflow-hidden">
         <div
           className="h-full bg-accent rounded-full transition-all duration-500"
           style={{ width: `${pct}%` }}

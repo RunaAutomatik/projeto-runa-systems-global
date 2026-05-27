@@ -45,7 +45,7 @@ export default async function SessaoDetailPage({ params }: Props) {
   // Session doesn't exist yet (future session) — not a 404
   if (!session) {
     return (
-      <div className="min-h-screen bg-bg text-textPrimary">
+      <div className="min-h-screen bg-bg text-text">
         <div className="max-w-2xl mx-auto px-6 py-12 space-y-6">
           <SessionNav
             menteeSlug={mentee}
@@ -53,10 +53,10 @@ export default async function SessaoDetailPage({ params }: Props) {
             total={TOTAL_SESSIONS}
           />
           <div className="text-center py-24 space-y-3">
-            <p className="text-textMuted text-sm font-mono">
+            <p className="text-muted text-sm font-mono">
               {String(sessionNumber).padStart(2, "0")}
             </p>
-            <p className="text-textPrimary text-lg">
+            <p className="text-text text-lg">
               Sessão não realizada ainda
             </p>
           </div>
@@ -86,7 +86,7 @@ export default async function SessaoDetailPage({ params }: Props) {
   }[];
 
   return (
-    <div className="min-h-screen bg-bg text-textPrimary">
+    <div className="min-h-screen bg-bg text-text">
       <div className="max-w-2xl mx-auto px-6 py-12 space-y-8">
         <SessionNav
           menteeSlug={mentee}
@@ -97,12 +97,12 @@ export default async function SessaoDetailPage({ params }: Props) {
         {signedUrl ? (
           <SessionPlayer signedUrl={signedUrl} />
         ) : (
-          <div className="w-full aspect-video bg-surface1 border border-border rounded-lg flex items-center justify-center">
-            <p className="text-textMuted text-sm">Gravação em processamento</p>
+          <div className="w-full aspect-video bg-surface-1 border border-border rounded-lg flex items-center justify-center">
+            <p className="text-muted text-sm">Gravação em processamento</p>
           </div>
         )}
 
-        <div className="flex items-center gap-4 text-textMuted text-xs">
+        <div className="flex items-center gap-4 text-muted text-xs">
           <span>📅 {date}</span>
           {session.duration_minutes != null && (
             <span>⏱ {session.duration_minutes}min</span>
@@ -111,8 +111,8 @@ export default async function SessaoDetailPage({ params }: Props) {
 
         {session.summary && (
           <section className="space-y-3">
-            <h2 className="text-textPrimary text-base font-semibold">Resumo</h2>
-            <p className="text-textMuted text-sm leading-relaxed whitespace-pre-wrap">
+            <h2 className="text-text text-base font-semibold">Resumo</h2>
+            <p className="text-muted text-sm leading-relaxed whitespace-pre-wrap">
               {session.summary}
             </p>
           </section>
@@ -120,7 +120,7 @@ export default async function SessaoDetailPage({ params }: Props) {
 
         {deliverables.length > 0 && (
           <section className="space-y-3">
-            <h2 className="text-textPrimary text-base font-semibold">
+            <h2 className="text-text text-base font-semibold">
               Entregáveis desta sessão
             </h2>
             <div className="space-y-2">

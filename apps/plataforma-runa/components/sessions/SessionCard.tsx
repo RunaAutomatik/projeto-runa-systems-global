@@ -14,28 +14,47 @@ export function SessionCard({ session, menteeSlug }: Props) {
     { day: "2-digit", month: "2-digit", year: "numeric" },
   );
   const delivCount = session.deliverables?.[0]?.count ?? 0;
+  const isConcluida = session.bunny_video_id != null;
 
   return (
     <Link href={`/${menteeSlug}/sessoes/${session.session_number}`}>
-      <div className="bg-surface1 border border-border rounded-lg p-5 flex items-start justify-between gap-4 hover:border-accent transition-colors cursor-pointer">
+      <div
+        className={[
+          "border rounded-lg p-5 flex items-start justify-between gap-4 transition-colors cursor-pointer",
+          isConcluida
+            ? "bg-surface-1 border-border opacity-70 hover:opacity-100 hover:border-accent"
+            : "bg-surface-1 border-border hover:border-accent",
+        ].join(" ")}
+      >
         <div className="space-y-1 min-w-0">
           <div className="flex items-center gap-3">
-            <span className="text-textMuted text-xs font-mono flex-shrink-0">
+            <span className="text-muted text-xs font-mono flex-shrink-0">
               {String(session.session_number).padStart(2, "0")}
             </span>
-            <h3 className="text-textPrimary text-sm font-medium truncate">
+            <h3
+              className={[
+                "text-sm font-medium truncate",
+                isConcluida ? "text-muted" : "text-text",
+              ].join(" ")}
+            >
               {session.title}
             </h3>
+            {isConcluida && (
+              <span className="text-xs text-muted border border-border rounded px-1.5 py-0.5 flex-shrink-0">
+                ✓
+              </span>
+            )}
           </div>
-          <div className="flex items-center gap-4 text-textMuted text-xs pl-7">
+          <div className="flex items-center gap-4 text-muted text-xs pl-7">
             <span>{date}</span>
             {session.duration_minutes != null && (
               <span>{session.duration_minutes}min</span>
             )}
+            {isConcluida && <span className="text-muted">concluída</span>}
           </div>
         </div>
         {delivCount > 0 && (
-          <span className="text-xs bg-accentSoft text-textMuted border border-border rounded px-2 py-0.5 whitespace-nowrap flex-shrink-0">
+          <span className="text-xs bg-accent-soft text-muted border border-border rounded px-2 py-0.5 whitespace-nowrap flex-shrink-0">
             {delivCount} entregável{delivCount !== 1 ? "is" : ""}
           </span>
         )}

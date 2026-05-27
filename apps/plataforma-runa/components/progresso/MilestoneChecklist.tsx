@@ -37,7 +37,7 @@ export function MilestoneChecklist({ milestones, completed }: Props) {
               )}
             </span>
             <span
-              className={`text-sm ${done ? "text-textPrimary" : "text-textMuted"}`}
+              className={`text-sm ${done ? "text-text" : "text-muted"}`}
             >
               {m.label}
             </span>

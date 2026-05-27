@@ -27,9 +27,9 @@ export default async function EntregaveisPage({ params }: Props) {
     .order("created_at", { ascending: false });
 
   return (
-    <div className="min-h-screen bg-bg text-textPrimary">
+    <div className="min-h-screen bg-bg text-text">
       <div className="max-w-2xl mx-auto px-6 py-12 space-y-8">
-        <h1 className="text-textPrimary text-2xl font-semibold">Entregáveis</h1>
+        <h1 className="text-text text-2xl font-semibold">Entregáveis</h1>
         <DeliverableBrowser deliverables={deliverables ?? []} />
       </div>
     </div>

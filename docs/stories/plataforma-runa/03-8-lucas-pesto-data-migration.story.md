@@ -2,7 +2,7 @@
 epic: "03"
 story: "03-8"
 title: "Migração dos dados do Lucas Pesto — 9 sessões + entregáveis"
-status: Draft
+status: Deprecated
 type: chore
 estimate: M
 assignee: "@dev"
@@ -88,3 +88,4 @@ await supabase.from('sessions').upsert([
 | Date | Agent | Change |
 |------|-------|--------|
 | 2026-05-16 | @sm | Draft created — BLOCKED on Epic 04 |
+| 2026-05-16 | @dev | Status: Draft → Deprecated — superseded by Story 04-10 which fully implements the seed script |

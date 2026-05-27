@@ -65,7 +65,7 @@ export function DeliverableBrowser({ deliverables }: Props) {
       />
 
       {filtered.length === 0 ? (
-        <p className="text-textMuted text-sm py-8 text-center">
+        <p className="text-muted text-sm py-8 text-center">
           Nenhum entregável encontrado.
         </p>
       ) : (

@@ -40,8 +40,8 @@ export function DeliverableFilters({
             onClick={() => onTypeChange(opt.value)}
             className={`text-xs px-3 py-1 rounded border transition-colors ${
               typeFilter === opt.value
-                ? "bg-accent border-accent text-textPrimary"
-                : "bg-surface1 border-border text-textMuted hover:border-accent"
+                ? "bg-accent border-accent text-text"
+                : "bg-surface-1 border-border text-muted hover:border-accent"
             }`}
           >
             {opt.label}
@@ -57,7 +57,7 @@ export function DeliverableFilters({
               e.target.value === "all" ? "all" : Number(e.target.value),
             )
           }
-          className="bg-surface1 border border-border rounded text-xs text-textMuted px-3 py-1 focus:outline-none focus:border-accent transition-colors"
+          className="bg-surface-1 border border-border rounded text-xs text-muted px-3 py-1 focus:outline-none focus:border-accent transition-colors"
         >
           <option value="all">Todas as sessões</option>
           {sessionOptions.map((s) => (

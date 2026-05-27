@@ -6,7 +6,7 @@ const STATUS_CONFIG: Record<
 > = {
   "not-started": {
     label: "Não iniciado",
-    badgeClass: "bg-surface2 text-textMuted border border-border",
+    badgeClass: "bg-surface-2 text-muted border border-border",
     ringClass: "",
   },
   "training-wheels": {
@@ -37,9 +37,9 @@ export function AgentCard({ name, status }: Props) {
 
   return (
     <div
-      className={`bg-surface1 border border-border rounded-xl p-4 space-y-3 ${config.ringClass}`}
+      className={`bg-surface-1 border border-border rounded-xl p-4 space-y-3 ${config.ringClass}`}
     >
-      <p className="text-textPrimary text-sm font-medium leading-tight">
+      <p className="text-text text-sm font-medium leading-tight">
         {name}
       </p>
       <span

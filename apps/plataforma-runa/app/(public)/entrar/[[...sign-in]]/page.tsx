@@ -15,8 +15,11 @@ export default async function EntrarPage({
         appearance={{
           variables: {
             colorBackground: "#111712",
-            colorText: "#E8EDE9",
             colorPrimary: "#3D4842",
+            colorText: "#E8EDE9",
+            colorTextSecondary: "#7A8C7C",
+            colorInputBackground: "#1A201B",
+            colorInputText: "#E8EDE9",
           },
         }}
       />
