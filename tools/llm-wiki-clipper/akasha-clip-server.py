@@ -4,7 +4,7 @@ AKASHA Web Clipper Server
 Receives clips from the LLM Wiki Chrome extension and saves to AKASHA/raw/
 
 Usage: python akasha-clip-server.py [--vault PATH]
-Default vault: C:/runa-systems-global/AKASHA
+Default vault: D:/Runa/runa-systems-global/AKASHA
 """
 
 import argparse
@@ -18,7 +18,7 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 from urllib.parse import urlparse
 
-DEFAULT_VAULT = Path("C:/runa-systems-global/AKASHA")
+DEFAULT_VAULT = Path("D:/Runa/runa-systems-global/AKASHA")
 PORT = 19827
 
 def slugify(title: str) -> str:
