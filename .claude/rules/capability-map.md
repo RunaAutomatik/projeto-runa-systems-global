@@ -13,11 +13,11 @@ Never guess or reinvent — if the capability exists, use it.
 |-------|---------------|-------------|
 | FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing**, **gpt-image-2-prompt-gallery** (consult before image prompts) | Supabase, knowledge-work-plugins (marketing, product-management) |
 | MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip**, **video-use** (raw footage editing), **gpt-image-2-prompt-gallery** (consult before image prompts) | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
-| HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content** | n8n-mcp, Gmail, Google Calendar, knowledge-work-plugins (customer-support) |
+| HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content**, **gws-gmail**, **gws-calendar**, **gws-events**, **gws-chat** | n8n-mcp, Gmail, Google Calendar, knowledge-work-plugins (customer-support) |
 | ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours**, **runa-os-audit**, **lp-copy**, **sales-sequence**, **client-copy** | knowledge-work-plugins (marketing, sales, finance) |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
 | ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp, knowledge-work-plugins (data, enterprise-search, bio-research) |
-| ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal**, **runa-intake** | Gmail, Google Calendar, Netlify, notebooklm-mcp, knowledge-work-plugins (enterprise-search, productivity) |
+| ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal**, **runa-intake**, **gws-drive**, **gws-docs**, **gws-sheets**, **gws-tasks**, **gws-workflow** | Gmail, Google Calendar, Netlify, notebooklm-mcp, knowledge-work-plugins (enterprise-search, productivity) |
 | @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse**, **vercel-react-best-practices**, **vercel-composition-patterns**, **vercel-react-native-skills** | Supabase, @21st-dev/magic |
 | @qa | code-review, testing-strategy, pr-review-toolkit, **gstack/review**, **gstack/cso**, **gstack/qa** | — |
 | @devops | devops-automation, commit-commands, hookify, **security-guidance**, **stop-notification**, **post-tool-format**, **vercel-optimize**, **deploy-to-vercel**, **vercel-cli-with-tokens** | Netlify, knowledge-work-plugins (cowork-plugin-management) |
@@ -376,4 +376,23 @@ claude
 
 ---
 
-Last updated: 2026-05-25
+## Google Workspace CLI Skills (gws — ACTIVE ✓ installed 2026-05-27)
+
+**Owner:** ORION (Drive/Docs/Sheets/Tasks), HERMES (Gmail/Calendar/Events), FREYJA (export to Drive), @dev (Sheets API), ARES (Drive offer docs)
+**Auth:** `automatikruna@gmail.com` — `~/.config/gws/credentials.enc` (token_valid: true) | **Rule:** `mcp-usage.md` → gws section
+**Install:** 44 skills via `npx skills add https://github.com/googleworkspace/cli`
+
+| Category | Skills | Agent |
+|----------|--------|-------|
+| Drive | gws-drive, gws-drive-upload | ORION / FREYJA |
+| Docs | gws-docs, gws-docs-write | ORION / FREYJA |
+| Sheets | gws-sheets, gws-sheets-read, gws-sheets-append | ORION / @dev / ARES |
+| Gmail | gws-gmail, gws-gmail-send, gws-gmail-reply, gws-gmail-reply-all, gws-gmail-forward, gws-gmail-read, gws-gmail-triage, gws-gmail-watch | HERMES |
+| Calendar | gws-calendar, gws-calendar-agenda, gws-calendar-insert, gws-events, gws-events-renew, gws-events-subscribe | HERMES / ORION |
+| Collaboration | gws-chat, gws-chat-send, gws-meet, gws-slides, gws-tasks, gws-forms, gws-keep | HERMES / ORION |
+| Admin | gws-people, gws-admin-reports, gws-classroom, gws-script, gws-script-push, gws-modelarmor, gws-shared | ORION / @dev |
+| Workflow | gws-workflow, gws-workflow-email-to-task, gws-workflow-file-announce, gws-workflow-meeting-prep, gws-workflow-standup-report, gws-workflow-weekly-digest | ORION / HERMES |
+
+---
+
+Last updated: 2026-05-27
