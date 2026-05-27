@@ -88,3 +88,10 @@ graphify-out/
 .tmp/
 AKASHA/.ingest-cache.json
 .gstack/
+
+# RUNA OS vault — Obsidian UI state (mirror pattern from SÍRIOS/AKASHA)
+RUNA OS/.obsidian/workspace.json
+RUNA OS/.obsidian/appearance.json
+RUNA OS/.obsidian/plugins/
+RUNA OS/.obsidian/themes/
+RUNA OS/.obsidian/community-plugins.json
