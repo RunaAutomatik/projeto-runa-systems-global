@@ -3,7 +3,7 @@ date: 2026-05-26
 tags: [maya, genhq, arthur, handoff]
 project: runa-systems-global
 type: brain-file
-updated: 2026-05-26
+updated: 2026-05-27
 active_session: false
 ---
 
@@ -79,13 +79,54 @@ Update the "Last Session Summary" and "Open Jobs" sections after each session.
 
 ---
 
+## Analytics Context (May 2026)
+
+Source: Windsor.ai @arthsystems_ report, last 90 days.
+
+| Metric | Value | Benchmark |
+|--------|-------|-----------|
+| Followers | 74 | — |
+| Total posts | 9 | — |
+| Carousel engagement | 9–10% | B2B benchmark: 1–3% (exceptional) |
+| Reels reach avg | 210 | 2.3× more reach than carousels |
+| Carousel reach avg | ~90 | — |
+| Stories published | 0 | **Critical gap** |
+| Saves in 90 days | 1 | **Critical gap — no framework/checklist content** |
+
+### Top performers (validates hook formulas)
+
+| # | Format | Hook | Reach | Interactions |
+|---|--------|------|-------|-------------|
+| 1 | Reel | "Não seja mais um ignorante" | 210 | 14 |
+| 2 | Carousel | "Construo negócios que não precisam de mim" | 101 | 10 + 1 save |
+| 3 | Carousel | "Enquanto você lê isso, Runa Systems está funcionando" | 98 | 9 + 1 share |
+| 4 | Carousel | "Você não tem um problema de produtividade" | 72 | 7 |
+
+### Validated hook formulas
+
+1. **Cognitive Dissonance + Implicit Judgment** — "Não seja mais um [noun]"
+2. **Identity Declaration + Proof** — "[I + verb + bold claim]"
+3. **Temporal Paradox** — "Enquanto você [X], [system] está [Y]"
+
+### Timing (data-validated)
+
+- Best day: **Friday** (63% of weekly views)
+- Best windows: **12h–14h** (lunch) or **18h–20h** (end of workday)
+- Avoid: before 10h
+
+### Validated CTA keywords
+
+Active: ARQUITETO, RUNA, SISTEMA | Pending setup: ARQUITETURA, ISIS, SQUAD
+
+---
+
 ## Last Session Summary
 
-**Date:** 2026-05-26 — Framework setup session
-**What was generated:** Framework files created. No media generated yet.
-**What worked:** _base/ folder structure + all brain files created.
+**Date:** 2026-05-27 — GenHQ v3 data-driven revision + epic-paper T3 onboarding
+**What was built:** GenHQ §11 rewritten (6 content types incl. Stories + Save-Driving). §12 Hook Pattern Library, §13 Content Calendar Template, §14 CTA Keyword Catalog inserted. Old §12–15 renumbered to §15–18. epic-paper T3 onboarded: rule file, capability-map, CLAUDE.md.
+**What worked:** Analytics gaps confirmed by Windsor.ai data. Hook formulas validated against top performers. Paper MCP identity resolved as local HTTP endpoint from Paper Desktop app.
 **What failed:** N/A
-**Next session priority:** First generation session — upload Arthur's character sheet photos to Higgsfield and test GPT Image 2 + 10 refs workflow.
+**Next session priority:** (1) Upload Arthur's character sheet photos to Higgsfield — test GPT Image 2 + 10 refs workflow. (2) **Create first Stories content** (critical gap — zero Stories in 90 days). (3) **Create first Save-Driving Content** (framework/checklist via epic-paper + Paper MCP — gap of only 1 save in 90 days). (4) Configure pending keywords: ARQUITETURA, ISIS, SQUAD in Zernio.
 
 ---
 

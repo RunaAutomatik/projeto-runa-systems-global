@@ -12,7 +12,7 @@ Never guess or reinvent — if the capability exists, use it.
 | Agent | Primary Skills | Primary MCPs |
 |-------|---------------|-------------|
 | FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing**, **gpt-image-2-prompt-gallery** (consult before image prompts) | Supabase, knowledge-work-plugins (marketing, product-management) |
-| MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip**, **video-use** (raw footage editing), **gpt-image-2-prompt-gallery** (consult before image prompts) | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
+| MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip**, **video-use** (raw footage editing), **gpt-image-2-prompt-gallery** (consult before image prompts), **epic-paper** (Paper Desktop MCP — carousel/deck/mockup/post design) | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
 | HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content**, **gws-gmail**, **gws-calendar**, **gws-events**, **gws-chat** | n8n-mcp, Gmail, Google Calendar, knowledge-work-plugins (customer-support) |
 | ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours**, **runa-os-audit**, **lp-copy**, **sales-sequence**, **client-copy** | knowledge-work-plugins (marketing, sales, finance) |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
@@ -310,6 +310,22 @@ Kill Switch triggers when ANY of: inactivity 30d, no KPI, no owner, cost > benef
 | Kill Switch Candidate | Status |
 |-----------------------|--------|
 | n8n-mcp | Monitoring — disabledMcpjsonServers, not used |
+
+---
+
+## Paper MCP (epic-paper — ACTIVE ✓)
+
+**Owner:** MAYA | **Rule file:** `.claude/rules/epic-paper-usage.md`
+**Status:** Skill installed 2026-05-27 — Paper Desktop MCP (local HTTP) — FREYJA brief writer
+**Requires:** Paper Desktop app open with file loaded at `http://127.0.0.1:29979/mcp`
+**Install:** `claude mcp add paper --transport http http://127.0.0.1:29979/mcp --scope user`
+
+| Capability | Canvas | Use case |
+|------------|--------|---------|
+| Instagram carousel | 1080×1080 per slide | Replaces carousel-worker HTML→PNG |
+| Single post | 1080×1080 | Static brand post design |
+| Mockup / landing page | 1440×900 | Sales page, offer mockup |
+| Pitch deck | 1920×1080 | Client presentation visuals |
 
 ---
 

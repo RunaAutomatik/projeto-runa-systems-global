@@ -176,6 +176,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `remotion-usage.md` | Remotion — programmatic React video creation; @dev primary, MAYA secondary (video-use overlay); NOT for real footage editing |
 | `21st-dev-magic-usage.md` | Magic MCP — React component generation via natural language; @dev primary, @ux-design-expert secondary; requires DESIGN.md context |
 | `knowledge-work-plugins-usage.md` | anthropics/knowledge-work-plugins — 11 professional plugins (marketing, sales, finance, product, data, legal, bio-research + more); ARES + ORION + @analyst primary |
+| `epic-paper-usage.md` | epic-paper skill — visual design via Paper Desktop MCP; MAYA primary; FREYJA brief writer; carousel/deck/post/mockup creation |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->

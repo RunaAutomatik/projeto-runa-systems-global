@@ -383,19 +383,146 @@ gws sheets spreadsheets values get \
 
 ## 11. Content Type Scope
 
-| Type | Pipeline | Models | FREYJA Review? |
-|------|---------|--------|----------------|
-| **Posts** | FREYJA brief → MAYA generates image → FREYJA writes copy | GPT Image 2 (PRIMARY); nano-banana-2 (backup) | Yes |
-| **Carousels** | FREYJA brief → MAYA generates images per slide → carousel-worker HTML→PNG | GPT Image 2 (PRIMARY); nano-banana-2 (backup) | Yes |
-| **Reels Virais** | FREYJA brief → MAYA generates video → FREYJA review | Seedance 2.0 (Higgsfield) — 100% Higgsfield, no lip sync | Yes |
+| Type | Pipeline | Models / Tools | FREYJA Review? |
+|------|---------|----------------|----------------|
+| **Posts** | FREYJA brief → MAYA generates image → FREYJA writes copy | GPT Image 2 (Higgsfield PRIMARY); nano-banana-2 (backup) | Yes |
+| **Carousels** | FREYJA brief → MAYA creates artboards via epic-paper skill via Paper MCP | Paper MCP (`write_html` per slide) — requires Paper Desktop app open + MCP connected | Yes |
+| **Stories** | FREYJA brief (casual/daily) → MAYA generates image → Zernio + direct upload | nano-banana-2 or GPT Image 2 | No (daily cadence) |
+| **Save-Driving Content** | FREYJA brief → MAYA designs framework/checklist/architecture via epic-paper | Paper MCP (document layout) — PDF delivered via DM keyword | Yes |
+| **Reels Virais** | FREYJA brief → MAYA generates video → FREYJA review | Seedance 2.0 (Higgsfield) — 15-30s, direct camera, hook in first 3s | Yes |
 | **Reels Avatar** | Script → FREYJA brief → HeyGen → FREYJA review | HeyGen REST API (talking head + native lip sync) | Yes |
 | **VSL** | Script → HeyGen (Arthur talking) + Remotion (full composition with motion/graphics) | HeyGen + Remotion | Yes |
 
 **For Reels Avatar and VSL:** HeyGen has its own system (Avatar ID + Voice ID). No Higgsfield UUIDs needed. Add a `## HeyGen Assets` section in `reference-ids.md`.
 
+**Minimum weekly content mix (from @arthsystems_ analytics):**
+- 2 carousels + 1 Reel Viral (minimum 3 posts/week)
+- 1-3 Stories/day (daily cadence — currently zero, critical gap)
+- 1 Save-Driving post per 2 weeks (framework/checklist — fixes zero-save metric)
+- Peak day: **Friday** (63% of weekly views) → always schedule carousel on Friday
+
+**Reel Viral specs (validated):**
+- Duration: 15-30s (no longer)
+- Camera: direct, no b-roll
+- Hook: delivered in first 3 seconds — no context-setting
+- Hook pattern must match one of the 3 validated formulas (see §12)
+
 ---
 
-## 12. Arthur's Asset Catalog
+## 12. Hook Pattern Library
+
+Three validated hook formulas from @arthsystems_ top performers (90-day analytics).
+
+### Formula 1 — Cognitive Dissonance + Implicit Judgment
+
+**Structure:** [implicit disqualifier] + [identity label that stings]
+
+**Template:** "Não seja mais um [noun that represents the failure]"
+**Variation A:** "Enquanto você [passive activity], outros [active achievement]"
+**Variation B:** "[common belief]. [single word contradiction]."
+
+**Validated example (top Reel — 210 reach, 14 interactions):**
+> "Não seja mais um ignorante digital"
+
+**When to use:** Reels Virais, first slide of carousel
+
+---
+
+### Formula 2 — Identity Declaration + Proof
+
+**Structure:** [strong first-person declaration] + [implied system/evidence]
+
+**Template:** "[I + verb + bold claim] (que não [common dependency])"
+**Variation A:** "[Possessive] [system] [does X] enquanto [human activity]"
+
+**Validated example (top carousel — 101 reach, 1 save):**
+> "Construo negócios que não precisam de mim"
+
+**When to use:** Carousel slide 1, post caption opening
+
+---
+
+### Formula 3 — Temporal Paradox
+
+**Structure:** [present action of reader] + [simultaneous autonomous action of system]
+
+**Template:** "Enquanto você [reads/sleeps/does X], [agent/system] está [doing Y]"
+
+**Validated examples (98 reach, 9 interactions + 1 share):**
+> "Enquanto você lê isso, Runa Systems está funcionando"
+> "Enquanto você lê este post, um agente da Runa está [...]"
+
+**When to use:** Carousel slide 1, Reel hook voiceover, Stories
+
+---
+
+### Application Rules
+
+- Every carousel slide 1 MUST use one of the 3 formulas
+- Reels Virais MUST open with Formula 1 or Formula 3 within the first 3 seconds
+- Do NOT use Formula 2 as a Reel hook — requires visual context to land
+- Rotate formulas: no 2 consecutive posts with the same formula
+
+---
+
+## 13. Content Calendar Template
+
+Weekly structure based on @arthsystems_ peak engagement data (90 days).
+
+### Weekly Cadence (minimum)
+
+| Day | Content | Type | Timing |
+|-----|---------|------|--------|
+| Monday | Story — context/question | Story | 12h-14h |
+| Wednesday | Post or Reel Avatar | Post / Reel Avatar | 12h-14h |
+| **Friday** | Carousel (MAIN — peak day) | Carousel | 12h-14h |
+| Daily | Story — behind-the-scenes or teaser | Story | 18h-20h |
+
+**Friday is mandatory.** 63% of weekly views concentrate on Friday. Never skip Friday carousel.
+
+### Scheduling Rules
+
+- **Always** schedule Friday carousel first when planning the week
+- **Avoid** publishing before 10h — engagement below baseline
+- **Best windows:** 12h-14h (lunch) or 18h-20h (evening)
+- **Save-Driving Content** (framework/checklist): publish Tuesday or Thursday — avoids competing with Friday carousel
+
+### 4-Week Rotation Template
+
+| Week | Monday | Wednesday | Friday |
+|------|--------|-----------|--------|
+| 1 | Story + Reel Viral | Story | Carousel (Formula 2 hook) |
+| 2 | Story | Carousel (Formula 3 hook) | Reel Viral |
+| 3 | Story + Save-Driving post | Story | Carousel (Formula 1 hook) |
+| 4 | Story | Reel Avatar | Carousel (Formula 2 hook) |
+
+Cycle repeats. Each 4-week block = 4 carousels, 2 Reels Virais, 1 Reel Avatar, 1 Save-Driving post, daily Stories.
+
+---
+
+## 14. CTA Keyword Catalog
+
+Keywords trigger Zernio automations → DM → entregável delivery → WhatsApp → discovery call / checkout.
+All new keywords require full 4-element setup before publishing (see `.claude/rules/conversion-post-protocol.md`).
+
+| Keyword | Status | Entregável | Zernio Automation |
+|---------|--------|-----------|-------------------|
+| **ARQUITETO** | ✅ Active | Pin 01 assets — carousel entregável | Configured |
+| **RUNA** | ✅ Active | Pin 02 assets | Configured |
+| **SISTEMA** | ✅ Active | Pin 03 assets | Configured |
+| **ARQUITETURA** | 🔄 Pending | Framework/checklist (save-driving content) | Not yet configured |
+| **ISIS** | 🔄 Pending | AI agent intro / MAYA demo | Not yet configured |
+| **SQUAD** | 🔄 Pending | Agent squad builder guide | Not yet configured |
+
+**Setup sequence for pending keywords:**
+1. Create entregável file (PDF or structured doc)
+2. Configure Zernio trigger (keyword → DM → entregável link)
+3. Confirm checkout link is active
+4. Only then: use keyword in a post
+
+---
+
+## 15. Arthur's Asset Catalog
 
 ### Higgsfield — Character Sheet (10 UUIDs)
 
@@ -442,7 +569,7 @@ Training requirements: ~10-20 high-quality photos per person. Soul IDs are Higgs
 
 ---
 
-## 13. External Image Upload Workflow (Midjourney, Pinterest, etc.)
+## 16. External Image Upload Workflow (Midjourney, Pinterest, etc.)
 
 To get UUIDs from externally generated images, you need to upload them to Higgsfield's media library. Direct URL pasting is not supported — requires CLI upload.
 
@@ -481,7 +608,7 @@ To get UUIDs from externally generated images, you need to upload them to Higgsf
 
 ---
 
-## 14. Anti-Patterns
+## 17. Anti-Patterns
 
 ❌ **Using nano-banana-2 as primary** — it's the backup. GPT Image 2 via Higgsfield is always first.
 
@@ -503,7 +630,7 @@ To get UUIDs from externally generated images, you need to upload them to Higgsf
 
 ---
 
-## 15. Quick Reference CLI
+## 18. Quick Reference CLI
 
 ### GPT Image 2 — Arthur Scene (10 refs)
 ```bash
