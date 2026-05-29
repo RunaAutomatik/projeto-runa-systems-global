@@ -65,22 +65,28 @@ The Inverse Prompt exists because UUIDs only work in Higgsfield. For nano-banana
 **Entry format:**
 ```
 ### Arthur Runa — Character Sheet
-UUID-01: 06525df3-7237-4781-8278-0f45c684c7f2
-UUID-02: 4a62aea6-e32a-471f-a3ca-33e3b25818b6
-UUID-03: 57c94747-552b-445b-85f0-d938023b7d16
-UUID-04: d64514a1-1721-4193-87b5-baccd4ffae8a
-UUID-05: 4c6dba30-8e82-4174-af0f-df3e3f088388
-UUID-06: 9a7aeaaa-570a-43ac-a312-c44df0e673d6
-UUID-07: 397662ef-b437-4351-a3dc-8c0c82343546
-UUID-08: a9915873-6b1a-4d50-883b-896024725834
-UUID-09: d526ad1d-f25b-4474-8ddb-e21a31ea2b81
-UUID-10: 02f6d3ea-eb41-415d-83fb-81b728117110
-Soul ID: a4f9c61c-e105-4bb8-833d-c40158ef6224
 
-Inverse Prompt:
-"Arthur Runa, Brazilian male, late 20s, sharp jaw, dark brown eyes,
-dark brown short hair, athletic but lean build, approximately 1.80m,
-neutral expression, confident posture"
+> ⚠️ DEPRECATED — UUIDs below are from old photos (previous appearance).
+> New 15-photo set uploaded 2026-05-28. UUIDs pending Higgsfield upload.
+> See: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/reference-ids.md → Type A
+
+UUID-01: 06525df3-7237-4781-8278-0f45c684c7f2  [DEPRECATED]
+UUID-02: 4a62aea6-e32a-471f-a3ca-33e3b25818b6  [DEPRECATED]
+UUID-03: 57c94747-552b-445b-85f0-d938023b7d16  [DEPRECATED]
+UUID-04: d64514a1-1721-4193-87b5-baccd4ffae8a  [DEPRECATED]
+UUID-05: 4c6dba30-8e82-4174-af0f-df3e3f088388  [DEPRECATED]
+UUID-06: 9a7aeaaa-570a-43ac-a312-c44df0e673d6  [DEPRECATED]
+UUID-07: 397662ef-b437-4351-a3dc-8c0c82343546  [DEPRECATED]
+UUID-08: a9915873-6b1a-4d50-883b-896024725834  [DEPRECATED]
+UUID-09: d526ad1d-f25b-4474-8ddb-e21a31ea2b81  [DEPRECATED]
+UUID-10: 02f6d3ea-eb41-415d-83fb-81b728117110  [DEPRECATED]
+Soul ID: a4f9c61c-e105-4bb8-833d-c40158ef6224  (needs retraining on new photos)
+
+Inverse Prompt (updated 2026-05-28 — based on new photo set):
+"Arthur Runa, white male, early-to-mid 30s, brown hair side-parted and swept back
+(medium-length, slightly wavy, well-groomed), full reddish-auburn beard,
+light blue-green eyes, slim-medium build with high cheekbones and defined jaw,
+confident posture — expression range from neutral/serious to genuine warm smile"
 ```
 
 **Usage:**
@@ -162,17 +168,44 @@ The underscore is part of the brand name."
 
 Color palettes are NOT UUIDs. They are separate text documents with hex codes and usage rules. Store in `color-palette.md` at the project root.
 
-**Arthur / @arthsystems_ brand palette:**
+**Arthur / @arthsystems_ brand palette — Solarpunk Híbrido:**
 
-| Name | Hex | Use |
-|------|-----|-----|
-| Brand Black | `#000000` | Primary background |
-| Brand White | `#FFFFFF` | Text, contrast elements |
-| Silver | `#AAAAAA` | Secondary text, dividers |
-| Deep Charcoal | `#1A1A1A` | Secondary backgrounds |
-| Electric Blue | `#0040FF` | CTA only — max 5% of frame |
+#### Tema Papel (light — :root)
 
-**Forbidden:** Warm tones (orange, amber, brown), high saturation (>60%), soft gradients.
+| Token | OKLCH | Hex approx. | Use |
+|-------|-------|-------------|-----|
+| `--background` | oklch(0.9450 0.0200 90) | `#F2EEDF` | Primary background — warm cream |
+| `--foreground` | oklch(0.2350 0.0120 130) | `#1F2418` | Text — dark ink |
+| `--primary` (sage) | oklch(0.4650 0.0450 145) | `#4A6B4E` | Primary accent — sage green |
+| `--accent` (amber) | oklch(0.6050 0.1050 65) | `#B47B3F` | Secondary accent — amber |
+| `--card` | oklch(0.9750 0.0220 90) | `#FBF8EC` | Surface 1 |
+| `--secondary` | oklch(0.8950 0.0300 90) | `#E8E2CC` | Surface 2 |
+| `--border` | oklch(0.8150 0.0400 90) | `#D4CCAE` | Border |
+
+#### Tema Forest (dark — .dark)
+
+| Token | OKLCH | Hex approx. | Use |
+|-------|-------|-------------|-----|
+| `--background` | oklch(0.1650 0.0080 145) | `#0E1410` | Primary background — deep forest |
+| `--foreground` | oklch(0.9350 0.0050 145) | `#E8EDE9` | Text — light |
+| `--primary` (sage) | oklch(0.6850 0.0450 145) | `#88A88E` | Sage Forest |
+| `--accent` (amber) | oklch(0.7450 0.0850 75) | `#D4A574` | Amber Forest |
+| `--card` | oklch(0.2050 0.0080 145) | `#161C18` | Surface 1 Forest |
+| `--secondary` | oklch(0.2550 0.0080 145) | `#1F2620` | Surface 2 Forest |
+| `--border` | oklch(0.2950 0.0100 145) | `#27302A` | Border Forest |
+
+#### Semantic tokens (both themes)
+`--sage`, `--sage-deep`, `--sage-soft`, `--sage-glow` · `--amber`, `--amber-deep`, `--amber-soft`
+`--ink`, `--ink-soft`, `--ink-muted`, `--ink-faint` · `--surface-1`, `--surface-2`, `--surface-3`
+
+#### Typography tokens
+- `--font-sans`: Geist, ui-sans-serif
+- `--font-serif`: Fraunces, Georgia, ui-serif
+- `--font-mono`: Geist Mono, ui-monospace
+
+**Forbidden:** Dominant `#000000` as background, Electric Blue `#0040FF`, Charcoal `#1A1A1A` as primary surface, purple/neon gradients, glassmorphism overuse. Warm tones are NOT forbidden — they ARE the system (amber, cream, sage).
+
+> Full token reference: `_base/color-palette.md` (single source of truth)
 
 ---
 
@@ -216,17 +249,22 @@ active_session: false
 
 ## Active UUIDs (Higgsfield)
 ### Human — Arthur
-UUID-01: 06525df3-7237-4781-8278-0f45c684c7f2
-UUID-02: 4a62aea6-e32a-471f-a3ca-33e3b25818b6
-UUID-03: 57c94747-552b-445b-85f0-d938023b7d16
-UUID-04: d64514a1-1721-4193-87b5-baccd4ffae8a
-UUID-05: 4c6dba30-8e82-4174-af0f-df3e3f088388
-UUID-06: 9a7aeaaa-570a-43ac-a312-c44df0e673d6
-UUID-07: 397662ef-b437-4351-a3dc-8c0c82343546
-UUID-08: a9915873-6b1a-4d50-883b-896024725834
-UUID-09: d526ad1d-f25b-4474-8ddb-e21a31ea2b81
-UUID-10: 02f6d3ea-eb41-415d-83fb-81b728117110
-Soul ID: a4f9c61c-e105-4bb8-833d-c40158ef6224
+
+> ⚠️ DEPRECATED — UUIDs below are from old photos (previous appearance).
+> New 15-photo set uploaded 2026-05-28. UUIDs pending Higgsfield upload.
+> Replace with new UUIDs after upload. See: `_base/reference-ids.md` → Type A
+
+UUID-01: 06525df3-7237-4781-8278-0f45c684c7f2  [DEPRECATED]
+UUID-02: 4a62aea6-e32a-471f-a3ca-33e3b25818b6  [DEPRECATED]
+UUID-03: 57c94747-552b-445b-85f0-d938023b7d16  [DEPRECATED]
+UUID-04: d64514a1-1721-4193-87b5-baccd4ffae8a  [DEPRECATED]
+UUID-05: 4c6dba30-8e82-4174-af0f-df3e3f088388  [DEPRECATED]
+UUID-06: 9a7aeaaa-570a-43ac-a312-c44df0e673d6  [DEPRECATED]
+UUID-07: 397662ef-b437-4351-a3dc-8c0c82343546  [DEPRECATED]
+UUID-08: a9915873-6b1a-4d50-883b-896024725834  [DEPRECATED]
+UUID-09: d526ad1d-f25b-4474-8ddb-e21a31ea2b81  [DEPRECATED]
+UUID-10: 02f6d3ea-eb41-415d-83fb-81b728117110  [DEPRECATED]
+Soul ID: a4f9c61c-e105-4bb8-833d-c40158ef6224  (needs retraining on new photos)
 
 ### Style Active This Project
 [UUIDs of active style references for this campaign]
@@ -524,25 +562,49 @@ All new keywords require full 4-element setup before publishing (see `.claude/ru
 
 ## 15. Arthur's Asset Catalog
 
-### Higgsfield — Character Sheet (10 UUIDs)
+### Higgsfield — Character Sheet
 
-| # | UUID |
-|---|------|
-| 01 | `06525df3-7237-4781-8278-0f45c684c7f2` |
-| 02 | `4a62aea6-e32a-471f-a3ca-33e3b25818b6` |
-| 03 | `57c94747-552b-445b-85f0-d938023b7d16` |
-| 04 | `d64514a1-1721-4193-87b5-baccd4ffae8a` |
-| 05 | `4c6dba30-8e82-4174-af0f-df3e3f088388` |
-| 06 | `9a7aeaaa-570a-43ac-a312-c44df0e673d6` |
-| 07 | `397662ef-b437-4351-a3dc-8c0c82343546` |
-| 08 | `a9915873-6b1a-4d50-883b-896024725834` |
-| 09 | `d526ad1d-f25b-4474-8ddb-e21a31ea2b81` |
-| 10 | `02f6d3ea-eb41-415d-83fb-81b728117110` |
+> ⚠️ DEPRECATED — UUIDs below are from old photos (previous appearance, ~10 photos).
+> New 15-photo set uploaded 2026-05-28. UUIDs pending Higgsfield upload.
+> See: `_base/reference-ids.md` → Type A for current status.
+
+| # | UUID | Status |
+|---|------|--------|
+| 01 | `06525df3-7237-4781-8278-0f45c684c7f2` | DEPRECATED |
+| 02 | `4a62aea6-e32a-471f-a3ca-33e3b25818b6` | DEPRECATED |
+| 03 | `57c94747-552b-445b-85f0-d938023b7d16` | DEPRECATED |
+| 04 | `d64514a1-1721-4193-87b5-baccd4ffae8a` | DEPRECATED |
+| 05 | `4c6dba30-8e82-4174-af0f-df3e3f088388` | DEPRECATED |
+| 06 | `9a7aeaaa-570a-43ac-a312-c44df0e673d6` | DEPRECATED |
+| 07 | `397662ef-b437-4351-a3dc-8c0c82343546` | DEPRECATED |
+| 08 | `a9915873-6b1a-4d50-883b-896024725834` | DEPRECATED |
+| 09 | `d526ad1d-f25b-4474-8ddb-e21a31ea2b81` | DEPRECATED |
+| 10 | `02f6d3ea-eb41-415d-83fb-81b728117110` | DEPRECATED |
+
+**New UUIDs — 15-photo set (2026-05-28):**
+
+| # | UUID | Status |
+|---|------|--------|
+| 01 | TBD — upload pending | |
+| 02 | TBD — upload pending | |
+| 03 | TBD — upload pending | |
+| 04 | TBD — upload pending | |
+| 05 | TBD — upload pending | |
+| 06 | TBD — upload pending | |
+| 07 | TBD — upload pending | |
+| 08 | TBD — upload pending | |
+| 09 | TBD — upload pending | |
+| 10 | TBD — upload pending | |
+| 11 | TBD — upload pending | |
+| 12 | TBD — upload pending | |
+| 13 | TBD — upload pending | |
+| 14 | TBD — upload pending | |
+| 15 | TBD — upload pending | |
 
 ### Higgsfield — Soul ID
 
 ```
-a4f9c61c-e105-4bb8-833d-c40158ef6224
+a4f9c61c-e105-4bb8-833d-c40158ef6224  (needs retraining on new 15-photo set)
 ```
 
 Use with model `text2image_soul_v2` for formal portraits/headshots. NOT for scenes with props or complex geometry.
@@ -632,10 +694,14 @@ To get UUIDs from externally generated images, you need to upload them to Higgsf
 
 ## 18. Quick Reference CLI
 
-### GPT Image 2 — Arthur Scene (10 refs)
+### GPT Image 2 — Arthur Scene (template — UUIDs TBD)
+
+> ⚠️ DEPRECATED UUIDs below — replace with new UUIDs after upload. See: `_base/reference-ids.md` → Type A
+
 ```bash
 higgsfield generate create gpt_image_2 \
   --prompt "[cinematic scene description]" \
+  # ⚠️ DEPRECATED UUIDs — replace all --image flags below with new UUIDs after upload
   --image 06525df3-7237-4781-8278-0f45c684c7f2 \
   --image 4a62aea6-e32a-471f-a3ca-33e3b25818b6 \
   --image 57c94747-552b-445b-85f0-d938023b7d16 \

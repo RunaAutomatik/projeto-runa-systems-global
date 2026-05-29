@@ -77,7 +77,8 @@ dark fitted clothing, natural confident movement
 ### Tech / Digital Aesthetic
 ```
 standing near digital interface or dark workspace,
-sharp focus on face, dark background, ambient blue light accent
+sharp focus on face, deep forest dark background (#0E1410),
+sage green accent lighting, warm amber rim light
 ```
 
 ### Talking Head / Avatar (HeyGen)
