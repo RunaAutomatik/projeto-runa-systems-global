@@ -581,25 +581,25 @@ All new keywords require full 4-element setup before publishing (see `.claude/ru
 | 09 | `d526ad1d-f25b-4474-8ddb-e21a31ea2b81` | DEPRECATED |
 | 10 | `02f6d3ea-eb41-415d-83fb-81b728117110` | DEPRECATED |
 
-**New UUIDs — 15-photo set (2026-05-28):**
+**New UUIDs — Folder 2 PRIMARY (burst 14:48–14:50, 2026-05-28) — USE THESE for gpt_image_2:**
 
-| # | UUID | Status |
-|---|------|--------|
-| 01 | TBD — upload pending | |
-| 02 | TBD — upload pending | |
-| 03 | TBD — upload pending | |
-| 04 | TBD — upload pending | |
-| 05 | TBD — upload pending | |
-| 06 | TBD — upload pending | |
-| 07 | TBD — upload pending | |
-| 08 | TBD — upload pending | |
-| 09 | TBD — upload pending | |
-| 10 | TBD — upload pending | |
-| 11 | TBD — upload pending | |
-| 12 | TBD — upload pending | |
-| 13 | TBD — upload pending | |
-| 14 | TBD — upload pending | |
-| 15 | TBD — upload pending | |
+| # | Source File | UUID | Status |
+|---|------------|------|--------|
+| 01 | 14.48.47.jpeg | `acb33bff-a019-489a-869c-0207f214d765` | ✅ ACTIVE |
+| 02 | 14.48.48 (1) | `2f24a94f-9905-4357-a78e-fb132187f343` | ✅ ACTIVE |
+| 03 | 14.48.48 (2) | `1b34fd83-ea2c-47f2-a730-500accb5fb30` | ✅ ACTIVE |
+| 04 | 14.48.48 (3) | `870aa8c9-0d6b-419e-8226-edb38aa8318f` | ✅ ACTIVE |
+| 05 | 14.48.48 (4) | `1077bd54-7de9-4022-9b9f-29b4ce4efb62` | ✅ ACTIVE |
+| 06 | 14.48.48.jpeg | `83d39e51-f1ed-40bc-bd74-bd56b595f681` | ✅ ACTIVE |
+| 07 | 14.48.49 (1) | `d444658d-a625-4c24-bb88-477a4907df4e` | ✅ ACTIVE |
+| 08 | 14.48.49 (2) | `a25b9b76-c6fa-4715-9379-5e2d35084bc0` | ✅ ACTIVE |
+| 09 | 14.48.49 (3) | `db5086a5-55d3-412c-895e-39eeeda1d177` | ✅ ACTIVE |
+| 10 | 14.48.49 (4) | `16f01e94-158c-455f-8c75-f448dce77d7d` | ✅ ACTIVE |
+| 11 | 14.48.49 (5) | `14c4b1d4-e05a-49c4-b38c-8a5df0394963` | ✅ ACTIVE |
+| 12 | 14.48.49.jpeg | `461aa7b3-49d7-4446-a67e-780b65e5b0d7` | ✅ ACTIVE |
+| 13 | 14.48.50 (1) | `f8492c76-35ba-49f5-9ee6-35395b5e1a54` | ✅ ACTIVE |
+| 14 | 14.48.50 (2) | `e187ad6a-8de5-47bb-8267-c38b9476b8fb` | ✅ ACTIVE |
+| 15 | 14.48.50.jpeg | `6c2f8764-6f5c-4566-8522-e9fe63239574` | ✅ ACTIVE |
 
 ### Higgsfield — Soul ID
 
@@ -694,24 +694,26 @@ To get UUIDs from externally generated images, you need to upload them to Higgsf
 
 ## 18. Quick Reference CLI
 
-### GPT Image 2 — Arthur Scene (template — UUIDs TBD)
-
-> ⚠️ DEPRECATED UUIDs below — replace with new UUIDs after upload. See: `_base/reference-ids.md` → Type A
+### GPT Image 2 — Arthur Scene (Folder 2 PRIMARY — 15 refs)
 
 ```bash
 higgsfield generate create gpt_image_2 \
   --prompt "[cinematic scene description]" \
-  # ⚠️ DEPRECATED UUIDs — replace all --image flags below with new UUIDs after upload
-  --image 06525df3-7237-4781-8278-0f45c684c7f2 \
-  --image 4a62aea6-e32a-471f-a3ca-33e3b25818b6 \
-  --image 57c94747-552b-445b-85f0-d938023b7d16 \
-  --image d64514a1-1721-4193-87b5-baccd4ffae8a \
-  --image 4c6dba30-8e82-4174-af0f-df3e3f088388 \
-  --image 9a7aeaaa-570a-43ac-a312-c44df0e673d6 \
-  --image 397662ef-b437-4351-a3dc-8c0c82343546 \
-  --image a9915873-6b1a-4d50-883b-896024725834 \
-  --image d526ad1d-f25b-4474-8ddb-e21a31ea2b81 \
-  --image 02f6d3ea-eb41-415d-83fb-81b728117110 \
+  --image acb33bff-a019-489a-869c-0207f214d765 \
+  --image 2f24a94f-9905-4357-a78e-fb132187f343 \
+  --image 1b34fd83-ea2c-47f2-a730-500accb5fb30 \
+  --image 870aa8c9-0d6b-419e-8226-edb38aa8318f \
+  --image 1077bd54-7de9-4022-9b9f-29b4ce4efb62 \
+  --image 83d39e51-f1ed-40bc-bd74-bd56b595f681 \
+  --image d444658d-a625-4c24-bb88-477a4907df4e \
+  --image a25b9b76-c6fa-4715-9379-5e2d35084bc0 \
+  --image db5086a5-55d3-412c-895e-39eeeda1d177 \
+  --image 16f01e94-158c-455f-8c75-f448dce77d7d \
+  --image 14c4b1d4-e05a-49c4-b38c-8a5df0394963 \
+  --image 461aa7b3-49d7-4446-a67e-780b65e5b0d7 \
+  --image f8492c76-35ba-49f5-9ee6-35395b5e1a54 \
+  --image e187ad6a-8de5-47bb-8267-c38b9476b8fb \
+  --image 6c2f8764-6f5c-4566-8522-e9fe63239574 \
   --quality high --resolution 2k --aspect_ratio 9:16 --wait
 ```
 

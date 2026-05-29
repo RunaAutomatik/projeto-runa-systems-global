@@ -17,10 +17,10 @@ Inverse Prompts enable use of reference patterns with models that have no UUID s
 
 ### Arthur Runa — Character Sheet
 
-> ⚠️ **UUID STATUS: OLD PHOTOS DEPRECATED — NEW CHARACTER SHEET PENDING UPLOAD**
-> 15 new Arthur photos received 2026-05-28 (WhatsApp).
-> Upload to Higgsfield → replace UUID table → update CLI template below.
-> Old 10 UUIDs retained temporarily for reference until new IDs are confirmed.
+> ✅ **UUID STATUS: NEW CHARACTER SHEET UPLOADED — 2026-05-28**
+> 29 Arthur photos uploaded to Higgsfield (15 primary + 14 supplementary).
+> Folder 2 (burst session 14:48–14:50) = PRIMARY 15 for gpt_image_2 CLI template.
+> Old 10 UUIDs (pre-2026-05-28): retained below for reference only.
 
 #### Old UUIDs (deprecated — trained on previous character photos)
 
@@ -37,28 +37,44 @@ Inverse Prompts enable use of reference patterns with models that have no UUID s
 | d526ad1d-f25b-4474-8ddb-e21a31ea2b81 | DEPRECATED |
 | 02f6d3ea-eb41-415d-83fb-81b728117110 | DEPRECATED |
 
-#### New UUIDs (pending upload)
+#### Folder 2 PRIMARY — 15 refs ✅ (burst 14:48–14:50 — use these for gpt_image_2 CLI)
 
-Source: `C:\Users\Admin\Downloads\WhatsApp Unknown 2026-05-28 at 16.09.55` — 15 photos.
-Upload each to Higgsfield → fill table below.
+| Photo filename | Higgsfield UUID |
+|---------------|----------------|
+| 14.48.47.jpeg | acb33bff-a019-489a-869c-0207f214d765 |
+| 14.48.48 (1).jpeg | 2f24a94f-9905-4357-a78e-fb132187f343 |
+| 14.48.48 (2).jpeg | 1b34fd83-ea2c-47f2-a730-500accb5fb30 |
+| 14.48.48 (3).jpeg | 870aa8c9-0d6b-419e-8226-edb38aa8318f |
+| 14.48.48 (4).jpeg | 1077bd54-7de9-4022-9b9f-29b4ce4efb62 |
+| 14.48.48.jpeg | 83d39e51-f1ed-40bc-bd74-bd56b595f681 |
+| 14.48.49 (1).jpeg | d444658d-a625-4c24-bb88-477a4907df4e |
+| 14.48.49 (2).jpeg | a25b9b76-c6fa-4715-9379-5e2d35084bc0 |
+| 14.48.49 (3).jpeg | db5086a5-55d3-412c-895e-39eeeda1d177 |
+| 14.48.49 (4).jpeg | 16f01e94-158c-455f-8c75-f448dce77d7d |
+| 14.48.49 (5).jpeg | 14c4b1d4-e05a-49c4-b38c-8a5df0394963 |
+| 14.48.49.jpeg | 461aa7b3-49d7-4446-a67e-780b65e5b0d7 |
+| 14.48.50 (1).jpeg | f8492c76-35ba-49f5-9ee6-35395b5e1a54 |
+| 14.48.50 (2).jpeg | e187ad6a-8de5-47bb-8267-c38b9476b8fb |
+| 14.48.50.jpeg | 6c2f8764-6f5c-4566-8522-e9fe63239574 |
 
-| Photo filename | Higgsfield UUID | Notes |
-|---------------|----------------|-------|
-| WhatsApp Image 2026-05-28 at 12.32.50.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.51.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.52.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.53.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.54.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.55.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.56.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.57.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.58.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.32.59.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.33.00.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.33.01.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.33.02.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.33.03.jpeg | TBD | |
-| WhatsApp Image 2026-05-28 at 12.33.04.jpeg | TBD | |
+#### Folder 1 Supplementary — 14 refs ✅ (morning session 12:14–12:52)
+
+| Photo filename | Higgsfield UUID |
+|---------------|----------------|
+| 12.14.32.jpeg | 6a4309ed-5333-463a-a883-a1e1fb9b88d3 |
+| 12.14.49.jpeg | 83e75396-b908-4c0a-8bd6-5a956323c7d4 |
+| 12.15.13.jpeg | 8a8b4df3-1360-4a49-bc75-df99995e21e2 |
+| 12.16.33.jpeg | d34082b2-4786-4b7c-890f-24c1e9f876b7 |
+| 12.16.58.jpeg | 710ad214-cb51-4ae8-92dd-31b0b1baca25 |
+| 12.17.28.jpeg | 17713aed-fbd6-4fab-b4a7-3281d8620702 |
+| 12.27.32.jpeg | 0daef1f8-c825-4c19-b66e-716c37ab6057 |
+| 12.32.50.jpeg | 827b22ab-d479-4808-b89e-98dcf508c001 |
+| 12.36.52.jpeg | 54e7b4c4-8e57-42f2-9a95-ac3c9a97a2ab |
+| 12.40.00.jpeg | fec72eab-bb1f-405b-a015-74dd3f124765 |
+| 12.40.22.jpeg | d16ec8c3-7b6e-460b-8937-b69fe0e779a3 |
+| 12.51.31.jpeg | 3f30695c-0e1f-4197-8398-a8067e4d2956 |
+| 12.51.55.jpeg | 58322372-f011-4bbb-889e-1cc0497af4dd |
+| 12.52.40.jpeg | 8234d8f4-5c2f-4613-b738-91bdb121fb5d |
 
 **Soul ID (soul_2 model):** `a4f9c61c-e105-4bb8-833d-c40158ef6224`
 *(Retrain recommended after uploading new character sheet.)*
@@ -78,25 +94,25 @@ confident posture — expression range from neutral/serious to genuine warm smil
 | `soul_id` (soul_2 model) | Formal portraits, headshots, close-ups without complex props |
 | Inverse Prompt (text) | Any model without UUID support (nano-banana-2, HeyGen, muapi, etc.) |
 
-**CLI command template (update UUIDs after upload):**
+**CLI command template (Folder 2 PRIMARY — updated 2026-05-28):**
 ```bash
 higgsfield generate create gpt_image_2 \
   --prompt "[scene description]" \
-  --image [UUID_01] \
-  --image [UUID_02] \
-  --image [UUID_03] \
-  --image [UUID_04] \
-  --image [UUID_05] \
-  --image [UUID_06] \
-  --image [UUID_07] \
-  --image [UUID_08] \
-  --image [UUID_09] \
-  --image [UUID_10] \
-  --image [UUID_11] \
-  --image [UUID_12] \
-  --image [UUID_13] \
-  --image [UUID_14] \
-  --image [UUID_15] \
+  --image acb33bff-a019-489a-869c-0207f214d765 \
+  --image 2f24a94f-9905-4357-a78e-fb132187f343 \
+  --image 1b34fd83-ea2c-47f2-a730-500accb5fb30 \
+  --image 870aa8c9-0d6b-419e-8226-edb38aa8318f \
+  --image 1077bd54-7de9-4022-9b9f-29b4ce4efb62 \
+  --image 83d39e51-f1ed-40bc-bd74-bd56b595f681 \
+  --image d444658d-a625-4c24-bb88-477a4907df4e \
+  --image a25b9b76-c6fa-4715-9379-5e2d35084bc0 \
+  --image db5086a5-55d3-412c-895e-39eeeda1d177 \
+  --image 16f01e94-158c-455f-8c75-f448dce77d7d \
+  --image 14c4b1d4-e05a-49c4-b38c-8a5df0394963 \
+  --image 461aa7b3-49d7-4446-a67e-780b65e5b0d7 \
+  --image f8492c76-35ba-49f5-9ee6-35395b5e1a54 \
+  --image e187ad6a-8de5-47bb-8267-c38b9476b8fb \
+  --image 6c2f8764-6f5c-4566-8522-e9fe63239574 \
   --quality high --resolution 2k --aspect_ratio 9:16 --wait
 ```
 
@@ -220,7 +236,7 @@ Solarpunk Híbrido: organic simplicity in warm atmosphere.
 ---
 
 #### B-E01 — Architect at the Edge ✅
-**ID:** `5a3f11a5_0` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `5a3f11a5_0` · **UUID:** `49bd5752-d1d1-4f71-b2f1-a124e9f2f183` · **Source:** Midjourney (Estilos)
 **When to use:** Contrarian/edge-thinker positioning; "standing apart" content; vision posts.
 **Encoded rules:** Triptych diagonal composition; subject on extreme terrain; natural fur signals authority in hostile context; coastal verticality.
 
@@ -234,7 +250,7 @@ Warm golden coastal light — amber atmospheric haze, sage-tinted ocean in dista
 ---
 
 #### B-E02 — Stone & Glass Command ✅ BRAND ALIGNED (Forest dark variation)
-**ID:** `c37ec5f0_0` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `c37ec5f0_0` · **UUID:** `7ede68b0-60c8-469b-9d09-d49c6f3fa976` · **Source:** Midjourney (Estilos)
 **When to use:** HIGHEST PRIORITY — Forest dark palette; vision/identity posts; architectural brand demonstration.
 **Encoded rules:** Natural stone cliff becomes the architecture; glass wall merges interior/exterior; grey-sage stone palette maps to Forest dark; stone slab desk = permanence.
 
@@ -249,7 +265,7 @@ Forest dark variation: evening light, #0E1410 shadows, sage green stone faces, a
 ---
 
 #### B-E03 — Cliff Edge Workspace ✅
-**ID:** `bc4c61cb_0` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `bc4c61cb_0` · **UUID:** `77ba0ee3-0c90-4b7b-9b2a-04592b796826` · **Source:** Midjourney (Estilos)
 **When to use:** "Build from anywhere" content; freedom-as-discipline; constraint = focus posts.
 **Encoded rules:** Rocky terrain as desk surface; ocean as backdrop; single laptop = only tool needed; extreme context highlights clarity through limitation.
 
@@ -267,7 +283,7 @@ Warm amber cliff light — natural golden stone, sage-tinted ocean depth, warm c
 ---
 
 #### B-E04 — Anti-Gravity Architecture ✅
-**ID:** `99e3a578_0` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `99e3a578_0` · **UUID:** `33aa7e59-150f-42ac-9694-1de58793a30c` · **Source:** Midjourney (Estilos)
 **When to use:** "Think impossible" / disruption content; framework or product launches.
 **Encoded rules:** Floating rock island defies physics; ancient stone texture on impossible form; empty = viewer is the next arrival; scale rules do not apply.
 
@@ -282,7 +298,7 @@ Solarpunk Híbrido: organic impossible architecture in warm organic atmosphere.
 ---
 
 #### B-E05 — Walking Impossible Ground ✅
-**ID:** `99e3a578_3` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `99e3a578_3` · **UUID:** `cfd33901-49ba-4e03-973d-268d624b0421` · **Source:** Midjourney (Estilos)
 **When to use:** Action-despite-uncertainty content; tutorial starts; "this seems impossible but here's someone doing it."
 **Encoded rules:** Tiny human on floating island edge; courage + scale contrast; the extraordinary becomes ordinary once you're there.
 
@@ -296,7 +312,7 @@ Warm golden sunset behind figure — amber-lit clouds, warm ancient stone underf
 ---
 
 #### B-E06 — Dwarfed by Technology ✅
-**ID:** `6ab549c8_0` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `6ab549c8_0` · **UUID:** `8c1326ea-07d2-48d8-b97a-9edef24b6f13` · **Source:** Midjourney (Estilos)
 **When to use:** AI/technology power posts; scale-reveal content; "what we're building."
 **Encoded rules:** Human at ~5% of frame height; alien biomorphic tech structure dominates; organic curves + mechanical precision; awe, not fear.
 
@@ -316,7 +332,7 @@ from organic curves, warm amber ember light at base where human stands.
 ---
 
 #### B-E07 — Organic Glass Studio ✅ PRIORITY (most Solarpunk entry)
-**ID:** `ecdf3fff_0` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `ecdf3fff_0` · **UUID:** `b2adf69b-a760-4d29-ab57-f73d500a47c0` · **Source:** Midjourney (Estilos)
 **When to use:** Deep work / environment design posts; "space where thinking happens"; HIGHEST PRIORITY for Solarpunk Híbrido content.
 **Encoded rules:** Organic arch = frame-within-frame; glass roof brings sky inside; stone desk = permanence; vegetation integrated = biophilic; curve softens tech.
 
@@ -332,7 +348,7 @@ Most biophilic and Solarpunk-aligned entry in the entire catalog.
 ---
 
 #### B-E08 — Reflected Architecture ✅
-**ID:** `ecdf3fff_3` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `ecdf3fff_3` · **UUID:** `71627010-9a43-4d02-adc7-7f7b95a81f41` · **Source:** Midjourney (Estilos)
 **When to use:** Systems/architecture posts; "what you build reflects back" messaging.
 **Encoded rules:** Stone columns create vertical rhythm; reflective pond doubles the full composition; symmetry as design principle; permanence.
 
@@ -350,7 +366,7 @@ Warm golden stone columns — amber atmospheric depth, sage-tinted water reflect
 ---
 
 #### B-E09 — The Portal (Warm Interior) ✅
-**ID:** `7febb009_1` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `7febb009_1` · **UUID:** `5bf21894-6234-4386-8a02-aa21e856cd84` · **Source:** Midjourney (Estilos)
 **When to use:** "Enter a new world" / product launches; module 0 / onboarding posts; threshold moments.
 **Encoded rules:** Triangular stone arch creates perspective pull to interior; stone path leads viewer in; frame-within-frame; interior reveals content.
 
@@ -365,7 +381,7 @@ Forest dark variation: deep forest dark exterior (#0E1410), warm amber interior 
 ---
 
 #### B-E10 — Portal with Creator ✅
-**ID:** `7febb009_3` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `7febb009_3` · **UUID:** `d78def9a-9de3-40b7-9396-043c7a52cfe3` · **Source:** Midjourney (Estilos)
 **When to use:** "Inside access" posts; "I'm already here" CTAs; screen-as-illumination content.
 **Encoded rules:** Same arch; person inside at laptop; screen = sole light source casting outward; warm amber screen glow fits Solarpunk palette.
 
@@ -380,7 +396,7 @@ Exterior stone dark, threshold framing — amber warmth from within.
 ---
 
 #### B-E11 — Portal in Dusk (Forest dark mapping)
-**ID:** `c3f20a9a_3` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `c3f20a9a_3` · **UUID:** `7f84c8b8-7805-40f2-816f-32ea9be86ffe` · **Source:** Midjourney (Estilos)
 **When to use:** Forest dark variation portal; preferred when deep shadow atmosphere is needed.
 **Encoded rules:** Same portal; purple-grey dusk grading maps to Forest dark palette; deep shadows dominant; closest to #0E1410 in the catalog.
 
@@ -399,7 +415,7 @@ warm amber glow in stone depths. Closest entry to Forest dark palette — minima
 ---
 
 #### B-E12 — Cosmic Mundane ✅
-**ID:** `c37ec5f0_1` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `c37ec5f0_1` · **UUID:** `59a01c44-38e8-4bab-8fca-ddaf9f17f94e` · **Source:** Midjourney (Estilos)
 **When to use:** Founder humor; contrast posts; "we take this seriously even if it looks absurd."
 **Encoded rules:** Astronaut suit = extreme professional context; laptop = mundane tool; flower field = soft/natural; juxtaposition IS the message.
 
@@ -414,7 +430,7 @@ Solarpunk contrast: high-tech garment in organic warm biophilic environment.
 ---
 
 #### B-E13 — The Meeting ✅
-**ID:** `0d6a587c_3` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `0d6a587c_3` · **UUID:** `720c3a0b-ac1e-4087-bb39-876c73ebf94e` · **Source:** Midjourney (Estilos)
 **When to use:** AI-as-companion posts; "building relationship with machines" content; first-contact aesthetic.
 **Encoded rules:** Human and machine face each other at equal distance; forest lake = neutral ground; turtle rover = harmless but advanced; mutual respect implied.
 
@@ -430,7 +446,7 @@ Forest dark variation: twilight approach with #0E1410 forest shadows, sage and a
 ---
 
 #### B-E14 — Observer in the Pod ✅ PRIORITY
-**ID:** `7c2c09ef_3` · **UUID:** `TBD_UPLOAD` · **Source:** Midjourney (Estilos)
+**ID:** `7c2c09ef_3` · **UUID:** `13a67b62-87b8-424f-bcec-264ddf543afd` · **Source:** Midjourney (Estilos)
 **When to use:** "Watching from above" / strategic distance posts; observation/analysis content.
 **Encoded rules:** Circular pod creates perfect frame around figure; panoramic window to river valley below; solitude by design; observer's throne aesthetic.
 
@@ -441,6 +457,20 @@ pod forms perfect circular frame around figure, observer's throne, solitude by d
 Warm amber pod interior — sage-tinted organic curves, warm amber upholstery,
 valley beyond in warm golden-sage tones. Brand-aligned as-is — use warm tones at full intensity.
 ```
+
+---
+
+### Extra Uploads — Unnamed
+
+Additional Midjourney style references uploaded without assigned names. Use as supplementary composition or environment references.
+
+| ID | UUID | Notes |
+|----|------|-------|
+| `c37ec5f0_2` | `28a13a7e-da76-4197-8ba0-8b03b4a6badf` | Midjourney (Estilos) — unnamed variant |
+| `ea1c1ae5_2` | `95d68483-3d36-4f0d-8da3-9118ec1c09ac` | Midjourney (Estilos) — unnamed variant |
+| `ea1c1ae5_3` | `1de23bde-7522-4170-89f6-4acdf71e46da` | Midjourney (Estilos) — unnamed variant |
+| `0d6a587c_2` | `12aeff53-2aa8-4364-a24f-7bc7b18a7376` | Midjourney (Estilos) — unnamed variant |
+| `2f229066_2` | `542e79b3-ea9f-486e-b29f-49c98dece94b` | Midjourney (Estilos) — unnamed variant |
 
 ---
 
