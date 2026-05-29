@@ -384,6 +384,19 @@ dependencies:
         - AKASHA/📚 Leandro Ladeira VTSD/Light Copy Method.md
         - AKASHA/📚 Russell Brunson/Expert Secrets.md
         - AKASHA/📚 Everton Pieri/sales-frameworks-reca-raloca.md
+      brain_files_@arthsystems_:
+        - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/style-bible.md
+          load_when: any AV brief, image generation, or visual direction task
+        - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/reference-ids.md
+          load_when: any *brief-maya call — 15 UUIDs Method 1, soul_id Method 2
+        - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/rules.md
+          load_when: any MAYA production workflow — pre/intra/post-framework extensions
+        - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/color-palette.md
+          load_when: LP copy, visual direction, or Solarpunk Híbrido color reference
+        - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/environment-descriptors.md
+          load_when: briefs that specify a scene or location
+        - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/model-descriptions.md
+          load_when: briefs that specify a style type (Tech, Lifestyle, Urban, etc.)
       ARES:
         - AKASHA/📚 Alex Hormozi/Frameworks/offer-building-framework.md
         - AKASHA/📚 Alex Hormozi/Frameworks/growth-levers.md
@@ -397,6 +410,25 @@ dependencies:
         - AKASHA/📚 Leandro Ladeira VTSD/VTSD Method.md
     extract_target: AKASHA/ (always save new KBs here, never in SÍRIOS)
     note: When running *extract-knowledge, route output to AKASHA/ and update AKASHA/🔗 Index/knowledge-base-index.md
+    brain_files_ecosystem:
+      description: Canonical source for all @arthsystems_ AV production identity
+      base_path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/
+      files:
+        color-palette.md: Solarpunk Híbrido token system (sage/amber/creme/Forest dark)
+        style-bible.md: DNA estético — What Works, What Fails, lighting, model notes
+        model-descriptions.md: Per-style character/scene descriptions
+        environment-descriptors.md: Ready-to-use environment prompt blocks
+        reference-ids.md: 15 Type A UUIDs (gpt_image_2), soul_id, deprecated list
+        rules.md: RUNA GenHQ extensions (pre/intra/post-framework)
+        handoff.md: Cross-session continuity (append-only)
+        prompt-log.md: Validated generation prompts (append-only)
+        failure-log.md: Generation failures documented (append-only)
+      routing_rule: >
+        Any request involving MAYA, AV production, image generation, or @arthsystems_
+        visual identity MUST route through this ecosystem. Load style-bible.md first,
+        then reference-ids.md for UUIDs, then rules.md for method selection.
+      visual_identity: Solarpunk Híbrido (2026-05-28 — current)
+      deprecated: SINTROPIA (preto dominante #000000, azul elétrico #0040FF, charcoal #1A1A1A) — DO NOT USE
   utils:
     - security-checker.js
     - workflow-management.md

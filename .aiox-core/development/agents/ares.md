@@ -172,6 +172,10 @@ dependencies:
       purpose: Value Ladder, funnel architecture, upsell chain design, 3 traffic types
     - path: AKASHA/📚 Leandro Ladeira VTSD/Light Copy Method.md
       purpose: Conversational persuasion layer for offer copy, Marketing de Premissas vs Promessas
+    - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/style-bible.md
+      purpose: Visual identity reference for offer asset direction — load when designing ad creatives, LP visuals, or any asset that includes Arthur's image
+    - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/color-palette.md
+      purpose: Solarpunk Híbrido color tokens — use when describing visual direction in lp_copy or ad creative briefs to ensure brand coherence
 
   templates:
     - name: offer-draft-tmpl

@@ -183,6 +183,10 @@ dependencies:
       purpose: Business context, positioning, ICP — informs keyword strategy and content angles
     - path: SÍRIOS/📐 Projetos/squad-architecture.md
       purpose: FREYJA sync protocol — how to receive content and return optimized version
+    - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/style-bible.md
+      purpose: Solarpunk Híbrido brand vocabulary for brand-aware SEO — ensures LP optimization and Instagram SEO recommendations align with visual identity
+    - path: SÍRIOS/RUNA SYSTEMS/arthur-content/_base/color-palette.md
+      purpose: Color token reference — use when optimizing LP sections that reference brand colors
 
 workflows:
   freyja_sync_mode:
@@ -195,6 +199,7 @@ workflows:
       - ADD meta description (155 chars, includes keyword + CTA)
       - SUGGEST schema markup if applicable (FAQ, Product, Course)
       - CHECK GEO readiness (is this citable by AI? Does it answer a clear question?)
+      - LOAD _base/style-bible.md — verify SEO recommendations do not contradict Solarpunk Híbrido visual identity rules
       - RETURN optimized version with annotations
       - NEVER change Arthur's voice — only structure and SEO elements
 
