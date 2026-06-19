@@ -8,6 +8,12 @@
     "prepare": "husky",
     "dia:abrir": "bash scripts/dia-abrir.sh",
     "dia:fechar": "bash scripts/dia-fechar.sh",
+    "sync:ide": "node .aiox-core/infrastructure/scripts/ide-sync/index.js sync",
+    "sync:ide:check": "node .aiox-core/infrastructure/scripts/ide-sync/index.js validate --strict",
+    "sync:skills:codex": "node .aiox-core/infrastructure/scripts/codex-skills-sync/index.js",
+    "sync:skills:codex:global": "node .aiox-core/infrastructure/scripts/codex-skills-sync/index.js --global",
+    "validate:structure": "node .aiox-core/infrastructure/scripts/validate-paths.js",
+    "validate:agents": "node .aiox-core/infrastructure/scripts/validate-agents.js",
     "watch:carousel": "node scripts/carousel-watcher.js"
   },
   "keywords": [],

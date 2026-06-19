@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIS — Design System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://aiautomationsociety.ai/assets/index-DU4PK6CS.css" />
+
+  <style>
+    /* ── DS-ONLY OVERRIDES ───────────────────────────────── */
+    html { scroll-behavior: smooth; }
+
+    /* pill nav stays on top */
+    .ds-pill-nav {
+      position: fixed;
+      top: 1.25rem;
+      left: 50%;
+      translate: -50% 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+      padding: .375rem .75rem;
+      background: rgba(6,8,16,.8);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(12px);
+      white-space: nowrap;
+    }
+    .ds-pill-nav a {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+      padding: .25rem .65rem;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .ds-pill-nav a:hover {
+      background: rgba(44,169,225,.12);
+      color: var(--ais-white);
+    }
+
+    /* section scaffolding */
+    .ds-section {
+      padding: 7rem 1.5rem 5rem;
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .ds-section + .ds-section {
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+    .ds-label {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ais-blue);
+      margin-bottom: .75rem;
+    }
+    .ds-h2 {
+      font-family: var(--font-mono);
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -.03em;
+      color: var(--ais-white);
+      margin-bottom: 3rem;
+    }
+    .ds-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    .ds-grid-2 { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+    .ds-grid-3 { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+    .ds-grid-4 { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+
+    /* token card */
+    .ds-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      backdrop-filter: blur(6px);
+    }
+    .ds-card__name {
+      font-family: var(--font-mono);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      color: var(--ais-grey);
+      margin-bottom: .35rem;
+    }
+    .ds-card__value {
+      font-family: var(--font-mono);
+      font-size: .85rem;
+      color: var(--ais-blue);
+    }
+
+    /* color swatch */
+    .ds-swatch {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.07);
+    }
+    .ds-swatch__color {
+      height: 80px;
+      width: 100%;
+    }
+    .ds-swatch__info {
+      background: var(--bg-card);
+      padding: .85rem 1rem;
+    }
+    .ds-swatch__name {
+      font-family: var(--font-mono);
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--ais-white);
+      display: block;
+      margin-bottom: .2rem;
+    }
+    .ds-swatch__hex {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--ais-grey);
+    }
+
+    /* typography row */
+    .ds-type-row {
+      display: grid;
+      grid-template-columns: 140px 1fr auto;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .ds-type-meta {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--ais-grey);
+      line-height: 1.6;
+    }
+    .ds-type-spec {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--ais-blue);
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    /* motion demo box */
+    .ds-motion-box {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 12px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .ds-motion-name {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ais-grey);
+      position: absolute;
+      bottom: .75rem;
+    }
+    .ds-motion-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--grad-cool);
+    }
+
+    /* spacing scale */
+    .ds-space-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: .65rem 0;
+      border-bottom: 1px solid rgba(255,255,255,.04);
+    }
+    .ds-space-bar {
+      height: 8px;
+      background: var(--grad-cool);
+      border-radius: 99px;
+      flex-shrink: 0;
+    }
+    .ds-space-label {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--ais-grey);
+      white-space: nowrap;
+    }
+    .ds-space-val {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      color: var(--ais-blue);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* button demo row */
+    .ds-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 12px;
+    }
+    .ds-btn-row + .ds-btn-row { margin-top: 1rem; }
+    .ds-row-label {
+      font-family: var(--font-mono);
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ais-grey);
+      margin-bottom: 1rem;
+    }
+
+    /* gradient text helper (in-page use) */
+    .tg { background: var(--grad-cool); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .tg-warm { background: var(--grad-warm); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+    /* motion animations (demo) */
+    .anim-atmosPulse { animation: fa-atmosPulse 8s ease-in-out infinite alternate; }
+    .anim-dotPulse   { animation: fa-dotPulse 2s ease-in-out infinite; }
+    .anim-fadeUp     { animation: fadeUp .6s var(--ease-out) both; }
+    .anim-driftA     { animation: driftA 8s ease-in-out infinite; }
+    .anim-driftB     { animation: driftB 10s ease-in-out infinite; }
+    .anim-driftC     { animation: driftC 12s ease-in-out infinite; }
+    .anim-spin       { animation: spin 2s linear infinite; }
+    .anim-pulse      { animation: pulse 2s ease-in-out infinite; }
+    .anim-marquee    { animation: marquee 8s linear infinite; white-space: nowrap; }
+
+    /* hero override: keep full height, no SPA */
+    #s0 .fa-hero { min-height: 100vh; }
+
+    /* remove top margin from first section heading */
+    body { overflow-x: hidden; }
+  </style>
+</head>
+<body>
+
+<!-- ── TOP NAV ────────────────────────────────────────────── -->
+<nav class="ds-pill-nav" aria-label="Design System Sections">
+  <a href="#s0">Hero</a>
+  <a href="#s1">Typography</a>
+  <a href="#s2">Colors</a>
+  <a href="#s3">Components</a>
+  <a href="#s4">Layout</a>
+  <a href="#s5">Motion</a>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════════
+  §0 — HERO (exact clone, text adapted)
+═════════════════════════════════════════════════════════ -->
+<section id="s0">
+  <div class="fa-hero">
+    <!-- atmospheric glow -->
+    <div class="fa-atmos" aria-hidden="true">
+      <div class="fa-atmos__orb fa-atmos__orb--blue"></div>
+      <div class="fa-atmos__orb fa-atmos__orb--teal"></div>
+    </div>
+
+    <div class="fa-hero__inner">
+      <div class="fa-hero__badge">
+        <span class="fa-hero__dot"></span>
+        Living Design System — v2.0
+      </div>
+
+      <h1 class="fa-hero__title">
+        AI Automation<br />
+        <span class="text-gradient">Society</span><br />
+        Design System
+      </h1>
+
+      <p class="fa-hero__sub">
+        Every token, component, animation and layout pattern that powers
+        <strong>aiautomationsociety.ai</strong> — extracted, documented and
+        showcased in one living reference.
+      </p>
+
+      <div class="fa-hero__actions">
+        <a href="#s3" class="fa-btn fa-btn--primary fa-btn--lg">Explore Components</a>
+        <a href="#s1" class="fa-btn fa-btn--ghost fa-btn--lg">Typography →</a>
+      </div>
+
+      <div class="fa-hero__meta">
+        <span>Roboto Mono + Montserrat</span>
+        <span>·</span>
+        <span>9 CSS Custom Properties</span>
+        <span>·</span>
+        <span>40+ Components</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+  §1 — TYPOGRAPHY
+═════════════════════════════════════════════════════════ -->
+<section id="s1" class="ds-section">
+  <p class="ds-label">01 — Typography</p>
+  <h2 class="ds-h2">Type Scale</h2>
+
+  <!-- headings -->
+  <div class="ds-type-row">
+    <div class="ds-type-meta">H1<br/>fa-hero__title</div>
+    <h1 style="margin:0;font-size:clamp(2rem,6vw,4.5rem);">Design System</h1>
+    <div class="ds-type-spec">clamp(2.75rem, 9vw, 7.5rem)<br/>Roboto Mono 700<br/>ls: -.045em · UC</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">H1 base<br/>--text-5xl</div>
+    <h1 style="margin:0;">AIS Design System</h1>
+    <div class="ds-type-spec">3.5rem / 56px<br/>Roboto Mono 700<br/>ls: -.04em · UC</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">H2<br/>--text-4xl</div>
+    <h2 style="margin:0;">Component Library</h2>
+    <div class="ds-type-spec">2.5rem / 40px<br/>Roboto Mono 700<br/>ls: -.04em · UC</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">fa-section-title</div>
+    <div class="fa-section-title" style="margin:0;">Section Heading</div>
+    <div class="ds-type-spec">clamp(2rem, 5vw, 3.25rem)<br/>Roboto Mono 700 · UC</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">H3<br/>--text-2xl</div>
+    <h3 style="margin:0;">Card Title Here</h3>
+    <div class="ds-type-spec">1.5rem / 24px<br/>Roboto Mono 700 · UC</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">H4<br/>--text-xl</div>
+    <h4 style="margin:0;">Subsection Title</h4>
+    <div class="ds-type-spec">1.25rem / 20px<br/>Roboto Mono 700 · UC</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">H5<br/>--text-lg</div>
+    <h5 style="margin:0;">Label Medium</h5>
+    <div class="ds-type-spec">1.125rem / 18px<br/>Roboto Mono 700 · UC</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">H6 / eyebrow<br/>--text-sm</div>
+    <h6 style="margin:0;">Eyebrow Label</h6>
+    <div class="ds-type-spec">.875rem / 14px<br/>Roboto Mono 700<br/>ls: .1em · UC</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">fa-eyebrow</div>
+    <div class="fa-eyebrow">Section Eyebrow</div>
+    <div class="ds-type-spec">.6875rem / 11px<br/>Roboto Mono 600<br/>ls: .14em · UC · blue</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">Paragraph<br/>body / Montserrat</div>
+    <p style="margin:0;max-width:480px;">The body copy uses Montserrat at 1rem with a generous line-height of 1.7. Color is set to <code>--fg-muted</code> for readability on dark surfaces.</p>
+    <div class="ds-type-spec">1rem / 16px<br/>Montserrat 400<br/>lh: 1.7 · muted</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">fa-hero__sub<br/>lead text</div>
+    <p class="fa-hero__sub" style="margin:0;max-width:400px;">Large lead paragraph used under the hero title for high-impact sub-copy.</p>
+    <div class="ds-type-spec">clamp(1rem,1.5vw,1.125rem)<br/>Montserrat 400 · lh:1.7</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">Gradient text</div>
+    <div style="font-family:var(--font-mono);font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-.04em;" class="tg">Cool Gradient</div>
+    <div class="ds-type-spec">.text-gradient<br/>--grad-cool · blue→teal</div>
+  </div>
+
+  <div class="ds-type-row">
+    <div class="ds-type-meta">Warm gradient</div>
+    <div style="font-family:var(--font-mono);font-size:2rem;font-weight:700;text-transform:uppercase;letter-spacing:-.04em;" class="tg-warm">Warm Gradient</div>
+    <div class="ds-type-spec">.text-gradient-warm<br/>--grad-warm · orange→yellow</div>
+  </div>
+
+  <!-- font families showcase -->
+  <div style="margin-top:3rem;display:grid;gap:1rem;grid-template-columns:1fr 1fr;">
+    <div class="ds-card">
+      <div class="ds-card__name">--font-mono</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:1.5rem;font-weight:700;color:var(--ais-white);margin-top:.5rem;">Roboto Mono</div>
+      <div style="font-family:'Roboto Mono',monospace;font-size:.8rem;color:var(--ais-grey);margin-top:.35rem;line-height:1.6;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>0123456789 !@#$%^&*()</div>
+      <div class="ds-card__value" style="margin-top:.75rem;">Weights: 400 / 500 / 600 / 700</div>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card__name">--font-sans</div>
+      <div style="font-family:'Montserrat',sans-serif;font-size:1.5rem;font-weight:700;color:var(--ais-white);margin-top:.5rem;">Montserrat</div>
+      <div style="font-family:'Montserrat',sans-serif;font-size:.8rem;color:var(--ais-grey);margin-top:.35rem;line-height:1.6;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>0123456789 !@#$%^&*()</div>
+      <div class="ds-card__value" style="margin-top:.75rem;">Weights: 300 / 400 / 500 / 600 / 700</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+  §2 — COLORS & SURFACES
+═════════════════════════════════════════════════════════ -->
+<section id="s2" class="ds-section">
+  <p class="ds-label">02 — Colors &amp; Surfaces</p>
+  <h2 class="ds-h2">Palette</h2>
+
+  <!-- brand colors -->
+  <p class="ds-row-label">Brand Colors</p>
+  <div class="ds-grid ds-grid-4" style="margin-bottom:3rem;">
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#2CA9E1;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">AIS Blue</span><span class="ds-swatch__hex">--ais-blue · #2CA9E1</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#2D9BA8;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">AIS Teal</span><span class="ds-swatch__hex">--ais-teal · #2D9BA8</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#F39237;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">AIS Orange</span><span class="ds-swatch__hex">--ais-orange · #F39237</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#F9C74F;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">AIS Yellow</span><span class="ds-swatch__hex">warm endpoint · #F9C74F</span></div>
+    </div>
+  </div>
+
+  <!-- neutrals -->
+  <p class="ds-row-label">Neutrals</p>
+  <div class="ds-grid ds-grid-4" style="margin-bottom:3rem;">
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#F0F2F5;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">White</span><span class="ds-swatch__hex">--ais-white · #F0F2F5</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#FFFFFF;border-bottom:1px solid rgba(0,0,0,.1);"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Pure White</span><span class="ds-swatch__hex">--ais-white-pure · #FFF</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#C5C8CC;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Grey Light</span><span class="ds-swatch__hex">--ais-grey-light · #C5C8CC</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#8A8F98;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Grey</span><span class="ds-swatch__hex">--ais-grey · #8A8F98</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#0A0C10;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Dark</span><span class="ds-swatch__hex">--ais-dark · #0A0C10</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:#060810;"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Darker</span><span class="ds-swatch__hex">--ais-darker · #060810</span></div>
+    </div>
+  </div>
+
+  <!-- surfaces -->
+  <p class="ds-row-label">Surfaces</p>
+  <div class="ds-grid ds-grid-3" style="margin-bottom:3rem;">
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:var(--bg-page);"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Page BG</span><span class="ds-swatch__hex">--bg-page = var(--ais-darker)</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:rgba(16,20,32,.65);"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Card BG</span><span class="ds-swatch__hex">--bg-card · rgba(16,20,32,.65)</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:rgba(255,255,255,.05);"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Surface</span><span class="ds-swatch__hex">rgba(255,255,255,.05)</span></div>
+    </div>
+  </div>
+
+  <!-- gradients -->
+  <p class="ds-row-label">Gradients</p>
+  <div class="ds-grid ds-grid-2" style="margin-bottom:3rem;">
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:linear-gradient(135deg,#2CA9E1 0%,#2D9BA8 100%);"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Cool Gradient</span><span class="ds-swatch__hex">--grad-cool · 135deg · blue→teal</span></div>
+    </div>
+    <div class="ds-swatch">
+      <div class="ds-swatch__color" style="background:linear-gradient(135deg,#F39237 0%,#F9C74F 100%);"></div>
+      <div class="ds-swatch__info"><span class="ds-swatch__name">Warm Gradient</span><span class="ds-swatch__hex">--grad-warm · 135deg · orange→yellow</span></div>
+    </div>
+  </div>
+
+  <!-- glows / shadows -->
+  <p class="ds-row-label">Glows &amp; Shadows</p>
+  <div class="ds-grid ds-grid-2">
+    <div class="ds-card" style="box-shadow:0 0 80px rgba(44,169,225,.15),0 0 160px rgba(44,169,225,.05);">
+      <div class="ds-card__name">--glow-blue</div>
+      <div class="ds-card__value">0 0 80px rgba(44,169,225,.15), 0 0 160px rgba(44,169,225,.05)</div>
+    </div>
+    <div class="ds-card" style="box-shadow:0 0 80px rgba(243,146,55,.15),0 0 160px rgba(243,146,55,.05);">
+      <div class="ds-card__name">--glow-warm</div>
+      <div class="ds-card__value">0 0 80px rgba(243,146,55,.15), 0 0 160px rgba(243,146,55,.05)</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+  §3 — UI COMPONENTS
+═════════════════════════════════════════════════════════ -->
+<section id="s3" class="ds-section">
+  <p class="ds-label">03 — Components</p>
+  <h2 class="ds-h2">UI Library</h2>
+
+  <!-- ── BUTTONS ──────────────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:2rem;">fa-btn — System Buttons</p>
+
+  <div class="ds-btn-row">
+    <span class="ds-card__name" style="width:80px;">--primary</span>
+    <button class="fa-btn fa-btn--primary fa-btn--sm">Small</button>
+    <button class="fa-btn fa-btn--primary fa-btn--md">Medium</button>
+    <button class="fa-btn fa-btn--primary fa-btn--lg">Large</button>
+    <button class="fa-btn fa-btn--primary fa-btn--xl">Extra Large</button>
+  </div>
+
+  <div class="ds-btn-row">
+    <span class="ds-card__name" style="width:80px;">--warm</span>
+    <button class="fa-btn fa-btn--warm fa-btn--sm">Small</button>
+    <button class="fa-btn fa-btn--warm fa-btn--md">Medium</button>
+    <button class="fa-btn fa-btn--warm fa-btn--lg">Large</button>
+    <button class="fa-btn fa-btn--warm fa-btn--xl">Extra Large</button>
+  </div>
+
+  <div class="ds-btn-row">
+    <span class="ds-card__name" style="width:80px;">--ghost</span>
+    <button class="fa-btn fa-btn--ghost fa-btn--sm">Small</button>
+    <button class="fa-btn fa-btn--ghost fa-btn--md">Medium</button>
+    <button class="fa-btn fa-btn--ghost fa-btn--lg">Large</button>
+    <button class="fa-btn fa-btn--ghost fa-btn--xl">Extra Large</button>
+  </div>
+
+  <p class="ds-row-label" style="margin-top:2.5rem;">CTA Variants</p>
+  <div class="ds-btn-row">
+    <a href="#" class="cta-primary">Primary CTA</a>
+    <a href="#" class="cta-warm">Warm CTA</a>
+    <a href="#" class="cta-ghost">Ghost CTA</a>
+    <a href="#" class="cta-small">Small CTA</a>
+  </div>
+
+  <!-- ── HERO BADGE ──────────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">fa-hero__badge</p>
+  <div class="ds-card">
+    <div class="fa-hero__badge" style="display:inline-flex;">
+      <span class="fa-hero__dot"></span>
+      Live · Hero Badge Component
+    </div>
+    <p style="margin:.75rem 0 0;font-size:.75rem;color:var(--ais-grey);">Pill badge with animated orange dot. Used in hero to signal status / edition.</p>
+  </div>
+
+  <!-- ── FEATURE CARDS ───────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">fa-feature</p>
+  <div class="ds-grid ds-grid-3">
+    <div class="fa-feature">
+      <div class="fa-feature__icon">⚡</div>
+      <h3 class="fa-feature__title">Fast by Default</h3>
+      <p>Zero-runtime CSS tokens with sub-100ms renders across all breakpoints.</p>
+      <div class="fa-feature__bar"></div>
+    </div>
+    <div class="fa-feature">
+      <div class="fa-feature__icon">🎨</div>
+      <h3 class="fa-feature__title">Token-Driven</h3>
+      <p>Every value — color, spacing, typography — lives in a CSS custom property.</p>
+      <div class="fa-feature__bar"></div>
+    </div>
+    <div class="fa-feature">
+      <div class="fa-feature__icon">🚀</div>
+      <h3 class="fa-feature__title">Scalable</h3>
+      <p>BEM-like naming with <code>fa-</code> prefix prevents global style collisions.</p>
+      <div class="fa-feature__bar"></div>
+    </div>
+  </div>
+
+  <!-- ── STAT CARDS ──────────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">stat-card</p>
+  <div class="ds-grid ds-grid-4">
+    <div class="stat-card">
+      <div class="stat-num">40+</div>
+      <div class="stat-label">Components</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">9</div>
+      <div class="stat-label">CSS Variables</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">2</div>
+      <div class="stat-label">Font Families</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num stat-num--warm">∞</div>
+      <div class="stat-label">Possibilities</div>
+    </div>
+  </div>
+
+  <!-- ── SERVICE CARDS ───────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">service-card</p>
+  <div class="ds-grid ds-grid-3">
+    <div class="service-card">
+      <div class="service-icon">🧠</div>
+      <h4>AI Strategy</h4>
+      <p>Full automation blueprint for your org.</p>
+      <div class="service-underline"></div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚙️</div>
+      <h4>Implementation</h4>
+      <p>We build and deploy AI workflows end-to-end.</p>
+      <div class="service-underline"></div>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📊</div>
+      <h4>Analytics</h4>
+      <p>Measure ROI across every automated touchpoint.</p>
+      <div class="service-underline"></div>
+    </div>
+  </div>
+
+  <!-- ── QUOTE CARD ──────────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">fa-quote</p>
+  <div style="max-width:560px;">
+    <div class="fa-quote">
+      <div class="fa-quote__stars">★★★★★</div>
+      <p class="fa-quote__text">"The most comprehensive design system I've seen built on pure CSS custom properties. Every token is intentional, every component purpose-built."</p>
+      <div class="fa-quote__author">
+        <div class="fa-quote__avatar" style="background:var(--grad-cool);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;">AV</div>
+        <div>
+          <strong>Alex V.</strong><br />
+          <span>Design Systems Lead</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FAQ ACCORDION ───────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">fa-faq</p>
+  <div class="fa-faq" style="max-width:640px;">
+    <details class="fa-faq__item" open>
+      <summary class="fa-faq__q">What fonts does this design system use?</summary>
+      <div class="fa-faq__a">
+        <p>Two Google Fonts: <strong>Roboto Mono</strong> (weights 400–700) for headings, labels, and all monospace UI; <strong>Montserrat</strong> (weights 300–700) for body copy and lead paragraphs.</p>
+      </div>
+    </details>
+    <details class="fa-faq__item">
+      <summary class="fa-faq__q">How are design tokens structured?</summary>
+      <div class="fa-faq__a">
+        <p>All tokens live in <code>:root</code> as CSS custom properties prefixed <code>--ais-</code> for brand values and <code>--bg-</code>, <code>--fg-</code>, <code>--grad-</code>, <code>--glow-</code> for semantic aliases.</p>
+      </div>
+    </details>
+    <details class="fa-faq__item">
+      <summary class="fa-faq__q">Is there a naming convention for components?</summary>
+      <div class="fa-faq__a">
+        <p>Yes — a BEM-like pattern with the <code>fa-</code> prefix for main components: <code>.fa-hero</code>, <code>.fa-feature</code>, <code>.fa-quote</code>, etc. Sub-elements use the double-underscore pattern: <code>.fa-hero__title</code>, <code>.fa-feature__icon</code>.</p>
+      </div>
+    </details>
+  </div>
+
+  <!-- ── COUNTDOWN ──────────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">fa-countdown</p>
+  <div class="fa-countdown">
+    <div class="fa-countdown__cell">
+      <div class="fa-countdown__num">04</div>
+      <div class="fa-countdown__label">Days</div>
+    </div>
+    <div class="fa-countdown__sep">:</div>
+    <div class="fa-countdown__cell">
+      <div class="fa-countdown__num">23</div>
+      <div class="fa-countdown__label">Hours</div>
+    </div>
+    <div class="fa-countdown__sep">:</div>
+    <div class="fa-countdown__cell">
+      <div class="fa-countdown__num">59</div>
+      <div class="fa-countdown__label">Mins</div>
+    </div>
+    <div class="fa-countdown__sep">:</div>
+    <div class="fa-countdown__cell">
+      <div class="fa-countdown__num">12</div>
+      <div class="fa-countdown__label">Secs</div>
+    </div>
+  </div>
+
+  <!-- ── INFO STRIP ──────────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">fa-info-strip</p>
+  <div class="fa-info-strip">
+    <div class="fa-info-cell">
+      <strong>Design Tokens</strong>
+      <span>CSS Custom Properties</span>
+    </div>
+    <div class="fa-info-cell">
+      <strong>Components</strong>
+      <span>40+ UI Patterns</span>
+    </div>
+    <div class="fa-info-cell">
+      <strong>Animations</strong>
+      <span>9 Keyframe Sets</span>
+    </div>
+    <div class="fa-info-cell">
+      <strong>Breakpoints</strong>
+      <span>Mobile First</span>
+    </div>
+  </div>
+
+  <!-- ── TROPHY / AWARD ─────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">award-tile + trophy-card</p>
+  <div class="ds-grid ds-grid-3">
+    <div class="award-tile">
+      <div class="award-num award-num--cool">01</div>
+      <h4>Best Component</h4>
+      <p>fa-feature card with animated hover bar.</p>
+      <div class="award-bar award-bar--cool"></div>
+    </div>
+    <div class="award-tile">
+      <div class="award-num award-num--warm">02</div>
+      <h4>Best Animation</h4>
+      <p>fa-atmosPulse — slow 8s atmospheric glow cycle.</p>
+      <div class="award-bar award-bar--warm"></div>
+    </div>
+    <div class="trophy-card">
+      <div class="trophy-glyph">🏆</div>
+      <h4>Design System</h4>
+      <p>Living reference extracted from production CSS.</p>
+    </div>
+  </div>
+
+  <!-- ── PERSONA ─────────────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">fa-persona</p>
+  <div style="max-width:520px;">
+    <div class="fa-persona">
+      <div class="fa-persona__tags">
+        <span class="fa-persona__tag">Designer</span>
+        <span class="fa-persona__tag">Developer</span>
+        <span class="fa-persona__tag">Architect</span>
+      </div>
+      <p class="fa-persona__intro">Who thrives with this system:</p>
+      <ul class="fa-persona__list">
+        <li>Wants a dark, premium aesthetic out of the box</li>
+        <li>Needs consistent type + spacing tokens</li>
+        <li>Builds conversion-focused landing pages</li>
+        <li>Values animation without JavaScript dependencies</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ── FINAL CARD (glassmorphism CTA) ─────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">final-card — Glassmorphism CTA</p>
+  <div class="final-card">
+    <div class="fa-eyebrow" style="margin-bottom:1rem;">Design System</div>
+    <h2 class="fa-section-title" style="margin-bottom:1rem;">Every Component<br/><span class="text-gradient">In One File</span></h2>
+    <p class="fa-section-sub">This <code>design-system.html</code> is a self-contained living reference. Link the production CSS and every class is live.</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+      <a href="#s0" class="fa-btn fa-btn--primary fa-btn--lg">Back to Top ↑</a>
+      <a href="#s1" class="fa-btn fa-btn--ghost fa-btn--lg">Typography →</a>
+    </div>
+  </div>
+
+  <!-- ── MARQUEE STRIP ───────────────────────────── -->
+  <p class="ds-row-label" style="margin-top:3rem;">marquee-strip</p>
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <div class="marquee-item">fa-hero</div>
+      <div class="marquee-item">fa-feature</div>
+      <div class="marquee-item">fa-quote</div>
+      <div class="marquee-item">fa-faq</div>
+      <div class="marquee-item">fa-countdown</div>
+      <div class="marquee-item">stat-card</div>
+      <div class="marquee-item">service-card</div>
+      <div class="marquee-item">award-tile</div>
+      <div class="marquee-item">trophy-card</div>
+      <div class="marquee-item">fa-persona</div>
+      <div class="marquee-item">final-card</div>
+      <div class="marquee-item">fa-info-strip</div>
+      <!-- duplicate for seamless loop -->
+      <div class="marquee-item">fa-hero</div>
+      <div class="marquee-item">fa-feature</div>
+      <div class="marquee-item">fa-quote</div>
+      <div class="marquee-item">fa-faq</div>
+      <div class="marquee-item">fa-countdown</div>
+      <div class="marquee-item">stat-card</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+  §4 — LAYOUT & SPACING
+═════════════════════════════════════════════════════════ -->
+<section id="s4" class="ds-section">
+  <p class="ds-label">04 — Layout &amp; Spacing</p>
+  <h2 class="ds-h2">Grid &amp; Spacing Scale</h2>
+
+  <!-- container -->
+  <p class="ds-row-label">Container</p>
+  <div class="ds-card" style="margin-bottom:2rem;">
+    <div class="ds-card__name">--container</div>
+    <div class="ds-card__value" style="font-size:1.1rem;margin-top:.35rem;">1240px max-width · auto side margins</div>
+    <p style="margin:.5rem 0 0;font-size:.75rem;color:var(--ais-grey);">All page sections use <code>max-width: var(--container); margin: 0 auto; padding: 0 1.5rem;</code></p>
+  </div>
+
+  <!-- spacing scale -->
+  <p class="ds-row-label">Spacing Scale (--sp-*)</p>
+  <div style="max-width:480px;">
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:4px;"></div><span class="ds-space-label">--sp-1</span><span class="ds-space-val">.25rem / 4px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:8px;"></div><span class="ds-space-label">--sp-2</span><span class="ds-space-val">.5rem / 8px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:12px;"></div><span class="ds-space-label">--sp-3</span><span class="ds-space-val">.75rem / 12px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:16px;"></div><span class="ds-space-label">--sp-4</span><span class="ds-space-val">1rem / 16px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:24px;"></div><span class="ds-space-label">--sp-6</span><span class="ds-space-val">1.5rem / 24px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:32px;"></div><span class="ds-space-label">--sp-8</span><span class="ds-space-val">2rem / 32px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:48px;"></div><span class="ds-space-label">--sp-12</span><span class="ds-space-val">3rem / 48px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:64px;"></div><span class="ds-space-label">--sp-16</span><span class="ds-space-val">4rem / 64px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:96px;"></div><span class="ds-space-label">--sp-24</span><span class="ds-space-val">6rem / 96px</span></div>
+    <div class="ds-space-row"><div class="ds-space-bar" style="width:128px;"></div><span class="ds-space-label">--sp-32</span><span class="ds-space-val">8rem / 128px</span></div>
+  </div>
+
+  <!-- text scale -->
+  <p class="ds-row-label" style="margin-top:3rem;">Text Scale (--text-*)</p>
+  <div class="ds-grid ds-grid-4">
+    <div class="ds-card"><div class="ds-card__name">--text-xs</div><div class="ds-card__value">.75rem / 12px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-sm</div><div class="ds-card__value">.875rem / 14px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-md</div><div class="ds-card__value">1rem / 16px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-lg</div><div class="ds-card__value">1.125rem / 18px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-xl</div><div class="ds-card__value">1.25rem / 20px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-2xl</div><div class="ds-card__value">1.5rem / 24px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-3xl</div><div class="ds-card__value">1.875rem / 30px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-4xl</div><div class="ds-card__value">2.5rem / 40px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-5xl</div><div class="ds-card__value">3.5rem / 56px</div></div>
+    <div class="ds-card"><div class="ds-card__name">--text-hero</div><div class="ds-card__value">clamp(2.75rem, 9vw, 7.5rem)</div></div>
+  </div>
+
+  <!-- border radius -->
+  <p class="ds-row-label" style="margin-top:3rem;">Border Radius</p>
+  <div class="ds-grid ds-grid-4">
+    <div class="ds-card"><div class="ds-card__name">--radius-full</div><div class="ds-card__value">9999px — pill</div><div style="margin-top:.75rem;height:32px;width:100%;background:var(--grad-cool);border-radius:9999px;"></div></div>
+    <div class="ds-card"><div class="ds-card__name">--radius-lg</div><div class="ds-card__value">16px — cards</div><div style="margin-top:.75rem;height:48px;width:100%;background:var(--grad-cool);border-radius:16px;"></div></div>
+    <div class="ds-card"><div class="ds-card__name">--radius-md</div><div class="ds-card__value">12px — panels</div><div style="margin-top:.75rem;height:48px;width:100%;background:var(--grad-cool);border-radius:12px;"></div></div>
+    <div class="ds-card"><div class="ds-card__name">--radius-sm</div><div class="ds-card__value">8px — inputs</div><div style="margin-top:.75rem;height:48px;width:100%;background:var(--grad-cool);border-radius:8px;"></div></div>
+  </div>
+
+  <!-- easing -->
+  <p class="ds-row-label" style="margin-top:3rem;">Easing</p>
+  <div class="ds-card" style="max-width:420px;">
+    <div class="ds-card__name">--ease-out</div>
+    <div class="ds-card__value" style="font-size:.9rem;margin-top:.35rem;">cubic-bezier(.16, 1, .3, 1)</div>
+    <p style="margin:.5rem 0 0;font-size:.75rem;color:var(--ais-grey);">Expo-out curve. Used on all entrance animations (fadeUp, card hovers, scroll panels). Creates the fast-start, soft-land feel.</p>
+  </div>
+
+  <!-- grid patterns -->
+  <p class="ds-row-label" style="margin-top:3rem;">Grid Patterns</p>
+  <div class="ds-grid ds-grid-2">
+    <div class="ds-card">
+      <div class="ds-card__name">Feature Grid (3-col)</div>
+      <div class="ds-card__value">grid-template-columns: repeat(3, 1fr)</div>
+      <p style="margin:.5rem 0 0;font-size:.75rem;color:var(--ais-grey);">Used by <code>.fa-feature</code> blocks. Collapses to 1-col on mobile.</p>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card__name">Agenda Grid (day cards)</div>
+      <div class="ds-card__value">repeat(auto-fill, minmax(280px, 1fr))</div>
+      <p style="margin:.5rem 0 0;font-size:.75rem;color:var(--ais-grey);">Used by <code>.fa-day</code> cards. Auto-fills columns fluidly.</p>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card__name">Info Strip</div>
+      <div class="ds-card__value">flex · space-between · border-top/bottom</div>
+      <p style="margin:.5rem 0 0;font-size:.75rem;color:var(--ais-grey);"><code>.fa-info-strip</code> with <code>.fa-info-cell</code> children. Used for quick stats rows.</p>
+    </div>
+    <div class="ds-card">
+      <div class="ds-card__name">Hero Layout</div>
+      <div class="ds-card__value">flex-column · align-items center · min-height 100vh</div>
+      <p style="margin:.5rem 0 0;font-size:.75rem;color:var(--ais-grey);">Single-column centered composition with <code>.fa-hero__inner</code> max-width 900px.</p>
+    </div>
+  </div>
+
+  <!-- day cards -->
+  <p class="ds-row-label" style="margin-top:3rem;">fa-day — Agenda Day Card</p>
+  <div class="ds-grid ds-grid-3">
+    <div class="fa-day">
+      <div class="fa-day__num">01</div>
+      <div class="fa-day__label">Day One</div>
+      <div class="fa-day__theme">Foundation</div>
+      <ul class="fa-day__list">
+        <li>Design tokens introduction</li>
+        <li>Typography system</li>
+        <li>Color palette</li>
+      </ul>
+    </div>
+    <div class="fa-day fa-day--warm">
+      <div class="fa-day__num">02</div>
+      <div class="fa-day__label">Day Two</div>
+      <div class="fa-day__theme">Components</div>
+      <ul class="fa-day__list">
+        <li>Button variants</li>
+        <li>Card patterns</li>
+        <li>Interactive elements</li>
+      </ul>
+    </div>
+    <div class="fa-day">
+      <div class="fa-day__num">03</div>
+      <div class="fa-day__label">Day Three</div>
+      <div class="fa-day__theme">Motion</div>
+      <ul class="fa-day__list">
+        <li>Keyframe animations</li>
+        <li>Scroll interactions</li>
+        <li>Atmospheric effects</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+  §5 — MOTION & INTERACTION
+═════════════════════════════════════════════════════════ -->
+<section id="s5" class="ds-section">
+  <p class="ds-label">05 — Motion</p>
+  <h2 class="ds-h2">Keyframe Gallery</h2>
+
+  <div class="ds-grid ds-grid-3" style="margin-bottom:3rem;">
+
+    <!-- fa-atmosPulse -->
+    <div class="ds-motion-box">
+      <div style="width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(44,169,225,.35) 0%,transparent 70%);" class="anim-atmosPulse"></div>
+      <span class="ds-motion-name">fa-atmosPulse</span>
+    </div>
+
+    <!-- fa-dotPulse -->
+    <div class="ds-motion-box">
+      <div style="width:16px;height:16px;border-radius:50%;background:var(--ais-orange);" class="anim-dotPulse"></div>
+      <span class="ds-motion-name">fa-dotPulse</span>
+    </div>
+
+    <!-- fadeUp -->
+    <div class="ds-motion-box" style="overflow:visible;">
+      <div style="width:48px;height:48px;border-radius:10px;background:var(--grad-cool);animation:fadeUp 1.5s var(--ease-out) infinite;"></div>
+      <span class="ds-motion-name">fadeUp</span>
+    </div>
+
+    <!-- driftA -->
+    <div class="ds-motion-box">
+      <div style="width:36px;height:36px;border-radius:50%;background:var(--grad-cool);" class="anim-driftA"></div>
+      <span class="ds-motion-name">driftA — 8s float</span>
+    </div>
+
+    <!-- driftB -->
+    <div class="ds-motion-box">
+      <div style="width:28px;height:28px;border-radius:50%;background:var(--grad-warm);" class="anim-driftB"></div>
+      <span class="ds-motion-name">driftB — 10s float</span>
+    </div>
+
+    <!-- driftC -->
+    <div class="ds-motion-box">
+      <div style="width:22px;height:22px;border-radius:50%;background:rgba(44,169,225,.5);" class="anim-driftC"></div>
+      <span class="ds-motion-name">driftC — 12s float</span>
+    </div>
+
+    <!-- spin -->
+    <div class="ds-motion-box">
+      <div style="width:40px;height:40px;border-radius:8px;background:linear-gradient(45deg,var(--ais-blue),transparent);border:2px solid var(--ais-blue);" class="anim-spin"></div>
+      <span class="ds-motion-name">spin — 2s linear</span>
+    </div>
+
+    <!-- pulse -->
+    <div class="ds-motion-box">
+      <div style="width:40px;height:40px;border-radius:50%;background:var(--ais-blue);" class="anim-pulse"></div>
+      <span class="ds-motion-name">pulse — scale+opacity</span>
+    </div>
+
+    <!-- marquee -->
+    <div class="ds-motion-box" style="overflow:hidden;">
+      <div style="font-family:var(--font-mono);font-size:.75rem;color:var(--ais-blue);font-weight:600;letter-spacing:.06em;" class="anim-marquee">
+        fa-feature · fa-quote · fa-faq · fa-countdown · stat-card · service-card ·&nbsp;
+      </div>
+      <span class="ds-motion-name">marquee — infinite scroll</span>
+    </div>
+  </div>
+
+  <!-- animation token table -->
+  <p class="ds-row-label">Animation Reference</p>
+  <div class="ds-card">
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-family:var(--font-mono);font-size:.72rem;">
+        <thead>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.08);">
+            <th style="text-align:left;padding:.6rem .75rem;color:var(--ais-grey);font-weight:600;letter-spacing:.06em;">Name</th>
+            <th style="text-align:left;padding:.6rem .75rem;color:var(--ais-grey);font-weight:600;letter-spacing:.06em;">Duration</th>
+            <th style="text-align:left;padding:.6rem .75rem;color:var(--ais-grey);font-weight:600;letter-spacing:.06em;">Easing</th>
+            <th style="text-align:left;padding:.6rem .75rem;color:var(--ais-grey);font-weight:600;letter-spacing:.06em;">Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04);">
+            <td style="padding:.6rem .75rem;color:var(--ais-blue);">fa-atmosPulse</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-white);">8s</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">ease-in-out · alternate</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">Background atmospheric glow orbs</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04);">
+            <td style="padding:.6rem .75rem;color:var(--ais-blue);">fa-dotPulse</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-white);">2s</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">ease-in-out · infinite</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">Hero badge orange status dot</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04);">
+            <td style="padding:.6rem .75rem;color:var(--ais-blue);">fadeUp</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-white);">.6s</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">var(--ease-out) · both</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">Entrance — translateY(16px)→0 + opacity</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04);">
+            <td style="padding:.6rem .75rem;color:var(--ais-blue);">driftA / B / C</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-white);">8 / 10 / 12s</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">ease-in-out · infinite</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">Floating particle / orb motion</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04);">
+            <td style="padding:.6rem .75rem;color:var(--ais-blue);">spin</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-white);">2s</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">linear · infinite</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">Loading spinner / icon rotation</td>
+          </tr>
+          <tr style="border-bottom:1px solid rgba(255,255,255,.04);">
+            <td style="padding:.6rem .75rem;color:var(--ais-blue);">pulse</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-white);">2s</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">ease-in-out · infinite</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">Scale + opacity pulse for badges</td>
+          </tr>
+          <tr>
+            <td style="padding:.6rem .75rem;color:var(--ais-blue);">marquee</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-white);">—</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">linear · infinite</td>
+            <td style="padding:.6rem .75rem;color:var(--ais-grey);">Horizontal ticker / social proof strip</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- hover interactions -->
+  <p class="ds-row-label" style="margin-top:3rem;">Hover Interactions</p>
+  <div class="ds-grid ds-grid-3">
+    <div class="ds-card" style="cursor:pointer;transition:transform .2s var(--ease-out),border-color .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(44,169,225,.3)';this.style.boxShadow='var(--glow-blue)'" onmouseout="this.style.transform='';this.style.borderColor='';this.style.boxShadow=''">
+      <div class="ds-card__name">Card hover</div>
+      <div class="ds-card__value">translateY(-4px) + glow-blue</div>
+      <p style="margin:.5rem 0 0;font-size:.72rem;color:var(--ais-grey);">Hover me ↑</p>
+    </div>
+    <div class="ds-card" style="cursor:pointer;transition:transform .2s var(--ease-out),border-color .2s,box-shadow .2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.borderColor='rgba(243,146,55,.3)';this.style.boxShadow='var(--glow-warm)'" onmouseout="this.style.transform='';this.style.borderColor='';this.style.boxShadow=''">
+      <div class="ds-card__name">Card hover warm</div>
+      <div class="ds-card__value">translateY(-4px) + glow-warm</div>
+      <p style="margin:.5rem 0 0;font-size:.72rem;color:var(--ais-grey);">Hover me ↑</p>
+    </div>
+    <div class="ds-card" style="cursor:pointer;">
+      <div class="ds-card__name">fa-feature__bar</div>
+      <div class="ds-card__value">width: 0 → 100% on hover</div>
+      <p style="margin:.5rem 0 0;font-size:.72rem;color:var(--ais-grey);">Bottom border animated via <code>transition: width .3s</code></p>
+    </div>
+  </div>
+
+  <!-- scroll behavior -->
+  <p class="ds-row-label" style="margin-top:3rem;">Scroll Behavior</p>
+  <div class="ds-card">
+    <div class="ds-card__name">Lenis Smooth Scroll</div>
+    <div class="ds-card__value">Loaded via CDN in the JS bundle</div>
+    <p style="margin:.5rem 0 0;font-size:.75rem;color:var(--ais-grey);">
+      The site imports <strong>@studio-freight/lenis</strong> for smooth, physics-based scroll.
+      Combined with scroll-triggered <code>fadeUp</code> on <code>.fa-feature</code>, <code>.fa-quote</code>, and <code>.panel-inner</code> elements via IntersectionObserver.
+    </p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+  FOOTER
+═════════════════════════════════════════════════════════ -->
+<footer style="border-top:1px solid rgba(255,255,255,.06);padding:3rem 1.5rem;text-align:center;">
+  <p style="font-family:var(--font-mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ais-grey);">
+    AI Automation Society — Design System · Extracted from production CSS · aiautomationsociety.ai
+  </p>
+  <p style="font-family:var(--font-mono);font-size:.6rem;color:rgba(138,143,152,.5);margin-top:.5rem;">
+    CSS bundle: /assets/index-DU4PK6CS.css · Fonts: Roboto Mono + Montserrat via Google Fonts
+  </p>
+</footer>
+
+</body>
+</html>

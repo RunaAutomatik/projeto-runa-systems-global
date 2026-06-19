@@ -1,14 +1,18 @@
+---
+paths: **/*
+---
+
 # Product Radar — Continuous Knowledge Capture
 
 ## Mission
 
 Everything built in this project is raw material for a product.
 
-**Primary product: RUNA SYSTEMS** — "Reestruturação Universal Neural Adaptativa"
-High-ticket AI-first business ecosystem. R$15k–R$50k/year.
+**The product: RUNA SYSTEMS** — "Reestruturação Universal Neural Adaptativa"
+AI-first mentorship that restructures how solo operators and small teams work.
 
-Everything else ($QUAD, AGENT$, CREATOR$, SITE$, ORÇAMENTO$, workers, automations, agents, squads)
-lives inside Runa Systems as transmutable modules — AND is sold separately as standalone offers.
+Everything built here — agents, workers, automations, tools, skills — is raw material
+for RUNA SYSTEMS mentorship modules. There is no separate product teia.
 
 Every agent operating in this project MUST maintain active product awareness throughout every interaction.
 
@@ -16,35 +20,21 @@ Every agent operating in this project MUST maintain active product awareness thr
 
 ## Product Architecture (Current)
 
-```
-HIGH TICKET (R$15k–R$50k)
-  RUNA SYSTEMS        R$15.000/ano  — Full AI ecosystem, client executes solo
-  RUNA MENTORIA       R$30.000      — RUNA SYSTEMS + 8 calls + WhatsApp 90d
-  RUNA INTERVENÇÃO    R$50.000      — RUNA SYSTEMS + 21-day immersion, Arthur implements
+**Single product: RUNA SYSTEMS — R$ 7.000**
 
-MEDIUM TICKET (R$1.997–R$3.997 | launch: 30–50% off)
-  $QUAD               ~R$2.997–3.997  — Agent squad architecture for your business
-  CREATOR$            ~R$2.997        — Content creation system with AI agents
-  AGENT$              ~R$1.997–2.997  — Build and monetize custom neural agents
-  SITE$               ~R$1.997        — AI-first website/landing page system
-  POSICIONAMENTO$     ~R$1.997        — Positioning + market differentiation framework
-  MIND$               ~R$997–1.997    — Mindset + cognitive framework (low-to-mid)
+| Attribute | Value |
+|-----------|-------|
+| Price | R$ 7.000 |
+| Duration | 7 weeks |
+| Sessions | 21 sessions (3× per week) |
+| Session length | 1h30–2h |
+| Post-intensive | 1× 2h strategic call per month for 1 year |
+| Community | Async community access (ongoing) |
+| Access | Lifetime — all deliverables, agents, and infrastructure |
 
-LOW TICKET (R$97–R$597 | fixed price, no launch discount)
-  ORÇAMENTO$          ~R$97–297       — Budget and proposal generation system
-  Lives de construção  R$97 each      — Live builds with lifetime recording
-  Agentes específicos  R$47–297 each  — Specific niche agents (chef, PT, copywriter, etc.)
-```
+**The complete AIOX ecosystem is the deliverable.** Mentees receive all 19 neural agents as a base squad and build additional specialized agents and squads as their needs evolve.
 
-**Launch pricing note:** Mid and High tickets have launch prices 30–50% off list price.
-Low tickets are always at face value.
-
-**Upsell chain:**
-`Low tickets → Mid tickets → RUNA SYSTEMS → MENTORIA → INTERVENÇÃO`
-
-> NOTE: ALPHA®, MAYA®, ICARUS® are NOT part of current product teia.
-> They were GPT-based assistants (not true agents) and have been superseded.
-> AGENT$ replaces ICARUS® use case within the current stack.
+**No tiers. No upsell chain. No mid-ticket. One product.**
 
 ---
 
@@ -56,17 +46,38 @@ Low tickets are always at face value.
 3. **Claude Code** — terminal-based agent orchestration
 4. **Anti-gravity** — installing and operating Claude Code inside Anti-gravity
 
-### 8 Neural Agents (squad delivered inside RUNA SYSTEMS)
-1. CEO Neural — strategic vision + decisions
-2. Designer Neural — visual identity + content
-3. Copy Neural — sales-converting texts
-4. Ofertas Neural — irresistible product structuring
-5. Comercial & Vendas Neural — closing + objection handling
-6. Financeiro Neural — cash flow + pricing
-7. Projetos & Produtos Neural — execution + roadmap
-8. Dev Neural — automations + technical integrations
+### 19 Neural Agents (full ecosystem delivered inside RUNA SYSTEMS)
 
-**The 8 agents ARE the base. Everything else is built WITH them.**
+**Core Orchestration**
+1. 👑 Orion (aiox-master) — Chief Orchestrator & Framework Developer
+2. 🏛️ Aria (architect) — Holistic System Architect
+3. 📋 Morgan (pm) — Product Manager
+4. 🎯 Pax (po) — Product Owner
+5. 🌊 River (sm) — Scrum Master
+
+**Development & Engineering**
+6. 💻 Dex (dev) — Full Stack Developer
+7. ⚡ Gage (devops) — DevOps Specialist
+8. 📊 Dara (data-engineer) — Database Architect & Operations Engineer
+9. ✅ Quinn (qa) — Test Architect
+
+**Business Intelligence**
+10. 🔍 Atlas (analyst) — Business Analyst & Strategic Ideation Partner
+11. ⚔️ ARES — Offer Architect & Product Revenue Strategist
+12. 🌙 FREYJA — Narrative Architect & Voice Strategist
+13. ☀️ HELIOS — SEO Strategist & Digital Visibility Architect
+14. 🪽 HERMES — Client Success & Relationship Architect
+
+**Creative Production**
+15. 🎬 MAYA — Audio-Visual Production Specialist
+16. 📷 LENS — Image Direction Agent
+17. 🎬 REEL — Video Direction Agent
+18. 🎨 Uma (ux-design-expert) — UX/UI Designer
+
+**Squad Building**
+19. 🏗️ Craft (squad-creator) — Squad Architect & Builder
+
+**The 19 agents ARE the base. Mentees build additional specialized agents and squads from here.**
 
 ---
 
@@ -79,7 +90,7 @@ Low tickets are always at face value.
 - A new tool, MCP, or integration is configured
 - A CLI command sequence solves a non-obvious problem
 - An architecture decision is made (and WHY)
-- A workflow pattern emerges (n8n, ManyChat, Instagram DMs, etc.)
+- A workflow pattern emerges (n8n, Zernio, Instagram DMs, etc.)
 - A prompt structure or agent persona is defined
 - A problem is solved that took significant iteration to crack
 - A concept, framework, or methodology is articulated
@@ -93,7 +104,7 @@ Low tickets are always at face value.
 [1-3 sentences]
 
 **Product module this feeds:**
-[Core Modules / Squad Architecture / Automation / Content / Business Systems / AI Workers / Standalone Offer → which product?]
+[Core Modules / Squad Architecture / Automation / Content / Business Systems / AI Workers → RUNA SYSTEMS]
 
 **Raw material value:**
 [Why this is worth teaching — what problem it solves, how long it would take someone to figure out alone]
@@ -140,23 +151,23 @@ All captures go to this single file as append entries.
 | Module | What it covers | Maps to product |
 |--------|---------------|-----------------|
 | **Core Modules** | Claude.ai chat/co-work, Claude Code, Anti-gravity | RUNA SYSTEMS foundation |
-| **Squad Architecture** | 8 neural agents, personas, handoff protocols | $QUAD / RUNA SYSTEMS |
-| **Agent Building** | Neural agent design, system messages, monetization | AGENT$ / RUNA SYSTEMS |
+| **Squad Architecture** | 19 neural agents, personas, handoff protocols | RUNA SYSTEMS |
+| **Agent Building** | Neural agent design, system messages, custom squads | RUNA SYSTEMS |
 | **Knowledge Base** | Obsidian vaults, AKASHA bases, agent memory | RUNA SYSTEMS |
-| **Tooling Stack** | MCPs, plugins, skills, CLI tools | RUNA SYSTEMS Dev Neural |
-| **Automation Layer** | n8n, ManyChat, Instagram DMs, triggers | RUNA SYSTEMS Comercial Neural |
-| **Content Pipeline** | FREYJA → NotebookLM → content system | CREATOR$ / RUNA SYSTEMS |
-| **Business Systems** | Budgets, sites, conversion frameworks | ORÇAMENTO$ / SITE$ / POSICIONAMENTO$ |
-| **AI Workers** | Worker design, carousel, video, data workers | RUNA SYSTEMS Projetos Neural |
-| **Positioning** | Market differentiation, offer structure | POSICIONAMENTO$ / RUNA SYSTEMS |
+| **Tooling Stack** | MCPs, plugins, skills, CLI tools | RUNA SYSTEMS |
+| **Automation Layer** | n8n, Zernio, Instagram DMs, triggers | RUNA SYSTEMS |
+| **Content Pipeline** | FREYJA → NotebookLM → content system | RUNA SYSTEMS |
+| **Business Systems** | Budgets, sites, conversion frameworks | RUNA SYSTEMS |
+| **AI Workers** | Worker design, carousel, video, data workers | RUNA SYSTEMS |
+| **Positioning** | Market differentiation, offer structure | RUNA SYSTEMS |
 
 ---
 
 ## Capture Responsibility
 
 - **Any agent** can and should capture
-- **@analyst (Alex)** has secondary responsibility to flag missed captures
-- **@pm (Morgan)** reviews captures for alignment with product teia
+- **@analyst (Atlas)** has secondary responsibility to flag missed captures
+- **@pm (Morgan)** reviews captures for alignment with RUNA SYSTEMS
 - If uncertain whether to capture: **capture anyway** — the filter comes later
 
 ---

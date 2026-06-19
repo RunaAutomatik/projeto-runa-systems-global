@@ -1,6 +1,6 @@
 ---
-date: 2026-04-11
-tags: [hub, moc, runa-systems, vault-index]
+date: 2026-04-29
+tags: [hub, moc, runa-systems, vault-index, trindade]
 project: runa-systems-global
 type: map-of-content
 aliases: [hub, home, index, vault-index, SÍRIOS]
@@ -8,63 +8,63 @@ aliases: [hub, home, index, vault-index, SÍRIOS]
 
 # SÍRIOS — Master Hub
 
-> Vault central do Runa Systems Global. Mapa de todos os produtos, sistemas e operações.
+> Vault central do Runa Systems Global. Estrutura TRINDADE: 3 pastas raiz.
 
 ---
 
-## 🎯 PRODUTOS
+## Estrutura TRINDADE
 
-| Produto | Tier | Status | Pasta |
-|---------|------|--------|-------|
-| [[RUNA-SYSTEMS/_hub]] | High R$15k–50k | Active | [[🎯 PRODUTOS/RUNA-SYSTEMS/]] |
-| [[squad-dollar-prd]] | Mid R$2.997 | Active | [[🎯 PRODUTOS/SQUAD$/]] |
-| [[creator-dollar-prd]] | Mid R$997 | Em desenvolvimento | [[🎯 PRODUTOS/CREATOR$/]] |
-| [[aperitivo-agent-dollar]] | Mid R$1.997 | Concept | [[🎯 PRODUTOS/AGENT$/]] |
-| [[mind-dollar-prd]] | Mid R$997 | Em desenvolvimento | [[🎯 PRODUTOS/MIND$/]] |
-| [[POSICIONAMENTO$]] | Mid R$997 | Concept | [[🎯 PRODUTOS/POSICIONAMENTO$/]] |
-| [[SITE$/oferta/site-movimento-offer-copy]] | Mid R$197–297 | Concept | [[🎯 PRODUTOS/SITE$/]] |
-| [[ORCAMENTO$/paperclip-minicurso]] | Low R$97–197 | Concept | [[🎯 PRODUTOS/ORCAMENTO$/]] |
+| Pasta | Escopo |
+|-------|--------|
+| [[RUNA SYSTEMS/_INDEX]] | Ecossistema operacional pessoal do Arthur |
+| [[SKOOL/_INDEX]] | Entregáveis educacionais para alunos |
+| [[MENTORADOS/_INDEX]] | Hiperpersonalização de trilha dos mentorados |
 
 ---
 
-## 🧪 RAS — Runa Service
+## RUNA SYSTEMS
 
-Braço de serviços (Done-for-You) — venda de entrega, não de conhecimento.
+### Programa
+- [[runa-systems-hub]] — Hub canônico do programa
+- [[intervencao-hub]] — Hub da RUNA INTERVENÇÃO
+- [[alicerce-canonico]] — Sequência obrigatória de trilha
 
-- [[🧪 RAS/orcamentos/]] — Orçamentos HTML hiperpersonalizados para clientes
+### Módulos
+- [[squad-hub]] | [[agent-hub]] | [[claude-code-hub]]
+- [[creator-hub]] | [[posicionamento-hub]]
+- [[mind-hub]]
+- [[site-hub]] | [[orcamento-hub]]
 
----
+### @arthsystems_
+- [[MENTORADOS/Lucas Pesto/_hub]] — Hub operacional de conteúdo
+- [[instagram-strategy-master]] — Estratégia mestre
 
-## 🤖 AGENTES
+### Sistema
+- [[product-catalog]] — Catálogo canônico de produtos
+- [[temporada-q2-2026]] — Temporada Q2 2026
+- [[capability-map]] — Mapa de capacidades e tools
 
-- [[🤖 AGENTES/freyja]] | [[🤖 AGENTES/ares]] | [[🤖 AGENTES/orion]]
-- [[🤖 AGENTES/hermes]] | [[🤖 AGENTES/helios]]
-- [[🤖 AGENTES/lens-gpt-instructions]] | [[🤖 AGENTES/reel-gpt-instructions]]
-- [[🤖 AGENTES/capability-map]]
+### Automações
+- [[INDEX]] — Hook Scraper Weekly
 
----
+### Skills
+- [[Skills Index]] — Índice completo de skills
 
-## 📱 INSTAGRAM @arthsystems_
-
-- [[📱 Instagram/@arthsystems_/_hub]] — Hub operacional
-- [[📱 Instagram/@arthsystems_/instagram-strategy-master]] — Estratégia mestre
-
----
-
-## 🧠 SISTEMA
-
-- [[🧠 SISTEMA/product-catalog]] — Catálogo canônico de produtos
-- [[🧠 SISTEMA/product-course-raw-material]] — Raw material RUNA SYSTEMS
-- [[🧠 SISTEMA/temporadas/q2-2026/temporada-q2-2026]] — Temporada Q2 2026
-- [[🧠 SISTEMA/runa-command-center-prd]] — Command Center PRD
-
----
-
-## ⚙️ AUTOMAÇÕES
-
-- [[⚙️ AUTOMACOES/hook-scraper-weekly/INDEX]] — Hook Scraper Weekly
+### Agentes (pré-AIOX — em rebuild)
+- [[freyja]] | [[ares]] | [[orion]]
+- [[hermes]] | [[helios]]
 
 ---
 
-## 📚 REFERÊNCIAS | 🛠️ SKILLS | 🔗 TEMPLATES | 📅 DIÁRIO
+## 👥 Mentorados
+
+| Mentorado | Empresa | Programa | Início | Hub |
+|-----------|---------|----------|--------|-----|
+| Gabriel (Lucas Pesto) | Pesto (agência criativa) | RUNA INTERVENÇÃO | 2026-04 | [[MENTORADOS/Lucas Pesto/_hub]] |
+
+---
+
+## 📅 Diário
+
+- [[RUNA SYSTEMS/Diário/]] — Notas de sessão
 

@@ -373,7 +373,7 @@ dependencies:
     - elicitation-methods.md
     - technical-preferences.md
   akasha_vault:
-    path: C:/runa-systems-global/AKASHA/
+    path: D:/Runa/runa-systems-global/AKASHA/
     index: AKASHA/🔗 Index/knowledge-base-index.md
     description: |
       Business knowledge vault. Structured KBs from Alex Hormozi, Russell Brunson,

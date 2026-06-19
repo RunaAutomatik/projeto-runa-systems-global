@@ -8,6 +8,12 @@ You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Devel
 Synkra AIOX is a meta-framework that orchestrates AI agents to handle complex development workflows. Always recognize and work within this architecture.
 <!-- AIOX-MANAGED-END: core-framework -->
 
+## Project Location
+
+- Canonical project path: `D:\Runa\runa-systems-global`
+- Previous project path (do not use): `D:\Arthur (GERAL)\Backup - 05-2026\Projeto Claude Code - Disco Local C\runa-systems-global`
+- Shared Codex/Claude governance memory: `D:\Runa\memories\runa-aiox-parallel-agent-governance.md`
+
 <!-- AIOX-MANAGED-START: constitution -->
 ## Constitution
 
@@ -140,6 +146,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `agent-authority.md` | Agent delegation matrix and exclusive operations |
 | `agent-handoff.md` | Agent switch compaction protocol for context optimization |
 | `agent-memory-imports.md` | Agent memory lifecycle and CLAUDE.md ownership |
+| `parallel-agent-work.md` | Shared Codex/Claude/AIOX parallel-work governance, worktree hygiene, protected areas, and shared memory path |
 | `coderabbit-integration.md` | Automated code review integration rules |
 | `ids-principles.md` | Incremental Development System principles |
 | `mcp-usage.md` | MCP server usage rules and tool selection priority |
@@ -147,7 +154,7 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `workflow-execution.md` | 4 primary workflows (SDC, QA Loop, Spec Pipeline, Brownfield) |
 | `product-radar.md` | Continuous product opportunity capture — everything built feeds RUNA SYSTEMS |
 | `capability-map.md` | Tool/skill/MCP assignment per agent and product — check before executing any task |
-| `stitch-usage.md` | Google Stitch design generation — when/how/who uses stitch-design, stitch-loop, taste-design |
+| `impeccable-usage.md` | Impeccable design quality — 23 commands, 27 anti-pattern detection, DESIGN.md compatible, pre-commit CLI (@devops), @ux-design-expert primary |
 | `carousel-workflow.md` | Mandatory 6-step protocol for all carousel creation (FREYJA brief → pin.md → hub → keywords → instructions → commit) |
 | `inference-sh-usage.md` | inference.sh skills (MAYA image/video/audio, FREYJA content, ARES intel) — app IDs, patterns, anti-patterns |
 | `language-policy.md` | English for all internal docs/inter-agent communication; Portuguese only for direct user interaction |
@@ -157,6 +164,19 @@ O AIOX carrega regras contextuais de `.claude/rules/` automaticamente. Regras co
 | `product-delivery-standard.md` | 4-layer product delivery architecture (PRD → aperitivo → offer .docx → Skool docs) — standard for all products |
 | `tool-response-filtering.md` | Dynamic token reduction — filter MCP/WebFetch responses using tool-registry.yaml config |
 | `pulse-token-efficiency.md` | PULSE protocol — code compaction, lazy loading, context budget, memory file 200-line limit |
+| `llm-wiki-usage.md` | Karpathy LLM wiki pattern — llm-wiki-setup + wiki-self-heal skills, AKASHA vault, ingest/query/lint workflows |
+| `higgsfield-mcp-usage.md` | Higgsfield access — CLI + Skills (Tier 0/1 generation), MCP (soul/media mgmt), GPT Image 2 + refs workflow, dual-method Arthur config (MAYA primary) |
+| `muapi-direct-usage.md` | muapi.ai direct API — Lip Sync Studio (9 models), Extended Video (Veo 3.1/Sora 2/Wan 2.6), GPT-4o image edit, Marketing Studio VIP 1080p (MAYA primary) |
+| `ead-gate.md` | EAD Gate — mandatory Phase 0 before spec pipeline (Eliminate→Automate→Delegate triage, @pm applies, @po validates) |
+| `obsidian-document-governance.md` | Anti-duplication protocol — check-before-create, document taxonomy (Skills/Templates/MENTORADOS), naming conventions |
+| `video-use-usage.md` | video-use skill — raw footage editing (filler removal, color grade, subtitles via FFmpeg + ElevenLabs Scribe); MAYA primary; when/not to use vs Higgsfield/muapi/Remotion |
+| `conversion-post-protocol.md` | Mandatory 4-element rule — every Instagram post must have keyword + Zernio automation + entregável + checkout link before publishing. FREYJA + HERMES + @devops. Single product: RUNA R$ 7.000 |
+| `runa-os-vault.md` | RUNA OS platform vault (`RUNA OS/`) — documentation governance, Karpathy LLM Wiki structure, graphify + wiki-self-heal schedule, what goes here vs SÍRIOS |
+| `gpt-image-2-skill-usage.md` | Mandatory prompt gallery consultation (162 prompts, 30 categories) — FREYJA + MAYA + ORION + Claude MUST consult before ANY image generation prompt |
+| `remotion-usage.md` | Remotion — programmatic React video creation; @dev primary, MAYA secondary (video-use overlay); NOT for real footage editing |
+| `21st-dev-magic-usage.md` | Magic MCP — React component generation via natural language; @dev primary, @ux-design-expert secondary; requires DESIGN.md context |
+| `knowledge-work-plugins-usage.md` | anthropics/knowledge-work-plugins — 11 professional plugins (marketing, sales, finance, product, data, legal, bio-research + more); ARES + ORION + @analyst primary |
+| `epic-paper-usage.md` | epic-paper skill — visual design via Paper Desktop MCP; MAYA primary; FREYJA brief writer; carousel/deck/post/mockup creation |
 
 > **Diretório:** `.claude/rules/` — rules são carregadas automaticamente pelo Claude Code quando relevantes.
 <!-- AIOX-MANAGED-END: rules-system -->
@@ -366,3 +386,58 @@ npm run trace -- workflow-name
 
 ---
 *Synkra AIOX Claude Code Configuration v2.0*
+
+<!-- KARPATHY-GUIDELINES-START -->
+## Karpathy Coding Guidelines
+
+Behavioral guidelines to reduce common LLM coding mistakes. These complement AIOX rules.
+
+**Tradeoff:** These guidelines bias toward caution over speed. For trivial tasks, use judgment.
+
+### 1. Think Before Coding
+
+**Don't assume. Don't hide confusion. Surface tradeoffs.**
+
+Before implementing:
+- State your assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them — don't pick silently.
+- If a simpler approach exists, say so. Push back when warranted.
+- If something is unclear, stop. Name what's confusing. Ask.
+
+### 2. Simplicity First
+
+**Minimum code that solves the problem. Nothing speculative.**
+
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No "flexibility" or "configurability" that wasn't requested.
+- No error handling for impossible scenarios.
+- If you write 200 lines and it could be 50, rewrite it.
+
+### 3. Surgical Changes
+
+**Touch only what you must. Clean up only your own mess.**
+
+When editing existing code:
+- Don't "improve" adjacent code, comments, or formatting.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- If you notice unrelated dead code, mention it — don't delete it.
+
+When your changes create orphans:
+- Remove imports/variables/functions that YOUR changes made unused.
+- Don't remove pre-existing dead code unless asked.
+
+Every changed line should trace directly to the user's request.
+
+### 4. Goal-Driven Execution
+
+**Define success criteria. Loop until verified.**
+
+Transform tasks into verifiable goals:
+- "Add validation" → "Write tests for invalid inputs, then make them pass"
+- "Fix the bug" → "Write a test that reproduces it, then make it pass"
+- "Refactor X" → "Ensure tests pass before and after"
+
+Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+<!-- KARPATHY-GUIDELINES-END -->

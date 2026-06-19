@@ -8,7 +8,7 @@ from docx.shared import Pt, RGBColor, Inches
 from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
-OUT_DIR = "c:/runa-systems-global/SÍRIOS/📦 Entregáveis/creator-dollar-skool-docx"
+OUT_DIR = "D:/Runa/runa-systems-global/SÍRIOS/📦 Entregáveis/creator-dollar-skool-docx"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 

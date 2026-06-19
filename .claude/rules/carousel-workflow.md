@@ -15,9 +15,6 @@ carousel content creation task for @arthsystems_).
 ### STEP 2 — Update the Pin .md file
 - Locate the corresponding pin file in the product criativos folder:
   - Pin 01–03 (RUNA-SYSTEMS): `SÍRIOS/🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-0X-*.md`
-  - Pin 04 AVATAR (CREATOR$): `SÍRIOS/🎯 PRODUTOS/CREATOR$/criativos/pin-04-creator-teaser.md`
-  - Pin 04 SQUAD (SQUAD$): `SÍRIOS/🎯 PRODUTOS/SQUAD$/criativos/pin-04-squad.md`
-  - Pin 05 AGENTE (AGENT$): `SÍRIOS/🎯 PRODUTOS/AGENT$/criativos/pin-05-nemoclaw.md`
 - Update frontmatter:
   - `type: carousel — 7 slides`
   - `estilo: [ARCHITECT | MANIFESTO | TERMINAL]`
@@ -76,9 +73,6 @@ Current keyword → folder assignments (paths relative to `SÍRIOS/`):
 | ARQUITETO | RUNA-SYSTEMS | `🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-01-assets`           | 01  |
 | RUNA      | RUNA-SYSTEMS | `🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-02-assets`           | 02  |
 | SISTEMA   | RUNA-SYSTEMS | `🎯 PRODUTOS/RUNA-SYSTEMS/criativos/pin-03-assets`           | 03  |
-| AVATAR    | CREATOR$    | `🎯 PRODUTOS/CREATOR$/criativos/pin-04-creator-assets`       | 04  |
-| SQUAD     | SQUAD$      | `🎯 PRODUTOS/SQUAD$/criativos/pin-04-squad-assets`           | 04  |
-| AGENTE    | AGENT$      | `🎯 PRODUTOS/AGENT$/criativos/pin-05-assets`                 | 05  |
 
 When adding new pins, always update `scripts/carousel-keywords.json` in STEP 4.
 

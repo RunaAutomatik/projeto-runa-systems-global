@@ -11,26 +11,28 @@ Never guess or reinvent — if the capability exists, use it.
 
 | Agent | Primary Skills | Primary MCPs |
 |-------|---------------|-------------|
-| FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing** | Supabase |
-| MAYA | **ai-image-generation**, **flux-image**, **nano-banana**, **ai-video-generation**, **google-veo**, **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, **talking-head-production** | — |
-| HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content** | n8n-mcp, Gmail, Google Calendar |
-| ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours** | — |
+| FREYJA | ads-dna, seo-content, obsidian-markdown, **content-repurposing**, **linkedin-content**, **technical-blog-writing**, **gpt-image-2-prompt-gallery** (consult before image prompts) | Supabase, knowledge-work-plugins (marketing, product-management) |
+| MAYA | **higgsfield-generate**, **higgsfield-soul-id**, **higgsfield-product-photoshoot** (Skills), **gpt-image-2** (Higgsfield CLI — KIE.AI broken), **nano-banana-2**, **seedance-2** (Higgsfield CLI/MCP), **elevenlabs-tts**, **elevenlabs-dialogue**, **ai-voice-cloning**, **elevenlabs-music**, **background-removal**, **image-upscaling**, HeyGen REST API, **muapi-lipsync**, **muapi-video-extended**, **muapi-image-edit**, **muapi-marketing-vip**, **video-use** (raw footage editing), **gpt-image-2-prompt-gallery** (consult before image prompts), **epic-paper** (Paper Desktop MCP — carousel/deck/mockup/post design) | Higgsfield MCP (soul/media mgmt), Higgsfield CLI (generation Tier 1) |
+| HERMES | ai-automation-workflows, twitter-automation, **ai-content-pipeline**, **ai-social-media-content**, **gws-gmail**, **gws-calendar**, **gws-events**, **gws-chat** | n8n-mcp, Gmail, Google Calendar, knowledge-work-plugins (customer-support) |
+| ARES | ads-*, ads-plan, ads-competitor, ads-meta, ads-google, spec-writing, **competitor-teardown**, **customer-persona**, **pitch-deck-visuals**, **product-hunt-launch**, **gstack/office-hours**, **runa-os-audit**, **lp-copy**, **sales-sequence**, **client-copy** | knowledge-work-plugins (marketing, sales, finance) |
 | HELIOS | seo-* (all 13 sub-skills), seo-content-brief, **web-search** | — |
-| ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp |
-| ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction** | Gmail, Google Calendar, Netlify, notebooklm-mcp |
-| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **stitch-loop**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse** | Figma, Supabase, Neon |
+| ALEX | defuddle, seo-competitor-pages, **ai-rag-pipeline**, **web-search**, **speech-to-text** | notebooklm-mcp, knowledge-work-plugins (data, enterprise-search, bio-research) |
+| ORION | obsidian-cli, obsidian-markdown, json-canvas, obsidian-bases, agent-workflows, **prompt-engineering**, **knowledge-extraction**, **llm-wiki-setup**, **wiki-self-heal**, **runa-intake**, **gws-drive**, **gws-docs**, **gws-sheets**, **gws-tasks**, **gws-workflow** | Gmail, Google Calendar, Netlify, notebooklm-mcp, knowledge-work-plugins (enterprise-search, productivity) |
+| @dev | ui-ux-pro-max, frontend-design, agent-sdk-dev, video-to-website, **impeccable-live**, **building-inferencesh-apps**, **javascript-sdk**, **python-sdk**, **agent-browser**, **agent-ui**, **chat-ui**, **tools-ui**, **widgets-ui**, **remotion-render**, **gstack/autoplan**, **gstack/browse**, **vercel-react-best-practices**, **vercel-composition-patterns**, **vercel-react-native-skills** | Supabase, @21st-dev/magic |
 | @qa | code-review, testing-strategy, pr-review-toolkit, **gstack/review**, **gstack/cso**, **gstack/qa** | — |
-| @devops | devops-automation, commit-commands, hookify, **stop-notification**, **post-tool-format** | Netlify |
+| @devops | devops-automation, commit-commands, hookify, **security-guidance**, **stop-notification**, **post-tool-format**, **vercel-optimize**, **deploy-to-vercel**, **vercel-cli-with-tokens** | Netlify, knowledge-work-plugins (cowork-plugin-management) |
+| @pm | spec-writing, **gstack/office-hours** | knowledge-work-plugins (product-management, legal) |
 | @architect | architecture-design, agent-workflows | — |
-| @ux-design-expert | **stitch-design**, **taste-design**, ui-ux-pro-max, frontend-design | StitchMCP (⚠️ requires setup) |
-| @data-engineer | (code tools) | Supabase, Neon |
+| @ux-design-expert | **taste-design**, **impeccable**, ui-ux-pro-max, frontend-design, **web-design-guidelines**, **vercel-react-view-transitions** | — |
+| @data-engineer | (code tools) | Supabase, knowledge-work-plugins (data, finance) |
 
 ## Tool Selection Priority (always follow this order)
 
 1. **Native Claude Code tools** (Read, Write, Edit, Bash, Grep, Glob) — fastest, local
 2. **Project skills** (`.claude/skills/`) — workflow-specific
 3. **Global skills** (`~/.claude/skills/`) — ads, seo, obsidian, ui-ux
-4. **MCPs** — only for external services (n8n, Supabase, Figma, etc.)
+   - **2.5: muapi-studio skill** — for lip sync, extended video, GPT-4o edit, MJ v7 (no infsh equivalent)
+4. **MCPs** — only for external services (n8n, Supabase, etc.)
 5. **Plugins** — for structured workflows (code-review, commit-commands, etc.)
 
 ## inference.sh Skills (via `infsh` CLI — ACTIVE ✓)
@@ -38,21 +40,50 @@ Never guess or reinvent — if the capability exists, use it.
 Token: stored at `~/.infsh-token` | CLI: `infsh` (global, no args needed)
 Full usage rules: `.claude/rules/inference-sh-usage.md`
 
+### GPT Image 2 Prompt Gallery (Mandatory — consult before ALL image prompts)
+
+**Rule file:** `.claude/rules/gpt-image-2-skill-usage.md`
+**Repo:** `https://github.com/wuyoscar/gpt_image_2_skill`
+**Agents who MUST consult:** FREYJA, MAYA, ORION, Claude (no agent selected)
+**Agents NOT included:** ARES, HERMES, ALEX, @dev, @qa, @architect, @data-engineer
+
+| Reference | Path | When to load |
+|-----------|------|-------------|
+| Gallery index | `skills/gpt-image/references/gallery.md` | ALWAYS first — route to category |
+| Category file | `skills/gpt-image/references/gallery-<slug>.md` | ONE per request (max 3 for hybrid) |
+| Craft guide | `skills/gpt-image/references/craft.md` | Dense text, UI, diagrams, multi-panel, weak prompts |
+
+```bash
+# Fetch any reference file
+gh api repos/wuyoscar/gpt_image_2_skill/contents/skills/gpt-image/references/<file>.md \
+  --jq '.content' | base64 -d
+```
+
+**FREYJA rule:** Consults gallery directly when writing image prompt briefs — no redirect to MAYA.
+**MAYA rule:** Consults gallery directly when generating own prompts — no redirect to FREYJA.
+
+---
+
 ### MAYA — Image Generation
-| Category | Skill | App IDs |
+| Category | Skill | App IDs / Provider |
 |----------|-------|---------|
-| **Image (premium)** | flux-image | `falai/flux-dev`, `falai/flux-dev-lora` |
-| **Image (fast)** | p-image, nano-banana | `pruna/p-image`, `google/gemini-3-pro-image-preview` |
-| **Image (alt)** | qwen-image-2, nano-banana-2 | `qwen/qwen-vl-max`, `google/gemini-3-flash-image` |
-| **Image (existing)** | ai-image-generation | `bytedance/seedream-4-5` |
+| **Image (premium)** | gpt-image-2 | KIE.AI external — `kie-client.py --model gpt-image-2` |
+| **Image (standard)** | nano-banana-2 | `google/gemini-3-flash-image` (infsh) — DEFAULT |
+| **Image (fast draft)** | p-image, nano-banana | `pruna/p-image`, `google/gemini-3-pro-image-preview` (infsh) |
+| **Image (legacy)** | flux-image | `falai/flux-dev`, `falai/flux-dev-lora` (infsh) — demoted |
+| **Image (alt)** | qwen-image-2 | `qwen/qwen-vl-max` (infsh) |
+| **Image (existing)** | ai-image-generation | `bytedance/seedream-4-5` (infsh) |
 | **Image process** | background-removal, image-upscaling | `falai/birefnet`, `falai/topaz-image-upscaler` |
 
 ### MAYA — Video Production
-| Category | Skill | App IDs |
+| Category | Skill | App IDs / Provider |
 |----------|-------|---------|
-| **Video (quality)** | google-veo | `google/veo-3-1-fast` |
-| **Video (fast)** | p-video, ai-video-generation | `pruna/p-video`, `bytedance/seedance-1` |
-| **Video (avatar)** | talking-head-production, ai-avatar-video | via infsh |
+| **Video (primary)** | Higgsfield MCP | `mcp__claude_ai_MCP_Higgsfield__generate_video` — see higgsfield-mcp-usage.md |
+| **Video (fallback 1)** | seedance-2 | `higgsfield/seedance-2` (infsh) |
+| **Video (fallback 2)** | seedance-2 | KIE.AI external — `kie-client.py --model seedance-2` |
+| **Video (final fallback)** | seedance-1 | `bytedance/seedance-1` (infsh) |
+| **Video (fast draft)** | p-video | `pruna/p-video` (infsh) |
+| **Video (avatar)** | HeyGen REST API | `POST api.heygen.com/v2/video/generate` — for Reels Mode A |
 | **Image→Video** | image-to-video | `falai/image-to-video` |
 | **Marketing video** | ai-marketing-videos | via infsh |
 
@@ -89,21 +120,91 @@ Full usage rules: `.claude/rules/inference-sh-usage.md`
 infsh app run <app-id> --input '{"prompt":"..."}'
 ```
 
-## Google Stitch Skills (UI Design Generation)
+## External Providers — KIE.AI
 
-**Owner:** `@ux-design-expert` (Uma) — primary | `@dev` (Dex) — stitch-loop only
-**Rule file:** `.claude/rules/stitch-usage.md`
-**Prerequisite:** StitchMCP must be configured in `~/.claude.json` (⚠️ pending setup)
+**Purpose:** Models NOT available on infsh. Accessed via REST API using `kie-client.py`.
+**Key:** `KIE_API_KEY=0d47e2b479b31cd2f06d62c499bfa8e6` (set in `.env`)
+**Client:** `C:/Users/user/.claude/skills/create-post/scripts/kie-client.py`
+**API base:** `https://api.kie.ai`
+
+| Model | Type | CLI call | When to use |
+|-------|------|---------|-------------|
+| GPT Image 2 | Image | `python kie-client.py --model gpt-image-2 --prompt "..." --size 1080x1350 --output path.png` | Premium final image assets |
+| Seedance 2.0 | Video | `python kie-client.py --model seedance-2 --prompt "..." --duration 6 --output path.mp4` | Fallback when `higgsfield/seedance-2` (infsh) is unavailable |
+
+**Agent owner:** MAYA
+**Usage rule:** MCP → infsh → KIE.AI chain for video. KIE.AI is the ONLY route for GPT Image 2.
+
+---
+
+## MCP Higgsfield (claude.ai native connector — ACTIVE ✓)
+
+**Owner:** MAYA | **Rule file:** `.claude/rules/higgsfield-mcp-usage.md`
+**Status:** Connected — `claude.ai MCP Higgsfield` in `~/.claude.json`
+**Tool prefix:** `mcp__claude_ai_MCP_Higgsfield__*` (deferred — load via ToolSearch)
+
+| Tool | Purpose |
+|------|---------|
+| `generate_video` | **PRIMARY** video generation — Tier 0 in all video tasks |
+| `generate_image` | Higgsfield-native image generation (cinematic aesthetic) |
+| `job_status` | Poll async job — REQUIRED after generate_video/image |
+| `job_display` | Retrieve completed asset URL |
+| `media_upload` / `media_confirm` | Upload reference media for image-to-video |
+| `models_explore` | Check available Higgsfield models |
+| `show_generations` / `show_medias` | Browse history and media library |
+| `balance` / `transactions` | Account management |
+
+**⚠️ ASYNC:** `generate_video` is non-blocking. Always poll `job_status` before `job_display`.
+
+---
+
+## muapi-direct Skills (api.muapi.ai direct — ACTIVE ✓)
+
+**Owner:** MAYA | **Rule file:** `.claude/rules/muapi-direct-usage.md`
+**Script:** `~/.claude/skills/muapi-studio/scripts/muapi-client.py`
+**Auth:** `~/.infsh-token` (`x-api-key` header — same key as infsh)
+
+| Workflow | Key Models | When to Use |
+|----------|-----------|-------------|
+| **Lip Sync** | `infinitetalk-image-to-video`, `ltx-2.3-lipsync`, `wan2.2-speech-to-video` | Face animation with audio — **no equivalent exists in stack** |
+| **Extended Video** | `veo3.1-text-to-video`, `openai-sora-2-text-to-video`, `wan2.6-text-to-video`, `kling-v3.0-pro-text-to-video` | Models absent from Higgsfield CLI |
+| **Image Edit** | `gpt4o-edit`, `midjourney-v7-omni-reference`, `flux-kontext-max-i2i` | High-fidelity text-guided image editing |
+| **Marketing VIP** | `sd-2-vip-omni-reference-1080p`, `seedance-2-vip-omni-reference` | VIP product ads 1080p with avatar + references |
+
+**Tier position:** Tier 2 in general hierarchy. **Tier 0** exclusively for: Lip Sync (no alternative), GPT-4o edit, MJ v7.
+
+---
+
+## taste-design Skill (Design System Generation — ACTIVE ✓)
+
+**Owner:** `@ux-design-expert` (Uma)
+**Skill path:** `~/.claude/skills/taste-design/`
+
+Generates opinionated `DESIGN.md` files that encode visual identity, color palette, typography, component behavior, and anti-patterns. Used as the single source of truth for `@dev` when implementing UI.
 
 | Skill | When to invoke | Output |
 |-------|---------------|--------|
-| `taste-design` | First step on any new project before generating screens | `.stitch/DESIGN.md` — anti-generic design system |
-| `stitch-design` | Generate or edit a specific page/screen | `.stitch/designs/{page}.html` + screenshot |
-| `stitch-loop` | Build full multi-page site autonomously | All pages via baton system |
+| `taste-design` | Before starting any UI implementation | `DESIGN.md` — complete design system |
 
-**Decision:** "Design it" → Stitch (Uma). "Code it" → ui-ux-pro-max + @dev.
+**Pipeline:** `taste-design (DESIGN.md) → @dev implements Next.js/Tailwind → /impeccable audit → Ship`
 
-**Products:** SITE$ (primary), $QUAD, CREATOR$, RUNA SYSTEMS (teaching clients).
+## Impeccable — Design Quality Skill (ACTIVE ✓)
+
+**Owner:** `@ux-design-expert` (Uma) primary | `@devops` for CLI/pre-commit
+**Rule file:** `.claude/rules/impeccable-usage.md`
+**Install:** `~/.agents/skills/impeccable/` (symlink: `~/.claude/skills/impeccable`)
+**DESIGN.md:** Stitch-format compatible — reads taste-design output directly
+
+| Use Case | Command/Tool | Agent |
+|----------|-------------|-------|
+| Detect anti-patterns in source | `npx impeccable detect src/ --json` | @devops (pre-commit) |
+| Full design audit after Stitch | `/impeccable audit` | @ux-design-expert |
+| Targeted refinement | `/impeccable polish`, `/typeset`, `/colorize`, `/layout` | @ux-design-expert |
+| Browser-based iteration | `/impeccable live` | @dev |
+| Pin decisions to DESIGN.md | `/impeccable pin` | @ux-design-expert |
+
+**Pipeline slot:** `taste-design (DESIGN.md) → @dev implements → impeccable audit → Ship`
+Apache 2.0 — bundleable for RUNA SYSTEMS client delivery.
 
 ## Claude Code Hooks
 
@@ -136,11 +237,178 @@ Full doc: `SÍRIOS/🛠️ Skills/Skills gstack.md`
 **IMPORTANTE:** `/ship` do gstack inclui git push — protocolo AIOX exige que push seja feito via @devops.
 Usar `/review` do gstack, mas delegar push para `@devops *push`.
 
+## LLM Wiki Skills (Karpathy pattern — ACTIVE ✓)
+
+Installed 2026-04-18. `llm-wiki-setup` + `wiki-self-heal` in `~/ai-second-brain-skills/`.
+Full usage rules: `.claude/rules/llm-wiki-usage.md`
+
+| Skill | Comando | Agent Owner | Quando usar |
+|-------|---------|-------------|-------------|
+| llm-wiki-setup | `/llm-wiki-setup` | ORION | Bootstrap novo knowledge vault (Karpathy 3-layer) |
+| wiki-self-heal | `/wiki-self-heal` | ORION | Health-check + gap-fill em wiki existente |
+
+**Vault ativo:** `AKASHA/` — layout nested, hot cache ativado.
+**SÍRIOS:** não usar — tem estrutura Obsidian própria.
+
+## vercel-labs/agent-skills (ACTIVE ✓ installed 2026-05-25)
+
+**Install:** `npx skills add vercel-labs/agent-skills`
+**Path:** `d:/Runa/runa-systems-global/.agents/skills/` + symlinks to `~/.claude/skills/`
+**Count:** 8 skills
+
+| Skill | Owner | When to Use |
+|-------|-------|-------------|
+| `web-design-guidelines` | @ux-design-expert | 100+ UX rules — apply before any UI review or impeccable audit |
+| `vercel-react-best-practices` | @dev | React component patterns, hooks, performance |
+| `vercel-composition-patterns` | @dev | Component composition, reuse patterns, compound components |
+| `vercel-react-native-skills` | @dev | Mobile component guidelines for React Native |
+| `vercel-react-view-transitions` | @ux-design-expert | Smooth page transitions, View Transitions API |
+| `vercel-optimize` | @devops | Vercel-specific performance optimizations (ISR, Edge, caching) |
+| `deploy-to-vercel` | @devops | Claim and configure Vercel deployments |
+| `vercel-cli-with-tokens` | @devops | Vercel CLI with token auth — CI/CD and scripted deploys |
+
+**Pipeline integration:**
+- `web-design-guidelines` → invoke BEFORE `/impeccable audit` for brand-aware context
+- `vercel-react-best-practices` + `vercel-composition-patterns` → @dev uses before scaffolding new React components
+- `vercel-optimize` + `deploy-to-vercel` → @devops uses for every Vercel deployment
+
+## Workers — Bike Method Phase Status
+
+All workers follow the Bike Method deployment protocol. Protocol doc: `SÍRIOS/RUNA SYSTEMS/worker-deployment-protocol.md`
+
+**Rule:** Every worker starts at Phase 1 (Training Wheels). No worker ships at Phase 4.
+
+| Worker | Port | Phase | Phase Since | Advance Criteria |
+|--------|------|-------|-------------|-----------------|
+| instagram-worker | :3000 | Phase 1 — Training Wheels | 2026-05-01 | 10 consecutive approved publishes |
+| content-worker | :3001 | Phase 1 — Training Wheels | 2026-05-01 | 10 consecutive approved carousel exports |
+
+Required frontmatter in every worker `.md` doc:
+```yaml
+bike-method-phase: 1
+phase-updated: YYYY-MM-DD
+phase-advance-criteria: "N outputs approved without intervention"
+kill-switch:
+  criteria: "..."
+  activator: "@devops"
+```
+
+---
+
+## Deprecation — Kill Switch Protocol
+
+Protocol doc: `SÍRIOS/RUNA SYSTEMS/deprecation-protocol.md`
+
+Kill Switch triggers when ANY of: inactivity 30d, no KPI, no owner, cost > benefit, failure rate >10%, superseded.
+
+**Review authority:** @devops (Gage) — 48h SLA.
+
+| Currently Deprecated | Replacement |
+|----------------------|-------------|
+| ManyChat | Zernio API integration |
+
+| Kill Switch Candidate | Status |
+|-----------------------|--------|
+| n8n-mcp | Monitoring — disabledMcpjsonServers, not used |
+
+---
+
+## Paper MCP (epic-paper — ACTIVE ✓)
+
+**Owner:** MAYA | **Rule file:** `.claude/rules/epic-paper-usage.md`
+**Status:** Skill installed 2026-05-27 — Paper Desktop MCP (local HTTP) — FREYJA brief writer
+**Requires:** Paper Desktop app open with file loaded at `http://127.0.0.1:29979/mcp`
+**Install:** `claude mcp add paper --transport http http://127.0.0.1:29979/mcp --scope user`
+
+| Capability | Canvas | Use case |
+|------------|--------|---------|
+| Instagram carousel | 1080×1080 per slide | Replaces carousel-worker HTML→PNG |
+| Single post | 1080×1080 | Static brand post design |
+| Mockup / landing page | 1440×900 | Sales page, offer mockup |
+| Pitch deck | 1920×1080 | Client presentation visuals |
+
+---
+
 ## Gaps
 
 | Gap | Status |
 |-----|--------|
-| StitchMCP not configured | ⚠️ Pending — user must set up at labs.google.com/stitch |
-| Magic MCP (@21st-dev) | ⚠️ Pending — requires API key from 21st.dev console |
+| *(no open gaps)* | — |
 
-Last updated: 2026-04-10
+---
+
+## anthropics/knowledge-work-plugins (⚠️ pending install)
+
+**Install:**
+```bash
+claude plugin marketplace add anthropics/knowledge-work-plugins
+claude plugin install <plugin-name>@knowledge-work-plugins
+```
+**Rule file:** `.claude/rules/knowledge-work-plugins-usage.md`
+**Count:** 11 core plugins (Anthropic-built) + 20+ partner plugins
+
+| Plugin | Primary Agent | Key Connectors |
+|--------|-------------|----------------|
+| `marketing` | ARES / FREYJA | Slack, Canva, HubSpot, Ahrefs, Klaviyo |
+| `sales` | ARES | HubSpot, Close, Clay, ZoomInfo |
+| `finance` | ARES / @data-engineer | Snowflake, Databricks, BigQuery |
+| `product-management` | @pm / FREYJA | Linear, Jira, Notion, Figma, Amplitude |
+| `data` | @analyst / @data-engineer | Snowflake, Databricks, BigQuery, Amplitude |
+| `enterprise-search` | ORION / @analyst | Slack, Notion, Guru, Jira, Asana |
+| `legal` | @pm | Slack, Box, Egnyte, Jira |
+| `bio-research` | @analyst | PubMed, bioRxiv, ClinicalTrials.gov |
+| `productivity` | ORION | Slack, Notion, Asana, Linear, ClickUp |
+| `customer-support` | HERMES | Intercom, HubSpot, Guru, Jira |
+| `cowork-plugin-management` | @devops | Internal plugin orchestration |
+
+---
+
+## video-use (Raw Footage Editing — ACTIVE ✓ installed 2026-05-12)
+
+**Owner:** MAYA | **Rule file:** `.claude/rules/video-use-usage.md`
+**Status:** Installed 2026-05-12 — video-use 0.1.0 — symlink active — ELEVENLABS_API_KEY configured
+**Requires:** `ELEVENLABS_API_KEY` in `~/Developer/video-use/.env`, Python 3.14 ✅, FFmpeg v8.0.1 ✅
+
+| Capability | Mechanism | When to use |
+|------------|-----------|-------------|
+| Filler removal | ElevenLabs Scribe word-level timestamps | Every talking head / class recording |
+| Silence removal | Waveform gap analysis | Multi-take, interviews, long footage |
+| Color grade | FFmpeg ASC CDL filter chains | Dark/cinematic consistent aesthetic |
+| Subtitle burn | SRT word-boundary, 2 words uppercase | Reels, accessibility |
+| Multi-take selection | Sub-agent selects best segment | Recordings with multiple attempts |
+| Animation overlays | Backends: HyperFrames, Remotion, Manim, PIL | Course diagrams, data animations |
+
+**Critical distinction:** video-use = *edit real footage*. Remotion = *create from zero via React code*.
+They are complementary: Remotion is one of video-use's animation overlay backends.
+
+**Usage pattern:**
+```bash
+cd /path/to/footage
+claude
+# then in natural language: "Edita esses vídeos para Instagram Reels"
+```
+
+**Products:** RUNA SYSTEMS (class modules for Skool, @arthsystems_ Reels pipeline)
+
+---
+
+## Google Workspace CLI Skills (gws — ACTIVE ✓ installed 2026-05-27)
+
+**Owner:** ORION (Drive/Docs/Sheets/Tasks), HERMES (Gmail/Calendar/Events), FREYJA (export to Drive), @dev (Sheets API), ARES (Drive offer docs)
+**Auth:** `automatikruna@gmail.com` — `~/.config/gws/credentials.enc` (token_valid: true) | **Rule:** `mcp-usage.md` → gws section
+**Install:** 44 skills via `npx skills add https://github.com/googleworkspace/cli`
+
+| Category | Skills | Agent |
+|----------|--------|-------|
+| Drive | gws-drive, gws-drive-upload | ORION / FREYJA |
+| Docs | gws-docs, gws-docs-write | ORION / FREYJA |
+| Sheets | gws-sheets, gws-sheets-read, gws-sheets-append | ORION / @dev / ARES |
+| Gmail | gws-gmail, gws-gmail-send, gws-gmail-reply, gws-gmail-reply-all, gws-gmail-forward, gws-gmail-read, gws-gmail-triage, gws-gmail-watch | HERMES |
+| Calendar | gws-calendar, gws-calendar-agenda, gws-calendar-insert, gws-events, gws-events-renew, gws-events-subscribe | HERMES / ORION |
+| Collaboration | gws-chat, gws-chat-send, gws-meet, gws-slides, gws-tasks, gws-forms, gws-keep | HERMES / ORION |
+| Admin | gws-people, gws-admin-reports, gws-classroom, gws-script, gws-script-push, gws-modelarmor, gws-shared | ORION / @dev |
+| Workflow | gws-workflow, gws-workflow-email-to-task, gws-workflow-file-announce, gws-workflow-meeting-prep, gws-workflow-standup-report, gws-workflow-weekly-digest | ORION / HERMES |
+
+---
+
+Last updated: 2026-05-27

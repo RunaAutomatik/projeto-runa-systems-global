@@ -42,18 +42,27 @@ Skills marked critical = high frequency, complex usage, integration with FREYJA�
 
 ---
 
-### `ai-image-generation` / `flux-image`
+### `ai-image-generation` / `gpt-image-2` / `nano-banana-2`
 **Owner:** MAYA
 **When to use:** Generate any image asset for @arthsystems_ content, product shots, marketing creatives.
 **When NOT to use:** Logos with text (hallucination risk), charts/data (use data-visualization).
 **Model selection:**
-- Final assets → `falai/flux-dev` (premium quality)
-- Drafts/iteration → `pruna/p-image` (fast + cheap)
-- Multimodal context → `google/gemini-3-pro-image-preview`
-**App IDs:** `falai/flux-dev`, `falai/flux-dev-lora`, `pruna/p-image`, `bytedance/seedream-4-5`
-**Example:**
+- Premium assets → GPT Image 2 via KIE.AI (NOT infsh — external API only)
+- Standard/fast → `google/gemini-3-flash-image` (nano-banana-2) via infsh
+- Legacy alternative → `falai/flux-dev` (demoted — only when nano-banana-2 is unavailable)
+**App IDs (infsh):** `google/gemini-3-flash-image`, `pruna/p-image`, `bytedance/seedream-4-5`
+**External (KIE.AI):** GPT Image 2 → `python scripts/kie-client.py --model gpt-image-2`
+**Example (standard):**
 ```bash
-infsh app run falai/flux-dev --input '{"prompt": "dark architect standing in front of digital blueprint, cinematic, architectural lighting", "width": 1080, "height": 1080}'
+infsh app run google/gemini-3-flash-image --input '{"prompt": "dark architect standing in front of digital blueprint, cinematic, architectural lighting", "width": 1080, "height": 1080}'
+```
+**Example (premium via KIE.AI):**
+```bash
+python C:/Users/user/.claude/skills/create-post/scripts/kie-client.py \
+  --model gpt-image-2 \
+  --prompt "dark architect standing in front of digital blueprint, cinematic, architectural lighting" \
+  --size 1080x1080 \
+  --output path/to/output.png
 ```
 **Workflow integration:** FREYJA writes `*brief-maya` → MAYA executes → FREYJA `*av-review` → approve/reject.
 **Style constraint:** Always apply Arthur's brand styles: dark, architectural, precise. No warm/soft aesthetics.
@@ -83,18 +92,35 @@ infsh app run elevenlabs/text-to-speech --input '{"text": "Você não está falt
 
 ---
 
-### `google-veo` / `ai-video-generation`
+### `seedance-2` / `ai-video-generation`
 **Owner:** MAYA
 **When to use:** Generate Reels (9:16), marketing videos, animated content from text prompts.
-**When NOT to use:** Don't use for simple slideshows (use FFmpeg compositor in content-worker). Don't use for avatar/talking-head (use `talking-head-production`).
-**Model selection:**
-- Quality Reels → `google/veo-3-1-fast`
-- Fast iteration → `pruna/p-video`
-- General → `bytedance/seedance-1`
-**App IDs:** `google/veo-3-1-fast`, `pruna/p-video`, `bytedance/seedance-1`
-**Example:**
+**When NOT to use:** Don't use for simple slideshows (use FFmpeg compositor in content-worker). Don't use for avatar/talking-head (use HeyGen via `create-reel`).
+**5-tier fallback chain (always follow this order):**
+0. Primary → `mcp__claude_ai_MCP_Higgsfield__generate_video` (Higgsfield MCP direct)
+1. Fallback 1 → `infsh app run higgsfield/seedance-2`
+2. Fallback 2 → muapi-studio: `python ~/.claude/skills/muapi-studio/scripts/muapi-client.py --endpoint seedance-v2.0-t2v`
+3. Fallback 3 → Seedance 2.0 via KIE.AI: `python kie-client.py --model seedance-2`
+4. Final fallback → `bytedance/seedance-1` via infsh
+**App IDs (infsh):** `higgsfield/seedance-2`, `bytedance/seedance-1`, `pruna/p-video`
+**MCP rule file:** `.claude/rules/higgsfield-mcp-usage.md` — async job pattern required
+**REMOVED:** `google/veo-3-1-fast` — purged from stack. Do NOT use.
+**Example (primary via MCP):**
+```
+mcp__claude_ai_MCP_Higgsfield__generate_video(prompt, aspect_ratio: "9:16", duration: 6)
+→ poll job_status → job_display → video_url
+```
+**Example (infsh fallback 1):**
 ```bash
-infsh app run google/veo-3-1-fast --input '{"prompt": "architect building digital infrastructure, dark cinematic, 9:16 vertical", "duration": 6, "aspect_ratio": "9:16"}'
+infsh app run higgsfield/seedance-2 --input '{"prompt": "architect building digital infrastructure, dark cinematic, 9:16 vertical", "duration": 6, "aspect_ratio": "9:16"}'
+```
+**Example (KIE.AI fallback):**
+```bash
+python C:/Users/user/.claude/skills/create-post/scripts/kie-client.py \
+  --model seedance-2 \
+  --prompt "architect building digital infrastructure, dark cinematic, 9:16 vertical" \
+  --duration 6 \
+  --output path/to/clip-01.mp4
 ```
 **Workflow integration:** FREYJA brief → MAYA generates → FREYJA reviews → HERMES publishes.
 **Style constraint:** 9:16 for Reels, architectural/dark aesthetic, no warm filters.
@@ -118,7 +144,7 @@ infsh app run falai/birefnet --input '{"image_url": "https://..."}'
 ### `talking-head-production` / `ai-avatar-video`
 **Owner:** MAYA
 **When to use:** Create Arthur's talking-head video with lip sync for educational or promotional content. AI avatar for scalable video content.
-**When NOT to use:** Don't use for abstract/cinematic video (use `google-veo`). Don't use for product demos without avatar.
+**When NOT to use:** Don't use for abstract/cinematic video (use `seedance-2`). Don't use for product demos without avatar.
 **Skills:** `talking-head-production`, `ai-avatar-video`
 **Example:**
 ```bash
@@ -142,11 +168,13 @@ infsh app run omni-human/talking-head --input '{"script": "...", "avatar_id": ".
 
 ### Image Generation
 
-| Skill | When to use | Agent | App ID |
+| Skill | When to use | Agent | App ID / Provider |
 |-------|------------|-------|--------|
-| `p-image` | Fast draft images, iteration | MAYA | `pruna/p-image` |
-| `nano-banana` | Gemini-native generation, multimodal | MAYA | `google/gemini-3-pro-image-preview` |
-| `nano-banana-2` | Fast Gemini image | MAYA | `google/gemini-3-flash-image` |
+| `gpt-image-2` | Premium final assets — @arthsystems_ creatives | MAYA | KIE.AI external (`kie-client.py`) |
+| `nano-banana-2` | Standard fast generation (default for most tasks) | MAYA | `google/gemini-3-flash-image` (infsh) |
+| `p-image` | Fast draft images, iteration | MAYA | `pruna/p-image` (infsh) |
+| `nano-banana` | Gemini-native generation, multimodal context | MAYA | `google/gemini-3-pro-image-preview` (infsh) |
+| `flux-image` | Legacy alternative (use nano-banana-2 instead) | MAYA | `falai/flux-dev` (infsh) — demoted |
 | `qwen-image-2` | Alibaba model, different aesthetic | MAYA | `qwen/qwen-vl-max` |
 | `qwen-image-2-pro` | Higher quality Qwen | MAYA | `qwen/qwen-vl-plus` |
 | `ai-product-photography` | Product shots with studio lighting | MAYA | via infsh |
@@ -155,11 +183,14 @@ infsh app run omni-human/talking-head --input '{"script": "...", "avatar_id": ".
 
 ### Video Production
 
-| Skill | When to use | Agent | App ID |
+| Skill | When to use | Agent | App ID / Provider |
 |-------|------------|-------|--------|
-| `p-video` | Fast video drafts | MAYA | `pruna/p-video` |
+| `seedance-2` (primary) | All cinematic Reels, brand videos | MAYA | `higgsfield/seedance-2` (infsh) |
+| `seedance-2` (fallback) | When Higgsfield unavailable | MAYA | KIE.AI external (`kie-client.py --model seedance-2`) |
+| `seedance-1` | Final fallback only | MAYA | `bytedance/seedance-1` (infsh) |
+| `p-video` | Fast video drafts, iteration only | MAYA | `pruna/p-video` (infsh) |
 | `ai-marketing-videos` | Structured promo videos | MAYA | via infsh |
-| `remotion-render` | Programmatic React/Remotion video | @dev / Worker | via infsh |
+| `remotion-render` | Programmatic React/Remotion composition | @dev / Worker | via infsh |
 | `video-ad-specs` | Video ad format compliance check | ARES / MAYA | via infsh |
 | `storyboard-creation` | Shot list + visual direction | MAYA / FREYJA | via infsh |
 | `explainer-video-guide` | Explainer video production guide | MAYA | via infsh |
@@ -251,8 +282,18 @@ infsh app run omni-human/talking-head --input '{"script": "...", "avatar_id": ".
 
 ❌ **Publishing MAYA output without `*av-review`** — All @arthsystems_ assets require FREYJA review.
 
-❌ **Using premium models for drafts** — Use `pruna/p-image` or `p-video` for iteration, reserve `flux-dev` / `veo-3-1-fast` for finals.
+❌ **Using `flux-dev` as primary image model** — Demoted to legacy. Default is `nano-banana-2` (infsh) or GPT Image 2 (KIE.AI). Only fall back to `flux-dev` when neither is available.
+
+❌ **Using `google/veo-3-1-fast`** — PURGED from stack. Use Higgsfield MCP → `higgsfield/seedance-2` (infsh) → KIE.AI seedance-2 → `bytedance/seedance-1` chain instead.
+
+❌ **Using `infsh higgsfield/seedance-2` as primary** — Higgsfield MCP (`generate_video`) is Tier 0. infsh is now Fallback 1. Only use infsh if the MCP tool call fails.
+
+❌ **Calling GPT Image 2 via infsh** — GPT Image 2 is NOT on infsh. Use `kie-client.py` (KIE.AI external API) exclusively for GPT Image 2.
+
+❌ **Using premium models for drafts** — Use `pruna/p-image` or `p-video` for iteration; reserve GPT Image 2 (KIE.AI) for final deliverables.
 
 ❌ **Running inference.sh for code/file operations** — Use Claude Code native tools (Read/Write/Edit/Bash).
+
+❌ **Using infsh for models available exclusively on muapi-direct** — For Lip Sync, GPT-4o edit, MJ v7 omni-reference, Veo 3.1, Sora 2, and Wan 2.6: infsh has no equivalents. Use `muapi-studio` (Tier 2) directly.
 
 ❌ **Using `elevenlabs-tts` for music** — Use `elevenlabs-music` instead. Different endpoint, different quality.

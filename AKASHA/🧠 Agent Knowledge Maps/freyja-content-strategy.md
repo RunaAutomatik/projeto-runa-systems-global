@@ -18,18 +18,22 @@ project: runa-systems-global
 - **5 posts, 21 followers** — early stage, blank slate, easy to reset
 
 ### Target State (Right)
-- **Narrative:** Architect of post-human businesses — "I build systems that run without founders"
-- **Positioning:** Builder/designer → creates authority and aspiration
-- **Effect:** Attracts founders who want to escape operational dependency
+- **Narrative:** Architect of SINTROPIA — humans + AI as living, self-sustaining ecosystem
+- **Three Pillars:** Operational Efficiency / Adaptive Intelligence / Augmented Humanity
+- **Philosophy:** Pro-team (people + AI = extraordinary), not anti-hiring
+- **Business metaphor:** Organic, alive — "plantar sementes que perduram"
+- **Single product anchor:** RUNA R$7.000 — all content feeds this acquisition
 - **Format that works:** Short sentences, line breaks, conceptual twist, zero hashtag spam
 
 ### The One-Sentence Shift
 > From: "Eu me recuperei do burnout e aprendi X"
-> To: "Eu construo negócios pós-humanos. Sistemas que funcionam enquanto o fundador dorme."
+> To: "Eu construo ecossistemas onde humanos e IA se tornam extraordinários juntos. Isso é SINTROPIA."
 
 ---
 
 ## 2. REFERENCE PROFILES — KEY PRINCIPLES EXTRACTED
+
+**INTERNAL REFERENCE ONLY — extract principles, do not reference names in content**
 
 ### From @dougdemarco_ (143k followers, 37 posts)
 **Core insight:** Instagram is a direction channel, not an education channel.
@@ -100,18 +104,18 @@ project: runa-systems-global
 - **Direct, zero fluff** — every sentence earns its place
 - **Conceptual architecture** — thinks in systems, not tactics
 - **Post-human philosophy** — believes businesses should outlive their founders' attention
-- **Anti-traditional hiring** — teams are a choice, not a requirement
 - **AI as infrastructure** — not a trend, a foundation
-- **Sovereignty framing** — freedom through systems, not hustle reduction
+- **Pro-team framing** — people + AI = extraordinary outcomes
 
 ### Vocabulary Arthur Should Own
-> "negócio pós-humano", "sistema que funciona sem mim", "fundador-arquiteto", "AIOX", "orquestração", "squad de agentes", "soberania operacional", "infraestrutura invisível", "carga cognitiva zero", "escala sem contratação"
+> "SINTROPIA", "ecossistema vivo", "humano extraordinário", "sementes que perduram", "eficiência operacional", "inteligência adaptativa", "humanidade aumentada", "negócio pós-humano", "sistema que funciona sem mim", "fundador-arquiteto", "AIOX", "orquestração", "infraestrutura invisível", "carga cognitiva zero"
 
 ### Tones Arthur CAN use
 - **Provocative:** "A maioria dos founders opera como funcionário do próprio negócio."
 - **Architectural:** "Um sistema de vendas não é um fluxo. É uma estrutura de intenção."
-- **Anti-conventional:** "Você não precisa de uma equipe. Você precisa de um arquiteto."
-- **Evidence-based:** "Construí o AIOX. Runa Systems roda com X horas/semana minha atenção."
+- **Organic/alive:** "Um negócio com SINTROPIA cresce como um ecossistema — cada parte alimenta as outras."
+- **Pro-team:** "Máquinas fazem trabalho de máquina. Humanos se tornam mais humanos."
+- **Evidence-based:** "O RUNA tem 21 sessões. 7 semanas. Lucas Pesto está na sessão 4."
 
 ### Tones Arthur should AVOID
 - Recovery/burnout narrative
@@ -119,23 +123,29 @@ project: runa-systems-global
 - Generic AI hype ("IA vai mudar tudo")
 - Motivational content ("Você consegue!")
 - Tutorial format (teaching everything = killing the sale)
+- Anti-hiring narrative ("não precisa de equipe", "escala sem contratar")
+- "soberania operacional" — framing too combative for the current organic concept
 
 ---
 
 ## 4. THE ARCHITECT NARRATIVE SYSTEM
 
-### The 3 Pillars (Arthur's version of Doug's 3 pillars)
+### THE 3 PILLARS (Arthur's actual framework)
 
-**Pillar 1 — The Architect Identity**
-Arthur doesn't say "I'm an AI consultant." He says "I build post-human businesses."
-Definition: businesses with operating systems so solid the founder's attention is optional.
+**Pillar 1 — Operational Efficiency**
+Eliminate what doesn't multiply. Systems that compound.
+Not "work less" — "work on what only you can do."
 
-**Pillar 2 — Runa Systems as Living Proof**
-Not "I help businesses with AI." Instead: "Runa Systems is a post-human business. It runs on AIOX. Here's what that looks like in practice: [real numbers, real specifics]"
+**Pillar 2 — Adaptive Intelligence**
+AI as infrastructure, not productivity tool. AIOX as living proof.
+Every Runa Systems session teaches one of the 8 Neural Agents.
 
-**Pillar 3 — The Avatar's Real Problem**
-Not "you have a productivity problem."
-Real problem: "You're the bottleneck of your own business. Every system depends on you knowing something, deciding something, or doing something."
+**Pillar 3 — Augmented Humanity**
+Machines do machine work → humans become more human.
+Pro-team: people + AI = extraordinary. Anti-infoobesidade (60-70% threshold).
+
+SINTROPIA: the meta-frame. Humans + AI as syntropic agriculture.
+Plant seeds that endure. The ecosystem self-sustains.
 
 ### The Invisible Sales Letter (Arthur's version)
 Every Instagram post should secretly be saying:
@@ -215,14 +225,13 @@ O negócio deve funcionar sem o fundador.
 | Pin | Purpose | Content |
 |-----|---------|---------|
 | 1st | **Manifesto** — who Arthur is and what he believes | "Eu construo negócios que funcionam sem mim." — define the architect identity |
-| 2nd | **Proof** — Runa Systems as living evidence | Real numbers, real operations, show the system in action |
+| 2nd | **Proof** — Runa Systems as living evidence | Real numbers, real operations, show the system in action. "Lucas Pesto está na sessão 4. O sistema funciona." |
 | 3rd | **Mirror** — the avatar's pain, Arthur's language | "Você é o gargalo do próprio negócio." — make them feel seen |
 
 ---
 
 ## 9. POSTING FREQUENCY AND RHYTHM
 
-Based on Doug and Sarah's model:
 - **Target:** 1-2 posts/week maximum
 - **Never:** daily posts, content for algorithm, reels just to have reels
 - **Always:** every post has a reason to exist beyond filling a calendar
@@ -230,9 +239,7 @@ Based on Doug and Sarah's model:
 
 ---
 
-*Knowledge base built from reference analyses: @dougdemarco_, @sarahseller.br, @acaroldutraa*
-*Architect narrative design for Arthur (@arthsystems_)*
-*Generated: 2026-03-19*
+*FREYJA Content Strategy Knowledge Base — updated 2026-05-13*
 
 
 ---

@@ -30,6 +30,17 @@ Este arquivo define as instrucoes do projeto para o Codex CLI.
 - Docs: `docs/`
 <!-- AIOX-MANAGED-END: codebase -->
 
+## Parallel Agent Governance
+
+- Canonical project path: `D:\Runa\runa-systems-global`
+- Previous project path (do not use): `D:\Arthur (GERAL)\Backup - 05-2026\Projeto Claude Code - Disco Local C\runa-systems-global`
+- Codex, Claude Code, AIOX agents, and other LLMs may work in parallel in this repo.
+- Shared rule: `.claude/rules/parallel-agent-work.md`
+- Shared memory: `D:\Runa\memories\runa-aiox-parallel-agent-governance.md`
+- Before large edits, check `git status`, identify the active story or governance task, and declare the work area.
+- Preserve unrelated worktree changes and avoid editing the same story/file another agent is editing.
+- Treat `.aiox-core` as canonical and protected; `.claude`, `.codex`, and `.agents` are consumer/sync layers.
+
 <!-- AIOX-MANAGED-START: commands -->
 ## Common Commands
 
